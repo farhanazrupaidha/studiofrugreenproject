@@ -1,30 +1,87 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import * as React from 'react';
+import AppBottomBar from '/components/appbottombar';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Unstable_Grid2';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
+import Avatar from '@mui/material/Avatar';
+import Divider from '@mui/material/Divider';
+import { Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 
-export default function Footer() {
-  return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
-      </Container>
-    </footer>
-  )
+const Item = styled(Box)(({ theme }) => ({
+  padding: theme.spacing(2),
+}));
+
+const useStyles = makeStyles((theme) => ({
+  box: {
+  backgroundColor: theme.palette.secondary.primary,
+  }
+}));
+
+export default function Footer () {
+const classes = useStyles();
+
+return (
+<section id="kontak" data-stellar-background-ratio="0.5">
+ <Paper elevation={2}>
+     <Stack
+        direction={{ xs: 'column', sm: 'row' }}
+        spacing={{ xs: 1, sm: 2, md: 2 }}
+        justifyContent="center"
+        alignItems="left"
+      >
+        <Item sx={{maxWidth:650, width:'95%'}}>
+          <Avatar
+                alt="Wiwit. | Human and Nature"
+                src="https://www.datocms-assets.com/82122/1664605536-wiwit-logo-750px.png"
+                sx={{ width: 56, height: 56, mb:2 }}
+              />
+          <Typography variant="h6" gutterBottom>
+          Wiwit. | Ensiklopedia Alam
+          </Typography>
+          <Typography variant="h5" gutterBottom sx={{ mt:1, fontWeight: 'bold' }}>
+          Tumbuh bersama.
+          </Typography>
+        </Item>
+        <Item sx={{maxWidth:230, width:'95%'}}>
+            <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
+                Profil
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+                <Link href="/" underline="hover" color='inherit'>
+                    Tentang
+                </Link>
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+                <Link href="/kontak" underline="hover" color='inherit'>
+                    Kontak
+                </Link>
+            </Typography>
+        </Item>
+        <Item sx={{maxWidth:230, width:'95%'}}>
+            <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
+                Komunitas
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+                <Link href="/forum" underline="hover" color='inherit'>
+                    Forum
+                </Link>
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              <Link href="/kontribusi" underline="hover" color='inherit'>
+                 Kontribusi
+              </Link>
+            </Typography>
+        </Item>
+      </Stack>
+  </Paper>
+    <AppBottomBar />
+</section>
+)
 }

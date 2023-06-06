@@ -3,3 +3,128 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+body {
+  --black: #111111;
+  --white: #fdfdfd;
+  --green: #22cc88;
+  --blue: #0055ff;
+  --purple: #8855ff;
+  --red: #ff0055;
+  --orange: #ee4444;
+  --yellow: #ffcc00;
+  --mustard: #ffaa00;
+
+  --accent: var(--blue);
+
+
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  prose: #777C88;
+}
+
+.proseColor {
+    color: #4C6AB0;
+    --accent: var(--blue);
+}
+
+article {
+    color: #667CAF;
+}
+
+.c-share {
+  padding: 1rem;
+
+  display: flex;
+  flex: column;
+  align-items: center;
+  justify-content: center; /* [2] */
+}
+
+.d-share {
+  display: flex;
+  flex: column;
+  align-items: center;
+  justify-content: center; /* [2] */
+  margin-bottom:10px;
+}
+
+.fix-bottom-button {
+  position: fixed;
+  bottom: 3rem;
+  left: 2rem;
+  right: 2rem;
+  align: right;
+
+  background-image: linear-gradient(90deg, #ffa513, #ff5a1c);
+  box-shadow: 0 0.13333rem 0.4rem 0 rgba(255, 80, 0, 0.4);
+
+  border-radius: 1.5rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  height: 3rem;
+  width: 3rem;
+
+  line-height: 2;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 10px;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--green);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--red);
+  transform-origin: 0%;
+}
+
+  /*---------------------------------------
+      HOME
+  -----------------------------------------*/
+
+  #home {
+    background: url('../public/images/backgroundhero.jpg') no-repeat center center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    margin-top:60px;
+  }
+
+  /*---------------------------------------
+      Kontak
+  -----------------------------------------*/
+
+  #kontak {
+    background: #004d40;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #01142C, #a7ffeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #01142C , #a7ffeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+    min-height: 20vh;
+  }

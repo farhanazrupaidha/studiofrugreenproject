@@ -1,13 +1,11 @@
-import Alert from '../components/alert'
+import ResponsiveAppBar from '../components/appbar'
 import Footer from '../components/footer'
-import Meta from '../components/meta'
 
 export default function Layout({ preview, children }) {
   return (
     <>
-      <Meta />
+    <ResponsiveAppBar />
       <div className="min-h-screen">
-        <Alert preview={preview} />
         <main>{children}</main>
       </div>
       <Footer />

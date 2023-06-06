@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Container from 'components/container'
 import PostBody from 'components/post-body'
+import PostReference from 'components/post-reference'
 import MoreStories from 'components/more-stories'
 import Header from 'components/header'
 import PostHeader from 'components/post-header'
@@ -11,6 +12,9 @@ import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
 import PostTitle from 'components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from 'lib/constants'
+
+import AdsenseListing from "../../components/adsense-listing";
+import AdsenseArticle from "../../components/adsense-article";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -30,7 +34,7 @@ export default function Post({ post, morePosts, preview }) {
             <article>
               <Head>
                 <title>
-                  {`${post.title} | Next.js Blog Example with ${CMS_NAME}`}
+                  {`${post.title} | Wiwit. | Ensiklopedia Alam`}
                 </title>
                 {/* <meta property="og:image" content={post.ogImage.url} /> */}
               </Head>
@@ -41,6 +45,7 @@ export default function Post({ post, morePosts, preview }) {
                 author={post.author}
               />
               <PostBody content={post.content} />
+              <PostReference reference={post.reference} />
             </article>
             <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}

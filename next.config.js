@@ -1,6 +1,12 @@
-/** @type {import('next').NextConfig} */
+require("dotenv").config();
+
 module.exports = {
-  images: {
-    domains: ['media.graphcms.com'],
+  env: {
+    GRAPHCMS_PROJECT_API:
+      process.env.GRAPHCMS_PROJECT_API,
   },
-}
+   reactStrictMode: true,
+    images: {
+      domains: ['media.graphassets.com'],
+    },
+};
