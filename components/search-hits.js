@@ -1,12 +1,15 @@
 // components/search-hits.js
 import { connectStateResults } from 'react-instantsearch-dom';
 import Link from 'next/link';
+import Typography from '@mui/material/Typography';
+
 function SearchHits({ searchState, searchResults }) {
   // checking if the query length is >= 3
   // (since 3 is the minimum Algolia query length)
   const validQuery = searchState.query?.length >= 3;
   return searchState.query && validQuery ? (
     <div className={'search-hits'}>
+    <Typography color="red">
       {searchResults?.hits.length === 0 && <div>No results found!</div>}
       {searchResults?.hits.length > 0 &&
         searchResults.hits.map((hit) => (
@@ -16,6 +19,7 @@ function SearchHits({ searchState, searchResults }) {
             </Link>
           </div>
         ))}
+       </Typography>
     </div>
   ) : null;
 }

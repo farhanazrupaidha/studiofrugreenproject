@@ -12,10 +12,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-import { useQuery, QueryClientProvider, QueryClient } from 'react-query'
-import { GraphQLClient } from 'graphql-request'
-const queryClient = new QueryClient();
-
 const { motion,useScroll } = require("framer-motion");
 
 import IconButton from '@mui/material/IconButton';
@@ -103,7 +99,6 @@ usePostHog('phc_hIxyJYhMq4PNf6nFh6e5l8JX6tmKnDNgiaWLY6s201j', {
 
 
   return (
-  <QueryClientProvider client={queryClient}>
   <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -134,7 +129,6 @@ usePostHog('phc_hIxyJYhMq4PNf6nFh6e5l8JX6tmKnDNgiaWLY6s201j', {
         <Component {...pageProps} />
     </ThemeProvider>
   </ColorModeContext.Provider>
-</QueryClientProvider>
   )
 }
 

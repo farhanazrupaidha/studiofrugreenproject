@@ -16,15 +16,15 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    overflowY:'scroll',
+    overflowY:'auto',
+    backgroundColor: '#eceff1',
     height:'100%',
-    maxHeight: 350,
+    maxHeight: 250,
     display:'block',
-    bgcolor: 'background.paper',
     width: '100%',
     maxWidth:650,
     p:5,
-    boxShadow: 24,
+    boxShadow: 50,
 };
 
 const searchClient = algoliasearch(
@@ -49,7 +49,7 @@ export default function Search() {
         sx={{overflow:'scroll'}}
     >
         <div className={"algolia-search"}>
-            <InstantSearch searchClient={searchClient} indexName="my_blog_content">
+            <InstantSearch searchClient={searchClient} indexName="wiwit_index">
                 <Box sx={style}>
                     <AdsenseText />
                     <SearchBox />
