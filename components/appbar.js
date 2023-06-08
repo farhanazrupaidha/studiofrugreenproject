@@ -128,7 +128,6 @@ function ResponsiveAppBar() {
             href="/"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
             }}
           >
             | Ensiklopedia Alam

@@ -20,10 +20,10 @@ export default function PostHeader({ title, coverImage, date, author, tags }) {
         <Stack
             direction={{ xs: 'column', sm: 'row' }}
             spacing={{ xs: 1, sm: 2, md: 1 }}
-            sx={{mt:2, mb:2}}
+            sx={{mt:2, mb:4}}
         >
             {tags.map((tag) => (
-                <Chip sx={{maxWidth:200, mb:3}} color="secondary" label= {tag} onClick={handleClick} />
+                <Chip sx={{maxWidth:200}} color="secondary" label= {tag} onClick={handleClick} />
             ))}
         </Stack>
       <div className="hidden md:block md:mb-12">
