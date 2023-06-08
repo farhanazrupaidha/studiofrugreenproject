@@ -5,17 +5,21 @@ import Link from "next/link";
 import DrawerToggle from "/components/drawer";
 import Search from '/components/search';
 
+import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
+import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
+import ListItemText from '@mui/material/ListItemText';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import Paper from '@mui/material/Paper';
 
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -98,6 +102,8 @@ function ResponsiveAppBar() {
 
 
   return (
+<React.Fragment>
+ <CssBaseline />
     <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -128,10 +134,11 @@ function ResponsiveAppBar() {
             | Ensiklopedia Alam
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
              <DrawerToggle />
           </Box>
-          <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
+
+          <Box sx={{ flexGrow: 1, mr:3, display: { xs: 'none', md: 'flex' } }}>
                          <Button
                              onClick={handleOpenUserMenu}
                              color= 'secondary'
@@ -139,10 +146,8 @@ function ResponsiveAppBar() {
                          >
                              Ensiklopedia
                          </Button>
-
-
                      <Menu
-                       sx={{ mt: '45px' }}
+                       sx={{ mt: '53px'}}
                        id="menu-appbar"
                        anchorEl={anchorElUser}
                        anchorOrigin={{
@@ -157,14 +162,14 @@ function ResponsiveAppBar() {
                        open={Boolean(anchorElUser)}
                        onClose={handleCloseUserMenu}
                      >
-                         <MenuItem onClick={handleCloseUserMenu}>
-                           <Typography textAlign="center" sx={{fontStyle: 'italic'}}><Link href="/flora"  color="inherit" underline="none">Flora</Link></Typography>
+                         <MenuItem sx={{ width: 150, maxWidth: '100%' }} onClick={handleCloseUserMenu}>
+                           <ListItemText href="/flora"><Link href="/flora"  color="inherit" underline="none">Flora</Link></ListItemText>
                          </MenuItem>
                          <MenuItem onClick={handleCloseUserMenu}>
-                           <Typography textAlign="center" sx={{fontStyle: 'italic'}}><Link href="/"  color="inherit" underline="none">Fauna</Link></Typography>
+                            <ListItemText href="/flora"><Link href="/"  color="inherit" underline="none">Fauna</Link></ListItemText>
                          </MenuItem>
                          <MenuItem onClick={handleCloseUserMenu}>
-                           <Typography textAlign="center" sx={{fontStyle: 'italic'}}><Link href="/inovasi"  color="inherit" underline="none">Inovasi</Link></Typography>
+                            <ListItemText href="/flora"><Link href="/inovasi"  color="inherit" underline="none">Inovasi</Link></ListItemText>
                          </MenuItem>
                      </Menu>
                          <Button
@@ -185,13 +190,11 @@ function ResponsiveAppBar() {
                          </Button>
                    </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
           <Search />
-
-          </Box>
         </Toolbar>
       </Container>
     </AppBar>
+</React.Fragment>
   );
 }
 export default ResponsiveAppBar;

@@ -24,14 +24,6 @@ body {
   prose: #777C88;
 }
 
-.proseColor {
-    color: #4C6AB0;
-    --accent: var(--blue);
-}
-
-article {
-    color: #667CAF;
-}
 
 .c-share {
   padding: 1rem;
@@ -78,21 +70,20 @@ article {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--blue);
-  -webkit-border-radius: 1ex;
+  background: var(--green);
 }
 
 ::-webkit-scrollbar-corner {
-  background: var(--green);
+  background: var(--blue);
 }
 
 .progress-bar {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 10px;
-  background: var(--red);
+  background: var(--green);
   transform-origin: 0%;
 }
 
@@ -123,8 +114,8 @@ article {
 
   #kontak {
     background: #004d40;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #01142C, #a7ffeb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #01142C , #a7ffeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #1565c0, #a7ffeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565c0 , #a7ffeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     position: relative;
     min-height: 20vh;
   }

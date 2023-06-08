@@ -28,7 +28,7 @@ function copy() {
   }
 
     return (
-<Box sx={{mt:2}}>
+<Box sx={{mt:5}}>
     <Button startIcon={<ShareIcon />} variant="contained" color="secondary" onClick={copy}>{!copied ? "Copy link" : "Copied!"}</Button>
 </Box>
 

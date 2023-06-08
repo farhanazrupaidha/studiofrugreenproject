@@ -13,8 +13,18 @@ import PostTitle from 'components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from 'lib/constants'
 
-import AdsenseListing from "../../components/adsense-listing";
-import AdsenseArticle from "../../components/adsense-article";
+import AdsenseListing from "components/adsense-listing";
+import AdsenseArticle from "components/adsense-article";
+import Location from "components/location";
+import ShareButton from "components/socialsharebutton";
+
+import { motion, useScroll } from "framer-motion"
+import { DiscussionEmbed } from 'disqus-react';
+
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -22,6 +32,8 @@ export default function Post({ post, morePosts, preview }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+
+  const { scrollYProgress } = useScroll();
 
   return (
     <Layout preview={preview}>
@@ -36,10 +48,16 @@ export default function Post({ post, morePosts, preview }) {
                 <title>
                   {`${post.title} | Wiwit. | Ensiklopedia Alam`}
                 </title>
-                {/* <meta property="og:image" content={post.ogImage.url} /> */}
+                <meta property="og:image" content={post.ogImage.url} />
               </Head>
+              <motion.div
+                className="progress-bar"
+                style={{ scaleX: scrollYProgress }}
+              />
+              <AdsenseListing />
               <PostHeader
                 title={post.title}
+                tags={post.tags}
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
@@ -47,7 +65,25 @@ export default function Post({ post, morePosts, preview }) {
               <PostBody content={post.content} />
               <PostReference reference={post.reference} />
             </article>
-            <SectionSeparator />
+        <center>
+            <ShareButton />
+            <Box sx={{mt:7, maxWidth: 700, width:'100%'}}>
+                <Divider sx={{mt:6, mb:5, maxWidth:300, width:'95%' }} />
+                <DiscussionEmbed
+                    shortname='wiwit-1'
+                    config={
+                    {
+                    url: post.url,
+                    identifier: post.id,
+                    title: post.title,
+                    }
+                    }
+                />
+            </Box>
+        </center>
+        <AdsenseArticle />
+        <SectionSeparator />
+        <Location />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}

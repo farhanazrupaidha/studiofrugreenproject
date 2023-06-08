@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
 
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import PostPreview from "../components/post-preview";
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Location from "../components/location"
-import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/graphcms'
+import Container from '../../components/container'
+import MoreStories from '../../components/more-stories'
+import PostPreview from "../../components/post-preview";
+import HeroPost from '../../components/hero-post'
+import Intro from '../../components/intro'
+import Location from "../../components/location"
+import Layout from '../../components/layout'
+import { getAllPostsForHome } from '../../lib/graphcms'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
-import Paginate from '../components/paginate';
+import { CMS_NAME } from '../../lib/constants'
+import Paginate from '../../components/paginate';
 
-import AdsenseListing from "../components/adsense-listing";
-import AdsenseDisplay from "../components/adsense-display";
+import AdsenseListing from "../../components/adsense-listing";
+import AdsenseDisplay from "../../components/adsense-display";
 
 import Box from '@mui/material/Box';
 import Pagination from "@mui/material/Pagination";
@@ -34,7 +34,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (where: {_search: "setu patok"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -109,21 +109,9 @@ export default function Index({ posts, preview }) {
         <Container>
           <AdsenseDisplay />
           <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              tags={heroPost.tags}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          <AdsenseListing />
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                Catatan terbaru
+                Jawa Barat
             </h2>
           </Box>
           <Location />
@@ -134,9 +122,9 @@ export default function Index({ posts, preview }) {
                    <PostPreview
                      key={blogPost.slug}
                      title={blogPost.title}
-                     tags={blogPost.tags}
                      coverImage={blogPost.coverImage}
                      date={blogPost.date}
+                     tags={blogPost.tags}
                      author={blogPost.author}
                      slug={blogPost.slug}
                      excerpt={blogPost.excerpt}
@@ -152,6 +140,7 @@ export default function Index({ posts, preview }) {
                     previousPage={previousPage}
                     nextPage={nextPage}
                    />
+                   <AdsenseListing />
                 </center>
 				</Box>
 			) : (
@@ -169,4 +158,3 @@ export async function getStaticProps({ preview = false }) {
     props: { posts, preview },
   }
 }
-

@@ -34,7 +34,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (where: {_search: "flora"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -109,18 +109,6 @@ export default function Index({ posts, preview }) {
         <Container>
           <AdsenseDisplay />
           <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              tags={heroPost.tags}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          <AdsenseListing />
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                 Catatan terbaru
@@ -134,9 +122,9 @@ export default function Index({ posts, preview }) {
                    <PostPreview
                      key={blogPost.slug}
                      title={blogPost.title}
-                     tags={blogPost.tags}
                      coverImage={blogPost.coverImage}
                      date={blogPost.date}
+                     tags={blogPost.tags}
                      author={blogPost.author}
                      slug={blogPost.slug}
                      excerpt={blogPost.excerpt}
@@ -152,6 +140,7 @@ export default function Index({ posts, preview }) {
                     previousPage={previousPage}
                     nextPage={nextPage}
                    />
+                  <AdsenseListing />
                 </center>
 				</Box>
 			) : (

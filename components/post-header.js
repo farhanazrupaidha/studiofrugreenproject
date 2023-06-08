@@ -3,10 +3,29 @@ import Date from '../components/date'
 import CoverImage from '../components/cover-image'
 import PostTitle from '../components/post-title'
 
-export default function PostHeader({ title, coverImage, date, author }) {
+import Typography from '@mui/material/Typography';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+
+export default function PostHeader({ title, coverImage, date, author, tags }) {
+  const handleClick = () => {
+    console.info('You clicked the Chip.');
+  };
   return (
     <>
       <PostTitle>{title}</PostTitle>
+      <div className="mb-6 text-lg">
+        <Date dateString={date} />
+      </div>
+        <Stack
+            direction={{ xs: 'column', sm: 'row' }}
+            spacing={{ xs: 1, sm: 2, md: 1 }}
+            sx={{mt:2, mb:2}}
+        >
+            {tags.map((tag) => (
+                <Chip sx={{maxWidth:200, mb:3}} color="secondary" label= {tag} onClick={handleClick} />
+            ))}
+        </Stack>
       <div className="hidden md:block md:mb-12">
         <Avatar name={author.name} picture={author.picture.url} />
       </div>
@@ -16,9 +35,6 @@ export default function PostHeader({ title, coverImage, date, author }) {
       <div className="max-w-2xl mx-auto">
         <div className="block mb-6 md:hidden">
           <Avatar name={author.name} picture={author.picture.url} />
-        </div>
-        <div className="mb-6 text-lg">
-          <Date dateString={date} />
         </div>
       </div>
     </>

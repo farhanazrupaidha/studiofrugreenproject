@@ -1,9 +1,7 @@
 import React from 'react';
-import Pagination from '@mui/material/Pagination';
-import PaginationItem from '@mui/material/PaginationItem';
 import Stack from '@mui/material/Stack';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 const Paginate = ({
 	postsPerPage,
@@ -18,14 +16,16 @@ const Paginate = ({
 	for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
 		pageNumbers.push(i);
 	}
-	return (
-	<>
-			<ul className="pagination">
-				<li onClick={previousPage} className="page-number">
-					Prev
-				</li>
+
+return (
+<>
+    <Stack spacing={2} sx={{m:5}} justifyContent="center" alignItems="center">
+			<ButtonGroup  variant="text" color="secondary" aria-label="medium secondary button group">
+				<Button onClick={previousPage} className="page-number">
+					Sebelumnya
+				</Button>
 				{pageNumbers.map((number) => (
-					<li
+					<Button
 						key={number}
 						onClick={() => paginate(number)}
 						className={
@@ -33,24 +33,13 @@ const Paginate = ({
 						}
 					>
 						{number}
-					</li>
+					</Button>
 				))}
-				<li onClick={nextPage} className="page-number">
-					Next
-				</li>
-			</ul>
-	    <Stack spacing={2}>
-	    {pageNumbers.map((number) => (
-          <Pagination
-            count={5}
-            key={number}
-            onClick={() => paginate(number)}
-            className={
-            'page-number ' + (number === currentPage ? 'active' : '')
-            }
-          />
-        ))}
-        </Stack>
+				<Button onClick={nextPage} className="page-number">
+					Selanjutnya
+				</Button>
+			</ButtonGroup>
+	</Stack>
     </>
 	);
 };
