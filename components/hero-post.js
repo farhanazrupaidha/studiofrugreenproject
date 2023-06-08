@@ -43,7 +43,7 @@ export default function HeroPost({
             sx={{mt:2, mb:2}}
         >
             {tags.map((tag) => (
-                <Chip sx={{maxWidth:200, mb:3}} color="secondary" label= {tag} onClick={handleClick} />
+                <Chip sx={{maxWidth:200}} color="secondary" label= {tag} onClick={handleClick} />
             ))}
         </Stack>
         </div>

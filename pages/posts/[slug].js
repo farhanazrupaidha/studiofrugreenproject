@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 
 import Container from 'components/container'
 import PostBody from 'components/post-body'
-import PostReference from 'components/post-reference'
 import MoreStories from 'components/more-stories'
 import Header from 'components/header'
 import PostHeader from 'components/post-header'
@@ -47,14 +46,13 @@ export default function Post({ post, morePosts, preview }) {
           <>
             <article>
                 <Helmet
-                     htmlAttributes={{ lang: 'd' }}
+                     htmlAttributes={{ lang: 'id' }}
                      defaultTitle="Wiwit. | Ensiklopedia Alam"
                    >
                      <title>{post.seo.title}</title>
                      <meta name="description" content={post.seo.description} />
                      <meta name="keywords" content={post.seo.keywords} />
                      <meta property="image" content={post.seo.image.url} />
-                     <meta property="og:url" content={post.slug} />
                      <meta property="og:title" content={post.seo.title} />
                      <meta property="og:description" content={post.seo.description} />
                      <meta property="og:site_name" content="Wiwit. | Ensiklopedia Alam" />
@@ -70,7 +68,6 @@ export default function Post({ post, morePosts, preview }) {
                 className="progress-bar"
                 style={{ scaleX: scrollYProgress }}
               />
-              <AdsenseListing />
               <PostHeader
                 title={post.title}
                 tags={post.tags}
@@ -79,7 +76,15 @@ export default function Post({ post, morePosts, preview }) {
                 author={post.author}
               />
               <PostBody content={post.content} />
-              <PostReference reference={post.reference} />
+                    <Typography variant="h5" sx={{mt:5}}>Referensi</Typography>
+                    <Box sx={{mt:4, whiteSpace: 'nowrap', overflowX: 'auto'}}>
+                        <Typography variant='body2'>
+                            <div
+                                dangerouslySetInnerHTML={{ __html: post.reference?.html }}
+                            />
+                        </Typography>
+                    </Box>
+              <AdsenseListing />
             </article>
         <center>
             <ShareButton />

@@ -105,7 +105,7 @@ export default function Index({ posts, preview }) {
     <>
       <Layout preview={preview}>
                <Helmet
-                     htmlAttributes={{ lang: 'd' }}
+                     htmlAttributes={{ lang: 'id' }}
                      defaultTitle="Wiwit. | Ensiklopedia Alam"
                    >
                      <title>Flora. | Ensiklopedia Alam</title>
