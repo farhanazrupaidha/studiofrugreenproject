@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
+import Helmet from 'react-helmet';
 
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
@@ -103,9 +104,27 @@ export default function Index({ posts, preview }) {
 	return (
     <>
       <Layout preview={preview}>
-        <Head>
-          <title>Wiwit. | Ensiklopedia Alam</title>
-        </Head>
+               <Helmet
+                     htmlAttributes={{ lang: 'd' }}
+                     defaultTitle="Wiwit. | Ensiklopedia Alam"
+                   >
+                     <title>Flora. | Ensiklopedia Alam</title>
+                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
+                     <meta name="keywords" content="wiwit, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
+                     <meta property="image" content="/images/fotopetani_1.jpg" />
+                     <meta property="og:url" content="https://wiwit.net" />
+                     <meta property="og:title" content="Flora. | Ensiklopedia Alam" />
+                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
+                     <meta property="og:site_name" content="Wiwit. | Ensiklopedia Alam" />
+                     <meta property="og:image" content="/images/fotopetani_1.jpg" />
+                     <meta name="og:type" content="website" />
+                     <meta name="twitter:site" content="@AkuStudiofru" />
+                     <meta name="twitter:title" content="Flora. | Ensiklopedia Alam" />
+                     <meta name="twitter:card" content="summary_large_image" />
+                     <meta name="twitter:image:src" content="/images/fotopetani_1.jpg" />
+                    <meta name="robots" content="noindex" />
+                    <link rel="icon" href="/images/favicon.ico" />
+               </Helmet>
         <Container>
           <AdsenseDisplay />
           <Intro />
@@ -133,7 +152,7 @@ export default function Index({ posts, preview }) {
                  </div>
                  <center>
                   <Paginate
-                  postsPerPage={postsPerPage}
+                    postsPerPage={postsPerPage}
                     totalPosts={totalPosts}
                     currentPage={currentPage}
                     paginate={paginate}

@@ -146,7 +146,7 @@ function ResponsiveAppBar() {
                              Ensiklopedia
                          </Button>
                      <Menu
-                       sx={{ mt: '53px'}}
+                       sx={{ mt: '53px', ml:3}}
                        id="menu-appbar"
                        anchorEl={anchorElUser}
                        anchorOrigin={{

@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
+import Helmet from 'react-helmet';
+
 import Container from 'components/container'
 import PostBody from 'components/post-body'
 import PostReference from 'components/post-reference'
@@ -44,12 +46,26 @@ export default function Post({ post, morePosts, preview }) {
         ) : (
           <>
             <article>
-              <Head>
-                <title>
-                  {`${post.title} | Wiwit. | Ensiklopedia Alam`}
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
+                <Helmet
+                     htmlAttributes={{ lang: 'd' }}
+                     defaultTitle="Wiwit. | Ensiklopedia Alam"
+                   >
+                     <title>{post.seo.title}</title>
+                     <meta name="description" content={post.seo.description} />
+                     <meta name="keywords" content={post.seo.keywords} />
+                     <meta property="image" content={post.seo.image.url} />
+                     <meta property="og:url" content={post.slug} />
+                     <meta property="og:title" content={post.seo.title} />
+                     <meta property="og:description" content={post.seo.description} />
+                     <meta property="og:site_name" content="Wiwit. | Ensiklopedia Alam" />
+                     <meta property="og:image" content={post.seo.image.url} />
+                     <meta name="og:type" content="website" />
+                     <meta name="twitter:site" content="@AkuStudiofru" />
+                     <meta name="twitter:title" content={post.seo.title} />
+                     <meta name="twitter:card" content="summary_large_image" />
+                     <meta name="twitter:image:src" content={post.seo.image.url} />
+                    <meta name="robots" content="noindex" />
+                </Helmet>
               <motion.div
                 className="progress-bar"
                 style={{ scaleX: scrollYProgress }}
