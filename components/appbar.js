@@ -130,7 +130,7 @@ function ResponsiveAppBar() {
               mr: 2,
             }}
           >
-            | Ensiklopedia Alam
+            | Human and Nature
           </Typography>
 
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

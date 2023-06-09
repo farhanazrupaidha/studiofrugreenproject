@@ -14,8 +14,9 @@ import PostTitle from 'components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from 'lib/constants'
 
-import AdsenseListing from "components/adsense-listing";
+import AdsenseDisplay from "components/adsense-display";
 import AdsenseArticle from "components/adsense-article";
+import AdsenseMultiplex from "components/adsense-multiplex";
 import Location from "components/location";
 import ShareButton from "components/socialsharebutton";
 
@@ -51,6 +52,9 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <Layout preview={preview}>
       <Container>
+        <Box sx={{mt:10}}>
+            <AdsenseDisplay />
+        </Box>
         <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
@@ -120,7 +124,7 @@ export default function Post({ post, morePosts, preview }) {
             <WhatsappShareButton
                 url={`https://wiwit.net/posts/${post.slug}`}
                 title={post.title}
-                separator="__"
+                separator="->"
             >
                 <WhatsAppIcon color="primary" size="small" />
             </WhatsappShareButton>
@@ -132,6 +136,7 @@ export default function Post({ post, morePosts, preview }) {
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}
+        <AdsenseMultiplex />
       </Container>
     </Layout>
   )

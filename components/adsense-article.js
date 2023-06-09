@@ -18,7 +18,7 @@ export default function AdsenseArticle () {
   }, []);
 
   return (
-  <Box sx={{mt:2, mb: 4}}>
+  <Box sx={{mt:3, mb: 3}}>
   <center>
     <ins
       className="adsbygoogle"

@@ -43,7 +43,7 @@ return (
                 sx={{ width: 56, height: 56, mb:2 }}
               />
           <Typography variant="h6" gutterBottom>
-          Wiwit. | Ensiklopedia Alam
+          Wiwit. | Human and Nature
           </Typography>
           <Typography variant="h5" gutterBottom sx={{ mt:1, fontWeight: 'bold' }}>
           Tumbuh bersama.

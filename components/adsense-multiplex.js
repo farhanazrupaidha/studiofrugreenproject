@@ -18,7 +18,7 @@ export default function AdsenseMultiplex () {
   }, []);
 
   return (
-  <Box sx={{mt:2, mb:2}}>
+  <Box sx={{mt:3, mb:3}}>
   <center>
     <ins class="adsbygoogle"
      style={{display:"block", maxWidth:"1000", width:'100%'}}

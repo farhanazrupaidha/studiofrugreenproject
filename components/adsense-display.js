@@ -18,7 +18,7 @@ export default function AdsenseDisplay () {
   }, []);
 
   return (
-  <Box sx={{mt:2, mb: 4}}>
+  <Box sx={{mt:3, mb: 3}}>
   <center>
     <ins class="adsbygoogle"
      style={{display:"block", maxWidth: 1000, width:'100%', height:120, margin:3}}

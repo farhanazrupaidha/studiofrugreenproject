@@ -114,30 +114,33 @@ export default function Index({ posts, preview }) {
                <Head
                      defaultTitle="Wiwit. | Ensiklopedia Alam"
                    >
-                     <title>Flora. | Ensiklopedia Alam</title>
+                     <title>Wilayah Konservasi Danau Setu Patok. | Ensiklopedia Alam</title>
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
                      <meta name="keywords" content="wiwit, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
                      <meta property="image" content="/images/fotopetani_1.jpg" />
-                     <meta property="og:url" content="https://wiwit.net" />
-                     <meta property="og:title" content="Flora. | Ensiklopedia Alam" />
+                     <meta property="og:url" content="https://wiwit.net/locations/setupatok" />
+                     <meta property="og:title" content="Wilayah Konservasi Danau Setu Patok. | Ensiklopedia Alam" />
                      <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
                      <meta property="og:site_name" content="Wiwit. | Ensiklopedia Alam" />
                      <meta property="og:image" content="/images/fotopetani_1.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@AkuStudiofru" />
-                     <meta name="twitter:title" content="Flora. | Ensiklopedia Alam" />
+                     <meta name="twitter:title" content="Wilayah Konservasi Danau Setu Patok. | Ensiklopedia Alam" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/fotopetani_1.jpg" />
                     <meta name="robots" content="noindex" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Container>
+        <Box sx={{mt:10}}>
           <AdsenseDisplay />
+        </Box>
           <Intro />
-          <Box sx={{mb:5}}>
+          <Box sx={{mb:10}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                Jawa Barat
+                Wilayah Konservasi Danau Setu Patok
             </h2>
+          <iframe width='100%' height='400px' src="https://api.mapbox.com/styles/v1/studiofru/cliof1jfa00og01r14zks3erq.html?title=false&access_token=pk.eyJ1Ijoic3R1ZGlvZnJ1IiwiYSI6ImNrZXBuYXlwcDN2cGwyc2x0Y2libnY2cmwifQ.LsxGcgeSlLKEYbnNldaEfw&zoomwheel=false#14.63/-6.78433/108.56724" title="Outdoors"></iframe>
           </Box>
           <Location />
 			{blogPosts ? (

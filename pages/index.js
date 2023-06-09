@@ -186,6 +186,7 @@ export default function Index({ posts, preview }) {
 				<div className="loading">Loading...</div>
 			)}
         </Container>
+        <AdsenseDisplay />
       </Layout>
     </>
 )
