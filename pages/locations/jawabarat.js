@@ -111,8 +111,7 @@ export default function Index({ posts, preview }) {
 	return (
     <>
       <Layout preview={preview}>
-               <Helmet
-                     htmlAttributes={{ lang: 'id' }}
+               <Head
                      defaultTitle="Wiwit. | Ensiklopedia Alam"
                    >
                      <title>Flora. | Ensiklopedia Alam</title>
@@ -131,7 +130,7 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:image:src" content="/images/fotopetani_1.jpg" />
                     <meta name="robots" content="noindex" />
                     <link rel="icon" href="/images/favicon.ico" />
-               </Helmet>
+               </Head>
         <Container>
           <AdsenseDisplay />
           <Intro />

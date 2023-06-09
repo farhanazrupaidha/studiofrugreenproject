@@ -23,9 +23,21 @@ import { motion, useScroll } from "framer-motion"
 import { DiscussionEmbed } from 'disqus-react';
 
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
+import {
+  TwitterShareButton,
+  FacebookShareButton,
+  WhatsappShareButton,
+} from 'next-share'
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -45,25 +57,24 @@ export default function Post({ post, morePosts, preview }) {
         ) : (
           <>
             <article>
-                <Helmet
-                     htmlAttributes={{ lang: 'id' }}
+                <Head
                      defaultTitle="Wiwit. | Ensiklopedia Alam"
                    >
-                     <title>{post.seo.title}</title>
+                     <title>{post.title}</title>
                      <meta name="description" content={post.seo.description} />
                      <meta name="keywords" content={post.seo.keywords} />
                      <meta property="image" content={post.seo.image.url} />
-                     <meta property="og:title" content={post.seo.title} />
+                     <meta property="og:title" content={post.title} />
                      <meta property="og:description" content={post.seo.description} />
                      <meta property="og:site_name" content="Wiwit. | Ensiklopedia Alam" />
                      <meta property="og:image" content={post.seo.image.url} />
+                      <meta name="og:url" content={`https://wiwit.net/posts/${post.slug}`}/>
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@AkuStudiofru" />
-                     <meta name="twitter:title" content={post.seo.title} />
+                     <meta name="twitter:title" content={post.title} />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content={post.seo.image.url} />
-                    <meta name="robots" content="noindex" />
-                </Helmet>
+                </Head>
               <motion.div
                 className="progress-bar"
                 style={{ scaleX: scrollYProgress }}
@@ -84,24 +95,37 @@ export default function Post({ post, morePosts, preview }) {
                             />
                         </Typography>
                     </Box>
-              <AdsenseListing />
             </article>
-        <center>
+        <Box sx={{mt:5}}>
+        <Typography variant="h6">Bagikan</Typography>
+        <Stack
+            direction="row"
+            spacing={1}
+            sx={{mt:2, mb:4}}
+        >
             <ShareButton />
-            <Box sx={{mt:7, maxWidth: 700, width:'100%'}}>
-                <Divider sx={{mt:6, mb:5, maxWidth:300, width:'95%' }} />
-                <DiscussionEmbed
-                    shortname='wiwit-1'
-                    config={
-                    {
-                    url: post.url,
-                    identifier: post.id,
-                    title: post.title,
-                    }
-                    }
-                />
-            </Box>
-        </center>
+            <TwitterShareButton
+                url={`https://wiwit.net/posts/${post.slug}`}
+                title={post.title}
+            >
+                <TwitterIcon color="primary" size="small" />
+            </TwitterShareButton>
+            <FacebookShareButton
+                url={`https://wiwit.net/posts/${post.slug}`}
+                quote={post.title}
+                hashtag={'#wiwit-ensiklopediaalam'}
+            >
+                <FacebookIcon color="primary" size="small" />
+            </FacebookShareButton>
+            <WhatsappShareButton
+                url={`https://wiwit.net/posts/${post.slug}`}
+                title={post.title}
+                separator="__"
+            >
+                <WhatsAppIcon color="primary" size="small" />
+            </WhatsappShareButton>
+        </Stack>
+        </Box>
         <AdsenseArticle />
         <SectionSeparator />
         <Location />

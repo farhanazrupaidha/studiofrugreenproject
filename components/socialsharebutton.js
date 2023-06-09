@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ShareIcon from '@mui/icons-material/Share';
 import LinkIcon from '@mui/icons-material/Link';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 export default function ShareButton () {
     const [copied, setCopied] = useState(false);
@@ -17,6 +18,7 @@ export default function ShareButton () {
     setAnchorEl(null);
     };
 
+
 function copy() {
     const el = document.createElement("input");
     el.value = window.location.href;
@@ -28,9 +30,7 @@ function copy() {
   }
 
     return (
-<Box sx={{mt:5}}>
-    <Button startIcon={<ShareIcon />} variant="contained" color="secondary" onClick={copy}>{!copied ? "Copy link" : "Copied!"}</Button>
-</Box>
-
+          <ContentCopyIcon color="primary" size="small" onClick={copy} />
     )
 }
+
