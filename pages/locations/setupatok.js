@@ -117,6 +117,7 @@ export default function Index({ posts, preview }) {
                      <title>Wilayah Konservasi Danau Setu Patok. | Ensiklopedia Alam</title>
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
                      <meta name="keywords" content="wiwit, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
+                     <meta name="author" content="Studiofru | https://wiwit.net/" />
                      <meta property="image" content="/images/fotopetani_1.jpg" />
                      <meta property="og:url" content="https://wiwit.net/locations/setupatok" />
                      <meta property="og:title" content="Wilayah Konservasi Danau Setu Patok. | Ensiklopedia Alam" />
