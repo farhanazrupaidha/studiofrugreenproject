@@ -20,6 +20,9 @@ export default function Location () {
         <Button size="small" href='/locations/jawatengah' variant="contained" color="primary" sx={{borderRadius: 5}}>
                     Jawa Tengah
         </Button>
+        <Button size="small" href='/locations/jawatimur' variant="contained" color="primary" sx={{borderRadius: 5}}>
+                    Jawa Timur
+        </Button>
         </Stack>
   );
 }

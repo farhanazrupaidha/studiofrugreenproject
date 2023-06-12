@@ -162,13 +162,13 @@ function ResponsiveAppBar() {
                        onClose={handleCloseUserMenu}
                      >
                          <MenuItem sx={{ width: 150, maxWidth: '100%' }} onClick={handleCloseUserMenu}>
-                           <ListItemText href="/flora"><Link href="/flora"  color="inherit" underline="none">Flora</Link></ListItemText>
+                           <ListItemText><Link href="/flora"  color="inherit" underline="none">Flora</Link></ListItemText>
                          </MenuItem>
                          <MenuItem onClick={handleCloseUserMenu}>
-                            <ListItemText href="/flora"><Link href="/"  color="inherit" underline="none">Fauna</Link></ListItemText>
+                            <ListItemText><Link href="/"  color="inherit" underline="none">Fauna</Link></ListItemText>
                          </MenuItem>
                          <MenuItem onClick={handleCloseUserMenu}>
-                            <ListItemText href="/flora"><Link href="/inovasi"  color="inherit" underline="none">Inovasi</Link></ListItemText>
+                            <ListItemText><Link href="/pengetahuan"  color="inherit" underline="none">Pengetahuan</Link></ListItemText>
                          </MenuItem>
                      </Menu>
                          <Button

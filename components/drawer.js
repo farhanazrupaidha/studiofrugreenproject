@@ -64,9 +64,9 @@ function DrawerToggle () {
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding>
-                    <ListItemButton href="/inovasi">
+                    <ListItemButton href="/pengetahuan">
                       <ListItemText>
-                        Inovasi
+                        Pengetahuan
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>

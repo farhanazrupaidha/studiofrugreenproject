@@ -51,7 +51,7 @@ export default function BottomAppBar () {
         <Item>
         <Box sx={{ flexGrow: 1 }} />
                   <Typography variant="caption" gutterBottom>
-                    © 2022 - 2023 Wiwit. | Ensiklopedia Alam. All rights reserved.
+                    © 2022 - 2023 Wiwit. | Human and Nature. All rights reserved.
                   </Typography>
         </Item>
       </Stack>
