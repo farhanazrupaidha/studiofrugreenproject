@@ -10,7 +10,7 @@ function SearchHits({ searchState, searchResults }) {
   return searchState.query && validQuery ? (
     <div className={'search-hits'}>
     <Typography color="red">
-      {searchResults?.hits.length === 0 && <div>No results found!</div>}
+      {searchResults?.hits.length === 0 && <div>Data tidak ditemukan!</div>}
       {searchResults?.hits.length > 0 &&
         searchResults.hits.map((hit) => (
           <div key={hit.objectID} className="text-2xl mb-3 leading-snug">
