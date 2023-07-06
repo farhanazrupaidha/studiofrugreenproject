@@ -20,7 +20,7 @@ const Paginate = ({
 return (
 <>
     <Stack spacing={2} sx={{m:5}} justifyContent="center" alignItems="center">
-			<ButtonGroup  variant="text" color="secondary" aria-label="medium secondary button group">
+			<ButtonGroup  variant="contained" sx={{borderRadius: 5}} color="secondary" aria-label="medium secondary button group">
 				<Button onClick={previousPage} className="page-number">
 					Sebelumnya
 				</Button>

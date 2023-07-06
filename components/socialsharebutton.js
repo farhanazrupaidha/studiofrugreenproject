@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import ShareIcon from '@mui/icons-material/Share';
-import LinkIcon from '@mui/icons-material/Link';
+
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 export default function ShareButton () {

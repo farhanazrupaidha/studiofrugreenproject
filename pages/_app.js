@@ -44,7 +44,7 @@ usePostHog('phc_hIxyJYhMq4PNf6nFh6e5l8JX6tmKnDNgiaWLY6s201j', {
     [],
   );
 
-  const theme = React.useMemo(
+  let ModeTheme = React.useMemo(
       () =>
         createTheme({
           palette: {
@@ -91,6 +91,7 @@ usePostHog('phc_hIxyJYhMq4PNf6nFh6e5l8JX6tmKnDNgiaWLY6s201j', {
       [mode],
     );
 
+const theme = responsiveFontSizes(ModeTheme);
 
   useEffect(() => {
     Smartlook.init('bf5020af514aff0436a24ae985529c89485559fb')

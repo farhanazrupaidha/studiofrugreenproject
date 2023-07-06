@@ -106,38 +106,34 @@ function ResponsiveAppBar() {
  <CssBaseline />
     <AppBar position="fixed">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <IconButton
-            size="medium"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            href="/"
-            sx={{ mr: 2 }}
-          >
+         <Toolbar>
+            <IconButton
+                size="medium"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                href="/"
+                sx={{ mr: 1 }}
+            >
             <Avatar
               alt="Wiwit. | Human and Nature"
               src="https://www.datocms-assets.com/82122/1664605536-wiwit-logo-750px.png"
               sx={{width:32, height:32}}
             />
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-            }}
-          >
-            | Human and Nature
-          </Typography>
-
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-             <DrawerToggle />
-          </Box>
-
-          <Box sx={{ flexGrow: 1, mr:3, display: { xs: 'none', md: 'flex' } }}>
+            </IconButton>
+            <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                href="/"
+                sx={{
+                    mr: 2,
+                    flexGrow: 1
+                }}
+            >
+                | Human and Nature
+            </Typography>
+            <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
                          <Button
                              onClick={handleOpenUserMenu}
                              color= 'secondary'
@@ -187,10 +183,13 @@ function ResponsiveAppBar() {
                          >
                              Kontribusi
                          </Button>
-                   </Box>
-
+          </Box>
           <Search />
-        </Toolbar>
+            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                <DrawerToggle />
+            </Box>
+          </Toolbar>
+
       </Container>
     </AppBar>
 </React.Fragment>
