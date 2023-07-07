@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-import Helmet from 'react-helmet';
 
 import Container from '../../components/container'
 import MoreStories from '../../components/more-stories'

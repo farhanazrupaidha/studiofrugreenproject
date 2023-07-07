@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import Helmet from 'react-helmet';
 
 import Container from 'components/container'
 import PostBody from 'components/post-body'
@@ -21,7 +20,6 @@ import Location from "components/location";
 import ShareButton from "components/socialsharebutton";
 
 import { motion, useScroll } from "framer-motion"
-import { DiscussionEmbed } from 'disqus-react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
