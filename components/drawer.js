@@ -91,6 +91,7 @@ function DrawerToggle () {
                     </ListItemButton>
                   </ListItem>
               </List>
+        <Button color="inherit" onClick={() => setOpen(false)}>X Tutup</Button>
       </Drawer>
     </div>
   );

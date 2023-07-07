@@ -30,7 +30,7 @@ const style = {
     width: '100%',
     maxWidth:650,
     p:5,
-    boxShadow: 50,
+    boxShadow: 100,
 };
 
 const TITLE_SEARCH_QUERY = gql`
@@ -100,6 +100,14 @@ return (
         </Link>
         </Box>
     ))}
+    <Button
+      variant="contained"
+      color="secondary"
+      sx={{borderRadius: 5}}
+      onClick={handleClose}
+    >
+      Tutup
+    </Button>
     </Box>
     </Modal>
 
