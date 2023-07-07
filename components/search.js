@@ -23,6 +23,7 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
+    backgroundColor: '#eceff1',
     overflowY:'auto',
     height:'100%',
     maxHeight: 500,
@@ -55,9 +56,9 @@ const Search = ({posts, slug}) => {
 
 return (
 <Box>
-    <IconButton aria-label="delete" onClick={handleOpen} color="secondary">
-        <SearchIcon />
-    </IconButton>
+    <Button aria-label="delete" onClick={handleOpen} color="secondary">
+        <SearchIcon /> <Typography variant='subtitle' sx={{ml:1}}>Cari</Typography>
+    </Button>
     <Modal
         open={open}
         onClose={handleClose}
@@ -74,7 +75,7 @@ return (
           style = {{width: '100%'}}
           sx={{ input: { color: 'black' }, mb:1, mt:2, ml:3 }}
           color="secondary"
-          placeholder="Cari ... "
+          placeholder="Ketik disini "
           type="text"
           onChange={(e) => setSearchFilter(e.target.value)}
         />
@@ -103,7 +104,7 @@ return (
     <Button
       variant="contained"
       color="secondary"
-      sx={{borderRadius: 5}}
+      sx={{borderRadius: 5, mt: 3}}
       onClick={handleClose}
     >
       Tutup
