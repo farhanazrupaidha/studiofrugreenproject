@@ -5,11 +5,7 @@ import Typography from '@mui/material/Typography';
 
 export default function Location () {
   return (
-        <Stack
-          direction={{ xs: 'column', sm: 'row' }}
-          spacing={{ xs: 1, sm: 2, md: 1 }}
-          sx={{mt:2, mb:5}}
-        >
+    <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" sx={{mt:2, mb:5}}>
         <Typography variant='h6'>Berdasarkan Lokasi</Typography>
         <Button size="small" href='/locations/setupatok' variant="contained" color="primary" sx={{borderRadius: 5}}>
             Setu Patok
@@ -23,6 +19,6 @@ export default function Location () {
         <Button size="small" href='/locations/jawatimur' variant="contained" color="primary" sx={{borderRadius: 5}}>
                     Jawa Timur
         </Button>
-        </Stack>
+    </Stack>
   );
 }

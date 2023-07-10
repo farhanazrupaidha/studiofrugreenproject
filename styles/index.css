@@ -4,6 +4,10 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+#app {
+  height: 100%;
+}
+
 body {
   --black: #111111;
   --white: #fdfdfd;
@@ -17,11 +21,12 @@ body {
 
   --accent: var(--blue);
 
-
   margin: 0;
   padding: 0;
   padding-bottom: 5px;
   prose: #777C88;
+  position: relative;
+  height: 100%;
 }
 
 
@@ -40,6 +45,29 @@ body {
   align-items: center;
   justify-content: center; /* [2] */
   margin-bottom:10px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  cursor: -webkit-grabbing; cursor: grabbing;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .fix-bottom-button {
@@ -88,10 +116,10 @@ body {
 }
 
   /*---------------------------------------
-      HOME
+      HERO
   -----------------------------------------*/
 
-  #home {
+  #hero {
     background: url('../public/images/backgroundhero.jpg') no-repeat center center;
     background-size: cover;
     display: -webkit-box;
@@ -101,15 +129,35 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 100vh;
+    padding-top: 20px;
     position: relative;
     overflow: hidden;
-    text-align: left;
-    margin-top:60px;
   }
 
   /*---------------------------------------
-      Kontak
+      HOME
+  -----------------------------------------*/
+
+  #home {
+    background: #004d40;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565c0, #a7ffeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565c0 , #a7ffeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 90vh;
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /*---------------------------------------
+      KONTAK
   -----------------------------------------*/
 
   #kontak {

@@ -17,11 +17,7 @@ export default function PostHeader({ title, coverImage, date, author, tags }) {
       <div className="mb-6 text-lg">
         <Date dateString={date} />
       </div>
-        <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            spacing={{ xs: 1, sm: 2, md: 1 }}
-            sx={{mt:2, mb:4}}
-        >
+        <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" sx={{mt:2, mb:2}}>
             {tags.map((tag) => (
                 <Chip sx={{maxWidth:200}} color="secondary" label= {tag} onClick={handleClick} />
             ))}

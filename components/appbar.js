@@ -1,77 +1,74 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react'
 import { useRouter } from "next/router";
-import Link from "next/link";
+
+import PropTypes from 'prop-types';
+import CssBaseline from '@mui/material/CssBaseline';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+
 import DrawerToggle from "/components/drawer";
 import Search from "/components/search";
+import Bahasa from "components/bahasa";
 
-import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
-import ListItemText from '@mui/material/ListItemText';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import Paper from '@mui/material/Paper';
-
-import LoginIcon from '@mui/icons-material/Login';
-import LogoutIcon from '@mui/icons-material/Logout';
-import BadgeIcon from '@mui/icons-material/Badge';
-import MenuIcon from '@mui/icons-material/Menu';
-import AppsIcon from '@mui/icons-material/Apps';
-import DragHandleIcon from '@mui/icons-material/DragHandle';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
+import Link from '@mui/material/Link';
+import Avatar from '@mui/material/Avatar';
 import { makeStyles } from '@mui/styles';
 import { styled, alpha } from '@mui/material/styles';
 
-const StyledMenu = styled((props) => (
-  <Menu
-    elevation={0}
-    anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'right',
-    }}
-    transformOrigin={{
-      vertical: 'top',
-      horizontal: 'right',
-    }}
-    {...props}
-  />
-))(({ theme }) => ({
-  '& .MuiPaper-root': {
-    borderRadius: 6,
-    marginTop: theme.spacing(1),
-    color: 'primary',
-    boxShadow:
-      'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-    '& .MuiMenu-list': {
-      padding: '4px 0',
+
+const useStyles = makeStyles((theme) => ({
+  text: {
+  fontSize: '2rem',
+    '@media (min-width:600px)': {
+      fontSize: '2.5rem',
     },
-    '& .MuiMenuItem-root': {
-      '& .MuiSvgIcon-root': {
-        fontSize: 18,
-        color: theme.palette.text.secondary,
-        marginRight: theme.spacing(1.5),
-      },
-      '&:active': {
-        backgroundColor: alpha(
-          theme.palette.primary.main,
-          theme.palette.action.selectedOpacity,
-        ),
-      },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '3.5rem',
     },
   },
+  box: {
+    backgroundColor: 'secondary',
+    color:'black'
+    }
 }));
 
-function ResponsiveAppBar() {
+function ElevationScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: window ? window() : undefined,
+  });
+
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
+}
+
+ElevationScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
+
+function ResponsiveAppBar(props) {
+  const classes = useStyles();
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -99,14 +96,17 @@ function ResponsiveAppBar() {
     setAnchorEl(null);
     };
 
-
-
   return (
+
 <React.Fragment>
- <CssBaseline />
-    <AppBar position="fixed">
-      <Container maxWidth="xl">
-         <Toolbar>
+      <CssBaseline />
+      <ElevationScroll {...props}>
+        <AppBar>
+          <Toolbar>
+            <Box sx={{ mr:2, display: { xs: 'flex', md: 'none' } }}>
+                <DrawerToggle />
+            </Box>
+
             <IconButton
                 size="medium"
                 edge="start"
@@ -115,84 +115,86 @@ function ResponsiveAppBar() {
                 href="/"
                 sx={{ mr: 1 }}
             >
-            <Avatar
-              alt="Wiwit. | Human and Nature"
-              src="https://www.datocms-assets.com/82122/1664605536-wiwit-logo-750px.png"
-              sx={{width:32, height:32}}
-            />
+                <Avatar
+                    alt="Wiwit. | Human and Nature"
+                    src="https://www.datocms-assets.com/82122/1664605536-wiwit-logo-750px.png"
+                    sx={{width:32, height:32}}
+                />
             </IconButton>
             <Typography
                 variant="h6"
                 noWrap
-                component="a"
                 href="/"
                 sx={{
                     mr: 2,
                     flexGrow: 1
                 }}
             >
-                | Human and Nature
+                Wiwit.
             </Typography>
-            <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
-                         <Button
-                             onClick={handleOpenUserMenu}
-                             color= 'secondary'
-                             sx={{ my: 2, display: 'block' }}
-                         >
-                             Ensiklopedia
-                         </Button>
-                     <Menu
-                       sx={{ mt: '53px', ml:3}}
-                       id="menu-appbar"
-                       anchorEl={anchorElUser}
-                       anchorOrigin={{
-                         vertical: 'top',
-                         horizontal: 'right',
-                       }}
-                       keepMounted
-                       transformOrigin={{
-                         vertical: 'top',
-                         horizontal: 'right',
-                       }}
-                       open={Boolean(anchorElUser)}
-                       onClose={handleCloseUserMenu}
-                     >
-                         <MenuItem sx={{ width: 150, maxWidth: '100%' }} onClick={handleCloseUserMenu}>
-                           <ListItemText><Link href="/flora"  color="inherit" underline="none">Flora</Link></ListItemText>
-                         </MenuItem>
-                         <MenuItem onClick={handleCloseUserMenu}>
-                            <ListItemText><Link href="/"  color="inherit" underline="none">Fauna</Link></ListItemText>
-                         </MenuItem>
-                         <MenuItem onClick={handleCloseUserMenu}>
-                            <ListItemText><Link href="/pengetahuan"  color="inherit" underline="none">Pengetahuan</Link></ListItemText>
-                         </MenuItem>
-                     </Menu>
-                         <Button
-                             onClick={handleCloseNavMenu}
-                             href="/forum"
-                             color= 'secondary'
-                             sx={{ my: 2, display: 'block' }}
-                         >
-                             Forum
-                         </Button>
-                         <Button
-                             onClick={handleCloseNavMenu}
-                             href="kontribusi"
-                             color= 'secondary'
-                             sx={{ my: 2, display: 'block' }}
-                         >
-                             Kontribusi
-                         </Button>
-          </Box>
-          <Search />
-            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                <DrawerToggle />
-            </Box>
-          </Toolbar>
 
-      </Container>
-    </AppBar>
-</React.Fragment>
+
+            <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
+                <Button
+                    onClick={handleOpenUserMenu}
+                    color= 'secondary'
+                    sx={{ my: 2, display: 'block' }}
+                >
+                    ENSIKLOPEDIA
+                </Button>
+
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center"><Link href="/flora"  color="inherit" underline="none">FLORA</Link></Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center"><Link href="/fauna"  color="inherit" underline="none">FAUNA</Link></Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center"><Link href="/pengetahuan"  color="inherit" underline="none">PENGETAHUAN</Link></Typography>
+                </MenuItem>
+            </Menu>
+
+                <Button
+                    onClick={handleCloseNavMenu}
+                    href="/"
+                    color= 'secondary'
+                    sx={{ my: 2, display: 'block' }}
+                >
+                    FORUM
+                </Button>
+                <Button
+                    onClick={handleCloseNavMenu}
+                    href="/kontribusi"
+                    color= 'secondary'
+                    sx={{ my: 2, display: 'block' }}
+                >
+                    KONTRIBUSI
+                </Button>
+                <Bahasa />
+          </Box>
+
+          <Search />
+          </Toolbar>
+        </AppBar>
+      </ElevationScroll>
+      <Toolbar />
+    </React.Fragment>
   );
 }
 export default ResponsiveAppBar;

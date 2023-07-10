@@ -1,18 +1,25 @@
 import * as React from 'react';
-import AppBottomBar from '/components/appbottombar';
+
+import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Unstable_Grid2';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import Paper from '@mui/material/Paper';
+import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
-import { Button } from '@mui/material';
+
 import { styled } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
+
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Item = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
@@ -26,10 +33,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer () {
 const classes = useStyles();
-
-return (
+  return (
 <section id="kontak" data-stellar-background-ratio="0.5">
- <Paper elevation={2}>
+    <Paper sx={{ flexGrow: 1 }}>
      <Stack
         direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 1, sm: 2, md: 2 }}
@@ -80,8 +86,33 @@ return (
             </Typography>
         </Item>
       </Stack>
-  </Paper>
-    <AppBottomBar />
+    </Paper>
+
+    <Box sx={{ flexGrow: 1 }}>
+      <Box position="static">
+        <Toolbar>
+          <Box component="div" sx={{ flexGrow: 1 }}>
+        <IconButton href="https://twitter.com/studiofruworks" color="secondary" aria-label="Follow me on Twitter">
+            <TwitterIcon />
+          </IconButton>
+          <IconButton href="https://www.youtube.com/channel/UCX5J82L560fv5r5hslQwI-A" color="secondary" aria-label="Follow me on YouTube">
+            <YouTubeIcon />
+          </IconButton>
+          <IconButton href="https://www.instagram.com/studiofru/" color="secondary" aria-label="Follow me on Instagram">
+            <InstagramIcon />
+          </IconButton>
+          <IconButton href="https://www.facebook.com/studiofruworks" color="secondary" aria-label="Follow me on Facebook">
+            <FacebookIcon />
+          </IconButton>
+          </Box>
+          <Box>
+                  <Typography variant="caption" gutterBottom>
+                    © 2022 - 2023 Wiwit. All rights reserved. Web developed by <Link href='https://www.studiofruworks.com'>Studiofru</Link>
+                  </Typography>
+          </Box>
+        </Toolbar>
+      </Box>
+    </Box>
 </section>
-)
+  );
 }

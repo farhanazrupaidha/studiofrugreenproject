@@ -15,6 +15,8 @@ import IconButton from '@mui/material/IconButton';
 
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 
+import Bahasa from "components/bahasa";
+
 function DrawerToggle () {
   const [open, setOpen] = useState(false);
 
@@ -90,6 +92,7 @@ function DrawerToggle () {
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
+                  <Bahasa />
               </List>
         <Button color="inherit" onClick={() => setOpen(false)}>X Tutup</Button>
       </Drawer>

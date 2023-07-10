@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLazyQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 
@@ -19,20 +19,11 @@ from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
 const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    bgcolor: 'background.default',
     overflowY:'auto',
     height:'100%',
     maxHeight: 500,
     display:'block',
-    width: '100%',
-    maxWidth:580,
-    p:5,
-    boxShadow: 100,
-    borderRadius: 5
+    p:2
 };
 
 const TITLE_SEARCH_QUERY = gql`
@@ -44,7 +35,7 @@ const TITLE_SEARCH_QUERY = gql`
   }
 `;
 
-const Search = ({posts, slug}) => {
+const SearchBar = ({posts, slug}) => {
   const [state, setstate] = useState('');
   const [searchFilter, setSearchFilter] = useState('');
   const [executeSearch, { data, loading, error }] = useLazyQuery(
@@ -55,21 +46,12 @@ const Search = ({posts, slug}) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const refresh = () => window.location.reload(true)
+
 return (
-<Box>
-    <Button aria-label="delete" onClick={handleOpen} color="secondary">
-        <SearchIcon /> <Typography variant='subtitle' sx={{ml:1}}>Cari</Typography>
-    </Button>
-    <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-        sx={{overflow:'scroll'}}
-    >
-    <Box sx={style}>
-    <Box sx={{maxWidth:500, m:'auto', mt:5, mb:10, textAlign: 'center', backgroundColor: '#eceff1', borderRadius: 5}}>
-      <Stack spacing={3} direction="row">
+<Box sx={style}>
+    <Box sx={{maxWidth:700, m:'auto', mt:5, mb:10, textAlign: 'center', backgroundColor: '#eceff1', borderRadius: 5}}>
+      <Stack spacing={1} direction="row">
         <TextField
           required
           variant="standard"
@@ -92,6 +74,14 @@ return (
         >
          Cari
          </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          sx={{borderRadius: 5}}
+          onClick={refresh}
+        >
+         Reset
+         </Button>
       </Stack>
     </Box>
     {data &&
@@ -102,19 +92,8 @@ return (
         </Link>
         </Box>
     ))}
-    <Button
-      variant="contained"
-      color="secondary"
-      sx={{borderRadius: 5, mt: 3}}
-      onClick={handleClose}
-    >
-      Tutup
-    </Button>
-    </Box>
-    </Modal>
-
 </Box>
 )
 }
 
-export default withApollo(Search);
+export default withApollo(SearchBar);

@@ -8,6 +8,7 @@ import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Location from "../components/location"
 import Layout from '../components/layout'
+import Hero from '../components/hero'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
@@ -131,24 +132,12 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:image:src" content="/images/fotopetani_1.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
-        <Container>
-        <Box sx={{mt:10}}>
-          <AdsenseDisplay />
+        <Hero />
+        <Box sx={{mt:3, mb:3}}>
+            <AdsenseListing />
         </Box>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              tags={heroPost.tags}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          <AdsenseListing />
-          <Box sx={{mb:5}}>
+        <Container>
+          <Box sx={{mb:5, mt:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                 Catatan terbaru
             </h2>
