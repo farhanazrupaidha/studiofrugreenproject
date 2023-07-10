@@ -1,7 +1,6 @@
 import React, { Component, useRouter } from 'react';
 import { useLazyQuery, useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
-import ReactPlayer from 'react-player/youtube';
 import CountUp from 'react-countup';
 import SearchBar from '/components/searchbar';
 
@@ -46,8 +45,8 @@ const { data, loading, error } = useQuery(FLORA);
 
 
   return (
-<section id='hero' data-stellar-background-ratio="0.5">
-<Box sx={{m:'auto', mt:25}}>
+<section data-stellar-background-ratio="0.5">
+<Box sx={{m:'auto', mt:18}}>
     <Box sx={{mb:5}}>
         <center>
             <Typography variant='h1' color="primary" sx={{fontWeight:"bold"}}>
@@ -61,10 +60,11 @@ const { data, loading, error } = useQuery(FLORA);
       spacing={{ xs: 1, sm: 2, md: 4 }}
       justifyContent="center"
       alignItems="center"
+      sx={{mb:8}}
     >
 
             <Paper sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
-                  <Typography sx={{ fontSize: 14, fontWeight: 'bold' }} color="text.secondary" gutterBottom>
+                  <Typography sx={{ fontSize: 14, mb:1, fontWeight: 'bold' }} color="text.secondary" gutterBottom>
                     Data: FLORA
                   </Typography>
                   <YardIcon sx={{ fontSize: 40}} />
@@ -75,15 +75,7 @@ const { data, loading, error } = useQuery(FLORA);
         </Box>
     </Stack>
   </Box>
-  <Box sx={{mt:8}}>
-    <section className="d-share">
-        <ReactPlayer
-            width='80%'
-            height='550px'
-            url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh' />
-    </section>
-  </Box>
-  <Divider sx={{m:5, mt:10}}/>
+  <Divider sx={{m:5, mt:5}}/>
 </section>
   );
 }

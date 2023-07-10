@@ -74,14 +74,6 @@ return (
         >
          Cari
          </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          sx={{borderRadius: 5}}
-          onClick={refresh}
-        >
-         Reset
-         </Button>
       </Stack>
     </Box>
     {data &&
@@ -90,6 +82,14 @@ return (
         <Link href={`/posts/${item.slug}`} className="hover:underline">
             <Typography color='black' sx={{m:1}}>{item.title}</Typography>
         </Link>
+        <Button
+          variant="contained"
+          color="secondary"
+          sx={{borderRadius: 5}}
+          onClick={refresh}
+        >
+         Reset
+         </Button>
         </Box>
     ))}
 </Box>

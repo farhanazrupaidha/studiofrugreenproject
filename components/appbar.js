@@ -130,7 +130,7 @@ function ResponsiveAppBar(props) {
                     flexGrow: 1
                 }}
             >
-                Wiwit.
+               | Human and Nature
             </Typography>
 
 
