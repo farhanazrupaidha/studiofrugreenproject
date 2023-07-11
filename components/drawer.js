@@ -15,7 +15,7 @@ import IconButton from '@mui/material/IconButton';
 
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 
-import Bahasa from "components/bahasa";
+import Locale from "components/locale";
 
 function DrawerToggle () {
   const [open, setOpen] = useState(false);
@@ -34,13 +34,13 @@ function DrawerToggle () {
                   sx={{ mr: 1, ml:2 }}
                 >
             <Avatar
-              alt="Wiwit. | Human and Nature"
-              src="https://www.datocms-assets.com/82122/1664605536-wiwit-logo-750px.png"
+              alt="Studiofru | Green Project"
+              src="/images/favicon.ico"
               sx={{width:32, height:32}}
             />
                 </IconButton>
-            <Typography variant="h6" component="div">
-              | Human and Nature
+            <Typography variant="h6" component="div" sx={{fontWeight: 'bold'}}>
+                Studiofru  | Green Project
             </Typography>
           </Toolbar>
           <Divider sx={{m:1}} />
@@ -92,7 +92,7 @@ function DrawerToggle () {
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
-                  <Bahasa />
+                  <Locale />
               </List>
         <Button color="inherit" onClick={() => setOpen(false)}>X Tutup</Button>
       </Drawer>

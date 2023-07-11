@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
 
-import Container from '../../components/container'
-import MoreStories from '../../components/more-stories'
-import PostPreview from "../../components/post-preview";
-import HeroPost from '../../components/hero-post'
-import Intro from '../../components/intro'
-import Location from "../../components/location"
-import Layout from '../../components/layout'
-import { getAllPostsForHome } from '../../lib/graphcms'
+import Container from '../components/container'
+import MoreStories from '../components/more-stories'
+import PostPreview from "../components/post-preview-en";
+import HeroPost from '../components/hero-post'
+import Intro from '../components/intro'
+import Location from "../components/location"
+import Layout from '../components/layout'
+import Hero from '../components/hero'
+import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
-import Paginate from '../../components/paginate';
+import { CMS_NAME } from '../lib/constants'
+import Paginate from '../components/paginate';
 
-import AdsenseListing from "../../components/adsense-listing";
-import AdsenseDisplay from "../../components/adsense-display";
+import AdsenseListing from "../components/adsense-listing";
+import AdsenseDisplay from "../components/adsense-display";
 
 import Box from '@mui/material/Box';
+import Pagination from "@mui/material/Pagination";
 
 export default function Index({ posts, preview }) {
     const heroPost = posts[0]
@@ -33,9 +35,9 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (where: {_search: "setu patok"}, locales: id, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
-				}) {
+				}, locales: en) {
 					        title
                             slug
                             excerpt
@@ -111,35 +113,34 @@ export default function Index({ posts, preview }) {
     <>
       <Layout preview={preview}>
                <Head
-                     defaultTitle="Wiwit. | Ensiklopedia Alam"
+                     defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Wilayah Konservasi Danau Setu Patok. | Ensiklopedia Alam</title>
+                     <title>Studiofru | Green Project</title>
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
-                     <meta name="keywords" content="wiwit, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
-                     <meta name="author" content="Studiofru | https://wiwit.net/" />
+                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
+                     <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
                      <meta property="image" content="/images/fotopetani_1.jpg" />
-                     <meta property="og:url" content="https://wiwit.net/locations/setupatok" />
-                     <meta property="og:title" content="Wilayah Konservasi Danau Setu Patok. | Ensiklopedia Alam" />
+                     <meta property="og:url" content="https://studiofrugreenproject.com/" />
+                     <meta property="og:title" content="Studiofru | Green Project" />
                      <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
-                     <meta property="og:site_name" content="Wiwit. | Ensiklopedia Alam" />
+                     <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content="/images/fotopetani_1.jpg" />
                      <meta name="og:type" content="website" />
-                     <meta name="twitter:site" content="@AkuStudiofru" />
-                     <meta name="twitter:title" content="Wilayah Konservasi Danau Setu Patok. | Ensiklopedia Alam" />
+                     <meta name="twitter:site" content="@studiofruworks" />
+                     <meta name="twitter:title" content="Studiofru | Green Project" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/fotopetani_1.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
-        <Container>
-        <Box sx={{mt:10}}>
-          <AdsenseDisplay />
+        <Hero />
+        <Box sx={{mt:3, mb:3}}>
+            <AdsenseListing />
         </Box>
-          <Intro />
-          <Box sx={{mb:10}}>
+        <Container>
+          <Box sx={{mb:5, mt:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                Wilayah Konservasi Danau Setu Patok
+                Catatan terbaru
             </h2>
-          <iframe width='100%' height='400px' src="https://api.mapbox.com/styles/v1/studiofru/cliof1jfa00og01r14zks3erq.html?title=false&access_token=pk.eyJ1Ijoic3R1ZGlvZnJ1IiwiYSI6ImNrZXBuYXlwcDN2cGwyc2x0Y2libnY2cmwifQ.LsxGcgeSlLKEYbnNldaEfw&zoomwheel=false#14.63/-6.78433/108.56724" title="Outdoors"></iframe>
           </Box>
           <Location />
 			{blogPosts ? (
@@ -149,9 +150,9 @@ export default function Index({ posts, preview }) {
                    <PostPreview
                      key={blogPost.slug}
                      title={blogPost.title}
+                     tags={blogPost.tags}
                      coverImage={blogPost.coverImage}
                      date={blogPost.date}
-                     tags={blogPost.tags}
                      author={blogPost.author}
                      slug={blogPost.slug}
                      excerpt={blogPost.excerpt}
@@ -167,13 +168,13 @@ export default function Index({ posts, preview }) {
                     previousPage={previousPage}
                     nextPage={nextPage}
                    />
-                   <AdsenseListing />
                 </center>
 				</Box>
 			) : (
 				<div className="loading">Loading...</div>
 			)}
         </Container>
+        <AdsenseDisplay />
       </Layout>
     </>
 )

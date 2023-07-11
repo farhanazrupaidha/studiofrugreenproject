@@ -44,15 +44,15 @@ const classes = useStyles();
       >
         <Item sx={{maxWidth:650, width:'95%'}}>
           <Avatar
-                alt="Wiwit. | Human and Nature"
-                src="https://www.datocms-assets.com/82122/1664605536-wiwit-logo-750px.png"
+                alt="Studiofru | Green Project"
+                src="/images/favicon.ico"
                 sx={{ width: 56, height: 56, mb:2 }}
               />
           <Typography variant="h6" gutterBottom>
-          Wiwit. | Human and Nature
+          Studiofru | Green Project
           </Typography>
           <Typography variant="h5" gutterBottom sx={{ mt:1, fontWeight: 'bold' }}>
-          Tumbuh bersama.
+          Human and nature.
           </Typography>
         </Item>
         <Item sx={{maxWidth:230, width:'95%'}}>
@@ -107,7 +107,7 @@ const classes = useStyles();
           </Box>
           <Box>
                   <Typography variant="caption" gutterBottom>
-                    © 2022 - 2023 Wiwit. All rights reserved. Web developed by <Link href='https://www.studiofruworks.com'>Studiofru</Link>
+                    © 2022 - 2023 <Link href='https://www.studiofruworks.com'>Studiofru</Link>. All rights reserved.
                   </Typography>
           </Box>
         </Toolbar>

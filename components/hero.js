@@ -46,11 +46,11 @@ const { data, loading, error } = useQuery(FLORA);
 
   return (
 <section data-stellar-background-ratio="0.5">
-<Box sx={{m:'auto', mt:18}}>
+<Box sx={{m:'auto', mt:5}}>
     <Box sx={{mb:5}}>
         <center>
             <Typography variant='h1' color="primary" sx={{fontWeight:"bold"}}>
-                Jelajah Ensiklopedia Alam
+                Jelajah Ensiklopedia
             </Typography>
         </center>
     </Box>

@@ -13,4 +13,8 @@ module.exports = {
     workerThreads: false,
     cpus: 1
    },
+   i18n: {
+    locales: ['en', 'id'],
+    defaultLocale: 'id',
+  },
 };

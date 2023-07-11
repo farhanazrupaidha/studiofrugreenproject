@@ -2,13 +2,15 @@ import * as React from 'react';
 import { useState, useEffect } from 'react'
 import { useRouter } from "next/router";
 
+import Typewriter from 'typewriter-effect';
+
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import DrawerToggle from "/components/drawer";
 import Search from "/components/search";
-import Bahasa from "components/bahasa";
+import Locale from "/components/locale";
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -116,8 +118,8 @@ function ResponsiveAppBar(props) {
                 sx={{ mr: 1 }}
             >
                 <Avatar
-                    alt="Wiwit. | Human and Nature"
-                    src="https://www.datocms-assets.com/82122/1664605536-wiwit-logo-750px.png"
+                    alt="Studiofru | Green Project"
+                    src="/images/favicon.ico"
                     sx={{width:32, height:32}}
                 />
             </IconButton>
@@ -127,11 +129,19 @@ function ResponsiveAppBar(props) {
                 href="/"
                 sx={{
                     mr: 2,
-                    flexGrow: 1
+                    flexGrow: 1,
+                    fontWeight: 'bold'
                 }}
             >
-               | Human and Nature
+            <Typewriter
+              options={{
+                strings: ['Studiofru', '| Green Project'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
             </Typography>
+
 
 
             <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
@@ -144,7 +154,7 @@ function ResponsiveAppBar(props) {
                 </Button>
 
             <Menu
-              sx={{ mt: '45px' }}
+              sx={{ mt: '35px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
@@ -186,9 +196,8 @@ function ResponsiveAppBar(props) {
                 >
                     KONTRIBUSI
                 </Button>
-                <Bahasa />
           </Box>
-
+          <Locale />
           <Search />
           </Toolbar>
         </AppBar>
