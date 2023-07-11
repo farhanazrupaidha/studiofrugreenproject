@@ -37,7 +37,7 @@ export default function Index({ posts, preview }) {
 			{
 				posts (orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
-				}, locales: id) {
+				}) {
 					        title
                             slug
                             excerpt

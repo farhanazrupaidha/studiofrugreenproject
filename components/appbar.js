@@ -10,7 +10,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import DrawerToggle from "/components/drawer";
 import Search from "/components/search";
-import Locale from "/components/locale";
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -197,7 +196,6 @@ function ResponsiveAppBar(props) {
                     KONTRIBUSI
                 </Button>
           </Box>
-          <Locale />
           <Search />
           </Toolbar>
         </AppBar>
