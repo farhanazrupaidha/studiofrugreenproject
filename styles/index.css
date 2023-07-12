@@ -120,7 +120,7 @@ body {
   -----------------------------------------*/
 
   #hero {
-    background: url('../public/images/backgroundhero.jpg') no-repeat center center;
+    background: url('../public/images/backgroundhero-tanah.jpg') no-repeat center center;
     background-size: cover;
     display: -webkit-box;
     display: -webkit-flex;
@@ -129,7 +129,7 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 60vh;
     padding-top: 20px;
     position: relative;
     overflow: hidden;

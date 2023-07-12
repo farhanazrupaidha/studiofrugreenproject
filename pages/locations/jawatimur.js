@@ -25,7 +25,7 @@ export default function Index({ posts, preview }) {
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(14);
+	const [postsPerPage] = useState(24);
 
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
@@ -111,25 +111,24 @@ export default function Index({ posts, preview }) {
     <>
       <Layout preview={preview}>
                <Head
-                     htmlAttributes={{ lang: 'id' }}
-                     defaultTitle="Jawa Timur. | Ensiklopedia Alam"
+                     defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Flora. | Ensiklopedia Alam</title>
+                     <title>Studiofru | Green Project</title>
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
-                     <meta name="keywords" content="wiwit, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
-                     <meta name="author" content="Studiofru | https://wiwit.net/" />
+                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
+                     <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
                      <meta property="image" content="/images/fotopetani_1.jpg" />
-                     <meta property="og:url" content="https://wiwit.net/locations/jawatengah" />
-                     <meta property="og:title" content="Jawa Timur. | Ensiklopedia Alam" />
+                     <meta property="og:url" content="https://studiofrugreenproject.com/" />
+                     <meta property="og:title" content="Studiofru | Green Project" />
                      <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
-                     <meta property="og:site_name" content="Wiwit. | Ensiklopedia Alam" />
+                     <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content="/images/fotopetani_1.jpg" />
                      <meta name="og:type" content="website" />
-                     <meta name="twitter:site" content="@AkuStudiofru" />
-                     <meta name="twitter:title" content="Jawa Timur. | Ensiklopedia Alam" />
+                     <meta name="twitter:site" content="@studiofruworks" />
+                     <meta name="twitter:title" content="Studiofru | Green Project" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/fotopetani_1.jpg" />
-                    <meta name="robots" content="noindex" />
+                     <meta name="robots" content="noindex,nofollow" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Container>

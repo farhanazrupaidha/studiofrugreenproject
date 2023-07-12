@@ -1,25 +1,17 @@
 import * as React from 'react';
 
-import AppBar from '@mui/material/AppBar';
+import AppBottomBar from '/components/appbottombar';
+
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Grid from '@mui/material/Unstable_Grid2';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
-import Divider from '@mui/material/Divider';
 
 import { styled } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
-
-import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Item = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
@@ -33,12 +25,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer () {
 const classes = useStyles();
+
   return (
 <section id="kontak" data-stellar-background-ratio="0.5">
-    <Paper sx={{ flexGrow: 1 }}>
+ <Paper elevation={2}>
      <Stack
         direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 1, sm: 2, md: 2 }}
+        sx={{ml:3, mr:3}}
         justifyContent="center"
         alignItems="left"
       >
@@ -87,32 +81,7 @@ const classes = useStyles();
         </Item>
       </Stack>
     </Paper>
-
-    <Box sx={{ flexGrow: 1 }}>
-      <Box position="static">
-        <Toolbar>
-          <Box component="div" sx={{ flexGrow: 1 }}>
-        <IconButton href="https://twitter.com/studiofruworks" color="secondary" aria-label="Follow me on Twitter">
-            <TwitterIcon />
-          </IconButton>
-          <IconButton href="https://www.youtube.com/channel/UCX5J82L560fv5r5hslQwI-A" color="secondary" aria-label="Follow me on YouTube">
-            <YouTubeIcon />
-          </IconButton>
-          <IconButton href="https://www.instagram.com/studiofru/" color="secondary" aria-label="Follow me on Instagram">
-            <InstagramIcon />
-          </IconButton>
-          <IconButton href="https://www.facebook.com/studiofruworks" color="secondary" aria-label="Follow me on Facebook">
-            <FacebookIcon />
-          </IconButton>
-          </Box>
-          <Box>
-                  <Typography variant="caption" gutterBottom>
-                    © 2022 - 2023 <Link href='https://www.studiofruworks.com'>Studiofru</Link>. All rights reserved.
-                  </Typography>
-          </Box>
-        </Toolbar>
-      </Box>
-    </Box>
+    <AppBottomBar />
 </section>
   );
 }

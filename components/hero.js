@@ -4,6 +4,8 @@ import withApollo from "../config";
 import CountUp from 'react-countup';
 import SearchBar from '/components/searchbar';
 
+import Typewriter from 'typewriter-effect';
+
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -45,12 +47,18 @@ const { data, loading, error } = useQuery(FLORA);
 
 
   return (
-<section data-stellar-background-ratio="0.5">
+<section id="hero" data-stellar-background-ratio="0.5">
 <Box sx={{m:'auto', mt:5}}>
     <Box sx={{mb:5}}>
         <center>
-            <Typography variant='h1' color="primary" sx={{fontWeight:"bold"}}>
-                Jelajah Ensiklopedia
+            <Typography variant='h1' color="#BFCC03" sx={{fontWeight:"bold"}}>
+                <Typewriter
+                  options={{
+                    strings: ['Jelajah Ensiklopedia', 'Flora'],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
             </Typography>
         </center>
     </Box>
@@ -60,22 +68,20 @@ const { data, loading, error } = useQuery(FLORA);
       spacing={{ xs: 1, sm: 2, md: 4 }}
       justifyContent="center"
       alignItems="center"
-      sx={{mb:8}}
+      sx={{mb:2}}
     >
-
             <Paper sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
                   <Typography sx={{ fontSize: 14, mb:1, fontWeight: 'bold' }} color="text.secondary" gutterBottom>
                     Data: FLORA
                   </Typography>
                   <YardIcon sx={{ fontSize: 40}} />
-                  <Typography gutterBottom variant="h3" color='secondary' textAlign= 'right'><CountUp end={data.postsConnection.aggregate.count} /></Typography>
+                  <Typography gutterBottom variant="h3" color='#BFCC03' textAlign= 'right'><CountUp end={data.postsConnection.aggregate.count} /></Typography>
             </Paper>
         <Box sx={{maxWidth:650, width:'100%'}}>
                 <SearchBar />
         </Box>
     </Stack>
   </Box>
-  <Divider sx={{m:5, mt:5}}/>
 </section>
   );
 }

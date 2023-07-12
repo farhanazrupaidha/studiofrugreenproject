@@ -27,7 +27,7 @@ export default function Index({ posts, preview }) {
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(14);
+	const [postsPerPage] = useState(24);
 
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
@@ -133,9 +133,7 @@ export default function Index({ posts, preview }) {
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Hero />
-        <Box sx={{mt:3, mb:3}}>
-            <AdsenseListing />
-        </Box>
+
         <Container>
           <Box sx={{mb:5, mt:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
@@ -143,6 +141,9 @@ export default function Index({ posts, preview }) {
             </h2>
           </Box>
           <Location />
+          <Box sx={{mt:3, mb:3}}>
+             <AdsenseListing />
+          </Box>
 			{blogPosts ? (
 			<Box>
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">

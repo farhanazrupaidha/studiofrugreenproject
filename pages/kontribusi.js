@@ -9,14 +9,27 @@ import Box from '@mui/material/Box';
 export default function ResponsiveStack() {
   return (
     <Layout>
-    <Head>
-        <title>Wiwit. | Human and Nature</title>
-        <link rel="icon" href="https://www.datocms-assets.com/82122/1664605536-wiwit-logo-750px.png" />
-        <meta name="google-site-verification" content="XMX1zwCBJRAaehfHGLaU6xHPlhjOGEmWKdDVIvvt9pk" />
-        <meta name="keywords" content="wiwit, tanaman herbal, tanaman organik, organik, organic plants, indonesia, plants encyclopedia, nature encyclopedia"/>
-        <meta name="description" content="A place for farmers, ranchers and fishermen, communities, and other societies to connect and exchange information the knowledge about humans, nature, and the environment."/>
-        <meta name="author" content="Wiwit. | Studiofru / https://www.wiwit.net/"/>
-    </Head>
+               <Head
+                     defaultTitle="Studiofru | Green Project"
+                   >
+                     <title>Studiofru | Green Project</title>
+                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
+                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
+                     <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
+                     <meta property="image" content="/images/fotopetani_1.jpg" />
+                     <meta property="og:url" content="https://studiofrugreenproject.com/" />
+                     <meta property="og:title" content="Studiofru | Green Project" />
+                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
+                     <meta property="og:site_name" content="Studiofru | Green Project" />
+                     <meta property="og:image" content="/images/fotopetani_1.jpg" />
+                     <meta name="og:type" content="website" />
+                     <meta name="twitter:site" content="@studiofruworks" />
+                     <meta name="twitter:title" content="Studiofru | Green Project" />
+                     <meta name="twitter:card" content="summary_large_image" />
+                     <meta name="twitter:image:src" content="/images/fotopetani_1.jpg" />
+                     <meta name="robots" content="noindex,nofollow" />
+                    <link rel="icon" href="/images/favicon.ico" />
+               </Head>
    <Box sx={{ maxWidth: 800, m:'auto', mb:2, mt:10, align: 'center', overflow: 'hidden' }}>
     <Typography variant="h3" gutterBottom sx={{m:5, fontWeight: 'bold', textAlign: 'center', lineHeight: 1}}>
             Kontribusi

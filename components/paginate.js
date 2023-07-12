@@ -3,6 +3,9 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
 const Paginate = ({
 	postsPerPage,
 	totalPosts,
@@ -22,7 +25,7 @@ return (
     <Stack spacing={2} sx={{m:5}} justifyContent="center" alignItems="center">
 			<ButtonGroup  variant="contained" sx={{borderRadius: 5}} color="secondary" aria-label="medium secondary button group">
 				<Button onClick={previousPage} className="page-number">
-					Sebelumnya
+					<KeyboardArrowLeftIcon />
 				</Button>
 				{pageNumbers.map((number) => (
 					<Button
@@ -36,7 +39,7 @@ return (
 					</Button>
 				))}
 				<Button onClick={nextPage} className="page-number">
-					Selanjutnya
+					<KeyboardArrowRightIcon />
 				</Button>
 			</ButtonGroup>
 	</Stack>
