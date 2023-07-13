@@ -60,7 +60,7 @@ export default function Post({ post, morePosts, preview }) {
           <>
             <article>
                 <Head
-                     defaultTitle="Wiwit. | Ensiklopedia Alam"
+                     defaultTitle="Studiofru | Green Project"
                    >
                      <title>{post.title}</title>
                      <meta name="description" content={post.seo.description} />
@@ -68,11 +68,11 @@ export default function Post({ post, morePosts, preview }) {
                      <meta property="image" content={post.seo.image.url} />
                      <meta property="og:title" content={post.title} />
                      <meta property="og:description" content={post.seo.description} />
-                     <meta property="og:site_name" content="Wiwit. | Ensiklopedia Alam" />
+                     <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content={post.seo.image.url} />
                       <meta name="og:url" content={`https://wiwit.net/posts/${post.slug}`}/>
                      <meta name="og:type" content="website" />
-                     <meta name="twitter:site" content="@AkuStudiofru" />
+                     <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content={post.title} />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content={post.seo.image.url} />
@@ -107,20 +107,20 @@ export default function Post({ post, morePosts, preview }) {
         >
             <ShareButton />
             <TwitterShareButton
-                url={`https://wiwit.net/posts/${post.slug}`}
+                url={`https://studiofrugreenproject.com/posts/${post.slug}`}
                 title={post.title}
             >
                 <TwitterIcon color="primary" size="small" />
             </TwitterShareButton>
             <FacebookShareButton
-                url={`https://wiwit.net/posts/${post.slug}`}
+                url={`https://studiofrugreenproject.com/posts/${post.slug}`}
                 quote={post.title}
-                hashtag={'#wiwit-ensiklopediaalam'}
+                hashtag={'#studiofrugreenproject', '#studiofru'}
             >
                 <FacebookIcon color="primary" size="small" />
             </FacebookShareButton>
             <WhatsappShareButton
-                url={`https://wiwit.net/posts/${post.slug}`}
+                url={`https://studiofrugreenproject.com/posts/${post.slug}`}
                 title={post.title}
                 separator="->"
             >

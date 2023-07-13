@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://www.wiwit.net',
+  siteUrl: process.env.SITE_URL || 'https://www.studiofrugreenproject.com',
   generateRobotsTxt: true, // (optional)
   sitemapSize: 7000
 }

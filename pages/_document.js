@@ -26,7 +26,6 @@ export default class MyDocument extends Document {
               type="image/<generated>"
               sizes="<generated>"
             />
-            <meta name="google-site-verification" content="XMX1zwCBJRAaehfHGLaU6xHPlhjOGEmWKdDVIvvt9pk" />
             {/* google adsense */}
      	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
      	    <script dangerouslySetInnerHTML={{
