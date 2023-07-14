@@ -70,7 +70,7 @@ export default function Post({ post, morePosts, preview }) {
                      <meta property="og:description" content={post.seo.description} />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content={post.seo.image.url} />
-                      <meta name="og:url" content={`https://wiwit.net/posts/${post.slug}`}/>
+                      <meta name="og:url" content={`https://studiofrugreenproject.com/posts/${post.slug}`}/>
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content={post.title} />
