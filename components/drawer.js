@@ -23,14 +23,14 @@ function DrawerToggle () {
     <div>
       <Button color="inherit" onClick={() => setOpen(true)}><DragHandleIcon /></Button>
       <Drawer open={open} anchor={"top"} onClose={() => setOpen(false)}>
-      <Toolbar>
+        <Toolbar sx={{m:'auto'}}>
                 <IconButton
                   size="medium"
                   edge="start"
                   color="primary"
                   aria-label="menu"
                   href="/"
-                  sx={{ mr: 1, ml:2 }}
+                  sx={{ mr: 1 }}
                 >
             <Avatar
               alt="Studiofru | Green Project"
@@ -41,8 +41,8 @@ function DrawerToggle () {
             <Typography variant="h6" component="div" sx={{fontWeight: 'bold'}}>
                 Studiofru  | Green Project
             </Typography>
-          </Toolbar>
-          <Divider sx={{m:1}} />
+        </Toolbar>
+        <Divider sx={{m:1}} />
         <List sx={{ mr: 2, ml:2 }}>
                   <ListItem disablePadding>
                       <ListItemText>

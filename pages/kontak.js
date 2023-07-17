@@ -13,7 +13,7 @@ export default function ResponsiveStack() {
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project</title>
+                     <title>Studiofru | Green Project - Kontak</title>
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
                      <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
