@@ -175,17 +175,20 @@ function ResponsiveAppBar(props) {
                   <Typography textAlign="center"><Link href="/fauna"  color="inherit" underline="none">FAUNA</Link></Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center"><Link href="/sains"  color="inherit" underline="none">SAINS</Link></Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseUserMenu}>
                   <Typography textAlign="center"><Link href="/pengetahuan"  color="inherit" underline="none">PENGETAHUAN</Link></Typography>
                 </MenuItem>
             </Menu>
 
                 <Button
                     onClick={handleCloseNavMenu}
-                    href="/"
+                    href="/wisata"
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    FORUM
+                    WISATA
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
