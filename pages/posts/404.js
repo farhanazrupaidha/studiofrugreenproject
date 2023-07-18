@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Layout from "../components/layout";
-import AdsenseListing from "../components/adsense-listing";
-import Container from '../components/container'
+import Layout from "../../components/layout";
+import AdsenseListing from "../../components/adsense-listing";
+import Container from '../../components/container'
 
 import Typewriter from 'typewriter-effect';
 
