@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 export default function Location () {
   return (
     <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" sx={{mt:2, mb:5}}>
-        <Typography variant='h6'>Berdasarkan Lokasi</Typography>
+        <Typography variant='h6' sx={{mr:1}}>Flora dan Fauna berdasarkan lokasi:</Typography>
         <Button size="small" href='/locations/setupatok' variant="contained" color="primary" sx={{borderRadius: 5}}>
             Setu Patok
         </Button>

@@ -130,7 +130,7 @@ export default function Index({ posts, preview }) {
           <Intro />
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                Catatan terbaru
+                Flora
             </h2>
           </Box>
           <Location />
