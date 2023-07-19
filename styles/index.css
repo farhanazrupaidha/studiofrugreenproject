@@ -136,13 +136,12 @@ body {
   }
 
   /*---------------------------------------
-      HOME
+      ABOUT
   -----------------------------------------*/
 
-  #home {
-    background: #004d40;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #1565c0, #a7ffeb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #1565c0 , #a7ffeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  #about {
+    background: url('../public/images/backgroundhero-tanah.jpg') no-repeat center center;
+    background-size: cover;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -150,7 +149,7 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 30vh;
     padding-top: 20px;
     position: relative;
     overflow: hidden;

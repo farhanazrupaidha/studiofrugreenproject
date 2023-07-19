@@ -114,20 +114,20 @@ export default function Index({ posts, preview }) {
                      defaultTitle="Studiofru | Green Project"
                    >
                      <title>Studiofru | Green Project - Setu Patok Mundu Cirebon</title>
-                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
-                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
+                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Konservasi Danau Setu Patok Mundu Cirebon" />
+                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, setu patok, danau setu patok, setu patok cirebon, cirebon" />
                      <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
-                     <meta property="image" content="/images/fotopetani_1.jpg" />
+                     <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />
-                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna" />
+                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Konservasi Danau Setu Patok Mundu Cirebon" />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
-                     <meta property="og:image" content="/images/fotopetani_1.jpg" />
+                     <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/images/fotopetani_1.jpg" />
+                     <meta name="twitter:image:src" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Container>

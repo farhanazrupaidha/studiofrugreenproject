@@ -8,13 +8,16 @@ import Typewriter from 'typewriter-effect';
 
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import { styled } from '@mui/material/styles';
 
 import YardIcon from '@mui/icons-material/Yard';
+import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
 const FLORA = gql`
   query {
@@ -45,6 +48,8 @@ const { data, loading, error } = useQuery(FLORA);
   if (loading) return null;
   if (error) return `Error! ${error}`;
 
+  const date = new Date().toLocaleDateString();
+  const time = new Date().toLocaleTimeString();
 
   return (
 <section id="hero" data-stellar-background-ratio="0.5">
@@ -70,12 +75,15 @@ const { data, loading, error } = useQuery(FLORA);
       alignItems="center"
       sx={{mb:2}}
     >
+    <Box sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
+            <AccessTimeFilledIcon sx={{ fontSize: 40, color:"#BFCC03"}} />
+            <Typography variant="h5" gutterBottom color="#BFCC03" sx={{textAlign: 'right'}}>{`${date}`}</Typography>
+            <Typography variant="h5" gutterBottom color="#BFCC03" sx={{textAlign: 'right'}}>{`${time}`}</Typography>
+    </Box>
+
             <Paper sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
-                  <Typography sx={{ fontSize: 14, mb:1, fontWeight: 'bold' }} color="text.secondary" gutterBottom>
-                    Data: FLORA
-                  </Typography>
-                  <YardIcon sx={{ fontSize: 40}} />
-                  <Typography gutterBottom variant="h3" color='#BFCC03' textAlign= 'right'><CountUp end={data.postsConnection.aggregate.count} /></Typography>
+                  <YardIcon sx={{ fontSize: 40, color:"#BFCC03"}} />
+                  <Typography variant="h3" color='#BFCC03' textAlign= 'right'><CountUp end={data.postsConnection.aggregate.count} /></Typography>
             </Paper>
         <Box sx={{maxWidth:650, width:'100%'}}>
                 <SearchBar />

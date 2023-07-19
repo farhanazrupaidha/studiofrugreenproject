@@ -54,7 +54,7 @@ const classes = useStyles();
                 Profil
             </Typography>
             <Typography variant="body1" gutterBottom>
-                <Link href="/" underline="hover" color='inherit'>
+                <Link href="/tentang" underline="hover" color='inherit'>
                     Tentang
                 </Link>
             </Typography>

@@ -52,7 +52,7 @@ export default function AppBottomBar () {
 
         <Item>
             <Typography variant="caption" gutterBottom>
-                © 2022 - 2023 <Link href="https:studiofruworks.com">Studiofru</Link> | Green Project. All rights reserved.
+                © 2022 - 2023 <Link href="https://www.studiofruworks.com">Studiofru</Link> | Green Project. All rights reserved.
             </Typography>
         </Item>
       </Stack>
