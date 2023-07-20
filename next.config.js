@@ -14,7 +14,7 @@ module.exports = {
     cpus: 1
    },
    i18n: {
-    locales: ['id'],
+    locales: ['id', 'en'],
     defaultLocale: 'id',
   },
 };

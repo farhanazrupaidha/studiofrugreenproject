@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { useRouter } from "next/router";
 
+import i18n from "../lib/i18n";
 import AppBottomBar from '/components/appbottombar';
 
 import Box from '@mui/material/Box';
@@ -25,18 +27,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer () {
 const classes = useStyles();
+const { locale } = useRouter();
+const formattedLocale = locale.split("-")[0];
 
   return (
 <section id="kontak" data-stellar-background-ratio="0.5">
  <Paper elevation={2}>
      <Stack
         direction={{ xs: 'column', sm: 'row' }}
-        spacing={{ xs: 1, sm: 2, md: 2 }}
+        spacing={{ xs: 1, sm: 1, md: 1 }}
         sx={{ml:3, mr:3}}
         justifyContent="center"
         alignItems="left"
       >
-        <Item sx={{maxWidth:650, width:'95%'}}>
+        <Item sx={{maxWidth:750, width:'100%'}}>
           <Avatar
                 alt="Studiofru | Green Project"
                 src="/images/favicon.ico"
@@ -49,24 +53,9 @@ const classes = useStyles();
           Human and nature.
           </Typography>
         </Item>
-        <Item sx={{maxWidth:230, width:'95%'}}>
+        <Item sx={{maxWidth:180, width:'100%'}}>
             <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
-                Profil
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-                <Link href="/tentang" underline="hover" color='inherit'>
-                    Tentang
-                </Link>
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-                <Link href="/kontak" underline="hover" color='inherit'>
-                    Kontak
-                </Link>
-            </Typography>
-        </Item>
-        <Item sx={{maxWidth:230, width:'95%'}}>
-            <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
-                Komunitas
+                {i18n.nav.komunitas[formattedLocale]}
             </Typography>
             <Typography variant="body1" gutterBottom>
                 <Link href="/forum" underline="hover" color='inherit'>
@@ -75,8 +64,38 @@ const classes = useStyles();
             </Typography>
             <Typography variant="body1" gutterBottom>
               <Link href="/kontribusi" underline="hover" color='inherit'>
-                 Kontribusi
+                 {i18n.nav.kontribusi[formattedLocale]}
               </Link>
+            </Typography>
+        </Item>
+        <Item sx={{maxWidth:180, width:'100%'}}>
+            <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
+                {i18n.nav.profil[formattedLocale]}
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+                <Link href="/tentang" underline="hover" color='inherit'>
+                    {i18n.nav.tentang[formattedLocale]}
+                </Link>
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+                <Link href="/kontak" underline="hover" color='inherit'>
+                    {i18n.nav.kontak[formattedLocale]}
+                </Link>
+            </Typography>
+        </Item>
+        <Item sx={{maxWidth:180, width:'100%'}}>
+            <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
+                Legal
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+                <Link href="/termsofuse" underline="hover" color='inherit'>
+                    Terms of Use
+                </Link>
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+                <Link href="/disclaimer" underline="hover" color='inherit'>
+                    Disclaimer
+                </Link>
             </Typography>
         </Item>
       </Stack>

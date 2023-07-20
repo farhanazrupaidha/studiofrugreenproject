@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 
 const ABOUT = gql`
   query {
-  page(where: {slug: "tentang"}) {
+  page(where: {slug: "terms-of-use"}) {
     content {
       html
     }
@@ -77,7 +77,7 @@ const { data, loading, error } = useQuery(ABOUT);
             <Typography variant='h1' color="#BFCC03" sx={{fontWeight:"bold"}}>
                 <Typewriter
                   options={{
-                    strings: ['Tentang'],
+                    strings: ['Terms of Use'],
                     autoStart: true,
                     loop: true,
                   }}

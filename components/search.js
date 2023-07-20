@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { useRouter } from "next/router";
+
+import i18n from "../lib/i18n";
+
 import { useLazyQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 
@@ -55,6 +59,9 @@ const Search = ({posts, slug}) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+const { locale } = useRouter();
+const formattedLocale = locale.split("-")[0];
+
 return (
 <Box>
     <Button aria-label="delete" onClick={handleOpen} color="secondary">
@@ -90,7 +97,7 @@ return (
             })
           }
         >
-         Cari
+         {i18n.nav.cari[formattedLocale]}
          </Button>
       </Stack>
     </Box>
@@ -108,7 +115,7 @@ return (
       sx={{borderRadius: 5, mt: 3}}
       onClick={handleClose}
     >
-      Tutup
+      {i18n.nav.tutup[formattedLocale]}
     </Button>
     </Box>
     </Modal>

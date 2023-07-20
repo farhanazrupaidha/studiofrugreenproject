@@ -10,6 +10,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import DrawerToggle from "/components/drawer";
 import Search from "/components/search";
+import i18n from "../lib/i18n";
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -97,6 +98,9 @@ function ResponsiveAppBar(props) {
     setAnchorEl(null);
     };
 
+const { locale } = useRouter();
+const formattedLocale = locale.split("-")[0];
+
   return (
 
 <React.Fragment>
@@ -149,7 +153,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    ENSIKLOPEDIA
+                    {i18n.nav.ensiklopedia[formattedLocale]}
                 </Button>
 
             <Menu
@@ -175,10 +179,10 @@ function ResponsiveAppBar(props) {
                   <Typography textAlign="center"><Link href="/fauna"  color="inherit" underline="none">FAUNA</Link></Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center"><Link href="/sains"  color="inherit" underline="none">SAINS</Link></Typography>
+                  <Typography textAlign="center"><Link href="/sains"  color="inherit" underline="none">{i18n.nav.sains[formattedLocale]}</Link></Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center"><Link href="/pengetahuan"  color="inherit" underline="none">PENGETAHUAN</Link></Typography>
+                  <Typography textAlign="center"><Link href="/pengetahuan"  color="inherit" underline="none">{i18n.nav.pengetahuan[formattedLocale]}</Link></Typography>
                 </MenuItem>
             </Menu>
 
@@ -188,7 +192,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    WISATA
+                    {i18n.nav.wisata[formattedLocale]}
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
@@ -196,7 +200,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    KONTRIBUSI
+                    {i18n.nav.kontribusi[formattedLocale]}
                 </Button>
           </Box>
           <Search />

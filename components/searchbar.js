@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from "next/router";
+
+import i18n from "../lib/i18n";
+
 import { useLazyQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 
@@ -48,6 +52,9 @@ const SearchBar = ({posts, slug}) => {
 
   const refresh = () => window.location.reload(true)
 
+const { locale } = useRouter();
+const formattedLocale = locale.split("-")[0];
+
 return (
 <Box sx={style}>
     <Box sx={{maxWidth:700, m:'auto', mt:5, mb:10, textAlign: 'center', backgroundColor: '#eceff1', borderRadius: 5}}>
@@ -72,7 +79,7 @@ return (
             })
           }
         >
-         Cari
+            {i18n.nav.cari[formattedLocale]}
          </Button>
         <Button
           variant="contained"

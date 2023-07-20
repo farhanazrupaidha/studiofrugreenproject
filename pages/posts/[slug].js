@@ -26,17 +26,31 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import { styled } from '@mui/material/styles';
 
 import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import PinterestIcon from '@mui/icons-material/Pinterest';
 
 import {
   TwitterShareButton,
   FacebookShareButton,
   WhatsappShareButton,
+  PinterestShareButton,
 } from 'next-share'
+
+const LightTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.common.white,
+    color: 'rgba(0, 0, 0, 0.87)',
+    boxShadow: theme.shadows[1],
+    fontSize: 11,
+  },
+}));
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -110,22 +124,36 @@ export default function Post({ post, morePosts, preview }) {
                 url={`https://studiofrugreenproject.com/posts/${post.slug}`}
                 title={post.title}
             >
-                <TwitterIcon color="primary" size="small" />
+                <LightTooltip disableFocusListener title="Share it on Twitter">
+                    <TwitterIcon color="primary" size="small" />
+                </LightTooltip>
             </TwitterShareButton>
             <FacebookShareButton
                 url={`https://studiofrugreenproject.com/posts/${post.slug}`}
                 quote={post.title}
                 hashtag={'#studiofrugreenproject', '#studiofru'}
             >
-                <FacebookIcon color="primary" size="small" />
+                <LightTooltip disableFocusListener title="Share it on Facebook">
+                    <FacebookIcon color="primary" size="small" />
+                </LightTooltip>
             </FacebookShareButton>
             <WhatsappShareButton
                 url={`https://studiofrugreenproject.com/posts/${post.slug}`}
                 title={post.title}
                 separator="->"
             >
-                <WhatsAppIcon color="primary" size="small" />
+                <LightTooltip disableFocusListener title="Share it on  WhatsApp">
+                    <WhatsAppIcon color="primary" size="small" />
+                </LightTooltip>
             </WhatsappShareButton>
+            <PinterestShareButton
+              url={'https://studiofrugreenproject.com/posts/${post.slug}'}
+              media={'Studiofru | Green Project'}
+            >
+              <LightTooltip disableFocusListener color ="primary" title="Share it on Pinterest">
+                <PinterestIcon color ="primary" size="small" />
+              </LightTooltip>
+            </PinterestShareButton>
         </Stack>
         </Box>
         <AdsenseArticle />
