@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from "next/router";
 
 import i18n from "../lib/i18n";
+import LocaleSwitcher from "./localeswitcher";
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -112,6 +113,7 @@ function DrawerToggle () {
                     </ListItemButton>
                   </ListItem>
               </List>
+        <LocaleSwitcher />
         <Button color="inherit" onClick={() => setOpen(false)}>X {i18n.nav.tutup[formattedLocale]}</Button>
       </Drawer>
     </div>

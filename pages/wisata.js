@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
+import { useRouter } from "next/router";
 
+import i18n from "../lib/i18n";
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import PostPreview from "../components/post-preview";
@@ -100,6 +102,9 @@ export default function Index({ posts, preview }) {
 		}
 	};
 
+    const { locale } = useRouter();
+    const formattedLocale = locale.split("-")[0];
+
 	return (
     <>
       <Layout preview={preview}>
@@ -130,7 +135,7 @@ export default function Index({ posts, preview }) {
           <Intro />
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                Wisata
+                {i18n.nav.wisata[formattedLocale]}
             </h2>
           </Box>
           <Location />

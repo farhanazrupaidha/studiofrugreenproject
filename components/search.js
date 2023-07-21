@@ -59,13 +59,13 @@ const Search = ({posts, slug}) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-const { locale } = useRouter();
-const formattedLocale = locale.split("-")[0];
+  const { locale } = useRouter();
+  const formattedLocale = locale.split("-")[0];
 
 return (
 <Box>
     <Button aria-label="delete" onClick={handleOpen} color="secondary">
-        <SearchIcon /> <Typography variant='subtitle' sx={{ml:1}}>Cari</Typography>
+        <SearchIcon /> <Typography variant='subtitle' sx={{ml:1}}>{i18n.nav.cari[formattedLocale]}</Typography>
     </Button>
     <Modal
         open={open}
@@ -83,7 +83,7 @@ return (
           style = {{width: '100%'}}
           sx={{ input: { color: 'black' }, mb:1, mt:2, ml:3 }}
           color="secondary"
-          placeholder="Ketik pencarian disini"
+          placeholder={i18n.nav.cariplaceholder[formattedLocale]}
           type="text"
           onChange={(e) => setSearchFilter(e.target.value)}
         />

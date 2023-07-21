@@ -1,6 +1,7 @@
 import React, { Component, useRouter } from 'react';
 import { useLazyQuery, useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
+
 import CountUp from 'react-countup';
 import SearchBar from '/components/searchbar';
 
@@ -59,7 +60,7 @@ const { data, loading, error } = useQuery(FLORA);
             <Typography variant='h1' color="#BFCC03" sx={{fontWeight:"bold"}}>
                 <Typewriter
                   options={{
-                    strings: ['Jelajah Ensiklopedia', 'Flora'],
+                    strings: ['Jelajah Ensiklopedia', 'Explore Encyclopedia'],
                     autoStart: true,
                     loop: true,
                   }}

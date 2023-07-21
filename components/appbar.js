@@ -11,6 +11,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import DrawerToggle from "/components/drawer";
 import Search from "/components/search";
 import i18n from "../lib/i18n";
+import LocaleSwitcher from "./localeswitcher";
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -179,10 +180,10 @@ const formattedLocale = locale.split("-")[0];
                   <Typography textAlign="center"><Link href="/fauna"  color="inherit" underline="none">FAUNA</Link></Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center"><Link href="/sains"  color="inherit" underline="none">{i18n.nav.sains[formattedLocale]}</Link></Typography>
+                  <Typography textAlign="center" sx={{ textTransform: 'uppercase' }}><Link href="/sains"  color="inherit" underline="none">{i18n.nav.sains[formattedLocale]}</Link></Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center"><Link href="/pengetahuan"  color="inherit" underline="none">{i18n.nav.pengetahuan[formattedLocale]}</Link></Typography>
+                  <Typography textAlign="center" sx={{ textTransform: 'uppercase' }}><Link href="/pengetahuan"  color="inherit" underline="none">{i18n.nav.pengetahuan[formattedLocale]}</Link></Typography>
                 </MenuItem>
             </Menu>
 
@@ -202,6 +203,7 @@ const formattedLocale = locale.split("-")[0];
                 >
                     {i18n.nav.kontribusi[formattedLocale]}
                 </Button>
+                <LocaleSwitcher />
           </Box>
           <Search />
           </Toolbar>

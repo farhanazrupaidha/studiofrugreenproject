@@ -77,7 +77,7 @@ const { data, loading, error } = useQuery(ABOUT);
             <Typography variant='h1' color="#BFCC03" sx={{fontWeight:"bold"}}>
                 <Typewriter
                   options={{
-                    strings: ['Tentang'],
+                    strings: ['Tentang', 'About'],
                     autoStart: true,
                     loop: true,
                   }}

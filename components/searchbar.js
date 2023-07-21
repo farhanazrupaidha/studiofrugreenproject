@@ -65,7 +65,7 @@ return (
           style = {{width: '100%'}}
           sx={{ input: { color: 'black' }, mb:1, mt:2, ml:3 }}
           color="secondary"
-          placeholder="Ketik pencarian disini"
+          placeholder={i18n.nav.cariplaceholder[formattedLocale]}
           type="text"
           onChange={(e) => setSearchFilter(e.target.value)}
         />
