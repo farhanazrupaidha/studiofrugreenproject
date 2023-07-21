@@ -41,9 +41,8 @@ const style = {
 
 const TITLE_SEARCH_QUERY = gql`
   query FeedSearchQuery($filter: String!) {
-    posts(where: {_search: $filter}, locales: id) {
+    posts(where: {_search: $filter}) {
         title
-        slug
     }
   }
 `;

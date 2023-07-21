@@ -12,6 +12,7 @@ import DrawerToggle from "/components/drawer";
 import Search from "/components/search";
 import i18n from "../lib/i18n";
 import LocaleSwitcher from "./localeswitcher";
+import PostLocaleSwitch from "./post-locale-switch";
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -199,11 +200,11 @@ const formattedLocale = locale.split("-")[0];
                     onClick={handleCloseNavMenu}
                     href="/kontribusi"
                     color= 'secondary'
-                    sx={{ my: 2, display: 'block' }}
+                    sx={{ my: 2, mr:2, display: 'block' }}
                 >
                     {i18n.nav.kontribusi[formattedLocale]}
                 </Button>
-                <LocaleSwitcher />
+                <PostLocaleSwitch />
           </Box>
           <Search />
           </Toolbar>

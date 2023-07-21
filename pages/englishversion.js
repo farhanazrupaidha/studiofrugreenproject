@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import i18n from "../lib/i18n";
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
-import PostPreview from "../components/post-preview";
+import PostPreview from "../components/post-preview-en";
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Location from "../components/location"
@@ -37,7 +37,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (locales: en, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -142,7 +142,7 @@ const formattedLocale = locale.split("-")[0];
         <Container>
           <Box sx={{mb:5, mt:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                {i18n.intro.artikelterbaru[formattedLocale]}
+              {i18n.intro.artikelterbaru[formattedLocale]}
             </h2>
           </Box>
           <Location />

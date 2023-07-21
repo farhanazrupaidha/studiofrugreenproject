@@ -8,7 +8,7 @@ import Header from 'components/header'
 import PostHeader from 'components/post-header'
 import SectionSeparator from 'components/section-separator'
 import Layout from 'components/layout'
-import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
+import { getAllPostsWithSlugEn, getPostAndMorePostsEn } from 'lib/graphcms'
 import PostTitle from 'components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from 'lib/constants'
@@ -30,6 +30,7 @@ import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
 
 import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import PinterestIcon from '@mui/icons-material/Pinterest';
@@ -84,10 +85,10 @@ export default function Post({ post, morePosts, preview }) {
                      <meta property="og:description" content={post.seo.description} />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content={post.seo.image.url} />
-                      <meta name="og:url" content={`https://studiofrugreenproject.com/posts/${post.slug}`}/>
+                      <meta name="og:url" content={`https://studiofrugreenproject.com/posts-en/${post.slug}`}/>
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
-                     <meta name="twitter:title" content={post.seo.title} />
+                     <meta name="twitter:title" content={post.title} />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content={post.seo.image.url} />
                 </Head>
@@ -113,7 +114,7 @@ export default function Post({ post, morePosts, preview }) {
                     </Box>
             </article>
         <Box sx={{mt:5}}>
-        <Typography variant="h6">Bagikan</Typography>
+        <Typography variant="h6">Share</Typography>
         <Stack
             direction="row"
             spacing={1}
@@ -121,7 +122,7 @@ export default function Post({ post, morePosts, preview }) {
         >
             <ShareButton />
             <TwitterShareButton
-                url={`https://studiofrugreenproject.com/posts/${post.slug}`}
+                url={`https://studiofrugreenproject.com/posts-en/${post.slug}`}
                 title={post.title}
             >
                 <LightTooltip disableFocusListener title="Share it on Twitter">
@@ -129,7 +130,7 @@ export default function Post({ post, morePosts, preview }) {
                 </LightTooltip>
             </TwitterShareButton>
             <FacebookShareButton
-                url={`https://studiofrugreenproject.com/posts/${post.slug}`}
+                url={`https://studiofrugreenproject.com/posts-en/${post.slug}`}
                 quote={post.title}
                 hashtag={'#studiofrugreenproject', '#studiofru'}
             >
@@ -138,7 +139,7 @@ export default function Post({ post, morePosts, preview }) {
                 </LightTooltip>
             </FacebookShareButton>
             <WhatsappShareButton
-                url={`https://studiofrugreenproject.com/posts/${post.slug}`}
+                url={`https://studiofrugreenproject.com/posts-en/${post.slug}`}
                 title={post.title}
                 separator="->"
             >
@@ -147,7 +148,7 @@ export default function Post({ post, morePosts, preview }) {
                 </LightTooltip>
             </WhatsappShareButton>
             <PinterestShareButton
-              url={'https://studiofrugreenproject.com/posts/${post.slug}'}
+              url={'https://studiofrugreenproject.com/posts-en/${post.slug}'}
               media={'Studiofru | Green Project'}
             >
               <LightTooltip disableFocusListener color ="primary" title="Pin it">
@@ -169,7 +170,7 @@ export default function Post({ post, morePosts, preview }) {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const data = await getPostAndMorePosts(params.slug, preview)
+  const data = await getPostAndMorePostsEn(params.slug, preview)
   return {
     props: {
       preview,
@@ -180,7 +181,7 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export async function getStaticPaths() {
-  const posts = await getAllPostsWithSlug()
+  const posts = await getAllPostsWithSlugEn()
   return {
     paths: posts.map(({ slug }) => ({
       params: { slug },

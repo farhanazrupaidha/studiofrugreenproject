@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 import i18n from "../lib/i18n";
 import LocaleSwitcher from "./localeswitcher";
+import PostLocaleSwitch from "./post-locale-switch";
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -113,7 +114,7 @@ function DrawerToggle () {
                     </ListItemButton>
                   </ListItem>
               </List>
-        <LocaleSwitcher />
+        <PostLocaleSwitch />
         <Button color="inherit" onClick={() => setOpen(false)}>X {i18n.nav.tutup[formattedLocale]}</Button>
       </Drawer>
     </div>
