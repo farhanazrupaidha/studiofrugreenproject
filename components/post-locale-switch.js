@@ -22,8 +22,7 @@ export default function App() {
             id={"1"}
             onClick={handleClick}
             sx={{ my: 2, display: 'block' }}
-            href="/"
-            locale="id"         
+            href="/id"         
             >
             ID
           </Button>
@@ -33,8 +32,7 @@ export default function App() {
             id={"2"}
             onClick={handleClick}
             sx={{ my: 2, display: 'block' }}
-            href="/englishversion"
-            locale="en"          
+            href="/en/englishversion"         
             >
             EN
           </Button>
