@@ -29,6 +29,9 @@ body {
   height: 100%;
 }
 
+.active{
+background-color:var(--green);
+}
 
 .c-share {
   padding: 1rem;
