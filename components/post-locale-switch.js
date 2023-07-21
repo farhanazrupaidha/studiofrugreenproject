@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
-
+import Stack from '@mui/material/Stack';
 
 export default function App() {
 
@@ -14,7 +14,8 @@ export default function App() {
 }
 
   return (
-        <ButtonGroup disableElevation variant="contained" color="primary">
+  <center>
+        <ButtonGroup disableElevation variant="contained" sx={{borderRadius: 5}} color="secondary" backgroundColor="white" aria-label="medium secondary button group">
           <Button
             key={1}
             className={active === "1" ? "active" : undefined}
@@ -36,5 +37,6 @@ export default function App() {
             EN
           </Button>
         </ButtonGroup>
+  </center>
   );
 }

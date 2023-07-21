@@ -30,7 +30,7 @@ body {
 }
 
 .active{
-background-color:var(--green);
+background-color:var(--red);
 }
 
 .c-share {
