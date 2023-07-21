@@ -16,15 +16,5 @@ module.exports = {
    i18n: {
     locales: ['id', 'en'],
     defaultLocale: 'id',
-    domains: [
-         {
-           domain: "studiofrugreenproject.com",
-           defaultLocale: "id",
-         },
-         {
-           domain: "/englishversion",
-           defaultLocale: "en",
-         },
-       ],
   },
 };
