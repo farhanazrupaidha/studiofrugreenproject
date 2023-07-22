@@ -12,14 +12,16 @@ export default function LocaleSwitcher() {
    <>
      {otherLocales.map((locale) => {
        return (
+         <center>
          <Link
            key={locale}
            href={{ pathname, query }}
            as={asPath}
            locale={locale}
          >
-           <Button color= 'secondary' sx={{ my: 2, display: 'block' }}><TranslateIcon sx={{mr:1}} />{locale}</Button>
+           <Button color= 'secondary' variant="contained" sx={{ my: 2, width:85, display: 'block' }}><TranslateIcon sx={{mr:1}} />{locale}</Button>
          </Link>
+         </center>
        );
      })}
    </>

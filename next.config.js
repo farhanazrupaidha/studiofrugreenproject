@@ -1,5 +1,4 @@
 require("dotenv").config();
-const { locales } = require('./lib/locales')
 
 module.exports = {
   env: {
@@ -15,8 +14,9 @@ module.exports = {
     cpus: 1
    },
   i18n: {
-    defaultLocale: locales.find((locale) => locale.default).value,
-    locales: locales.map((locale) => locale.value)
+    defaultLocale: 'id',
+    locales: ['id', 'en'],
+    localeDetection: false,
   },
   async redirects() {
           return [

@@ -100,8 +100,8 @@ function ResponsiveAppBar(props) {
     setAnchorEl(null);
     };
 
-const { locale } = useRouter();
-const formattedLocale = locale.split("-")[0];
+    const { locale } = useRouter();
+    const formattedLocale = locale.split("-")[0];
 
   return (
 

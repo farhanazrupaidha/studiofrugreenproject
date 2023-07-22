@@ -32,7 +32,7 @@ const style = {
 
 const TITLE_SEARCH_QUERY = gql`
   query FeedSearchQuery($filter: String!) {
-    posts(where: {_search: $filter}, locales: id) {
+    posts(where: {_search: $filter}) {
         title
         slug
     }
@@ -52,8 +52,8 @@ const SearchBar = ({posts, slug}) => {
 
   const refresh = () => window.location.reload(true)
 
-const { locale } = useRouter();
-const formattedLocale = locale.split("-")[0];
+  const { locale } = useRouter();
+  const formattedLocale = locale.split("-")[0];
 
 return (
 <Box sx={style}>
