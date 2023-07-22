@@ -111,8 +111,9 @@ export default function Index({ posts, preview }) {
 		}
 	};
 
-const { locale } = useRouter();
-const formattedLocale = locale.split("-")[0];
+    const { locale } = useRouter();
+    const { locales, asPath } = useRouter().locale;
+    const formattedLocale = locale.split("-")[0];
 
 	return (
     <>
