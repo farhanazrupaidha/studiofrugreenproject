@@ -112,13 +112,13 @@ export default function Index({ posts, preview }) {
                      defaultTitle="Studiofru | Green Project"
                    >
                      <title>Studiofru | Green Project - Pengetahuan</title>
-                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai pengetahuan lingkungan" />
+                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai pengetahuan lingkungan." />
                      <meta name="keywords" content="studiofru, green project, studiofru green project, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, lingkungan, sains" />
                      <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
                      <meta property="image" content="/images/fotopetani_1.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />
-                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai pengetahuan lingkungan" />
+                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai pengetahuan lingkungan." />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />

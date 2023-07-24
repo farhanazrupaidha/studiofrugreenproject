@@ -104,7 +104,7 @@ export default function Post({ post, morePosts, preview }) {
                 author={post.author}
               />
               <PostBody content={post.content} />
-                    <Typography variant="h5" sx={{mt:5}}>Referensi</Typography>
+                    <Typography variant="h5" sx={{mt:5}}>Reference</Typography>
                     <Box sx={{mt:4, whiteSpace: 'nowrap', overflowX: 'auto'}}>
                         <Typography variant='body2'>
                             <div
@@ -122,7 +122,7 @@ export default function Post({ post, morePosts, preview }) {
         >
             <ShareButton />
             <TwitterShareButton
-                url={`https://studiofrugreenproject.com/posts-en/${post.slug}`}
+                url={`https://studiofrugreenproject.com/en/posts-en/${post.slug}`}
                 title={post.title}
             >
                 <LightTooltip disableFocusListener title="Share it on Twitter">
@@ -130,7 +130,7 @@ export default function Post({ post, morePosts, preview }) {
                 </LightTooltip>
             </TwitterShareButton>
             <FacebookShareButton
-                url={`https://studiofrugreenproject.com/posts-en/${post.slug}`}
+                url={`https://studiofrugreenproject.com/en/posts-en/${post.slug}`}
                 quote={post.title}
                 hashtag={'#studiofrugreenproject', '#studiofru'}
             >
@@ -139,7 +139,7 @@ export default function Post({ post, morePosts, preview }) {
                 </LightTooltip>
             </FacebookShareButton>
             <WhatsappShareButton
-                url={`https://studiofrugreenproject.com/posts-en/${post.slug}`}
+                url={`https://studiofrugreenproject.com/en/posts-en/${post.slug}`}
                 title={post.title}
                 separator="->"
             >
@@ -148,7 +148,7 @@ export default function Post({ post, morePosts, preview }) {
                 </LightTooltip>
             </WhatsappShareButton>
             <PinterestShareButton
-              url={'https://studiofrugreenproject.com/posts-en/${post.slug}'}
+              url={'https://studiofrugreenproject.com/en/posts-en/${post.slug}'}
               media={'Studiofru | Green Project'}
             >
               <LightTooltip disableFocusListener color ="primary" title="Pin it">
@@ -163,7 +163,6 @@ export default function Post({ post, morePosts, preview }) {
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}
-        <AdsenseMultiplex />
       </Container>
     </Layout>
   )

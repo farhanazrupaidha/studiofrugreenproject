@@ -162,7 +162,6 @@ export default function Post({ post, morePosts, preview }) {
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}
-        <AdsenseMultiplex />
       </Container>
     </Layout>
   )
