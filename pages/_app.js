@@ -2,7 +2,6 @@ import '../styles/index.css';
 
 import * as React from 'react'
 import Head from 'next/head';
-import Smartlook from 'smartlook-client'
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { ThemeProvider, useTheme, createTheme, responsiveFontSizes, } from '@mui/material/styles';
@@ -92,11 +91,6 @@ usePostHog('phc_hIxyJYhMq4PNf6nFh6e5l8JX6tmKnDNgiaWLY6s201j', {
     );
 
 const theme = responsiveFontSizes(ModeTheme);
-
-  useEffect(() => {
-    Smartlook.init('bf5020af514aff0436a24ae985529c89485559fb')
-    })
-
 
 
   return (
