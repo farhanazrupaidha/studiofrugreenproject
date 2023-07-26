@@ -1,9 +1,9 @@
 import React, { Component, useRouter } from 'react';
-import { useLazyQuery, useQuery, gql } from '@apollo/client';
-import withApollo from "../config";
 
 import CountUp from 'react-countup';
 import SearchBar from '/components/searchbar';
+import DataCountFlora from '/components/data-flora';
+import DataCountFauna from '/components/data-fauna';
 
 import Typewriter from 'typewriter-effect';
 
@@ -17,18 +17,8 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import { styled } from '@mui/material/styles';
 
-import YardIcon from '@mui/icons-material/Yard';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
-const FLORA = gql`
-  query {
-  postsConnection(where: {_search: "Flora"}) {
-    aggregate {
-      count
-    }
-  }
-  }
-`;
 
 const Item = styled(Box)(({ theme }) => ({
   ...theme.typography.body2,
@@ -43,11 +33,7 @@ const style = {
     transform: 'translate(-50%, -50%)',
 };
 
-const DataCountFlora = ({postsConnection}) => {
-const { data, loading, error } = useQuery(FLORA);
-
-  if (loading) return null;
-  if (error) return `Error! ${error}`;
+export default function Hero () {
 
   const date = new Date().toLocaleDateString();
   const time = new Date().toLocaleTimeString();
@@ -57,7 +43,7 @@ const { data, loading, error } = useQuery(FLORA);
 <Box sx={{m:'auto', mt:5}}>
     <Box sx={{mb:5}}>
         <center>
-            <Typography variant='h1' color="#BFCC03" sx={{fontWeight:"bold"}}>
+            <Typography variant='h1' color="#BFCC03" sx={{fontWeight:"bold", height:'130px'}}>
                 <Typewriter
                   options={{
                     strings: ['Jelajah Ensiklopedia', 'Explore Encyclopedia'],
@@ -81,11 +67,8 @@ const { data, loading, error } = useQuery(FLORA);
             <Typography variant="h5" gutterBottom color="#BFCC03" sx={{textAlign: 'right'}}>{`${date}`}</Typography>
             <Typography variant="h5" gutterBottom color="#BFCC03" sx={{textAlign: 'right'}}>{`${time}`}</Typography>
     </Box>
-
-            <Paper sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
-                  <YardIcon sx={{ fontSize: 40, color:"#BFCC03"}} />
-                  <Typography variant="h3" color='#BFCC03' textAlign= 'right'><CountUp end={data.postsConnection.aggregate.count} /></Typography>
-            </Paper>
+        <DataCountFlora />
+        <DataCountFauna />
         <Box sx={{maxWidth:650, width:'100%'}}>
                 <SearchBar />
         </Box>
@@ -95,4 +78,3 @@ const { data, loading, error } = useQuery(FLORA);
   );
 }
 
-export default withApollo(DataCountFlora);

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-import { useRouter } from "next/router";
 
-import i18n from "../lib/i18n";
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import PostPreview from "../components/post-preview";
@@ -10,7 +8,6 @@ import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Location from "../components/location"
 import Layout from '../components/layout'
-import Hero from '../components/hero'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
@@ -37,7 +34,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (where: {_search: "fauna"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -70,14 +67,6 @@ export default function Index({ posts, preview }) {
                                 })
                               }
                             }
-                            seo {
-                                  title
-                                  description
-                                  keywords
-                                  image {
-                                    url
-                                  }
-                                }
                           }
 				 postsConnection {
 					pageInfo {
@@ -111,45 +100,40 @@ export default function Index({ posts, preview }) {
 		}
 	};
 
-    const { locale } = useRouter();
-    const { locales, asPath } = useRouter().locale;
-    const formattedLocale = locale.split("-")[0];
-
 	return (
     <>
       <Layout preview={preview}>
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project</title>
-                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan di Indonesia." />
-                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
+                     <title>Studiofru | Green Project - Fauna</title>
+                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai hewan di Indonesia." />
+                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, peternakan" />
                      <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
                      <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />
-                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan di Indonesia." />
+                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai hewan di Indonesia." />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/images/tanah.jpg" />
+                     <meta name="twitter:image:src" content="/tanah.jpg" />e
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
-        <Hero />
-
         <Container>
-          <Box sx={{mb:5, mt:5}}>
+        <Box sx={{mt:10}}>
+          <AdsenseDisplay />
+        </Box>
+          <Intro />
+          <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                {i18n.intro.artikelterbaru[formattedLocale]}
+                Flora
             </h2>
           </Box>
           <Location />
-          <Box sx={{mt:3, mb:3}}>
-             <AdsenseListing />
-          </Box>
 			{blogPosts ? (
 			<Box>
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
@@ -157,9 +141,9 @@ export default function Index({ posts, preview }) {
                    <PostPreview
                      key={blogPost.slug}
                      title={blogPost.title}
-                     tags={blogPost.tags}
                      coverImage={blogPost.coverImage}
                      date={blogPost.date}
+                     tags={blogPost.tags}
                      author={blogPost.author}
                      slug={blogPost.slug}
                      excerpt={blogPost.excerpt}
@@ -168,20 +152,20 @@ export default function Index({ posts, preview }) {
                  </div>
                  <center>
                   <Paginate
-                  postsPerPage={postsPerPage}
+                    postsPerPage={postsPerPage}
                     totalPosts={totalPosts}
                     currentPage={currentPage}
                     paginate={paginate}
                     previousPage={previousPage}
                     nextPage={nextPage}
                    />
+                  <AdsenseListing />
                 </center>
 				</Box>
 			) : (
 				<div className="loading">Loading...</div>
 			)}
         </Container>
-        <AdsenseDisplay />
       </Layout>
     </>
 )
