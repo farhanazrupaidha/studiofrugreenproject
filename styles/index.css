@@ -132,7 +132,7 @@ background-color:var(--red);
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 60vh;
+    min-height: 70vh;
     padding-top: 20px;
     position: relative;
     overflow: hidden;

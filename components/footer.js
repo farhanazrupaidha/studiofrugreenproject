@@ -53,7 +53,12 @@ const formattedLocale = locale.split("-")[0];
           Human and nature.
           </Typography>
         </Item>
-        <Item sx={{maxWidth:180, width:'100%'}}>
+        <Item sx={{maxWidth:400, width:'100%'}}>
+            <Typography variant="body2" sx={{mt:2}} gutterBottom>
+                {i18n.intro.disclaimer[formattedLocale]}
+            </Typography>
+        </Item>
+        <Item sx={{maxWidth:150, width:'100%'}}>
             <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
                 {i18n.nav.komunitas[formattedLocale]}
             </Typography>
@@ -68,7 +73,7 @@ const formattedLocale = locale.split("-")[0];
               </Link>
             </Typography>
         </Item>
-        <Item sx={{maxWidth:180, width:'100%'}}>
+        <Item sx={{maxWidth:150, width:'100%'}}>
             <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
                 {i18n.nav.profil[formattedLocale]}
             </Typography>
@@ -83,7 +88,7 @@ const formattedLocale = locale.split("-")[0];
                 </Link>
             </Typography>
         </Item>
-        <Item sx={{maxWidth:180, width:'100%'}}>
+        <Item sx={{maxWidth:150, width:'100%'}}>
             <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
                 Legal
             </Typography>

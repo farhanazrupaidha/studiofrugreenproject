@@ -40,7 +40,7 @@ export default function Hero () {
 
   return (
 <section id="hero" data-stellar-background-ratio="0.5">
-<Box sx={{m:'auto', mt:5}}>
+<Box sx={{m:'auto', mt:5, mb:5}}>
     <Box sx={{mb:5}}>
         <center>
             <Typography variant='h1' color="#BFCC03" sx={{fontWeight:"bold", height:'130px'}}>
