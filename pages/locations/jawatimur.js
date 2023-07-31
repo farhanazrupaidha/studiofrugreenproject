@@ -128,7 +128,6 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:title" content="Studiofru | Green Project" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
-                     <meta name="robots" content="noindex,nofollow" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Container>
