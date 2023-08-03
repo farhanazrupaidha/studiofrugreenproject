@@ -125,17 +125,17 @@ export default function Index({ posts, preview }) {
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan di Indonesia." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
                      <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
-                     <meta property="image" content="https://studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />
                      <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan di Indonesia." />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
-                     <meta property="og:image" content="https://studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="https://studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta name="twitter:image:src" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Hero />
