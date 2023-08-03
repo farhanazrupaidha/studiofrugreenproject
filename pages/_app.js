@@ -95,8 +95,6 @@ const theme = responsiveFontSizes(ModeTheme);
 
 
   return (
-<HydrationProvider>
- <Client>
   <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -127,8 +125,6 @@ const theme = responsiveFontSizes(ModeTheme);
         <Component {...pageProps} />
     </ThemeProvider>
   </ColorModeContext.Provider>
-</Client>
-</HydrationProvider>
   )
 }
 
