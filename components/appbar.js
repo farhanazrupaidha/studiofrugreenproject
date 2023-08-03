@@ -155,7 +155,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    {i18n.nav.ensiklopedia[formattedLocale]}
+                    {i18n.nav.spesies[formattedLocale]}
                 </Button>
 
             <Menu
@@ -181,12 +181,26 @@ function ResponsiveAppBar(props) {
                   <Typography textAlign="center"><Link href="/fauna"  color="inherit" underline="none">FAUNA</Link></Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" sx={{ textTransform: 'uppercase' }}><Link href="/sains"  color="inherit" underline="none">{i18n.nav.sains[formattedLocale]}</Link></Typography>
-                </MenuItem>
-                <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" sx={{ textTransform: 'uppercase' }}><Link href="/pengetahuan"  color="inherit" underline="none">{i18n.nav.pengetahuan[formattedLocale]}</Link></Typography>
+                  <Typography textAlign="center" sx={{ textTransform: 'uppercase' }}><Link href="/endemik"  color="inherit" underline="none">{i18n.nav.endemik[formattedLocale]}</Link></Typography>
                 </MenuItem>
             </Menu>
+
+                <Button
+                    onClick={handleCloseNavMenu}
+                    href="/sains"
+                    color= 'secondary'
+                    sx={{ my: 2, display: 'block' }}
+                >
+                    {i18n.nav.sains[formattedLocale]}
+                </Button>
+                <Button
+                    onClick={handleCloseNavMenu}
+                    href="/pengetahuan"
+                    color= 'secondary'
+                    sx={{ my: 2, display: 'block' }}
+                >
+                    {i18n.nav.pengetahuan[formattedLocale]}
+                </Button>
 
                 <Button
                     onClick={handleCloseNavMenu}

@@ -21,3 +21,18 @@
   @apply mt-8 mb-4 text-2xl leading-snug;
 }
 
+.post table {
+  @apply min-w-full text-left text-sm overflow-x-auto sm:-mx-6 lg:-mx-8;
+}
+
+.post thead {
+  @apply border-b font-medium;
+}
+
+.post tr {
+  @apply border-b;
+}
+
+.post td {
+  @apply whitespace-nowrap px-6 py-4;
+}

@@ -2,6 +2,7 @@ import '../styles/index.css';
 
 import * as React from 'react'
 import Head from 'next/head';
+import { HydrationProvider, Client } from "react-hydration-provider";
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { ThemeProvider, useTheme, createTheme, responsiveFontSizes, } from '@mui/material/styles';
@@ -94,6 +95,8 @@ const theme = responsiveFontSizes(ModeTheme);
 
 
   return (
+<HydrationProvider>
+ <Client>
   <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -124,6 +127,8 @@ const theme = responsiveFontSizes(ModeTheme);
         <Component {...pageProps} />
     </ThemeProvider>
   </ColorModeContext.Provider>
+</Client>
+</HydrationProvider>
   )
 }
 

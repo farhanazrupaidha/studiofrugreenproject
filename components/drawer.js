@@ -54,7 +54,7 @@ function DrawerToggle () {
         <List sx={{ mr: 2, ml:2 }}>
                   <ListItem disablePadding>
                       <ListItemText>
-                        {i18n.nav.ensiklopedia[formattedLocale]}
+                        {i18n.nav.spesies[formattedLocale]}
                       </ListItemText>
                   </ListItem>
                   <Divider sx={{mr:5}} />
@@ -72,6 +72,19 @@ function DrawerToggle () {
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton href="/endemik">
+                      <ListItemText>
+                        {i18n.nav.endemik[formattedLocale]}
+                      </ListItemText>
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem disablePadding sx={{mt:2}}>
+                      <ListItemText>
+                        {i18n.nav.lainnya[formattedLocale]}
+                      </ListItemText>
+                  </ListItem>
+                  <Divider sx={{mr:5}} />
                   <ListItem disablePadding>
                     <ListItemButton href="/sains">
                       <ListItemText>
