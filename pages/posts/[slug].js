@@ -80,7 +80,7 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="description" content={post.seo.description} />
                      <meta name="keywords" content={post.seo.keywords} />
                      <meta property="image" content={post.seo.image.url} />
-                     <meta property="og:title" content={post.title} />
+                     <meta property="og:title" content={post.seo.title} />
                      <meta property="og:description" content={post.seo.description} />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content={post.seo.image.url} />
@@ -122,7 +122,7 @@ export default function Post({ post, morePosts, preview }) {
             <ShareButton />
             <TwitterShareButton
                 url={`https://studiofrugreenproject.com/posts/${post.slug}`}
-                title={post.title}
+                title={post.seo.title}
             >
                 <LightTooltip disableFocusListener title="Share it on Twitter">
                     <TwitterIcon color="primary" size="small" />
@@ -130,7 +130,7 @@ export default function Post({ post, morePosts, preview }) {
             </TwitterShareButton>
             <FacebookShareButton
                 url={`https://studiofrugreenproject.com/posts/${post.slug}`}
-                quote={post.title}
+                quote={post.seo.title}
                 hashtag={'#studiofrugreenproject', '#studiofru'}
             >
                 <LightTooltip disableFocusListener title="Share it on Facebook">
@@ -139,7 +139,7 @@ export default function Post({ post, morePosts, preview }) {
             </FacebookShareButton>
             <WhatsappShareButton
                 url={`https://studiofrugreenproject.com/posts/${post.slug}`}
-                title={post.title}
+                title={post.seo.title}
                 separator="->"
             >
                 <LightTooltip disableFocusListener title="Share it on  WhatsApp">
