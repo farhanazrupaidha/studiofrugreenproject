@@ -19,7 +19,7 @@ import AdsenseDisplay from "../components/adsense-display";
 import Box from '@mui/material/Box';
 import Pagination from "@mui/material/Pagination";
 
-export default function Index({ posts, preview }) {
+export default function Flora ({ posts, preview }) {
     const heroPost = posts[0]
     const morePosts = posts.slice(1)
 

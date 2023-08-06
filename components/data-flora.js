@@ -28,7 +28,6 @@ const { data, loading, error } = useQuery(FLORA);
   if (loading) return null;
   if (error) return `Error! ${error}`;
 
-
   return (
             <Paper sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
                   <YardIcon sx={{ fontSize: 40, color:"#BFCC03"}} />
