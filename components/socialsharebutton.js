@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import IconButton from '@mui/material/IconButton';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
 
@@ -40,8 +41,7 @@ function copy() {
 
     return (
          <LightTooltip title={!copied ? "Copy link" : "Copied!"}>
-            <ContentCopyIcon color="primary" size="small" onClick={copy} />
+            <IconButton><ContentCopyIcon color="primary" size="small" onClick={copy} /></IconButton>
          </LightTooltip>
     )
 }
-

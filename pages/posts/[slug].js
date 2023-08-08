@@ -26,19 +26,18 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
 
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import PinterestIcon from '@mui/icons-material/Pinterest';
 
 import {
   TwitterShareButton,
   FacebookShareButton,
   WhatsappShareButton,
-  PinterestShareButton,
 } from 'next-share'
 
 const LightTooltip = styled(({ className, ...props }) => (
@@ -112,14 +111,18 @@ export default function Post({ post, morePosts, preview }) {
                         </Typography>
                     </Box>
             </article>
-        <Box sx={{mt:5}}>
-        <Typography variant="h6">Bagikan</Typography>
-        <Stack
-            direction="row"
-            spacing={1}
-            sx={{mt:2, mb:4}}
-        >
-            <ShareButton />
+            <Box sx={{mt:7}}>
+            <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
+            <Typography variant='h5' color="#ff0055">Bagikan</Typography>
+            <Box sx={{mb:5, mt:2}}>
+            <Stack
+                direction="row"
+                spacing={1}
+                justifyContent="left"
+                alignItems="left"
+                sx={{mt:2, mb:4}}
+            >
+                <ShareButton />
                 <TwitterShareButton
                     url={`https://studiofrugreenproject.com/posts/${post.slug}`}
                     title={post.seo.title}
@@ -128,34 +131,27 @@ export default function Post({ post, morePosts, preview }) {
                     <IconButton><TwitterIcon color="primary" size="small" /></IconButton>
                 </LightTooltip>
                 </TwitterShareButton>
-            <FacebookShareButton
-                url={`https://studiofrugreenproject.com/posts/${post.slug}`}
-                quote={post.seo.title}
-                hashtag={'#studiofrugreenproject', '#studiofru'}
-            >
+                <FacebookShareButton
+                    url={`https://studiofrugreenproject.com/posts/${post.slug}`}
+                    quote={post.seo.title}
+                    hashtag={'#studiofruworks', '#studiofruarticle'}
+                >
                 <LightTooltip disableFocusListener title="Share it on Facebook">
-                    <FacebookIcon color="primary" size="small" />
+                    <IconButton><FacebookIcon color="primary" size="small" /></IconButton>
                 </LightTooltip>
-            </FacebookShareButton>
-            <WhatsappShareButton
-                url={`https://studiofrugreenproject.com/posts/${post.slug}`}
-                title={post.seo.title}
-                separator="->"
-            >
+                </FacebookShareButton>
+                <WhatsappShareButton
+                    url={`https://studiofrugreenproject.com/posts/${post.slug}`}
+                    title={post.seo.title}
+                    separator="->"
+                >
                 <LightTooltip disableFocusListener title="Share it on  WhatsApp">
-                    <WhatsAppIcon color="primary" size="small" />
+                    <IconButton><WhatsAppIcon color="primary" size="small" /></IconButton>
                 </LightTooltip>
-            </WhatsappShareButton>
-            <PinterestShareButton
-              url={'https://studiofrugreenproject.com/posts/${post.slug}'}
-              media={'Studiofru | Green Project'}
-            >
-              <LightTooltip disableFocusListener color ="primary" title="Pin it">
-                <PinterestIcon color ="primary" size="small" />
-              </LightTooltip>
-            </PinterestShareButton>
-        </Stack>
-        </Box>
+                </WhatsappShareButton>
+            </Stack>
+            </Box>
+            </Box>
         <AdsenseArticle />
         <SectionSeparator />
         <Location />
