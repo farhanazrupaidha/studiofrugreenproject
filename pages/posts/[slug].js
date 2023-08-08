@@ -120,14 +120,14 @@ export default function Post({ post, morePosts, preview }) {
             sx={{mt:2, mb:4}}
         >
             <ShareButton />
-            <TwitterShareButton
-                url={`https://studiofrugreenproject.com/posts/${post.slug}`}
-                title={post.seo.title}
-            >
+                <TwitterShareButton
+                    url={`https://studiofrugreenproject.com/posts/${post.slug}`}
+                    title={post.seo.title}
+                >
                 <LightTooltip disableFocusListener title="Share it on Twitter">
-                    <TwitterIcon color="primary" size="small" />
+                    <IconButton><TwitterIcon color="primary" size="small" /></IconButton>
                 </LightTooltip>
-            </TwitterShareButton>
+                </TwitterShareButton>
             <FacebookShareButton
                 url={`https://studiofrugreenproject.com/posts/${post.slug}`}
                 quote={post.seo.title}
