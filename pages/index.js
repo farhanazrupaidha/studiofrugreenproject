@@ -122,7 +122,7 @@ export default function Index({ posts, preview }) {
                      defaultTitle="Studiofru | Green Project"
                    >
                      <title>Studiofru | Green Project</title>
-                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan di Indonesia." />
+                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
                      <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
                      <meta property="image" content="/images/tanah.jpg" />

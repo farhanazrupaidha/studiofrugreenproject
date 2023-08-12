@@ -23,7 +23,7 @@ from '@mui/material';
 
 const FLORA = gql`
   query {
-      posts(orderBy: date_DESC) {
+      posts(orderBy: date_DESC, first: 20) {
         title
         slug
         excerpt
