@@ -15,16 +15,6 @@ module.exports = {
    },
   i18n: {
     defaultLocale: 'id',
-    locales: ['id', 'en'],
-    localeDetection: false,
+    locales: ['id', 'en']
   },
-  async redirects() {
-          return [
-            {
-              source: '/en',
-              destination: '/englishversion',
-              permanent: true,
-            },
-          ];
-        },
 };

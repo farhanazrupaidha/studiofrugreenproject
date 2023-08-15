@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
+import { useRouter } from "next/router";
 
+import i18n from "../../lib/i18n";
 import Container from '../../components/container'
 import MoreStories from '../../components/more-stories'
 import PostPreview from "../../components/post-preview";
@@ -27,13 +29,17 @@ export default function Index({ posts, preview }) {
 	const [totalPosts, setTotalPosts] = useState();
 	const [postsPerPage] = useState(24);
 
+	const { locale } = useRouter();
+    const { locales, asPath } = useRouter().locale;
+    const formattedLocale = locale.split("-")[0];
+
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
 			const { posts, postsConnection } = await request(
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (where: {_search: "setu patok"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (locales: ${formattedLocale}, where: {_search: "setu patok"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title

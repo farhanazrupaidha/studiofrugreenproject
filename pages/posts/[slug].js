@@ -1,6 +1,9 @@
 import { useRouter } from 'next/router'
+import { gql } from 'graphql-request';
+import hygraphClient from 'lib/hygraphClient';
 import ErrorPage from 'components/errorpage'
 
+import i18n from "lib/i18n";
 import Container from 'components/container'
 import PostBody from 'components/post-body'
 import MoreStories from 'components/more-stories'
@@ -59,6 +62,9 @@ export default function Post({ post, morePosts, preview }) {
   }
 
   const { scrollYProgress } = useScroll();
+  const { locale } = useRouter();
+  const { locales, asPath } = useRouter().locale;
+  const formattedLocale = locale.split("-")[0];
 
   return (
     <Layout preview={preview}>
@@ -102,7 +108,7 @@ export default function Post({ post, morePosts, preview }) {
                 author={post.author}
               />
               <PostBody content={post.content} />
-                    <Typography variant="h5" sx={{mt:5}}>Referensi</Typography>
+                    <Typography variant="h5" sx={{mt:5}}>{i18n.intro.referensi[formattedLocale]}</Typography>
                     <Box sx={{mt:4, whiteSpace: 'nowrap', overflowX: 'auto'}}>
                         <Typography variant='body2'>
                             <div
@@ -113,7 +119,7 @@ export default function Post({ post, morePosts, preview }) {
             </article>
             <Box sx={{mt:7}}>
             <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
-            <Typography variant='h5' color="#ff0055">Bagikan</Typography>
+            <Typography variant='h5' color="#ff0055">{i18n.intro.bagikan[formattedLocale]}</Typography>
             <Box sx={{mb:5, mt:2}}>
             <Stack
                 direction="row"
@@ -163,23 +169,102 @@ export default function Post({ post, morePosts, preview }) {
   )
 }
 
-export async function getStaticProps({ params, preview = false }) {
-  const data = await getPostAndMorePosts(params.slug, preview)
-  return {
-    props: {
-      preview,
-      post: data.post,
-      morePosts: data.morePosts || [],
-    },
+export async function getStaticPaths({ locales }) {
+  let paths = [];
+
+  const { posts } = await hygraphClient.request(gql`
+    {
+      posts {
+        slug
+      }
+    }
+  `);
+
+  for (const locale of locales) {
+    paths = [
+      ...paths,
+      ...posts.map((post) => ({ params: { slug: post.slug }, locale })),
+    ];
   }
+
+  return {
+    paths,
+    fallback: false,
+  };
 }
 
-export async function getStaticPaths() {
-  const posts = await getAllPostsWithSlug()
+export async function getStaticProps({ locale, params }) {
+  const { post, morePosts } = await hygraphClient.request(
+    gql`
+      query PostPageQuery($slug: String!, $locale: Locale!) {
+        post (where: {slug: $slug}, locales: [$locale]) {
+        locale
+        title
+        slug
+        content {
+          html
+        }
+        reference {
+          html
+        }
+        date
+        ogImage: coverImage {
+          url(transformation: {image: {resize: {fit: crop, width: 2000, height: 1000}}})
+        }
+        coverImage {
+          url(transformation: {image: {resize: {fit: crop, width: 2000, height: 1000}}})
+        }
+        author {
+          name
+          picture {
+            url(transformation: {image: {resize: {fit: crop, width: 100, height: 100}}})
+          }
+        }
+        tags
+        seo {
+              title
+              description
+              keywords
+              image {
+                url
+              }
+            }
+      }
+
+      morePosts: posts(locales: [$locale], orderBy: date_DESC, first: 8, where: {slug_not_in: [$slug]}) {
+        locale
+        title
+        slug
+        excerpt
+        date
+        coverImage {
+          url(transformation: {image: {resize: {fit: crop, width: 2000, height: 1000}}})
+        }
+        author {
+          name
+          picture {
+            url(transformation: {image: {resize: {fit: crop, width: 100, height: 100}}})
+          }
+        }
+        tags
+        seo {
+              title
+              description
+              keywords
+              image {
+                url
+              }
+            }
+      }
+      }
+    `,
+    { slug: params.slug, locale }
+  );
+
   return {
-    paths: posts.map(({ slug }) => ({
-      params: { slug },
-    })),
-    fallback: true,
-  }
+    props: {
+      post,
+      morePosts: morePosts || [],
+    },
+  };
 }

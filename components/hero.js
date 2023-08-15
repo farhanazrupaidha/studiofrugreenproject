@@ -64,6 +64,7 @@ export default function Hero () {
     >
     <Box sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
             <AccessTimeFilledIcon sx={{ fontSize: 40, color:"#BFCC03"}} />
+            <Typography variant="h5" gutterBottom color="#BFCC03" sx={{textAlign: 'right'}}>10/10/2022</Typography>
             <Typography variant="h5" gutterBottom color="#BFCC03" sx={{textAlign: 'right'}}>{`${date}`}</Typography>
             <Typography variant="h5" gutterBottom color="#BFCC03" sx={{textAlign: 'right'}}>{`${time}`}</Typography>
     </Box>

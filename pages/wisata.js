@@ -30,13 +30,17 @@ export default function Index({ posts, preview }) {
 	const [totalPosts, setTotalPosts] = useState();
 	const [postsPerPage] = useState(16);
 
+	const { locale } = useRouter();
+    const { locales, asPath } = useRouter().locale;
+    const formattedLocale = locale.split("-")[0];
+
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
 			const { posts, postsConnection } = await request(
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (where: {_search: "Wisata"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (locales: ${formattedLocale}, where: {_search: "Wisata"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -102,23 +106,20 @@ export default function Index({ posts, preview }) {
 		}
 	};
 
-    const { locale } = useRouter();
-    const formattedLocale = locale.split("-")[0];
-
 	return (
     <>
       <Layout preview={preview}>
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project - Wisata</title>
-                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai tempat - tempat wisata di Indonesia." />
-                     <meta name="keywords" content="studiofru, green project, studiofru green project, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, wisata, wisata alam, wisata lingkungan, wisata indonesia" />
+                     <title>Studiofru | Green Project - Wisata/Travel</title>
+                     <meta name="description" content={i18n.seo.wisata[formattedLocale]} />
+                     <meta name="keywords" content="studiofru, green project, studiofru green project, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, wisata, wisata alam, wisata lingkungan, wisata indonesia, travel indonesia" />
                      <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
                      <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />
-                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai tempat - tempat wisata di Indonesia." />
+                     <meta property="og:description" content={i18n.seo.wisata[formattedLocale]} />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
