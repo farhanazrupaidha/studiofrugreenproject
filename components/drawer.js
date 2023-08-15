@@ -127,7 +127,7 @@ function DrawerToggle () {
                     </ListItemButton>
                   </ListItem>
               </List>
-        <PostLocaleSwitch />
+        <LocaleSwitcher />
         <Button color="inherit" onClick={() => setOpen(false)}>X {i18n.nav.tutup[formattedLocale]}</Button>
       </Drawer>
     </div>
