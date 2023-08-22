@@ -137,9 +137,6 @@ export default function Index({ posts, preview }) {
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Container>
-        <Box sx={{mt:10}}>
-          <AdsenseDisplay />
-        </Box>
           <Intro />
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
@@ -172,7 +169,6 @@ export default function Index({ posts, preview }) {
                     previousPage={previousPage}
                     nextPage={nextPage}
                    />
-                   <AdsenseListing />
                 </center>
 				</Box>
 			) : (

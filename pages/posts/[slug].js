@@ -69,9 +69,6 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <Layout preview={preview}>
       <Container>
-        <Box sx={{mt:10}}>
-            <AdsenseDisplay />
-        </Box>
         <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
@@ -158,7 +155,6 @@ export default function Post({ post, morePosts, preview }) {
             </Stack>
             </Box>
             </Box>
-        <AdsenseArticle />
         <SectionSeparator />
         <Location />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}

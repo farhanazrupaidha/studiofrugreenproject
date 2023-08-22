@@ -147,9 +147,6 @@ export default function Index({ posts, preview }) {
             </h2>
           </Box>
           <Location />
-          <Box sx={{mt:3, mb:3}}>
-             <AdsenseListing />
-          </Box>
 			{blogPosts ? (
 			<Box>
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
@@ -181,7 +178,6 @@ export default function Index({ posts, preview }) {
 				<div className="loading">Loading...</div>
 			)}
         </Container>
-        <AdsenseDisplay />
       </Layout>
     </>
 )

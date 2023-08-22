@@ -46,7 +46,6 @@ export default function Custom404() {
                 />
             </Typography>
             <Button href='/' color='secondary' variant='contained' sx={{mb:5, mt:10}}>Back to Homepage</Button>
-            <AdsenseListing />
             </Box>
         </center>
    </Layout>
