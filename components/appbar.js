@@ -131,13 +131,13 @@ function ResponsiveAppBar(props) {
             <Typography
                 variant="h6"
                 noWrap
-                href="/"
                 sx={{
                     mr: 2,
                     flexGrow: 1,
                     fontWeight: 'bold'
                 }}
             >
+            <Link href="/" color="inherit" underline="hover">
             <Typewriter
               options={{
                 strings: ['Studiofru', '| Green Project'],
@@ -145,9 +145,8 @@ function ResponsiveAppBar(props) {
                 loop: true,
               }}
             />
+            </Link>
             </Typography>
-
-
 
             <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
                 <Button
