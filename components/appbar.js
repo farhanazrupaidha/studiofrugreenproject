@@ -217,7 +217,7 @@ function ResponsiveAppBar(props) {
                 >
                     {i18n.nav.kontribusi[formattedLocale]}
                 </Button>
-                <LocaleSwitcher />
+                <PostLocaleSwitch />
           </Box>
           <Search />
           </Toolbar>

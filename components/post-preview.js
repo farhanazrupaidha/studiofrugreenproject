@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+
 import Avatar from '../components/avatar'
 import Date from '../components/date'
 import CoverImage from './cover-image'
@@ -20,6 +22,9 @@ export default function PostPreview({
   const handleClick = () => {
     console.info('You clicked the Chip.');
   };
+
+	const { locale } = useRouter();
+    const { locales, asPath } = useRouter().locale;
 
   return (
     <div>
