@@ -2,27 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
 import { useRouter } from "next/router";
 
-import i18n from "../../lib/i18n";
 import Container from '../../components/container'
-import MoreStories from '../../components/more-stories'
 import PostPreview from "../../components/post-preview";
-import HeroPost from '../../components/hero-post'
 import Intro from '../../components/intro'
 import Location from "../../components/location"
 import Layout from '../../components/layout'
 import { getAllPostsForHome } from '../../lib/graphcms'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
 import Paginate from '../../components/paginate';
 
-import AdsenseListing from "../../components/adsense-listing";
-import AdsenseDisplay from "../../components/adsense-display";
+import Hero from "../../components/hero-setupatok";
+
 
 import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 
 export default function Index({ posts, preview }) {
-    const heroPost = posts[0]
-    const morePosts = posts.slice(1)
 
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
@@ -30,7 +25,6 @@ export default function Index({ posts, preview }) {
 	const [postsPerPage] = useState(24);
 
 	const { locale } = useRouter();
-    const { locales, asPath } = useRouter().locale;
     const formattedLocale = locale.split("-")[0];
 
 	useEffect(() => {
@@ -135,15 +129,15 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
-               </Head>
+               </Head>        
         <Container>
           <Intro />
-          <Box sx={{mb:10}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                 Wilayah Konservasi Danau Setu Patok
             </h2>
           <iframe width='100%' height='400px' src="https://api.mapbox.com/styles/v1/studiofru/cliof1jfa00og01r14zks3erq.html?title=false&access_token=pk.eyJ1Ijoic3R1ZGlvZnJ1IiwiYSI6ImNrZXBuYXlwcDN2cGwyc2x0Y2libnY2cmwifQ.LsxGcgeSlLKEYbnNldaEfw&zoomwheel=false#14.63/-6.78433/108.56724" title="Outdoors"></iframe>
-          </Box>
+          <Hero />
+          <Divider sx={{mt:10, mb:10}} />
           <Location />
 			{blogPosts ? (
 			<Box>

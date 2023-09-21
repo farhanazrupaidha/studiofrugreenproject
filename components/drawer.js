@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { useRouter } from "next/router";
 
 import i18n from "../lib/i18n";
-import LocaleSwitcher from "./localeswitcher";
 import PostLocaleSwitch from "./post-locale-switch";
 
 import List from '@mui/material/List';
@@ -10,11 +9,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import Avatar from '@mui/material/Avatar';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';

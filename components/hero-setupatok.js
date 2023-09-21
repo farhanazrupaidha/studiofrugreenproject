@@ -1,17 +1,15 @@
-import React from 'react';
+import React, { Component, useRouter } from 'react';
 
-import SearchBar from '/components/searchbar';
-import DataCountFlora from '/components/data-flora';
-import DataCountFauna from '/components/data-fauna';
+import DataCountFlora from '/components/dataflora-setupatok';
+import DataCountFauna from '/components/datafauna-setupatok';
 
-import Typewriter from 'typewriter-effect';
 
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { styled } from '@mui/material/styles';
 
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
+
 
 
 export default function Hero () {
@@ -20,22 +18,7 @@ export default function Hero () {
   const time = new Date().toLocaleTimeString();
 
   return (
-<section id="hero" data-stellar-background-ratio="0.5">
 <Box sx={{m:'auto', mt:5, mb:5}}>
-    <Box sx={{mb:5}}>
-        <center>
-            <Typography variant='h1' color="#BFCC03" sx={{fontWeight:"bold", height:'130px'}}>
-                <Typewriter
-                  options={{
-                    strings: ['Jelajah Ensiklopedia', 'Explore Encyclopedia'],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-            </Typography>
-        </center>
-    </Box>
-
     <Stack
       direction={{ xs: 'column', sm: 'row' }}
       spacing={{ xs: 1, sm: 2, md: 4 }}
@@ -51,12 +34,8 @@ export default function Hero () {
     </Box>
         <DataCountFlora />
         <DataCountFauna />
-        <Box sx={{maxWidth:650, width:'100%'}}>
-                <SearchBar />
-        </Box>
     </Stack>
   </Box>
-</section>
   );
 }
 

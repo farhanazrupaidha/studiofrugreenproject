@@ -8223,6 +8223,11 @@ react-app-polyfill@^3.0.0:
     regenerator-runtime "^0.13.9"
     whatwg-fetch "^3.6.2"
 
+react-country-flag@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/react-country-flag/-/react-country-flag-3.1.0.tgz"
+  integrity sha512-JWQFw1efdv9sTC+TGQvTKXQg1NKbDU2mBiAiRWcKM9F1sK+/zjhP2yGmm8YDddWyZdXVkR8Md47rPMJmo4YO5g==
+
 react-countup@^6.4.2:
   version "6.4.2"
   resolved "https://registry.npmjs.org/react-countup/-/react-countup-6.4.2.tgz"
