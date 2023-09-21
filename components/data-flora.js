@@ -4,12 +4,10 @@ import withApollo from "../config";
 
 import CountUp from 'react-countup';
 
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
 import YardIcon from '@mui/icons-material/Yard';
-import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
 const FLORA = gql`
   query {

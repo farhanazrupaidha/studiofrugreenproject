@@ -135,7 +135,7 @@ export default function Index({ posts, preview }) {
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                 Wilayah Konservasi Danau Setu Patok
             </h2>
-          <iframe width='100%' height='400px' src="https://api.mapbox.com/styles/v1/studiofru/cliof1jfa00og01r14zks3erq.html?title=false&access_token=pk.eyJ1Ijoic3R1ZGlvZnJ1IiwiYSI6ImNrZXBuYXlwcDN2cGwyc2x0Y2libnY2cmwifQ.LsxGcgeSlLKEYbnNldaEfw&zoomwheel=false#14.63/-6.78433/108.56724" title="Outdoors"></iframe>
+          
           <Hero />
           <Divider sx={{mt:10, mb:10}} />
           <Location />

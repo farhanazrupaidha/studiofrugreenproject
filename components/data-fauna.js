@@ -4,7 +4,6 @@ import withApollo from "../config";
 
 import CountUp from 'react-countup';
 
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
