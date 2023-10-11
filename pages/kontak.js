@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import Layout from "../components/layout";
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
+
 import Box from '@mui/material/Box';
 
 

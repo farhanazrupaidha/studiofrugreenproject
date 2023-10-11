@@ -12,9 +12,9 @@ const formattedLocale = locale.split("-")[0];
   return (
     <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" sx={{mt:2, mb:5}}>
         <Typography variant='h6' sx={{mr:1}}>{i18n.intro.lokasi[formattedLocale]}</Typography>
-        <Button size="small" href='/locations/setupatok' variant="contained" color="primary" sx={{borderRadius: 5}}>
-            Setu Patok
-        </Button>
+        <Button size="small" href='/locations/bali' variant="contained" color="primary" sx={{borderRadius: 5}}>
+            Bali
+        </Button> 
         <Button size="small" href='/locations/jawabarat' variant="contained" color="primary" sx={{borderRadius: 5}}>
             Jawa Barat
         </Button>
@@ -24,6 +24,9 @@ const formattedLocale = locale.split("-")[0];
         <Button size="small" href='/locations/jawatimur' variant="contained" color="primary" sx={{borderRadius: 5}}>
                     Jawa Timur
         </Button>
+        <Button size="small" href='/locations/setupatok' variant="contained" color="primary" sx={{borderRadius: 5}}>
+            Setu Patok
+        </Button>        
     </Stack>
   );
 }

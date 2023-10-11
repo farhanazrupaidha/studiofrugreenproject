@@ -39,7 +39,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (locales: ${formattedLocale}, where: {_search: "jawa barat"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (locales: ${formattedLocale}, where: {_search: "bali"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -119,14 +119,14 @@ export default function Index({ posts, preview }) {
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project - Jawa Barat</title>
-                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Jawa Barat" />
-                     <meta name="keywords" content="studiofru, green project, studiofru green project, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, jawa barat, teknologi pertanian" />
+                     <title>Studiofru | Green Project - Bali</title>
+                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Jawa Bali" />
+                     <meta name="keywords" content="studiofru, green project, studiofru green project, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, bali, teknologi pertanian" />
                      <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
                      <meta property="image" content="/images/fotopetani_1.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />
-                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Jawa Barat" />
+                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Bali" />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
@@ -140,7 +140,7 @@ export default function Index({ posts, preview }) {
           <Intro />
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                Jawa Barat
+                Bali
             </h2>
           </Box>
           <Location />

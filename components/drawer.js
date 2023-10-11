@@ -103,6 +103,13 @@ function DrawerToggle () {
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton href="/videos">
+                      <ListItemText>
+                        Video
+                      </ListItemText>
+                    </ListItemButton>
+                  </ListItem>                  
                   <ListItem disablePadding sx={{mt:2}}>
                       <ListItemText>
                         {i18n.nav.komunitas[formattedLocale]}

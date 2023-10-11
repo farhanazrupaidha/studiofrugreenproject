@@ -211,11 +211,11 @@ function ResponsiveAppBar(props) {
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
-                    href="/kontribusi"
+                    href="/videos"
                     color= 'secondary'
                     sx={{ my: 2, mr:2, display: 'block' }}
                 >
-                    {i18n.nav.kontribusi[formattedLocale]}
+                    Video
                 </Button>
                 <PostLocaleSwitch />
           </Box>
