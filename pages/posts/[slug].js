@@ -36,6 +36,9 @@ import { styled } from '@mui/material/styles';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import PinterestIcon from '@mui/icons-material/Pinterest';
 
 import {
   TwitterShareButton,
@@ -154,6 +157,31 @@ export default function Post({ post, morePosts, preview }) {
                 </WhatsappShareButton>
             </Stack>
             </Box>
+            <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
+              <Typography variant="h6" color="#ff0055" sx={{mt:2}}>Ikuti Studiofru | Green Project melalui media sosial untuk mendapatkan informasi singkat mengenai flora dan fauna</Typography>
+              <Stack
+                direction="row"
+                spacing={1}
+                justifyContent="left"
+                alignItems="left"
+                sx={{mt:2, mb:4}}
+            >
+              <LightTooltip disableFocusListener title="Follow me on YouTube">
+              <IconButton href="https://www.youtube.com/channel/UCX5J82L560fv5r5hslQwI-A" color="primary" aria-label="Follow me on YouTube">
+                <YouTubeIcon />
+              </IconButton>
+              </LightTooltip>
+              <LightTooltip disableFocusListener title="Follow me on Instagram">
+              <IconButton href="https://www.instagram.com/studiofru/" color="primary" aria-label="Follow me on Instagram">
+                <InstagramIcon />
+              </IconButton>
+              </LightTooltip>
+              <LightTooltip disableFocusListener title="Follow me on Facebook">
+              <IconButton href="https://www.facebook.com/studiofruworks" color="primary" aria-label="Follow me on Facebook">
+                <FacebookIcon />
+              </IconButton> 
+              </LightTooltip>     
+              </Stack>       
             </Box>
         <SectionSeparator />
         <Location />
