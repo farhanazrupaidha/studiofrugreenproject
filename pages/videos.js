@@ -30,6 +30,7 @@ import ReactPlayer from 'react-player/youtube';
 import Box from '@mui/material/Box';
 import Pagination from "@mui/material/Pagination";
 import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 
 export default function Index({ posts, preview }) {
     const heroPost = posts[0]
@@ -144,17 +145,18 @@ export default function Index({ posts, preview }) {
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                 Video - Video
-            </h2>
-          </Box>
+            </h2>   
+            <Typography variant="h4">Video Diary</Typography>
+            <Splide aria-label="Video Diary">
+              <SplideSlide>
+                <section className="d-share">
+                  <ReactPlayer url='https://youtu.be/bHkj6MgXdiw?si=epvJyo3Q-B_vz_la' />
+                </section>
+              </SplideSlide>  
+            </Splide>                     
+            </Box>
+            <Divider sx={{mt:10, mb:10}} />            
           <Location />
-          <Typography variant="h4">Video Diary</Typography>
-          <Splide aria-label="Video Diary">
-            <SplideSlide>
-              <section className="d-share">
-                <ReactPlayer url='https://youtu.be/bHkj6MgXdiw?si=epvJyo3Q-B_vz_la' />
-              </section>
-            </SplideSlide>  
-          </Splide>
 
 			{blogPosts ? (
 			<Box>
