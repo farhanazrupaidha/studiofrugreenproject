@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react'
+
 import { useRouter } from "next/router";
 
 import Typewriter from 'typewriter-effect';
@@ -10,9 +10,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import DrawerToggle from "/components/drawer";
 import Search from "/components/search";
-import i18n from "../lib/i18n";
-import LocaleSwitcher from "./localeswitcher";
-import PostLocaleSwitch from "./post-locale-switch";
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -21,7 +18,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
@@ -101,7 +97,6 @@ function ResponsiveAppBar(props) {
     };
 
     const { locale } = useRouter();
-    const formattedLocale = locale.split("-")[0];
 
   return (
 
@@ -154,7 +149,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    {i18n.nav.spesies[formattedLocale]}
+                    Spesies
                 </Button>
 
             <Menu
@@ -180,7 +175,7 @@ function ResponsiveAppBar(props) {
                   <Typography textAlign="center"><Link href="/fauna"  color="inherit" underline="none">FAUNA</Link></Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" sx={{ textTransform: 'uppercase' }}><Link href="/endemik"  color="inherit" underline="none">{i18n.nav.endemik[formattedLocale]}</Link></Typography>
+                  <Typography textAlign="center" sx={{ textTransform: 'uppercase' }}><Link href="/endemik"  color="inherit" underline="none">Endemik</Link></Typography>
                 </MenuItem>
             </Menu>
 
@@ -190,7 +185,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    {i18n.nav.sains[formattedLocale]}
+                    Sains
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
@@ -198,7 +193,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    {i18n.nav.pengetahuan[formattedLocale]}
+                    Pengetahuan
                 </Button>
 
                 <Button
@@ -207,7 +202,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    {i18n.nav.wisata[formattedLocale]}
+                    Wisata
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
@@ -217,7 +212,6 @@ function ResponsiveAppBar(props) {
                 >
                     Video
                 </Button>
-                <PostLocaleSwitch />
           </Box>
           <Search />
           </Toolbar>

@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useRouter } from "next/router";
 
-import i18n from "../lib/i18n";
-import PostLocaleSwitch from "./post-locale-switch";
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -21,8 +18,6 @@ import DragHandleIcon from '@mui/icons-material/DragHandle';
 
 function DrawerToggle () {
   const [open, setOpen] = useState(false);
-  const { locale } = useRouter();
-  const formattedLocale = locale.split("-")[0];
 
   return (
     <div>
@@ -51,7 +46,7 @@ function DrawerToggle () {
         <List sx={{ mr: 2, ml:2 }}>
                   <ListItem disablePadding>
                       <ListItemText>
-                        {i18n.nav.spesies[formattedLocale]}
+                        Spesies
                       </ListItemText>
                   </ListItem>
                   <Divider sx={{mr:5}} />
@@ -72,34 +67,34 @@ function DrawerToggle () {
                   <ListItem disablePadding>
                     <ListItemButton href="/endemik">
                       <ListItemText>
-                        {i18n.nav.endemik[formattedLocale]}
+                        Endemik
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding sx={{mt:2}}>
                       <ListItemText>
-                        {i18n.nav.lainnya[formattedLocale]}
+                        Lainnya
                       </ListItemText>
                   </ListItem>
                   <Divider sx={{mr:5}} />
                   <ListItem disablePadding>
                     <ListItemButton href="/sains">
                       <ListItemText>
-                        {i18n.nav.sains[formattedLocale]}
+                        Sains
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding>
                     <ListItemButton href="/pengetahuan">
                       <ListItemText>
-                        {i18n.nav.pengetahuan[formattedLocale]}
+                        Pengetahuan
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding>
                     <ListItemButton href="/wisata">
                       <ListItemText>
-                        {i18n.nav.wisata[formattedLocale]}
+                        Wisata
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
@@ -112,7 +107,7 @@ function DrawerToggle () {
                   </ListItem>                  
                   <ListItem disablePadding sx={{mt:2}}>
                       <ListItemText>
-                        {i18n.nav.komunitas[formattedLocale]}
+                        Komunitas
                       </ListItemText>
                   </ListItem>
                   <Divider sx={{mr:5}} />
@@ -126,13 +121,12 @@ function DrawerToggle () {
                   <ListItem disablePadding>
                     <ListItemButton href="/kontribusi">
                       <ListItemText>
-                        {i18n.nav.kontribusi[formattedLocale]}
+                        Kontribusi
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
               </List>
-        <PostLocaleSwitch />
-        <Button color="inherit" onClick={() => setOpen(false)}>X {i18n.nav.tutup[formattedLocale]}</Button>
+        <Button color="inherit" onClick={() => setOpen(false)}>X Tutup</Button>
       </Drawer>
     </div>
   );

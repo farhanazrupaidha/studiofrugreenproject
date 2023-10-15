@@ -1,39 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-import { useRouter } from "next/router";
 
-import i18n from "../lib/i18n";
 import Container from '../components/container'
-import MoreStories from '../components/more-stories'
 import PostPreview from "../components/post-preview";
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
 import Location from "../components/location"
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 import Paginate from '../components/paginate';
 
-import AdsenseListing from "../components/adsense-listing";
-import AdsenseDisplay from "../components/adsense-display";
 
 import Box from '@mui/material/Box';
-import Pagination from "@mui/material/Pagination";
 
 export default function Index({ posts, preview }) {
-    const heroPost = posts[0]
-    const morePosts = posts.slice(1)
 
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
 	const [postsPerPage] = useState(16);
 
-	const { locale } = useRouter();
-    const { locales, asPath } = useRouter().locale;
-    const formattedLocale = locale.split("-")[0];
 
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
@@ -41,7 +27,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (locales: ${formattedLocale}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -122,13 +108,13 @@ export default function Index({ posts, preview }) {
                      defaultTitle="Studiofru | Green Project"
                    >
                      <title>Studiofru | Green Project</title>
-                     <meta name="description" content={i18n.seo.index[formattedLocale]} />
+                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, farming, livestock, animal, plants" />
                      <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
                      <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />
-                     <meta property="og:description" content={i18n.seo.index[formattedLocale]} />
+                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia."/>
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
@@ -143,7 +129,7 @@ export default function Index({ posts, preview }) {
         <Container>
           <Box sx={{mb:5, mt:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                {i18n.intro.artikelterbaru[formattedLocale]}
+               Catatan Terbaru
             </h2>
           </Box>
           <Location />

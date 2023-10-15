@@ -24,16 +24,13 @@ export default function Index({ posts, preview }) {
 	const [totalPosts, setTotalPosts] = useState();
 	const [postsPerPage] = useState(24);
 
-	const { locale } = useRouter();
-    const formattedLocale = locale.split("-")[0];
-
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
 			const { posts, postsConnection } = await request(
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (locales: ${formattedLocale}, where: {_search: "setu patok"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (where: {_search: "setu patok"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title

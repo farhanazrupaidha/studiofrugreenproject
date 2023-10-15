@@ -2,36 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
 import { useRouter } from "next/router";
 
-import i18n from "../../lib/i18n";
 import Container from '../../components/container'
-import MoreStories from '../../components/more-stories'
 import PostPreview from "../../components/post-preview";
-import HeroPost from '../../components/hero-post'
 import Intro from '../../components/intro'
 import Location from "../../components/location"
 import Layout from '../../components/layout'
 import { getAllPostsForHome } from '../../lib/graphcms'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
 import Paginate from '../../components/paginate';
 
-import AdsenseListing from "../../components/adsense-listing";
-import AdsenseDisplay from "../../components/adsense-display";
 
 import Box from '@mui/material/Box';
 
 export default function Index({ posts, preview }) {
-    const heroPost = posts[0]
-    const morePosts = posts.slice(1)
 
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
 	const [postsPerPage] = useState(24);
 
-	const { locale } = useRouter();
-    const { locales, asPath } = useRouter().locale;
-    const formattedLocale = locale.split("-")[0];
 
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
@@ -39,7 +28,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (locales: ${formattedLocale}, where: {_search: "jawa timur"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (where: {_search: "jawa timur"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
