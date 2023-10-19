@@ -179,7 +179,7 @@ export default function Post({ post, morePosts, preview }) {
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}
-         <Button variant="contained" endIcon={<ArrowForwardIcon />} href="/catatanlapangan-lama" color="secondary"  size="large" sx={{borderRadius: 5, mb:10}}>Lihat Catatan Terbaru Lainnya</Button>
+         <Button variant="contained" endIcon={<ArrowForwardIcon />} href="/" color="secondary"  size="large" sx={{borderRadius: 5, mb:10}}>Lihat Catatan Terbaru Lainnya</Button>
       </Container>
     </Layout>
   )
