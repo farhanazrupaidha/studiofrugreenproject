@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from "next/router";
 
-import i18n from "../lib/i18n";
-
 import { useLazyQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 
@@ -59,13 +57,10 @@ const Search = ({posts, slug}) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const { locale } = useRouter();
-  const formattedLocale = locale.split("-")[0];
-
 return (
 <Box>
     <Button aria-label="delete" onClick={handleOpen} color="secondary">
-        <SearchIcon /> <Typography variant='subtitle' sx={{ml:1}}>{i18n.nav.cari[formattedLocale]}</Typography>
+        <SearchIcon /> <Typography variant='subtitle' sx={{ml:1}}>Cari</Typography>
     </Button>
     <Modal
         open={open}
@@ -83,7 +78,7 @@ return (
           style = {{width: '100%'}}
           sx={{ input: { color: 'black' }, mb:1, mt:2, ml:3 }}
           color="secondary"
-          placeholder={i18n.nav.cariplaceholder[formattedLocale]}
+          placeholder="Ketik pencarian di sini"
           type="text"
           onChange={(e) => setSearchFilter(e.target.value)}
         />
@@ -97,7 +92,7 @@ return (
             })
           }
         >
-         {i18n.nav.cari[formattedLocale]}
+         Cari
          </Button>
       </Stack>
     </Box>
@@ -115,7 +110,7 @@ return (
       sx={{borderRadius: 5, mt: 3}}
       onClick={handleClose}
     >
-      {i18n.nav.tutup[formattedLocale]}
+      Tutup
     </Button>
     </Box>
     </Modal>

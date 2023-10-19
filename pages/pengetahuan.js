@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-import { useRouter } from "next/router";
 
-import i18n from "../lib/i18n";
 import Container from '../components/container'
 import PostPreview from "../components/post-preview";
 import Intro from '../components/intro'
@@ -94,8 +92,6 @@ export default function Index({ posts, preview }) {
 		}
 	};
 
-    const { locale } = useRouter();
-    const formattedLocale = locale.split("-")[0];
 
 	return (
     <>

@@ -27,7 +27,7 @@ export default function Hero () {
             <Typography variant='h1' color="#BFCC03" sx={{fontWeight:"bold", height:'130px'}}>
                 <Typewriter
                   options={{
-                    strings: ['Jelajah Ensiklopedia', 'Explore Encyclopedia'],
+                    strings: ['Jelajah Ensiklopedia'],
                     autoStart: true,
                     loop: true,
                   }}

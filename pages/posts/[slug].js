@@ -131,7 +131,7 @@ export default function Post({ post, morePosts, preview }) {
                 <FacebookShareButton
                     url={`https://studiofrugreenproject.com/posts/${post.slug}`}
                     quote={post.seo.title}
-                    hashtag={'#studiofruworks', '#studiofruarticle'}
+                    hashtag={'#studiofrugreenproject'}
                 >
                 <LightTooltip disableFocusListener title="Share it on Facebook">
                     <IconButton><FacebookIcon color="primary" size="small" /></IconButton>

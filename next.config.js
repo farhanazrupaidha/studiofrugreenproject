@@ -15,10 +15,6 @@ module.exports = withBundleAnalyzer({
    experimental: {
     workerThreads: false,
     cpus: 1
-   },
-  i18n: {
-    locales: ['id'],
-    defaultLocale: 'id'
-  },
+   }
 })
 

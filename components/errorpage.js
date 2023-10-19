@@ -3,8 +3,6 @@ import { useLazyQuery, useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 import Head from 'next/head'
 
-import AdsenseListing from "components/adsense-listing";
-import Container from 'components/container'
 import SearchBar from 'components/searchbar';
 import PostPreview from "components/post-preview";
 import Layout from "components/layout";

@@ -7,12 +7,6 @@ export default class MyDocument extends Document {
         <Head>
             <meta charset="utf-8" />
             <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
-            <link rel="alternate" hreflang="id"
-              href="https://studiofrugreenproject.com/id" />
-            <link rel="alternate" hreflang="en"
-              href="https://studiofrugreenproject.com/en" />
-            <link rel="alternate" hreflang="x-default"
-              href="https://studiofrugreenproject.com/" />
             <link
               rel="icon"
               href="/icon?<generated>"
