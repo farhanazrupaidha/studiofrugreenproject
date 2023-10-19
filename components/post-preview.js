@@ -1,11 +1,9 @@
-import { useRouter } from "next/router";
 
 import Avatar from '../components/avatar'
 import Date from '../components/date'
 import CoverImage from './cover-image'
 import Link from 'next/link'
 
-import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 
@@ -23,8 +21,6 @@ export default function PostPreview({
     console.info('You clicked the Chip.');
   };
 
-	const { locale } = useRouter();
-  const { locales, asPath } = useRouter().locale;
 
   return (
     <div>
