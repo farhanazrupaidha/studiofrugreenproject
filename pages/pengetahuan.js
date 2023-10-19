@@ -4,31 +4,23 @@ import { useRouter } from "next/router";
 
 import i18n from "../lib/i18n";
 import Container from '../components/container'
-import MoreStories from '../components/more-stories'
 import PostPreview from "../components/post-preview";
-import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Location from "../components/location"
 import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 import Paginate from '../components/paginate';
 
-import AdsenseListing from "../components/adsense-listing";
-import AdsenseDisplay from "../components/adsense-display";
 
 import Box from '@mui/material/Box';
-import Pagination from "@mui/material/Pagination";
 
 export default function Index({ posts, preview }) {
-    const heroPost = posts[0]
-    const morePosts = posts.slice(1)
 
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(16);
+	const [postsPerPage] = useState(10);
 
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
@@ -132,7 +124,7 @@ export default function Index({ posts, preview }) {
           <Intro />
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                {i18n.nav.pengetahuan[formattedLocale]}
+                Pengetahuan
             </h2>
           </Box>
           <Location />

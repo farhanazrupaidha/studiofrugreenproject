@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-import { useRouter } from "next/router";
 
 import Container from '../../components/container'
 import PostPreview from "../../components/post-preview";
@@ -18,7 +17,7 @@ export default function Index({ posts, preview }) {
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(24);
+	const [postsPerPage] = useState(10);
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
 			const { posts, postsConnection } = await request(

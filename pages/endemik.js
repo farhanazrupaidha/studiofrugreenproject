@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-import { useRouter } from "next/router";
 
 import Container from '../components/container'
 import PostPreview from "../components/post-preview";
@@ -11,9 +10,7 @@ import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 import Paginate from '../components/paginate';
 
-
 import Box from '@mui/material/Box';
-import Pagination from "@mui/material/Pagination";
 
 export default function Index({ posts, preview }) {
 
@@ -23,7 +20,6 @@ export default function Index({ posts, preview }) {
 	const [totalPosts, setTotalPosts] = useState();
 	const [postsPerPage] = useState(16);
 
-	const { locale } = useRouter();
 
 	useEffect(() => {
 		const fetchBlogPosts = async () => {

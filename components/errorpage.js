@@ -16,8 +16,7 @@ import {
     Box,
     Stack,
     Typography,
-    Link,
-    Pagination
+    Link
 }
 from '@mui/material';
 
@@ -94,7 +93,6 @@ const { data, loading, error } = useQuery(FLORA);
             </Box>
         </center>
 </section>
-
 
 
 <Stack spacing={{ xs: 2, sm: 5 }} direction="row" useFlexGap flexWrap="wrap" justifyContent="center" sx={{m:5}}>

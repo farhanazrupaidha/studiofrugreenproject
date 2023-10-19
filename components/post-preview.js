@@ -24,7 +24,7 @@ export default function PostPreview({
   };
 
 	const { locale } = useRouter();
-    const { locales, asPath } = useRouter().locale;
+  const { locales, asPath } = useRouter().locale;
 
   return (
     <div>

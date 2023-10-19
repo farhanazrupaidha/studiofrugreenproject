@@ -25,21 +25,10 @@ return (
     <Stack spacing={2} sx={{borderRadius: 5, m:5}} justifyContent="center" alignItems="center">
 			<ButtonGroup  variant="contained" sx={{borderRadius: 5}} color="secondary" backgroundColor="white" aria-label="medium secondary button group">
 				<Button onClick={previousPage} className="page-number">
-					<KeyboardArrowLeftIcon />
+					Terbaru <KeyboardArrowLeftIcon />
 				</Button>
-				{pageNumbers.map((number) => (
-					<Button
-						key={number}
-						onClick={() => paginate(number)}
-						className={
-							'page-number ' + (number === currentPage ? 'active' : '')
-						}
-					>
-						{number}
-					</Button>
-				))}
 				<Button onClick={nextPage} className="page-number">
-					<KeyboardArrowRightIcon />
+					Terdahulu <KeyboardArrowRightIcon />
 				</Button>
 			</ButtonGroup>
 	</Stack>

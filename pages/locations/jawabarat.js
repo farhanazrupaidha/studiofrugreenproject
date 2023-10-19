@@ -10,7 +10,6 @@ import { getAllPostsForHome } from '../../lib/graphcms'
 import Head from 'next/head'
 import Paginate from '../../components/paginate';
 
-
 import Box from '@mui/material/Box';
 
 export default function Index({ posts, preview }) {
@@ -18,7 +17,7 @@ export default function Index({ posts, preview }) {
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(24);
+	const [postsPerPage] = useState(10);
 
 
 	useEffect(() => {

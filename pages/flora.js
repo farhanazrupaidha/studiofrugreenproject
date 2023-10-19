@@ -17,7 +17,7 @@ export default function Flora ({ posts, preview }) {
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(16);
+	const [postsPerPage] = useState(10);
 
 
 	useEffect(() => {

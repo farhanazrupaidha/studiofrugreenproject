@@ -23,6 +23,7 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
 
@@ -31,6 +32,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import {
   TwitterShareButton,
@@ -177,6 +179,7 @@ export default function Post({ post, morePosts, preview }) {
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}
+         <Button variant="contained" endIcon={<ArrowForwardIcon />} href="/catatanlapangan-lama" color="secondary"  size="large" sx={{borderRadius: 5, mb:10}}>Lihat Catatan Terbaru Lainnya</Button>
       </Container>
     </Layout>
   )
