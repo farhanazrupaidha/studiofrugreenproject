@@ -20,6 +20,7 @@ export default class MyDocument extends Document {
               sizes="<generated>"
             />
             <meta name="monetag" content="9663b06f2269f23a9530d7c480190dbd" />
+            <script src="https://alwingulla.com/88/tag.min.js" data-zone="18543" async data-cfasync="false" />
             {/* google adsense */}
      	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
      	    <script dangerouslySetInnerHTML={{
