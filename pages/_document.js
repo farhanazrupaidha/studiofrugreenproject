@@ -19,8 +19,14 @@ export default class MyDocument extends Document {
               type="image/<generated>"
               sizes="<generated>"
             />
+             {/* monetag */}
             <meta name="monetag" content="9663b06f2269f23a9530d7c480190dbd" />
-            <script src="https://alwingulla.com/88/tag.min.js" data-zone="18543" async data-cfasync="false" />
+            <script async="async" data-cfasync="false" src="//ophoacit.com/1?z=6529360" />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('oaphoace.net',6529363,document.createElement('script'))`,
+              }}
+            />
             {/* google adsense */}
      	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
      	    <script dangerouslySetInnerHTML={{
