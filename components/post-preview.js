@@ -6,6 +6,14 @@ import Link from 'next/link'
 
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
+
+const Item = styled(Box)(({ theme }) => ({
+  ...theme.typography.body2,
+  maxWidth: 700,
+  width:'100%'
+}));
 
 export default function PostPreview({
   title,
@@ -23,7 +31,12 @@ export default function PostPreview({
 
 
   return (
-    <div>
+    <Box sx={{bgcolor: 'background.default'}}>
+      <Stack
+        direction={{ xs: 'column', sm: 'row' }}
+        spacing={{ xs: 5, sm: 2, md: 4 }}
+      >
+        <Item>
       <div className="mb-5">
         <CoverImage slug={slug} title={title} url={coverImage.url} />
       </div>
@@ -42,6 +55,8 @@ export default function PostPreview({
         </Stack>
       <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture.url} />
-    </div>
+    </Item>
+    </Stack>
+  </Box>  
   )
 }

@@ -132,7 +132,6 @@ export default function Index({ posts, preview }) {
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                 Wilayah Konservasi Danau Setu Patok
             </h2>
-          
           <Hero />
           <Divider sx={{mt:10, mb:10}} />
           <Location />

@@ -123,7 +123,7 @@ background-color:var(--red);
   -----------------------------------------*/
 
   #hero {
-    background: url('../public/images/backgroundhero-tanah.jpg') no-repeat center center;
+    background: url('../public/images/backgroundhero-tanah-smallersize.jpg') no-repeat center center;
     background-size: cover;
     display: -webkit-box;
     display: -webkit-flex;
