@@ -19,6 +19,7 @@ export default class MyDocument extends Document {
               type="image/<generated>"
               sizes="<generated>"
             />
+            <meta name="monetag" content="9663b06f2269f23a9530d7c480190dbd" />
             {/* google adsense */}
      	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
      	    <script dangerouslySetInnerHTML={{
