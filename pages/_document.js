@@ -25,13 +25,6 @@ export default class MyDocument extends Document {
             <script dangerouslySetInnerHTML={{
                 __html: 
                 `
-                (function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('oaphoace.net',6529363,document.createElement('script'))
-                `,
-              }}
-            />
-            <script dangerouslySetInnerHTML={{
-                __html: 
-                `
                 (function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('ileeckut.com',6531061,document.createElement('script'))
                 `,
               }}
