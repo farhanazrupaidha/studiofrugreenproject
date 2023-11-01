@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
      	    <script dangerouslySetInnerHTML={{
          	    __html: `
             	(adsbygoogle = window.adsbygoogle || []).push({
-              	google_ad_client: "ca-pub-5314296649303404",
+              	google_ad_client: "ca-pub-1624631757856478",
               	enable_page_level_ads: true
               	});
              	`,
