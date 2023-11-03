@@ -21,23 +21,13 @@ export default class MyDocument extends Document {
             />
              {/* monetag */}
             <meta name="monetag" content="9663b06f2269f23a9530d7c480190dbd" />
-            <script async="async" data-cfasync="false" src="//ophoacit.com/1?z=6529360" />
-            <script src="https://glimtors.net/pfe/current/tag.min.js?z=6546234" data-cfasync="false" async />
+            <script src="https://boustahe.com/pfe/current/tag.min.js?z=6546234" data-cfasync="false" async />            
             <script dangerouslySetInnerHTML={{
-                __html: 
-                `
-                (function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('ileeckut.com',6531061,document.createElement('script'))
-                `,
-              }}
-            />
-            <script dangerouslySetInnerHTML={{
-                __html: 
-                `
-                (function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('ofleafeona.com',6529363,document.createElement('script'))
-                `,
-              }}
-            />    
-                    
+         	    __html: `
+               (function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gloaphoo.net',6529363,document.createElement('script'))
+             	`,
+            }} />  
+            {/* monetag */}           
             {/* google adsense */}
      	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
      	    <script dangerouslySetInnerHTML={{
