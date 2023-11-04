@@ -22,11 +22,6 @@ export default class MyDocument extends Document {
              {/* monetag */}
             <meta name="monetag" content="9663b06f2269f23a9530d7c480190dbd" />
             <script src="https://boustahe.com/pfe/current/tag.min.js?z=6546234" data-cfasync="false" async />            
-            <script dangerouslySetInnerHTML={{
-         	    __html: `
-               (function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gloaphoo.net',6529363,document.createElement('script'))
-             	`,
-            }} />  
             {/* monetag */}           
             {/* google adsense */}
      	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
