@@ -6,19 +6,33 @@ import PostPreview from "../components/post-preview";
 import Location from "../components/location"
 import Layout from '../components/layout'
 import Hero from '../components/hero'
+
+import RecentFlora from 'components/recent-flora'
+import RecentFauna from 'components/recent-fauna'
+import RecentSains from 'components/recent-sains'
+import RecentWisata from 'components/recent-wisata'
+import RecentPengetahuan from 'components/recent-pengetahuan'
+
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 import Paginate from '../components/paginate';
 
-
+import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
+
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+import '@splidejs/react-splide/css/sea-green';
+
+// or only core styles
+import '@splidejs/react-splide/css/core';
 
 export default function Index({ posts, preview }) {
 
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(10);
+	const [postsPerPage] = useState(4);
 
 
 	useEffect(() => {
@@ -108,9 +122,14 @@ export default function Index({ posts, preview }) {
                      defaultTitle="Studiofru | Green Project"
                    >
                      <title>Studiofru | Green Project</title>
+                     <meta name="title" content="Studiofru | Green Project - Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia." />
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, farming, livestock, animal, plants" />
-                     <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
+                     <meta name="robots" content="index, follow" />
+                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                     <meta name="language" content="Bahasa Indonesia" />
+                     <meta name="revisit-after" content="3 days" />
+                     <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />
@@ -148,7 +167,7 @@ export default function Index({ posts, preview }) {
                      excerpt={blogPost.excerpt}
                    />
                    ))}
-                 </div>
+      </div>
                  <center>
                   <Paginate
                   postsPerPage={postsPerPage}
@@ -164,6 +183,31 @@ export default function Index({ posts, preview }) {
 				<div className="loading">Loading...</div>
 			)}
         </Container>
+        <Divider sx={{m:10}} />
+      <Box sx={{ml:5}}>
+      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+        Berdasarkan Topik
+      </h2>
+      </Box>        
+        <Box sx={{m:5}}>
+        <Splide aria-label="Catatan Terbaru">
+              <SplideSlide>
+                <RecentFlora />
+              </SplideSlide>  
+              <SplideSlide>
+                <RecentFauna />
+              </SplideSlide>
+              <SplideSlide>
+                <RecentSains />
+              </SplideSlide>   
+              <SplideSlide>
+                <RecentWisata />
+              </SplideSlide>       
+              <SplideSlide>
+                <RecentPengetahuan />
+              </SplideSlide>                                                    
+      </Splide> 
+        </Box>  
       </Layout>
     </>
 )

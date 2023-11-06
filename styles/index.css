@@ -34,12 +34,13 @@ background-color:var(--red);
 }
 
 .c-share {
-  padding: 1rem;
-
   display: flex;
   flex: column;
   align-items: center;
   justify-content: center; /* [2] */
+  margin-bottom:10px;
+  max-width: 200px;
+  width:100%;
 }
 
 .d-share {
@@ -48,29 +49,6 @@ background-color:var(--red);
   align-items: center;
   justify-content: center; /* [2] */
   margin-bottom:10px;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-  cursor: -webkit-grabbing; cursor: grabbing;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .fix-bottom-button {

@@ -6,6 +6,11 @@ import ErrorPage from 'components/errorpage'
 import Container from 'components/container'
 import PostBody from 'components/post-body'
 import MoreStories from 'components/more-stories'
+import RecentFlora from 'components/recent-flora'
+import RecentFauna from 'components/recent-fauna'
+import RecentSains from 'components/recent-sains'
+import RecentWisata from 'components/recent-wisata'
+import RecentPengetahuan from 'components/recent-pengetahuan'
 import Header from 'components/header'
 import PostHeader from 'components/post-header'
 import PostTitle from 'components/post-title'
@@ -17,13 +22,24 @@ import Location from "components/location"
 import ShareButton from "components/socialsharebutton";
 
 import { motion, useScroll } from "framer-motion"
+import ReactPlayer from 'react-player/youtube';
+
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+import '@splidejs/react-splide/css/sea-green';
+
+// or only core styles
+import '@splidejs/react-splide/css/core';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import Button from '@mui/material/Button';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
 
@@ -32,13 +48,17 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import {
   TwitterShareButton,
   FacebookShareButton,
   WhatsappShareButton,
 } from 'next-share'
+
+const Item = styled(Box)(({ theme }) => ({
+  ...theme.typography.body2,
+}));
 
 const LightTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -73,8 +93,14 @@ export default function Post({ post, morePosts, preview }) {
                      defaultTitle="Studiofru | Green Project"
                    >
                      <title>{post.seo.title}</title>
+                     <meta name="title" content={post.seo.title}></meta>
                      <meta name="description" content={post.seo.description} />
                      <meta name="keywords" content={post.seo.keywords} />
+                     <meta name="robots" content="index, follow" />
+                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                     <meta name="language" content="Bahasa Indonesia" />
+                     <meta name="revisit-after" content="3 days" />
+                     <meta name="author" content="Studiofru | Green Project" />                     
                      <meta property="image" content={post.seo.image.url} />
                      <meta property="og:title" content={post.seo.title} />
                      <meta property="og:description" content={post.seo.description} />
@@ -91,7 +117,7 @@ export default function Post({ post, morePosts, preview }) {
                 className="progress-bar"
                 style={{ scaleX: scrollYProgress }}
               />
-              <PostHeader
+            <PostHeader
                 title={post.title}
                 tags={post.tags}
                 coverImage={post.coverImage}
@@ -107,6 +133,8 @@ export default function Post({ post, morePosts, preview }) {
                             />
                         </Typography>
                     </Box>
+             
+                   
             </article>
             <Box sx={{mt:7}}>
             <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
@@ -176,11 +204,35 @@ export default function Post({ post, morePosts, preview }) {
             </Box>
         <SectionSeparator />
         <Location />
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
-        )}
-         <Button variant="contained" endIcon={<ArrowForwardIcon />} href="/" color="secondary"  size="large" sx={{borderRadius: 5, mb:10}}>Lihat Catatan Terbaru Lainnya</Button>
+        )}       
       </Container>
+      <Divider sx={{m:5, mb:10}} />
+      <Box sx={{ml:5}}>
+      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+        Berdasarkan Topik
+      </h2>
+      </Box>
+      <Box sx={{mb:5}}>
+      <Splide aria-label="Catatan Terbaru">
+              <SplideSlide>
+                <RecentFlora />
+              </SplideSlide>  
+              <SplideSlide>
+                <RecentFauna />
+              </SplideSlide>
+              <SplideSlide>
+                <RecentSains />
+              </SplideSlide>   
+              <SplideSlide>
+                <RecentWisata />
+              </SplideSlide>       
+              <SplideSlide>
+                <RecentPengetahuan />
+              </SplideSlide>                                                    
+      </Splide>  
+      </Box>     
     </Layout>
   )
 }

@@ -58,6 +58,11 @@ const { data, loading, error } = useQuery(ABOUT);
                      <title>{data.page.seo.title}</title>
                      <meta name="description" content={data.page.seo.description} />
                      <meta name="keywords" content={data.page.seo.keywords} />
+                     <meta name="robots" content="index, follow" />
+                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                     <meta name="language" content="Bahasa Indonesia" />
+                     <meta name="revisit-after" content="3 days" />
+                     <meta name="author" content="Studiofru | Green Project" />                      
                      <meta property="image" content={data.page.seo.image.url} />
                      <meta property="og:title" content={data.page.seo.title} />
                      <meta property="og:description" content={data.page.seo.description} />

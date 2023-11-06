@@ -11,7 +11,6 @@ import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 import Paginate from '../components/paginate';
 
-
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import '@splidejs/react-splide/css/sea-green';
@@ -113,7 +112,11 @@ export default function Index({ posts, preview }) {
                      <title>Studiofru | Green Project - Video</title>
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai hewan dan tumbuhan di Indonesia." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, peternakan" />
-                     <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
+                     <meta name="robots" content="index, follow" />
+                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                     <meta name="language" content="Bahasa Indonesia" />
+                     <meta name="revisit-after" content="3 days" />
+                     <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />

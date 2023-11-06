@@ -102,7 +102,11 @@ export default function Index({ posts, preview }) {
                      <title>Studiofru | Green Project - Spesies Endemik</title>
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai hewan dan tumbuhan kategori endemik di Indonesia." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, peternakan, spesies endemik" />
-                     <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
+                     <meta name="robots" content="index, follow" />
+                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                     <meta name="language" content="Bahasa Indonesia" />
+                     <meta name="revisit-after" content="3 days" />
+                     <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />
