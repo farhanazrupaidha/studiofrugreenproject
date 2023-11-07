@@ -189,7 +189,7 @@ export default function Index({ posts, preview }) {
         Berdasarkan Topik
       </h2>
       </Box>        
-        <Box sx={{m:5}}>
+        <Box sx={{mb:5}}>
         <Splide aria-label="Catatan Terbaru">
               <SplideSlide>
                 <RecentFlora />
