@@ -5,9 +5,12 @@
 .post p,
 .post ul,
 .post ol,
-.post li,
 .post blockquote {
   @apply my-6;
+}
+
+.post li {
+  @apply list-disc;
 }
 
 .post h1 {

@@ -111,7 +111,7 @@ const handleChange = (panel) => (event, newExpanded) => {
         <Head>
                <link rel="icon" href="/images/favicon.ico" />
         </Head>
-      <div style={{ position: 'fixed', bottom: '85px', right: '20px', backgroundColor: '#073EF8',  borderRadius: '20px'}}>
+      <div style={{ position: 'fixed', bottom: '55px', right: '20px', backgroundColor: '#073EF8',  borderRadius: '20px'}}>
         <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -121,10 +121,9 @@ const handleChange = (panel) => (event, newExpanded) => {
           <Typography>Mode</Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <section className="c-share">
-          <ReactPlayer controls={true} loop={true} playing={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
+        <section className="e-share">
+          <ReactPlayer height= '300px' controls={true} loop={true} playing={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
         </section>
-        <Typography>Gelap x Terang</Typography>
         <IconButton backgroundColor="green" onClick={colorMode.toggleColorMode} color="inherit">
             {theme.palette.mode === 'light' ? <LightModeIcon /> : <NightsStayIcon />}
         </IconButton>
