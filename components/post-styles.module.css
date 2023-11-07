@@ -5,6 +5,7 @@
 .post p,
 .post ul,
 .post ol,
+.post li,
 .post blockquote {
   @apply my-6;
 }
@@ -22,7 +23,7 @@
 }
 
 .post table {
-  @apply min-w-full text-left text-sm overflow-x-auto sm:-mx-6 lg:-mx-8;
+  @apply table-auto min-w-full text-left text-sm overflow-x-auto border-spacing-0 mb-8;
 }
 
 .post thead {
@@ -30,9 +31,9 @@
 }
 
 .post tr {
-  @apply border-b;
+  @apply border-b h-px;
 }
 
 .post td {
-  @apply whitespace-nowrap px-6 py-4;
+  @apply whitespace-nowrap h-px;
 }
