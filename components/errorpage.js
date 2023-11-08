@@ -2,6 +2,7 @@ import React, { Component, useRouter } from 'react';
 import { useLazyQuery, useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 import Head from 'next/head'
+import Link from 'next/link'
 
 import SearchBar from 'components/searchbar';
 import PostPreview from "components/post-preview";
@@ -10,13 +11,9 @@ import CoverImage from 'components/cover-image'
 
 import Typewriter from 'typewriter-effect';
 
-import {
-    Box,
-    Stack,
-    Typography,
-    Link
-}
-from '@mui/material';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 const FLORA = gql`
   query {
@@ -93,18 +90,18 @@ const { data, loading, error } = useQuery(FLORA);
 </section>
 
 
-<Stack spacing={{ xs: 2, sm: 5 }} direction="row" useFlexGap flexWrap="wrap" justifyContent="center" sx={{m:5}}>
+<Stack spacing={{ xs: 2, sm: 3 }} direction="row" useFlexGap flexWrap="wrap" justifyContent="center" sx={{m:5}}>
     {data &&
       data.posts.map((item) => (
-        <Box sx={{maxWidth:300}} key={item.id}>
+        <Box sx={{maxWidth:250}} key={item.id}>
           <div className="mb-5">
             <CoverImage slug={item.slug} title={item.title} url={item.coverImage.url} />
           </div>
-            <h3 className="mb-3 text-3xl leading-snug">
+            <Typography variant="h5" color="secondary" sx={{mb:1}}>
                 <Link href={`/posts/${item.slug}`} className="hover:underline">
                     {item.title}
                 </Link>
-            </h3>
+            </Typography>
         </Box>
             ))}
     </Stack>
