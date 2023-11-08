@@ -88,12 +88,6 @@ usePostHog('phc_hIxyJYhMq4PNf6nFh6e5l8JX6tmKnDNgiaWLY6s201j', {
 
 const theme = responsiveFontSizes(ModeTheme);
 
-const [expanded, setExpanded] = React.useState('panel1');
-
-const handleChange = (panel) => (event, newExpanded) => {
-  setExpanded(newExpanded ? panel : false);
-};
-
   return (
   <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>

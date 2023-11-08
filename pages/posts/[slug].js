@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import * as React from 'react'
 
 import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
 
@@ -72,6 +73,7 @@ const LightTooltip = styled(({ className, ...props }) => (
 }));
 
 export default function Post({ post, morePosts, preview }) {
+
   const router = useRouter()
 
   if (!router.isFallback && !post?.slug) {
@@ -100,7 +102,7 @@ export default function Post({ post, morePosts, preview }) {
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="language" content="Bahasa Indonesia" />
                      <meta name="revisit-after" content="3 days" />
-                     <meta name="author" content="Studiofru | Green Project" />                     
+                     <meta name="author" content="Studiofru" />                     
                      <meta property="image" content={post.seo.image.url} />
                      <meta property="og:title" content={post.seo.title} />
                      <meta property="og:description" content={post.seo.description} />
@@ -125,7 +127,15 @@ export default function Post({ post, morePosts, preview }) {
                 author={post.author}
               />
               <PostBody content={post.content} />
-                    <Typography variant="h5" sx={{mt:5}}>Referensi</Typography>
+              <Accordion sx={{mt:5}}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content" 
+                  id="panel1a-header"
+                  >        
+                  <Typography variant="h5">Referensi</Typography>   
+                </AccordionSummary>
+                <AccordionDetails>   
                     <Box sx={{mt:4, whiteSpace: 'nowrap', overflowX: 'auto'}}>
                         <Typography variant='body2'>
                             <div
@@ -133,6 +143,8 @@ export default function Post({ post, morePosts, preview }) {
                             />
                         </Typography>
                     </Box>
+                </AccordionDetails>
+              </Accordion>  
              
                    
             </article>
@@ -204,7 +216,7 @@ export default function Post({ post, morePosts, preview }) {
             </Box>
         <SectionSeparator />
         <Box sx={{mb:5}}>
-        <Box sx={{ml:5, mb:5}}> 
+        <Box sx={{ mb:5}}> 
         <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
           Dokumentasi Video
         </h2>
