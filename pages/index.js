@@ -20,6 +20,7 @@ import Paginate from '../components/paginate';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 
+import ReactPlayer from 'react-player/youtube';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import '@splidejs/react-splide/css/sea-green';
@@ -184,6 +185,17 @@ export default function Index({ posts, preview }) {
 			)}
         </Container>
         <Divider sx={{m:10}} />
+        <Box sx={{mb:5}}>
+        <Box sx={{ml:5, mb:10}}> 
+        <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+          Dokumentasi Video
+        </h2>
+        </Box>  
+        <section className="c-share">         
+          <ReactPlayer controls={true} loop={true} playing={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
+        </section> 
+        </Box>   
+        <Divider sx={{m:10}} />      
       <Box sx={{ml:5}}>
       <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
         Berdasarkan Topik

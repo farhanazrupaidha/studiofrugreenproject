@@ -203,6 +203,17 @@ export default function Post({ post, morePosts, preview }) {
               </Stack>       
             </Box>
         <SectionSeparator />
+        <Box sx={{mb:5}}>
+        <Box sx={{ml:5, mb:5}}> 
+        <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+          Dokumentasi Video
+        </h2>
+        </Box>  
+        <section className="c-share">         
+          <ReactPlayer controls={true} loop={true} playing={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
+        </section> 
+        </Box> 
+        <Divider sx={{mb:10, mt:10}} />
         <Location />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>

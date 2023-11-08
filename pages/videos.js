@@ -136,11 +136,12 @@ export default function Index({ posts, preview }) {
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                 Video - Video
             </h2>   
-            <Typography variant="h4">Video Diary</Typography>
+            
             <Splide aria-label="Video Diary">
               <SplideSlide>
+              <Typography variant="h4" sx={{mb:5}}>Video Diary</Typography>
                 <section className="d-share">
-                  <ReactPlayer url='https://youtu.be/bHkj6MgXdiw?si=epvJyo3Q-B_vz_la' />
+                <ReactPlayer controls={true} loop={true} playing={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
                 </section>
               </SplideSlide>  
             </Splide>                     
