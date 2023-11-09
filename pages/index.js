@@ -122,7 +122,7 @@ export default function Index({ posts, preview }) {
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project - Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna.</title>
+                     <title>Studiofru | Green Project - Jelajah berbagai informasi mengenai flora dan fauna.</title>
                      <meta name="title" content="Studiofru | Green Project - Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia." />
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, farming, livestock, animal, plants" />
@@ -140,6 +140,7 @@ export default function Index({ posts, preview }) {
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project" />
+                     <meta property="twitter:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia."/>
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />

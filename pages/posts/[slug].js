@@ -114,6 +114,7 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content={post.seo.title} />
+                     <meta property="twitter:description" content={post.seo.description} />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content={post.seo.image.url} />
                 </Head>
