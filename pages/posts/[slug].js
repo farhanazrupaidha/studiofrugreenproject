@@ -24,6 +24,8 @@ import ShareButton from "components/socialsharebutton";
 
 import { motion, useScroll } from "framer-motion"
 import ReactPlayer from 'react-player/youtube';
+import { DiscussionEmbed } from 'disqus-react';
+import { CommentCount } from 'disqus-react';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
@@ -148,15 +150,16 @@ export default function Post({ post, morePosts, preview }) {
              
                    
             </article>
+            <center>
             <Box sx={{mt:7}}>
             <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
-            <Typography variant='h5' color="#ff0055">Bagikan</Typography>
+            <Typography variant='h5' color="#ff0055">Bagikan Catatan Ini</Typography>
             <Box sx={{mb:5, mt:2}}>
             <Stack
                 direction="row"
                 spacing={1}
-                justifyContent="left"
-                alignItems="left"
+                justifyContent="center"
+                alignItems="center"
                 sx={{mt:2, mb:4}}
             >
                 <ShareButton />
@@ -188,13 +191,39 @@ export default function Post({ post, morePosts, preview }) {
                 </WhatsappShareButton>
             </Stack>
             </Box>
-            <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
+            <Box sx={{mt:5, maxWidth: 700, width:'100%'}}>
+              <Divider sx={{mb:5, maxWidth:300, width:'95%' }} />
+              <CommentCount
+                shortname='studiofru-green-project'
+                config={
+                {
+                  url: post.id,
+                  identifier: post.id,
+                  title: post.title,
+                  }
+                }
+              >
+              {/* Placeholder Text */}
+                Komentar
+              </CommentCount>        
+              <DiscussionEmbed
+                shortname='studiofru-green-project'
+                config={
+                {
+                  url: post.url,
+                  identifier: post.id,
+                  title: post.title,
+                  }
+                }
+              />
+        </Box>          
+            <Divider sx={{mt:5, mb:5, maxWidth:300, width:'95%' }} />
               <Typography variant="h6" color="#ff0055" sx={{mt:2}}>Ikuti Studiofru | Green Project melalui media sosial untuk mendapatkan informasi singkat mengenai flora dan fauna</Typography>
               <Stack
                 direction="row"
                 spacing={1}
-                justifyContent="left"
-                alignItems="left"
+                justifyContent="center"
+                alignItems="center"
                 sx={{mt:2, mb:4}}
             >
               <LightTooltip disableFocusListener title="Follow me on YouTube">
@@ -203,7 +232,7 @@ export default function Post({ post, morePosts, preview }) {
               </IconButton>
               </LightTooltip>
               <LightTooltip disableFocusListener title="Follow me on Instagram">
-              <IconButton href="https://www.instagram.com/studiofru/" color="primary" aria-label="Follow me on Instagram">
+              <IconButton href="https://www.instagram.com/studiofrugreenproject/" color="primary" aria-label="Follow me on Instagram">
                 <InstagramIcon />
               </IconButton>
               </LightTooltip>
@@ -214,6 +243,7 @@ export default function Post({ post, morePosts, preview }) {
               </LightTooltip>     
               </Stack>       
             </Box>
+            </center>
         <SectionSeparator />
         <Box sx={{mb:5}}>
         <Box sx={{ mb:5}}> 
