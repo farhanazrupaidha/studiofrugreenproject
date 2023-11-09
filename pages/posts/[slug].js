@@ -154,7 +154,7 @@ export default function Post({ post, morePosts, preview }) {
             <center>
             <Box sx={{mt:7}}>
             <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
-            <Typography variant='h5' color="#ff0055">Bagikan Catatan Ini</Typography>
+            <Typography variant='h5' color="#ff0055">Bagikan catatan ini</Typography>
             <Box sx={{mb:5, mt:2}}>
             <Stack
                 direction="row"
