@@ -130,13 +130,7 @@ function ResponsiveAppBar(props) {
                 }}
             >
             <Link href="/" color="inherit" underline="hover">
-            <Typewriter
-              options={{
-                strings: ['Studiofru', '| Green Project'],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+                Studiofru | Green Project
             </Link>
             </Typography>
 

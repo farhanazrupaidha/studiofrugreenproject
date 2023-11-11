@@ -253,7 +253,7 @@ export default function Post({ post, morePosts, preview }) {
         </h2>
         </Box>  
         <section className="c-share">         
-          <ReactPlayer controls={true} loop={true} playing={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
+          <ReactPlayer controls={true} loop={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
         </section> 
         </Box> 
         <Divider sx={{mb:10, mt:10}} />

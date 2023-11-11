@@ -20,8 +20,7 @@ export default class MyDocument extends Document {
               sizes="<generated>"
             />
              {/* monetag */}
-            <meta name="monetag" content="9663b06f2269f23a9530d7c480190dbd" />
-            <script src="https://boustahe.com/pfe/current/tag.min.js?z=6546234" data-cfasync="false" async />            
+            <meta name="monetag" content="9663b06f2269f23a9530d7c480190dbd" />           
             {/* monetag */}           
             {/* google adsense */}
      	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
