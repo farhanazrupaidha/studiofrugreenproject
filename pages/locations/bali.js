@@ -123,7 +123,8 @@ export default function Index({ posts, preview }) {
                      <meta name="keywords" content="studiofru, green project, studiofru green project, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, bali, teknologi pertanian" />
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                     <meta name="language" content="Bahasa Indonesia" />
+                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                     <meta name="language" content="id-id" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/fotopetani_1.jpg" />

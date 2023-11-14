@@ -6,4 +6,10 @@ module.exports = {
   sitemapSize: 7000,
   generateRobotsTxt: false,
   exclude: ['/tentang', '/wisata', '/endemik', '/videos', '/fauna', '/pengetahuan', '/sains', '/disclaimer', '/termsofuse', '/kontribusi', '/kontak', '/forum', '/locations/bali', '/locations/jawatengah', '/locations/jawatimur'],
+  alternateRefs: [
+    {
+      href: 'https://studiofrugreenproject.com',
+      hreflang: 'id-id',
+    }
+  ],
 }

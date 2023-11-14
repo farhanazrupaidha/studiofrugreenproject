@@ -57,7 +57,8 @@ const { data, loading, error } = useQuery(ABOUT);
                      <meta name="keywords" content={data.page.seo.keywords} />
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                     <meta name="language" content="Bahasa Indonesia" />
+                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                     <meta name="language" content="id-id" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" />                      
                      <meta property="image" content={data.page.seo.image.url} />
