@@ -1,5 +1,5 @@
-import React, { Component, useRouter } from 'react';
-import { useLazyQuery, useQuery, gql } from '@apollo/client';
+import React from 'react';
+import { useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 import Link from 'next/link'
 

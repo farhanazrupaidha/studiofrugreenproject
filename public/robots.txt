@@ -1,6 +1,22 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /tentang
+Disallow: /locations/
+Disallow: /posts/Pentingnya-Tanah
+Disallow: /posts/pemandangan-gunung-lawu-dan-telaga-sarangan
+Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Super-Napier-Grass-Pakchong
+Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Sambiloto-Andrographis-paniculata
+Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Kelor-Moringa-oleifera
+Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Kembang-Kantil-Cempaka-Magnolia-champaca
+Disallow: /posts/Deskripsi-Asal-dan-Manfaat-Bunga-Teratai-Nymphaeaceae
+Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Daun-Ungu-Graptophyllum-pictum
+Disallow: /posts/10-Jenis-Tanah-di-Wilayah-Indonesia
+Disallow: /posts/Deskripsi-Asal-dan-Kegunaan-Jati-Tectona-grandis
+Disallow: /posts/deskripsi-asal-manfaat-dan-kegunaan-bunga-matahari-helianthus-annuus
+Disallow: /en/fauna
+Disallow: /englishversion
+Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Orok-Orok-Crotalaria-juncea
 
 # Host
 Host: https://www.studiofrugreenproject.com

@@ -1,26 +1,58 @@
 import { useRouter } from 'next/router'
 import * as React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
 
 import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
 
-import ErrorPage from 'components/errorpage'
-import Container from 'components/container'
-import PostBody from 'components/post-body'
-import MoreStories from 'components/more-stories'
-import RecentFlora from 'components/recent-flora'
-import RecentFauna from 'components/recent-fauna'
-import RecentSains from 'components/recent-sains'
-import RecentWisata from 'components/recent-wisata'
-import RecentPengetahuan from 'components/recent-pengetahuan'
-import Header from 'components/header'
-import PostHeader from 'components/post-header'
-import PostTitle from 'components/post-title'
-import SectionSeparator from 'components/section-separator'
-import Layout from 'components/layout'
-import Head from 'next/head'
-import Location from "components/location"
-
-import ShareButton from "components/socialsharebutton";
+const ErrorPage = dynamic(() => import('components/errorpage'), {
+  ssr: false,
+});
+const Container = dynamic(() => import('components/container'), {
+  ssr: false,
+});
+const PostBody = dynamic(() => import('components/post-body'), {
+  ssr: false,
+});
+const MoreStories = dynamic(() => import('components/more-stories'), {
+  ssr: false,
+});
+const RecentFlora = dynamic(() => import('components/recent-flora'), {
+  ssr: false,
+});
+const RecentFauna = dynamic(() => import('components/recent-fauna'), {
+  ssr: false,
+});
+const RecentSains = dynamic(() => import('components/recent-sains'), {
+  ssr: false,
+});
+const RecentWisata = dynamic(() => import('components/recent-wisata'), {
+  ssr: false,
+});
+const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'), {
+  ssr: false,
+});
+const Header = dynamic(() => import('components/header'), {
+  ssr: false,
+});
+const PostHeader = dynamic(() => import('components/post-header'), {
+  ssr: false,
+});
+const PostTitle = dynamic(() => import('components/post-title'), {
+  ssr: false,
+});
+const SectionSeparator = dynamic(() => import('components/section-separator'), {
+  ssr: false,
+});
+const Layout = dynamic(() => import('components/layout'), {
+  ssr: false,
+});
+const Location = dynamic(() => import('components/location'), {
+  ssr: false,
+});
+const ShareButton = dynamic(() => import('components/socialsharebutton'), {
+  ssr: false,
+});
 
 import { motion, useScroll } from "framer-motion"
 import ReactPlayer from 'react-player/youtube';

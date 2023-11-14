@@ -13,7 +13,6 @@ import { styled } from '@mui/material/styles';
 
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
-
 export default function Hero () {
 
   const date = new Date().toLocaleDateString();

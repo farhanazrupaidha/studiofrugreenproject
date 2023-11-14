@@ -1,5 +1,5 @@
-import React, { Component, useRouter } from 'react';
-import { useLazyQuery, useQuery, gql } from '@apollo/client';
+import React from 'react';
+import { useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 import Link from 'next/link'
 
@@ -8,13 +8,6 @@ import CoverImage from 'components/cover-image'
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-
-import '@splidejs/react-splide/css/sea-green';
-
-// or only core styles
-import '@splidejs/react-splide/css/core';
 
 const FLORA = gql`
   query {

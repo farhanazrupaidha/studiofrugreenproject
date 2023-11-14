@@ -3,15 +3,12 @@ import React, { Component, useRouter } from 'react';
 import DataCountFlora from '/components/dataflora-setupatok';
 import DataCountFauna from '/components/datafauna-setupatok';
 
-
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
-
-
 
 export default function Hero () {
 

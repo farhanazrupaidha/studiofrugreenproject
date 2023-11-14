@@ -1,21 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-
-import Container from '../components/container'
-import PostPreview from "../components/post-preview";
-import Location from "../components/location"
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-
-import RecentFlora from 'components/recent-flora'
-import RecentFauna from 'components/recent-fauna'
-import RecentSains from 'components/recent-sains'
-import RecentWisata from 'components/recent-wisata'
-import RecentPengetahuan from 'components/recent-pengetahuan'
-
-import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
-import Paginate from '../components/paginate';
+import dynamic from 'next/dynamic'
+import { getAllPostsForHome } from '../lib/graphcms'
+
+const Container = dynamic(() => import('components/container'), {
+  ssr: false,
+});
+const PostPreview = dynamic(() => import('components/post-preview'), {
+  ssr: false,
+});
+const Layout = dynamic(() => import('components/layout'), {
+  ssr: false,
+});
+const Location = dynamic(() => import('components/location'), {
+  ssr: false,
+});
+const Hero = dynamic(() => import('components/hero'), {
+  ssr: false,
+});
+
+const RecentFlora = dynamic(() => import('components/recent-flora'), {
+  ssr: false,
+});
+const RecentFauna = dynamic(() => import('components/recent-fauna'), {
+  ssr: false,
+});
+const RecentSains = dynamic(() => import('components/recent-sains'), {
+  ssr: false,
+});
+const RecentWisata = dynamic(() => import('components/recent-wisata'), {
+  ssr: false,
+});
+const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'), {
+  ssr: false,
+});
+
+const Paginate = dynamic(() => import('components/paginate'), {
+  ssr: false,
+});
 
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';

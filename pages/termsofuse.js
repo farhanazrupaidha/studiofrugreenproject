@@ -1,16 +1,13 @@
-import React, { Component, useRouter } from 'react';
+import React from 'react';
 import Head from 'next/head'
-import { useLazyQuery, useQuery, gql } from '@apollo/client';
+import { useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
-import CountUp from 'react-countup';
 import postStyles from '/components/post-styles.module.css'
 import Layout from '/components/layout'
 
 import Typewriter from 'typewriter-effect';
 
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 

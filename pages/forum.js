@@ -6,13 +6,9 @@ import * as React from 'react';
 import Typewriter from 'typewriter-effect';
 import ReactPlayer from 'react-player/youtube';
 
-import {
-  Box,
-  Typography,
-  Divider
-}
-from '@mui/material';
-
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 
 export default function ResponsiveStack() {
   return (

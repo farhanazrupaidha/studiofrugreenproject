@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { useRouter } from "next/router";
+import dynamic from 'next/dynamic'
 
-import AppBottomBar from '/components/appbottombar';
+const AppBottomBar = dynamic(() => import('components/appbottombar'), {
+    ssr: false,
+  });
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';

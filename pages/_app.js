@@ -3,7 +3,6 @@ import '../styles/index.css';
 import * as React from 'react'
 import Head from 'next/head';
 
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { ThemeProvider, useTheme, createTheme, responsiveFontSizes, } from '@mui/material/styles';
 import { deepOrange, green, cyan, indigo, blueGrey, } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';

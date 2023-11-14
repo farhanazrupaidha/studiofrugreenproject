@@ -1,4 +1,5 @@
 import * as React from 'react';
+import dynamic from 'next/dynamic'
 
 import Typewriter from 'typewriter-effect';
 
@@ -6,8 +7,12 @@ import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
-import DrawerToggle from "/components/drawer";
-import Search from "/components/search";
+const DrawerToggle = dynamic(() => import('components/drawer'), {
+  ssr: false,
+});
+const Search = dynamic(() => import('components/search'), {
+  ssr: false,
+});
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -160,13 +165,13 @@ function ResponsiveAppBar(props) {
               onClose={handleCloseUserMenu}
             >
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center"><Link href="/flora"  color="inherit" underline="none">FLORA</Link></Typography>
+                  <Button href="/flora" color="inherit">FLORA</Button>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center"><Link href="/fauna"  color="inherit" underline="none">FAUNA</Link></Typography>
+                  <Button href="/fauna" color="inherit">FAUNA</Button>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" sx={{ textTransform: 'uppercase' }}><Link href="/endemik"  color="inherit" underline="none">Endemik</Link></Typography>
+                  <Button href="/endemik" color="inherit">Endemik</Button>
                 </MenuItem>
             </Menu>
 

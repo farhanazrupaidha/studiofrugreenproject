@@ -14,7 +14,6 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.11",
     "@mui/styles": "^5.10.10",
-    "@next/bundle-analyzer": "^13.5.6",
     "@splidejs/react-splide": "^0.7.12",
     "classnames": "2.3.1",
     "date-fns": "2.28.0",
@@ -30,16 +29,16 @@
     "next-with-apollo": "^5.3.0",
     "ra-data-graphql": "^4.11.0",
     "react": "^18.2.0",
-    "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
-    "react-hydration-provider": "^1.0.2",
     "react-icons": "^4.9.0",
     "react-player": "^2.11.0",
     "react-scripts": "^5.0.1",
     "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.2",
     "autoprefixer": "10.4.2",
+    "cross-env": "^7.0.3",
     "postcss": "8.4.5",
     "tailwindcss": "^3.0.15"
   }

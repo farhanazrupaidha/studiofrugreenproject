@@ -4,20 +4,14 @@ import { useRouter } from "next/router";
 import { useLazyQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 
-import {
-    Button,
-    ButtonGroup,
-    Box,
-    Stack,
-    Paper,
-    TextField,
-    Typography,
-    Select,
-    Link,
-    Modal,
-    IconButton
-}
-from '@mui/material';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import TextField from '@mui/material/TextField';
+import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
+
 import SearchIcon from '@mui/icons-material/Search';
 
 const style = {

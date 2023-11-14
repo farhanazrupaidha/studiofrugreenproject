@@ -1,17 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import PostPreview from "../components/post-preview";
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Location from "../components/location"
-import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
-import Paginate from '../components/paginate';
+import dynamic from 'next/dynamic'
+import { getAllPostsForHome } from '../lib/graphcms'
 
+const Container = dynamic(() => import('components/container'), {
+  ssr: false,
+});
+const PostPreview = dynamic(() => import('components/post-preview'), {
+  ssr: false,
+});
+const Intro = dynamic(() => import('components/intro'), {
+  ssr: false,
+});
+const Layout = dynamic(() => import('components/layout'), {
+  ssr: false,
+});
+const Location = dynamic(() => import('components/location'), {
+  ssr: false,
+});
+const Paginate = dynamic(() => import('components/paginate'), {
+  ssr: false,
+});
 
 import Box from '@mui/material/Box';
 

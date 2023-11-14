@@ -2,8 +2,6 @@ import React, { Component, useRouter } from 'react';
 import { useLazyQuery, useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 
-import CountUp from 'react-countup';
-
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
@@ -30,7 +28,7 @@ const { data, loading, error } = useQuery(FAUNA);
   return (
             <Paper sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
                   <PetsIcon sx={{ fontSize: 40, color:"#BFCC03"}} />
-                  <Typography variant="h3" color='#BFCC03' textAlign= 'right'><CountUp end={data.postsConnection.aggregate.count} /></Typography>
+                  <Typography variant="h3" color='#BFCC03' textAlign= 'right'>{data.postsConnection.aggregate.count}</Typography>
             </Paper>
   );
 }

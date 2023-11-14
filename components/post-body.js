@@ -2,7 +2,6 @@ import postStyles from './post-styles.module.css'
 
 import Box from '@mui/material/Box';
 
-
 export default function PostBody({ content }) {
   return (
 <> 

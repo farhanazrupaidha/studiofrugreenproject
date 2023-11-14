@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default class MyDocument extends Document {
   render() {
@@ -19,12 +20,18 @@ export default class MyDocument extends Document {
               type="image/<generated>"
               sizes="<generated>"
             />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+            />
              {/* monetag */}
             <meta name="monetag" content="9663b06f2269f23a9530d7c480190dbd" />           
             {/* monetag */}           
             {/* google adsense */}
-     	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
-     	    <script dangerouslySetInnerHTML={{
+     	    <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
+     	    <Script dangerouslySetInnerHTML={{
          	    __html: `
             	(adsbygoogle = window.adsbygoogle || []).push({
               	google_ad_client: "ca-pub-1624631757856478",
@@ -34,11 +41,11 @@ export default class MyDocument extends Document {
             }} />
             {/* google adsense */}
             {/* Global Site Tag (gtag.js) - Google Analytics */}
-            <script
+            <Script
                 async
                 src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
                 />
-            <script
+            <Script
                 dangerouslySetInnerHTML={{
                 __html: `
                  window.dataLayer = window.dataLayer || [];
