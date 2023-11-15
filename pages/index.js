@@ -7,7 +7,9 @@ import { getAllPostsForHome } from '../lib/graphcms'
 const Container = dynamic(() => import('components/container'));
 const PostPreview = dynamic(() => import('components/post-preview'));
 const Layout = dynamic(() => import('components/layout'));
-const Location = dynamic(() => import('components/location'));
+const Location = dynamic(() => import('components/location'), {
+  ssr: false,
+});
 const Hero = dynamic(() => import('components/hero'));
 
 const RecentFlora = dynamic(() => import('components/recent-flora'));
@@ -15,7 +17,9 @@ const RecentFauna = dynamic(() => import('components/recent-fauna'));
 const RecentSains = dynamic(() => import('components/recent-sains'));
 const RecentWisata = dynamic(() => import('components/recent-wisata'));
 const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'));
-const Paginate = dynamic(() => import('components/paginate'));
+const Paginate = dynamic(() => import('components/paginate'), {
+  ssr: false,
+});
 
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';

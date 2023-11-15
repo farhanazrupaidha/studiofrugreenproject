@@ -4,24 +4,19 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { getAllPostsForHome } from '../lib/graphcms'
 
-const Container = dynamic(() => import('components/container'), {
-  ssr: false,
-});
-const PostPreview = dynamic(() => import('components/post-preview'), {
-  ssr: false,
-});
+const Container = dynamic(() => import('components/container'));
+const PostPreview = dynamic(() => import('components/post-preview'));
 const Intro = dynamic(() => import('components/intro'), {
   ssr: false,
 });
-const Layout = dynamic(() => import('components/layout'), {
-  ssr: false,
-});
+const Layout = dynamic(() => import('components/layout'));
 const Location = dynamic(() => import('components/location'), {
   ssr: false,
 });
 const Paginate = dynamic(() => import('components/paginate'), {
   ssr: false,
 });
+
 
 import Box from '@mui/material/Box';
 

@@ -8,45 +8,21 @@ import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
 const ErrorPage = dynamic(() => import('components/errorpage'), {
   ssr: false,
 });
-const Container = dynamic(() => import('components/container'), {
-  ssr: false,
-});
-const PostBody = dynamic(() => import('components/post-body'), {
-  ssr: false,
-});
-const MoreStories = dynamic(() => import('components/more-stories'), {
-  ssr: false,
-});
-const RecentFlora = dynamic(() => import('components/recent-flora'), {
-  ssr: false,
-});
-const RecentFauna = dynamic(() => import('components/recent-fauna'), {
-  ssr: false,
-});
-const RecentSains = dynamic(() => import('components/recent-sains'), {
-  ssr: false,
-});
-const RecentWisata = dynamic(() => import('components/recent-wisata'), {
-  ssr: false,
-});
-const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'), {
-  ssr: false,
-});
-const Header = dynamic(() => import('components/header'), {
-  ssr: false,
-});
-const PostHeader = dynamic(() => import('components/post-header'), {
-  ssr: false,
-});
-const PostTitle = dynamic(() => import('components/post-title'), {
-  ssr: false,
-});
+const Container = dynamic(() => import('components/container'));
+const PostBody = dynamic(() => import('components/post-body'));
+const MoreStories = dynamic(() => import('components/more-stories'));
+const RecentFlora = dynamic(() => import('components/recent-flora'));
+const RecentFauna = dynamic(() => import('components/recent-fauna'));
+const RecentSains = dynamic(() => import('components/recent-sains'));
+const RecentWisata = dynamic(() => import('components/recent-wisata'));
+const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'));
+const Header = dynamic(() => import('components/header'));
+const PostHeader = dynamic(() => import('components/post-header'));
+const PostTitle = dynamic(() => import('components/post-title'));
 const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
 });
-const Layout = dynamic(() => import('components/layout'), {
-  ssr: false,
-});
+const Layout = dynamic(() => import('components/layout'));
 const Location = dynamic(() => import('components/location'), {
   ssr: false,
 });
