@@ -4,41 +4,18 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { getAllPostsForHome } from '../lib/graphcms'
 
-const Container = dynamic(() => import('components/container'), {
-  ssr: false,
-});
-const PostPreview = dynamic(() => import('components/post-preview'), {
-  ssr: false,
-});
-const Layout = dynamic(() => import('components/layout'), {
-  ssr: false,
-});
-const Location = dynamic(() => import('components/location'), {
-  ssr: false,
-});
-const Hero = dynamic(() => import('components/hero'), {
-  ssr: false,
-});
+const Container = dynamic(() => import('components/container'));
+const PostPreview = dynamic(() => import('components/post-preview'));
+const Layout = dynamic(() => import('components/layout'));
+const Location = dynamic(() => import('components/location'));
+const Hero = dynamic(() => import('components/hero'));
 
-const RecentFlora = dynamic(() => import('components/recent-flora'), {
-  ssr: false,
-});
-const RecentFauna = dynamic(() => import('components/recent-fauna'), {
-  ssr: false,
-});
-const RecentSains = dynamic(() => import('components/recent-sains'), {
-  ssr: false,
-});
-const RecentWisata = dynamic(() => import('components/recent-wisata'), {
-  ssr: false,
-});
-const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'), {
-  ssr: false,
-});
-
-const Paginate = dynamic(() => import('components/paginate'), {
-  ssr: false,
-});
+const RecentFlora = dynamic(() => import('components/recent-flora'));
+const RecentFauna = dynamic(() => import('components/recent-fauna'));
+const RecentSains = dynamic(() => import('components/recent-sains'));
+const RecentWisata = dynamic(() => import('components/recent-wisata'));
+const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'));
+const Paginate = dynamic(() => import('components/paginate'));
 
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
@@ -151,6 +128,7 @@ export default function Index({ posts, preview }) {
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, farming, livestock, animal, plants" />
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />                     
                      <meta name="language" content="id-id" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
