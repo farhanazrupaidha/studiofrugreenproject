@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://www.studiofrugreenproject.com',
-  changefreq: 'weekly',
+  siteUrl: process.env.SITE_URL || 'https://studiofrugreenproject.com',
+  changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 7000,
   generateRobotsTxt: false,
