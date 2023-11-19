@@ -19,7 +19,7 @@ Disallow: /englishversion
 Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Orok-Orok-Crotalaria-juncea
 
 # Host
-Host: https://www.studiofrugreenproject.com
+Host: https://studiofrugreenproject.com
 
 # Sitemaps
-Sitemap: https://www.studiofrugreenproject.com/sitemap.xml
+Sitemap: https://studiofrugreenproject.com/sitemap.xml
