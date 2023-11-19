@@ -1,8 +1,24 @@
 # *
 User-agent: *
 Allow: /
+
+# *
+User-agent: *
 Disallow: /tentang
-Disallow: /locations/
+Disallow: /wisata
+Disallow: /endemik
+Disallow: /videos
+Disallow: /fauna
+Disallow: /pengetahuan
+Disallow: /sains
+Disallow: /disclaimer
+Disallow: /termsofuse
+Disallow: /kontribusi
+Disallow: /kontak
+Disallow: /forum
+Disallow: /locations/bali
+Disallow: /locations/jawatengah
+Disallow: /locations/jawatimur
 Disallow: /posts/Pentingnya-Tanah
 Disallow: /posts/pemandangan-gunung-lawu-dan-telaga-sarangan
 Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Super-Napier-Grass-Pakchong
