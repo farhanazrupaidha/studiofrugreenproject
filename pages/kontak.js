@@ -20,18 +20,18 @@ export default function ResponsiveStack() {
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="id-id" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com" hreflang="id-id" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/kontak" hreflang="id-id" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />
-                     <meta property="og:url" content="https://studiofrugreenproject.com/" />
-                     <meta property="og:title" content="Studiofru | Green Project" />
+                     <meta property="og:url" content="https://studiofrugreenproject.com/kontak" />
+                     <meta property="og:title" content="Studiofru | Green Project - Kontak" />
                      <meta property="og:description" content="Kontak Studiofru untuk mulai berkolaborasi." />
-                     <meta property="og:site_name" content="Studiofru | Green Project" />
+                     <meta property="og:site_name" content="Studiofru | Green Project - Kontak" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
-                     <meta name="twitter:title" content="Studiofru | Green Project" />
+                     <meta name="twitter:title" content="Studiofru | Green Project - Kontak" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
                      <meta name="robots" content="noindex,nofollow" />

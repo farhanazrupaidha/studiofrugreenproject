@@ -65,9 +65,9 @@ const { data, loading, error } = useQuery(ABOUT);
                      <meta property="image" content={data.page.seo.image.url} />
                      <meta property="og:title" content={data.page.seo.title} />
                      <meta property="og:description" content={data.page.seo.description} />
-                     <meta property="og:site_name" content="Studiofru | Green Project - Tentang" />
+                     <meta property="og:site_name" content="Studiofru | Green Project - Terms of Use" />
                      <meta property="og:image" content={data.page.seo.image.url} />
-                      <meta name="og:url" content={`https://studiofrugreenproject.com/tentang`}/>
+                      <meta name="og:url" content={`https://studiofrugreenproject.com/termsofuse`}/>
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content={data.page.seo.title} />

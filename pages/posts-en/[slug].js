@@ -101,7 +101,7 @@ export default function Post({ post, morePosts, preview }) {
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="en-us" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com" hreflang="en-us" />
+                     <link rel="alternate" href={`https://studiofrugreenproject.com/posts-en/${post.slug}`} hreflang="en-us" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru" />                     
                      <meta property="image" content={post.seo.image.url} />
@@ -109,7 +109,7 @@ export default function Post({ post, morePosts, preview }) {
                      <meta property="og:description" content={post.seo.description} />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content={post.seo.image.url} />
-                      <meta name="og:url" content={`https://studiofrugreenproject.com/posts/${post.slug}`}/>
+                      <meta name="og:url" content={`https://studiofrugreenproject.com/posts-en/${post.slug}`}/>
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content={post.seo.title} />

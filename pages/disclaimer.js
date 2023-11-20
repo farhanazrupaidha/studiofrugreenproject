@@ -59,15 +59,15 @@ const { data, loading, error } = useQuery(ABOUT);
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="id-id" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com" hreflang="id-id" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/disclaimer" hreflang="id-id" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" />                      
                      <meta property="image" content={data.page.seo.image.url} />
                      <meta property="og:title" content={data.page.seo.title} />
                      <meta property="og:description" content={data.page.seo.description} />
-                     <meta property="og:site_name" content="Studiofru | Green Project - Tentang" />
+                     <meta property="og:site_name" content="Studiofru | Green Project - Disclaimer" />
                      <meta property="og:image" content={data.page.seo.image.url} />
-                      <meta name="og:url" content={`https://studiofrugreenproject.com/tentang`}/>
+                      <meta name="og:url" content={`https://studiofrugreenproject.com/disclaimer`}/>
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content={data.page.seo.title} />
