@@ -44,7 +44,7 @@ function DrawerToggle () {
         <List sx={{ mr: 2, ml:2 }}>
                   <ListItem disablePadding>
                       <ListItemText>
-                        Spesies
+                        Species
                       </ListItemText>
                   </ListItem>
                   <Divider sx={{mr:5}} />
@@ -65,34 +65,34 @@ function DrawerToggle () {
                   <ListItem disablePadding>
                     <ListItemButton href="/endemik">
                       <ListItemText>
-                        Endemik
+                        Endemic
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding sx={{mt:2}}>
                       <ListItemText>
-                        Lainnya
+                        Others
                       </ListItemText>
                   </ListItem>
                   <Divider sx={{mr:5}} />
                   <ListItem disablePadding>
                     <ListItemButton href="/sains">
                       <ListItemText>
-                        Sains
+                        Science
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding>
                     <ListItemButton href="/pengetahuan">
                       <ListItemText>
-                        Pengetahuan
+                        Knowledge
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding>
                     <ListItemButton href="/wisata">
                       <ListItemText>
-                        Wisata
+                        Travel
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
@@ -105,7 +105,7 @@ function DrawerToggle () {
                   </ListItem>                  
                   <ListItem disablePadding sx={{mt:2}}>
                       <ListItemText>
-                        Komunitas
+                        Community
                       </ListItemText>
                   </ListItem>
                   <Divider sx={{mr:5}} />
@@ -119,13 +119,13 @@ function DrawerToggle () {
                   <ListItem disablePadding>
                     <ListItemButton href="/kontribusi">
                       <ListItemText>
-                        Kontribusi
+                        Contribution
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
               </List>
-        <Button color="inherit" href="/en">English</Button>      
-        <Button color="inherit" onClick={() => setOpen(false)}>X Tutup</Button>
+        <Button color="inherit" href="/en">English</Button>
+        <Button color="inherit" onClick={() => setOpen(false)}>X Close</Button>
       </Drawer>
     </div>
   );

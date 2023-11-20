@@ -1,13 +1,11 @@
 import * as React from 'react';
 import dynamic from 'next/dynamic'
 
-import Typewriter from 'typewriter-effect';
-
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
-const DrawerToggle = dynamic(() => import('components/drawer'), {
+const DrawerToggle = dynamic(() => import('components/drawer-en'), {
   ssr: false,
 });
 const Search = dynamic(() => import('components/search-en'), {

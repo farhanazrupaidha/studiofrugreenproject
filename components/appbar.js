@@ -1,8 +1,6 @@
 import * as React from 'react';
 import dynamic from 'next/dynamic'
 
-import Typewriter from 'typewriter-effect';
-
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
