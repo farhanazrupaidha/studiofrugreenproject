@@ -6,12 +6,6 @@ module.exports = {
   sitemapSize: 7000,
   generateRobotsTxt: true,
   exclude: ['/tentang', '/wisata', '/endemik', '/videos', '/fauna', '/pengetahuan', '/sains', '/disclaimer', '/termsofuse', '/kontribusi', '/kontak', '/forum', '/locations/bali', '/locations/jawatengah', '/locations/jawatimur'],
-  alternateRefs: [
-    {
-      href: 'https://studiofrugreenproject.com',
-      hreflang: 'id-id',
-    }
-  ],
 // Default transformation function
 transform: async (config, path) => {
   return {
@@ -19,7 +13,6 @@ transform: async (config, path) => {
     changefreq: config.changefreq,
     priority: config.priority,
     lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-    alternateRefs: config.alternateRefs ?? [],
   }
 },
 robotsTxtOptions: {

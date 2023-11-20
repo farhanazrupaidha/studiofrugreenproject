@@ -10,7 +10,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 const DrawerToggle = dynamic(() => import('components/drawer'), {
   ssr: false,
 });
-const Search = dynamic(() => import('components/search'), {
+const Search = dynamic(() => import('components/search-en'), {
   ssr: false,
 });
 
@@ -145,7 +145,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    Spesies
+                    Species
                 </Button>
 
             <Menu
@@ -171,7 +171,7 @@ function ResponsiveAppBar(props) {
                   <Button href="/fauna" color="inherit">FAUNA</Button>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Button href="/endemik" color="inherit">ENDEMIK</Button>
+                  <Button href="/endemik" color="inherit">ENDEMIC</Button>
                 </MenuItem>
             </Menu>
 
@@ -181,7 +181,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    Sains
+                    SCIENCE
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
@@ -189,7 +189,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    Pengetahuan
+                    KNOWLEDGE
                 </Button>
 
                 <Button
@@ -198,7 +198,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
-                    Wisata
+                    TRAVEL
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
@@ -206,7 +206,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, mr:2, display: 'block' }}
                 >
-                    Video
+                    VIDEO
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
@@ -214,7 +214,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, mr:2, display: 'block' }}
                 >
-                    English
+                    ENGLISH
                 </Button>                
           </Box>
           <Search />

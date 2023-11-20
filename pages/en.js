@@ -2,30 +2,32 @@ import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import { getAllPostsForHome } from '../lib/graphcms'
+import { getAllPostsForHomeEn } from '../lib/graphcms'
 
 const Container = dynamic(() => import('components/container'));
-const PostPreview = dynamic(() => import('components/post-preview'));
-const Intro = dynamic(() => import('components/intro'), {
+const PostPreview = dynamic(() => import('components/post-preview-en'));
+const Layout = dynamic(() => import('components/layout-en'));
+const Location = dynamic(() => import('components/location-en'), {
   ssr: false,
 });
-const Layout = dynamic(() => import('components/layout'));
-const Location = dynamic(() => import('components/location'), {
-  ssr: false,
+const Hero = dynamic(() => import('components/hero-en'), {
+    ssr: false,
 });
 const Paginate = dynamic(() => import('components/paginate'), {
   ssr: false,
 });
 
-
+import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
+
+import ReactPlayer from 'react-player/youtube';
 
 export default function Index({ posts, preview }) {
 
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(10);
+	const [postsPerPage] = useState(8);
 
 
 	useEffect(() => {
@@ -34,7 +36,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (where: {_search: "Wisata"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (locales: en, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -67,6 +69,14 @@ export default function Index({ posts, preview }) {
                                 })
                               }
                             }
+                            seo {
+                                  title
+                                  description
+                                  keywords
+                                  image {
+                                    url
+                                  }
+                                }
                           }
 				 postsConnection {
 					pageInfo {
@@ -106,34 +116,37 @@ export default function Index({ posts, preview }) {
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project - Wisata/Travel</title>
-                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai tempat - tempat wisata di Indonesia." />
-                     <meta name="keywords" content="studiofru, green project, studiofru green project, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, wisata, wisata alam, wisata lingkungan, wisata indonesia, travel indonesia" />
+                     <title>Studiofru | Green Project - Encyclopedia of Biodiversity.</title>
+                     <meta name="title" content="Studiofru | Green Project - Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia." />
+                     <meta name="description" content="Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia." />
+                     <meta name="keywords" content="studiofru, encyclopedia, nature encyclopedia, flora encyclopedia, fauna encyclopedia, farming, livestock, animal, plants" />
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                     <meta name="language" content="id-id" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com" hreflang="id-id" />
+                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+                     <meta name="language" content="en-us" />                 
+                     <link rel="alternate" href="https://studiofrugreenproject.com" hreflang="en-us" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project" />
-                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai tempat - tempat wisata di Indonesia." />
+                     <meta property="og:description" content="Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia."/>
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project" />
+                     <meta property="twitter:description" content="Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia."/>
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
+        <Hero />
+
         <Container>
-          <Intro />
-          <Box sx={{mb:5}}>
+          <Box sx={{mb:5, mt:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                Wisata
+               Recent Articles
             </h2>
           </Box>
           <Location />
@@ -144,18 +157,18 @@ export default function Index({ posts, preview }) {
                    <PostPreview
                      key={blogPost.slug}
                      title={blogPost.title}
+                     tags={blogPost.tags}
                      coverImage={blogPost.coverImage}
                      date={blogPost.date}
-                     tags={blogPost.tags}
                      author={blogPost.author}
                      slug={blogPost.slug}
                      excerpt={blogPost.excerpt}
                    />
                    ))}
-                 </div>
+      </div>
                  <center>
                   <Paginate
-                    postsPerPage={postsPerPage}
+                  postsPerPage={postsPerPage}
                     totalPosts={totalPosts}
                     currentPage={currentPage}
                     paginate={paginate}
@@ -168,13 +181,24 @@ export default function Index({ posts, preview }) {
 				<div className="loading">Loading...</div>
 			)}
         </Container>
+        <Divider sx={{m:10}} />
+        <Box sx={{mb:10}}>
+        <Box sx={{ml:5, mb:10}}> 
+        <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+            Video Documentation
+        </h2>
+        </Box>  
+        <section className="c-share">         
+          <ReactPlayer controls={true} loop={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
+        </section> 
+        </Box>   
       </Layout>
     </>
 )
 };
 
 export async function getStaticProps({ preview = false }) {
-  const posts = (await getAllPostsForHome(preview)) || []
+  const posts = (await getAllPostsForHomeEn(preview)) || []
   return {
     props: { posts, preview },
   }

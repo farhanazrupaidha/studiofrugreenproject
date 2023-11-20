@@ -3,7 +3,7 @@ import * as React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
+import { getAllPostsWithSlugEn, getPostAndMorePostsEn } from 'lib/graphcms'
 
 const ErrorPage = dynamic(() => import('components/errorpage'), {
   ssr: false,
@@ -11,19 +11,14 @@ const ErrorPage = dynamic(() => import('components/errorpage'), {
 const Container = dynamic(() => import('components/container'));
 const PostBody = dynamic(() => import('components/post-body'));
 const MoreStories = dynamic(() => import('components/more-stories'));
-const RecentFlora = dynamic(() => import('components/recent-flora'));
-const RecentFauna = dynamic(() => import('components/recent-fauna'));
-const RecentSains = dynamic(() => import('components/recent-sains'));
-const RecentWisata = dynamic(() => import('components/recent-wisata'));
-const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'));
 const Header = dynamic(() => import('components/header'));
 const PostHeader = dynamic(() => import('components/post-header'));
 const PostTitle = dynamic(() => import('components/post-title'));
 const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
 });
-const Layout = dynamic(() => import('components/layout'));
-const Location = dynamic(() => import('components/location'), {
+const Layout = dynamic(() => import('components/layout-en'));
+const Location = dynamic(() => import('components/location-en'), {
   ssr: false,
 });
 const ShareButton = dynamic(() => import('components/socialsharebutton'), {
@@ -35,12 +30,6 @@ import ReactPlayer from 'react-player/youtube';
 import { DiscussionEmbed } from 'disqus-react';
 import { CommentCount } from 'disqus-react';
 
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-
-import '@splidejs/react-splide/css/sea-green';
-
-// or only core styles
-import '@splidejs/react-splide/css/core';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -111,8 +100,8 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                     <meta name="language" content="id-id" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com" hreflang="id-id" />
+                     <meta name="language" content="en-us" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com" hreflang="en-us" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru" />                     
                      <meta property="image" content={post.seo.image.url} />
@@ -146,7 +135,7 @@ export default function Post({ post, morePosts, preview }) {
                   aria-controls="panel1a-content" 
                   id="panel1a-header"
                   >        
-                  <Typography variant="h5">Referensi</Typography>   
+                  <Typography variant="h5">Reference</Typography>   
                 </AccordionSummary>
                 <AccordionDetails>   
                     <Box sx={{mt:4, whiteSpace: 'nowrap', overflowX: 'auto'}}>
@@ -164,7 +153,7 @@ export default function Post({ post, morePosts, preview }) {
             <center>
             <Box sx={{mt:7}}>
             <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
-            <Typography variant='h5' color="#ff0055">Bagikan catatan ini</Typography>
+            <Typography variant='h5' color="#ff0055">Share this article</Typography>
             <Box sx={{mb:5, mt:2}}>
             <Stack
                 direction="row"
@@ -215,7 +204,7 @@ export default function Post({ post, morePosts, preview }) {
                 }
               >
               {/* Placeholder Text */}
-                Komentar
+                Comments
               </CommentCount>        
               <DiscussionEmbed
                 shortname='studiofru-green-project'
@@ -229,7 +218,7 @@ export default function Post({ post, morePosts, preview }) {
               />
         </Box>          
             <Divider sx={{mt:5, mb:5, maxWidth:300, width:'95%' }} />
-              <Typography variant="h6" color="#ff0055" sx={{mt:2}}>Ikuti Studiofru | Green Project melalui media sosial untuk mendapatkan informasi singkat mengenai flora dan fauna</Typography>
+              <Typography variant="h6" color="#ff0055" sx={{mt:2}}>Follow Studiofru | Green Project via social media to get short information about flora and fauna.</Typography>
               <Stack
                 direction="row"
                 spacing={1}
@@ -259,7 +248,7 @@ export default function Post({ post, morePosts, preview }) {
         <Box sx={{mb:5}}>
         <Box sx={{ mb:5}}> 
         <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-          Dokumentasi Video
+          Video Documentation
         </h2>
         </Box>  
         <section className="c-share">         
@@ -271,38 +260,13 @@ export default function Post({ post, morePosts, preview }) {
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}       
-      </Container>
-      <Divider sx={{m:5, mb:10}} />
-      <Box sx={{ml:5}}>
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-        Berdasarkan Topik
-      </h2>
-      </Box>
-      <Box sx={{mb:5}}>
-      <Splide aria-label="Catatan Terbaru">
-              <SplideSlide>
-                <RecentFlora />
-              </SplideSlide>  
-              <SplideSlide>
-                <RecentFauna />
-              </SplideSlide>
-              <SplideSlide>
-                <RecentSains />
-              </SplideSlide>   
-              <SplideSlide>
-                <RecentWisata />
-              </SplideSlide>       
-              <SplideSlide>
-                <RecentPengetahuan />
-              </SplideSlide>                                                    
-      </Splide>  
-      </Box>     
+      </Container>    
     </Layout>
   )
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const data = await getPostAndMorePosts(params.slug, preview)
+  const data = await getPostAndMorePostsEn(params.slug, preview)
   return {
     props: {
       preview,
@@ -313,7 +277,7 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export async function getStaticPaths() {
-  const posts = await getAllPostsWithSlug()
+  const posts = await getAllPostsWithSlugEn()
   return {
     paths: posts.map(({ slug }) => ({
       params: { slug },
