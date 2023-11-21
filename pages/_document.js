@@ -4,7 +4,7 @@ import Script from 'next/script'
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="id">
+      <Html>
         <Head>
             <meta charset="utf-8" />
             <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />

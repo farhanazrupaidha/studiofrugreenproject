@@ -80,7 +80,7 @@ return (
     {data &&
       data.posts.map((item) => (
         <Box sx={{maxWidth:1000, m:'auto', p:2, backgroundColor: '#eceff1'}} key={item.id}>
-        <Link href={`/posts-en/${item.slug}`} className="hover:underline">
+        <Link href={`/en/posts/${item.slug}`} className="hover:underline">
             <Typography color='black' sx={{m:1}}>{item.title}</Typography>
         </Link>
         </Box>

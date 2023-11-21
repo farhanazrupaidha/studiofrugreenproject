@@ -41,7 +41,7 @@ export default function PostPreview({
         <CoverImage slug={slug} title={title} url={coverImage.url} />
       </div>
       <h3 className="mb-3 text-3xl leading-snug">
-        <Link href={`/posts-en/${slug}`} className="hover:underline">
+        <Link href={`/en/posts/${slug}`} className="hover:underline">
           {title}
         </Link>
       </h3>
