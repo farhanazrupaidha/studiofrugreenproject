@@ -102,6 +102,8 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="en-US" />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en-US" />
+                     <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en" />
+                     <link rel="alternate" href={`https://studiofrugreenproject.com/posts/${post.slug}`} hreflang="x-default" /> 
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru" />                     
                      <meta property="image" content={post.seo.image.url} />
