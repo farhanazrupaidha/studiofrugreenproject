@@ -118,8 +118,8 @@ export default function Index({ posts, preview }) {
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                     <meta name="language" content="id-id" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com/locations/bali" hreflang="id-id" />
+                     <meta name="language" content="id-ID" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/locations/bali" hreflang="id-ID" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/fotopetani_1.jpg" />
