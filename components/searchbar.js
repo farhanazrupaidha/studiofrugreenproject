@@ -51,7 +51,7 @@ return (
           style = {{width: '100%'}}
           sx={{ input: { color: 'black' }, mb:1, mt:2, ml:3 }}
           color="secondary"
-          placeholder= " ketik pencarian di sini"
+          placeholder= " Ketik pencarian di sini"
           type="text"
           onChange={(e) => setSearchFilter(e.target.value)}
         />
