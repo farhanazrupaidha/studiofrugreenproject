@@ -11,6 +11,9 @@ const DrawerToggle = dynamic(() => import('components/drawer'), {
 const Search = dynamic(() => import('components/search'), {
   ssr: false,
 });
+const LocaleSwitch = dynamic(() => import('components/locale-switch'), {
+  ssr: false,
+});
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -206,14 +209,7 @@ function ResponsiveAppBar(props) {
                 >
                     Video
                 </Button>
-                <Button
-                    onClick={handleCloseNavMenu}
-                    href="/en"
-                    color= 'secondary'
-                    sx={{ my: 2, mr:2, display: 'block' }}
-                >
-                    English
-                </Button>                
+                <LocaleSwitch />
           </Box>
           <Search />
           </Toolbar>

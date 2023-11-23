@@ -1,4 +1,9 @@
 import { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
+
+const LocaleSwitch = dynamic(() => import('components/locale-switch'), {
+  ssr: false,
+});
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -124,7 +129,7 @@ function DrawerToggle () {
                     </ListItemButton>
                   </ListItem>
               </List>
-        <Button color="inherit" href="/en">English</Button>
+        <LocaleSwitch />
         <Button color="inherit" onClick={() => setOpen(false)}>X Close</Button>
       </Drawer>
     </div>
