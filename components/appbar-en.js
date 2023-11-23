@@ -117,7 +117,7 @@ function ResponsiveAppBar(props) {
                 edge="start"
                 color="inherit"
                 aria-label="menu"
-                href="/"
+                href="/en"
                 sx={{ mr: 1 }}
             >
                 <Avatar

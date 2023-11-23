@@ -32,7 +32,7 @@ function DrawerToggle () {
                   edge="start"
                   color="primary"
                   aria-label="menu"
-                  href="/"
+                  href="/en"
                   sx={{ mr: 1 }}
                 >
             <Avatar
