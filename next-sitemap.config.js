@@ -6,8 +6,8 @@ module.exports = {
   sitemapSize: 7000,
   generateRobotsTxt: true,
   exclude: ['/tentang', '/wisata', '/endemik', '/videos', '/fauna', '/pengetahuan', '/sains', '/disclaimer', '/termsofuse', '/kontribusi', '/kontak', '/forum', '/locations/bali', '/locations/jawatengah', '/locations/jawatimur'],
-// Default transformation function
-transform: async (config, path) => {
+  // Default transformation function
+  transform: async (config, path) => {
   return {
     loc: path, // => this will be exported as http(s)://<config.siteUrl>/<path>
     changefreq: config.changefreq,
