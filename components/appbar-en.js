@@ -135,7 +135,7 @@ function ResponsiveAppBar(props) {
                     fontWeight: 'bold'
                 }}
             >
-            <Link href="/" color="inherit" underline="hover">
+            <Link href="/en" color="inherit" underline="hover">
                 Studiofru | Green Project
             </Link>
             </Typography>
