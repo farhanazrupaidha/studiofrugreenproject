@@ -101,10 +101,9 @@ export default function Post({ post, morePosts, preview }) {
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="en-US" />
-                     <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en-US" />
-                     <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en" />
-                     <link rel="alternate" href={`https://studiofrugreenproject.com/posts/${post.slug}`} hreflang="id-ID" />
-                     <link rel="alternate" href={`https://studiofrugreenproject.com/posts/${post.slug}`} hreflang="x-default" /> 
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/posts/" hreflang="en-US" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/posts/" hreflang="id-ID" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/posts/" hreflang="x-default" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru" />                     
                      <meta property="image" content={post.seo.image.url} />
@@ -151,7 +150,6 @@ export default function Post({ post, morePosts, preview }) {
                 </AccordionDetails>
               </Accordion>  
              
-                   
             </article>
             <center>
             <Box sx={{mt:7}}>
@@ -260,6 +258,9 @@ export default function Post({ post, morePosts, preview }) {
         </Box> 
         <Divider sx={{mb:10, mt:10}} />
         <Location />
+        <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+          Recent Notes
+        </h2>        
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}       

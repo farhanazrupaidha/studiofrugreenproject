@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 export default function Location () {
   return (
     <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" sx={{mt:2, mb:5}}>
-        <Typography variant='h6' sx={{mr:1}}>Cari berdasarkan lokasi:</Typography>
+        <Typography variant='h5' sx={{mr:1}}>Cari berdasarkan lokasi:</Typography>
         <Button size="small" href='/locations/bali' variant="contained" color="primary" sx={{borderRadius: 5}}>
             Bali
         </Button> 
