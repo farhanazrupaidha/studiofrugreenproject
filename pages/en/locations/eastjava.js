@@ -1,36 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-import { useRouter } from "next/router";
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import { getAllPostsForHome } from '../lib/graphcms'
+import { getAllPostsForHome } from '../../../lib/graphcms'
 
 const Container = dynamic(() => import('components/container'));
-const PostPreview = dynamic(() => import('components/post-preview'));
+const PostPreview = dynamic(() => import('components/post-preview-en'));
 const Intro = dynamic(() => import('components/intro'), {
   ssr: false,
 });
-const Layout = dynamic(() => import('components/layout'));
-const Location = dynamic(() => import('components/location'), {
+const Layout = dynamic(() => import('components/layout-en'));
+const Location = dynamic(() => import('components/location-en'), {
   ssr: false,
 });
-const Paginate = dynamic(() => import('components/paginate'), {
+const Paginate = dynamic(() => import('components/paginate-en'), {
   ssr: false,
 });
-
-
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-
-import '@splidejs/react-splide/css/sea-green';
-
-// or only core styles
-import '@splidejs/react-splide/css/core';
-
-import ReactPlayer from 'react-player/youtube';
 
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 
 export default function Index({ posts, preview }) {
 
@@ -39,13 +26,14 @@ export default function Index({ posts, preview }) {
 	const [totalPosts, setTotalPosts] = useState();
 	const [postsPerPage] = useState(10);
 
+
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
 			const { posts, postsConnection } = await request(
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (where: {_search: "video"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (where: {_search: "jawa timur"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -78,6 +66,14 @@ export default function Index({ posts, preview }) {
                                 })
                               }
                             }
+                            seo {
+                                  title
+                                  description
+                                  keywords
+                                  image {
+                                    url
+                                  }
+                                }
                           }
 				 postsConnection {
 					pageInfo {
@@ -117,48 +113,37 @@ export default function Index({ posts, preview }) {
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project - Dokumentasi Video</title>
-                     <meta name="description" content="Jelajah dokumentasi mengenai flora dan fauna serta lingkungan pertanian dan perkebunan di Indonesia." />
-                     <meta name="keywords" content="studiofru, green project, studiofru green project, wisata di Indonesia, wisata alam di Indonesia, wisata lingkungan di Indonesia, wisata indonesia" />
+                     <title>Studiofru | Green Project - East Java</title>
+                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Jawa Timur" />
+                     <meta name="keywords" content="studiofru, green project, studiofru green project, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, jawa timur" />
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="id-ID" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com/video" hreflang="id-ID" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/locations/jawatimur" hreflang="id-ID" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
-                     <meta property="image" content="/images/tanah.jpg" />
-                     <meta property="og:url" content="https://studiofrugreenproject.com/video" />
-                     <meta property="og:title" content="Studiofru | Green Project - Dokumentasi Video" />
-                     <meta property="og:description" content="Jelajah dokumentasi mengenai flora dan fauna serta lingkungan pertanian dan perkebunan di Indonesia." />
-                     <meta property="og:site_name" content="Studiofru | Green Project - Dokumentasi Video" />
+                     <meta property="image" content="/images/fotopetani_1.jpg" />
+                     <meta property="og:url" content="https://studiofrugreenproject.com/locations/jawatimur" />
+                     <meta property="og:title" content="Studiofru | Green Project - Jawa Tengah" />
+                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Jawa Timur" />
+                     <meta property="og:site_name" content="Studiofru | Green Project - Jawa Tengah" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
-                     <meta name="twitter:title" content="Studiofru | Green Project - VDokumentasi Video" />
+                     <meta name="twitter:title" content="Studiofru | Green Project - Jawa Tengah" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/tanah.jpg" />e
+                     <meta name="twitter:image:src" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Container>
           <Intro />
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                Dokumentasi Video
-            </h2>   
-            
-            <Splide aria-label="Video Diary">
-              <SplideSlide>
-              <Typography variant="h4" sx={{mb:5}}>Video Diary</Typography>
-                <section className="d-share">
-                <ReactPlayer controls={true} loop={true} playing={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
-                </section>
-              </SplideSlide>  
-            </Splide>                     
-            </Box>
-            <Divider sx={{mt:10, mb:10}} />            
+                East Java
+            </h2>
+          </Box>
           <Location />
-
 			{blogPosts ? (
 			<Box>
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
@@ -177,7 +162,7 @@ export default function Index({ posts, preview }) {
                  </div>
                  <center>
                   <Paginate
-                    postsPerPage={postsPerPage}
+                  postsPerPage={postsPerPage}
                     totalPosts={totalPosts}
                     currentPage={currentPage}
                     paginate={paginate}

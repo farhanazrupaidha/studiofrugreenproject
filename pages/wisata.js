@@ -106,9 +106,9 @@ export default function Index({ posts, preview }) {
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project - Wisata/Travel</title>
+                     <title>Studiofru | Green Project - Wisata</title>
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai tempat - tempat wisata di Indonesia." />
-                     <meta name="keywords" content="studiofru, green project, studiofru green project, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, wisata, wisata alam, wisata lingkungan, wisata indonesia, travel indonesia" />
+                     <meta name="keywords" content="studiofru, green project, studiofru green project wisata, wisata alam, wisata lingkungan, wisata indonesia" />
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -118,13 +118,13 @@ export default function Index({ posts, preview }) {
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/wisata" />
-                     <meta property="og:title" content="Studiofru | Wisata/Travel" />
+                     <meta property="og:title" content="Studiofru | Wisata" />
                      <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai tempat - tempat wisata di Indonesia." />
                      <meta property="og:site_name" content="Studiofru | Wisata/Travel" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
-                     <meta name="twitter:title" content="Studiofru | Wisata/Travel" />
+                     <meta name="twitter:title" content="Studiofru | Wisata" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />

@@ -13,7 +13,7 @@ const Location = dynamic(() => import('components/location-en'), {
 const Hero = dynamic(() => import('components/hero-en'), {
     ssr: false,
 });
-const Paginate = dynamic(() => import('components/paginate'), {
+const Paginate = dynamic(() => import('components/paginate-en'), {
   ssr: false,
 });
 

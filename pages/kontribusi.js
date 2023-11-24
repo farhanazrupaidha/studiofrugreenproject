@@ -14,7 +14,7 @@ export default function ResponsiveStack() {
                    >
                      <title>Studiofru | Green Project - Kontribusi</title>
                      <meta name="description" content="Ikut berkontribusi dalam pengarsipan informasi ensiklopedia berbagai flora dan fauna di Indonesia." />
-                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
+                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, kontribusi ilmu pengetahuan" />
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />

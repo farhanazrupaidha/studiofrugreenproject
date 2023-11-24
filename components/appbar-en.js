@@ -166,19 +166,19 @@ function ResponsiveAppBar(props) {
               onClose={handleCloseUserMenu}
             >
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Button href="/flora" color="inherit">FLORA</Button>
+                  <Button href="/en/flora" color="inherit">FLORA</Button>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Button href="/fauna" color="inherit">FAUNA</Button>
+                  <Button href="/en/fauna" color="inherit">FAUNA</Button>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Button href="/endemik" color="inherit">ENDEMIC</Button>
+                  <Button href="/en/endemic" color="inherit">ENDEMIC</Button>
                 </MenuItem>
             </Menu>
 
                 <Button
                     onClick={handleCloseNavMenu}
-                    href="/sains"
+                    href="/en/science"
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
@@ -186,7 +186,7 @@ function ResponsiveAppBar(props) {
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
-                    href="/pengetahuan"
+                    href="/en/knowledge"
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
@@ -195,7 +195,7 @@ function ResponsiveAppBar(props) {
 
                 <Button
                     onClick={handleCloseNavMenu}
-                    href="/wisata"
+                    href="/en/travel"
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
                 >
@@ -203,7 +203,7 @@ function ResponsiveAppBar(props) {
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
-                    href="/videos"
+                    href="/en/videos"
                     color= 'secondary'
                     sx={{ my: 2, mr:2, display: 'block' }}
                 >

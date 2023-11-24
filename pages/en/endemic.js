@@ -1,43 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-import { useRouter } from "next/router";
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import { getAllPostsForHome } from '../lib/graphcms'
+import { getAllPostsForHome } from '../../lib/graphcms'
 
 const Container = dynamic(() => import('components/container'));
 const PostPreview = dynamic(() => import('components/post-preview'));
 const Intro = dynamic(() => import('components/intro'), {
   ssr: false,
 });
-const Layout = dynamic(() => import('components/layout'));
-const Location = dynamic(() => import('components/location'), {
+const Layout = dynamic(() => import('components/layout-en'));
+const Location = dynamic(() => import('components/location-en'), {
   ssr: false,
 });
-const Paginate = dynamic(() => import('components/paginate'), {
+const Paginate = dynamic(() => import('components/paginate-en'), {
   ssr: false,
 });
-
-
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-
-import '@splidejs/react-splide/css/sea-green';
-
-// or only core styles
-import '@splidejs/react-splide/css/core';
-
-import ReactPlayer from 'react-player/youtube';
 
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 
 export default function Index({ posts, preview }) {
+
 
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(10);
+	const [postsPerPage] = useState(16);
+
 
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
@@ -45,7 +34,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (where: {_search: "video"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (locales: en, where: {_search: "endemik"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -117,25 +106,25 @@ export default function Index({ posts, preview }) {
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project - Dokumentasi Video</title>
-                     <meta name="description" content="Jelajah dokumentasi mengenai flora dan fauna serta lingkungan pertanian dan perkebunan di Indonesia." />
-                     <meta name="keywords" content="studiofru, green project, studiofru green project, wisata di Indonesia, wisata alam di Indonesia, wisata lingkungan di Indonesia, wisata indonesia" />
+                     <title>Studiofru | Green Project - Endemic Species in Indonesia</title>
+                     <meta name="description" content="Explore the encyclopedia and various information regarding the naming identity, origin, history and benefits of various endemic animals and plants in Indonesia." />
+                     <meta name="keywords" content="studiofru, encyclopedia, nature encyclopedia, flora encyclopedia, fauna encyclopedia, plantations, agriculture, animal husbandry, endemic species" />
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                     <meta name="language" content="id-ID" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com/video" hreflang="id-ID" />
+                     <meta name="language" content="en-US" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/endemic" hreflang="en-US" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />
-                     <meta property="og:url" content="https://studiofrugreenproject.com/video" />
-                     <meta property="og:title" content="Studiofru | Green Project - Dokumentasi Video" />
-                     <meta property="og:description" content="Jelajah dokumentasi mengenai flora dan fauna serta lingkungan pertanian dan perkebunan di Indonesia." />
-                     <meta property="og:site_name" content="Studiofru | Green Project - Dokumentasi Video" />
+                     <meta property="og:url" content="https://studiofrugreenproject.com/en/endemic" />
+                     <meta property="og:title" content="Studiofru | Green Project - Endemic Species in Indonesia" />
+                     <meta property="og:description" content="Explore the encyclopedia and various information regarding the naming identity, origin, history and benefits of various endemic animals and plants in Indonesia." />
+                     <meta property="og:site_name" content="Studiofru | Green Project - Endemic Species in Indonesia" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
-                     <meta name="twitter:title" content="Studiofru | Green Project - VDokumentasi Video" />
+                     <meta name="twitter:title" content="Studiofru | Green Project - Endemic Species in Indonesia" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/tanah.jpg" />e
                     <link rel="icon" href="/images/favicon.ico" />
@@ -144,21 +133,10 @@ export default function Index({ posts, preview }) {
           <Intro />
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                Dokumentasi Video
-            </h2>   
-            
-            <Splide aria-label="Video Diary">
-              <SplideSlide>
-              <Typography variant="h4" sx={{mb:5}}>Video Diary</Typography>
-                <section className="d-share">
-                <ReactPlayer controls={true} loop={true} playing={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
-                </section>
-              </SplideSlide>  
-            </Splide>                     
-            </Box>
-            <Divider sx={{mt:10, mb:10}} />            
+            Endemic Species
+            </h2>
+          </Box>
           <Location />
-
 			{blogPosts ? (
 			<Box>
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
@@ -201,3 +179,4 @@ export async function getStaticProps({ preview = false }) {
     props: { posts, preview },
   }
 }
+

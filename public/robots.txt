@@ -16,9 +16,9 @@ Disallow: /termsofuse
 Disallow: /kontribusi
 Disallow: /kontak
 Disallow: /forum
-Disallow: /locations/bali
-Disallow: /locations/jawatengah
-Disallow: /locations/jawatimur
+Disallow: /lokasi/bali
+Disallow: /lokasi/jawatengah
+Disallow: /lokasi/jawatimur
 Disallow: /posts/Pentingnya-Tanah
 Disallow: /posts/pemandangan-gunung-lawu-dan-telaga-sarangan
 Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Super-Napier-Grass-Pakchong
@@ -33,6 +33,10 @@ Disallow: /posts/deskripsi-asal-manfaat-dan-kegunaan-bunga-matahari-helianthus-a
 Disallow: /en/fauna
 Disallow: /englishversion
 Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Orok-Orok-Crotalaria-juncea
+Disallow: /en/knowledge
+Disallow: /en/videos
+Disallow: /en/endemic
+Disallow: /en/setupatok
 
 # Host
 Host: https://studiofrugreenproject.com
