@@ -6,17 +6,29 @@ import { getAllPostsForHome } from '../lib/graphcms'
 
 const Container = dynamic(() => import('components/container'));
 const PostPreview = dynamic(() => import('components/post-preview'));
-const Layout = dynamic(() => import('components/layout'));
+const Layout = dynamic(() => import('components/layout'), {
+  ssr: false,
+});
 const Location = dynamic(() => import('components/location'), {
   ssr: false,
 });
 const Hero = dynamic(() => import('components/hero'));
 
-const RecentFlora = dynamic(() => import('components/recent-flora'));
-const RecentFauna = dynamic(() => import('components/recent-fauna'));
-const RecentSains = dynamic(() => import('components/recent-sains'));
-const RecentWisata = dynamic(() => import('components/recent-wisata'));
-const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'));
+const RecentFlora = dynamic(() => import('components/recent-flora'), {
+  ssr: false,
+});
+const RecentFauna = dynamic(() => import('components/recent-fauna'), {
+  ssr: false,
+});
+const RecentSains = dynamic(() => import('components/recent-sains'), {
+  ssr: false,
+});
+const RecentWisata = dynamic(() => import('components/recent-wisata'), {
+  ssr: false,
+});
+const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'), {
+  ssr: false,
+});
 const Paginate = dynamic(() => import('components/paginate'), {
   ssr: false,
 });

@@ -4,9 +4,19 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { getAllPostsForHomeEn } from '../lib/graphcms'
 
-const Container = dynamic(() => import('components/container'));
+const RecentFlora = dynamic(() => import('components/recent-flora-en'), {
+  ssr: false,
+});
+const RecentFauna = dynamic(() => import('components/recent-fauna-en'), {
+  ssr: false,
+});
+const Container = dynamic(() => import('components/container'), {
+  ssr: false,
+});
 const PostPreview = dynamic(() => import('components/post-preview-en'));
-const Layout = dynamic(() => import('components/layout-en'));
+const Layout = dynamic(() => import('components/layout-en'), {
+  ssr: false,
+});
 const Location = dynamic(() => import('components/location-en'), {
   ssr: false,
 });
@@ -21,6 +31,13 @@ import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 
 import ReactPlayer from 'react-player/youtube';
+
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+import '@splidejs/react-splide/css/sea-green';
+
+// or only core styles
+import '@splidejs/react-splide/css/core';
 
 export default function Index({ posts, preview }) {
 
@@ -194,6 +211,22 @@ export default function Index({ posts, preview }) {
           <ReactPlayer controls={true} loop={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
         </section> 
         </Box>   
+        <Divider sx={{m:5, mb:10}} />
+      <Box sx={{ml:5}}>
+      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+        Based on Topic
+      </h2>
+      </Box>
+      <Box sx={{mb:5}}>
+      <Splide aria-label="Catatan Terbaru">
+              <SplideSlide>
+                <RecentFlora />
+              </SplideSlide>  
+              <SplideSlide>
+                <RecentFauna />
+              </SplideSlide>                                                  
+      </Splide>  
+      </Box>             
       </Layout>
     </>
 )
