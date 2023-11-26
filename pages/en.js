@@ -14,9 +14,7 @@ const Container = dynamic(() => import('components/container'), {
   ssr: false,
 });
 const PostPreview = dynamic(() => import('components/post-preview-en'));
-const Layout = dynamic(() => import('components/layout-en'), {
-  ssr: false,
-});
+const Layout = dynamic(() => import('components/layout-en'));
 const Location = dynamic(() => import('components/location-en'), {
   ssr: false,
 });

@@ -29,9 +29,7 @@ const PostTitle = dynamic(() => import('components/post-title'));
 const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
 });
-const Layout = dynamic(() => import('components/layout-en'), {
-  ssr: false,
-});
+const Layout = dynamic(() => import('components/layout-en'));
 const Location = dynamic(() => import('components/location-en'), {
   ssr: false,
 });
