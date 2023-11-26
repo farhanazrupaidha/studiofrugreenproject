@@ -10,9 +10,7 @@ const RecentFlora = dynamic(() => import('components/recent-flora-en'), {
 const RecentFauna = dynamic(() => import('components/recent-fauna-en'), {
   ssr: false,
 });
-const Container = dynamic(() => import('components/container'), {
-  ssr: false,
-});
+const Container = dynamic(() => import('components/container'));
 const PostPreview = dynamic(() => import('components/post-preview-en'));
 const Layout = dynamic(() => import('components/layout-en'));
 const Location = dynamic(() => import('components/location-en'), {

@@ -8,12 +8,8 @@ import { getAllPostsWithSlugEn, getPostAndMorePostsEn } from 'lib/graphcms'
 const ErrorPage = dynamic(() => import('components/errorpage'), {
   ssr: false,
 });
-const Container = dynamic(() => import('components/container'), {
-  ssr: false,
-});
-const PostBody = dynamic(() => import('components/post-body'), {
-  ssr: false,
-});
+const Container = dynamic(() => import('components/container'));
+const PostBody = dynamic(() => import('components/post-body'));
 const MoreStories = dynamic(() => import('components/more-stories'), {
   ssr: false,
 });
