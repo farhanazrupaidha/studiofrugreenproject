@@ -9,7 +9,6 @@ import Typewriter from 'typewriter-effect';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { styled } from '@mui/material/styles';
 
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
@@ -23,10 +22,13 @@ export default function Hero () {
 <Box sx={{m:'auto', mt:5, mb:5}}>
     <Box sx={{mb:5}}>
         <center>
-            <Typography variant='h1' color="#BFCC03" sx={{fontWeight:"bold", height:'130px'}}>
+            <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold", height:'130px', mb:10}}>
+              Studiofru | Green Project
+            </Typography>
+            <Typography variant='h2' color="white" sx={{fontWeight:"bold", height:'110px'}}>
                 <Typewriter
                   options={{
-                    strings: ['Explore Encyclopedia'],
+                    strings: ['Encyclopedia of Biodiversity'],
                     autoStart: true,
                     loop: true,
                   }}
@@ -43,10 +45,10 @@ export default function Hero () {
       sx={{mb:2}}
     >
     <Box sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
-            <AccessTimeFilledIcon sx={{ fontSize: 40, color:"#BFCC03"}} />
-            <Typography variant="h6" gutterBottom color="#BFCC03" sx={{textAlign: 'right'}}>10/10/2022</Typography>
-            <Typography variant="h6" gutterBottom color="#BFCC03" sx={{textAlign: 'right'}}>{`${date}`}</Typography>
-            <Typography variant="h6" gutterBottom color="#BFCC03" sx={{textAlign: 'right'}}>{`${time}`}</Typography>
+            <AccessTimeFilledIcon sx={{ fontSize: 40, color:"#22cc88"}} />
+            <Typography variant="h6" gutterBottom color="#22cc88" sx={{textAlign: 'right'}}>10/10/2022</Typography>
+            <Typography variant="h6" gutterBottom color="#22cc88" sx={{textAlign: 'right'}}>{`${date}`}</Typography>
+            <Typography variant="h6" gutterBottom color="#22cc88" sx={{textAlign: 'right'}}>{`${time}`}</Typography>
     </Box>
         <DataCountFlora />
         <DataCountFauna />

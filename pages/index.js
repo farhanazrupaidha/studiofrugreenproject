@@ -151,22 +151,23 @@ export default function Index({ posts, preview }) {
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
-                     <meta property="og:title" content="Studiofru | Green Project" />
+                     <meta property="og:title" content="Studiofru | Green Project - Ensiklopedia Keanekaragaman Hayati" />
                      <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia."/>
-                     <meta property="og:site_name" content="Studiofru | Green Project" />
+                     <meta property="og:site_name" content="Studiofru | Green Project - Ensiklopedia Keanekaragaman Hayati" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
-                     <meta name="twitter:title" content="Studiofru | Green Project" />
+                     <meta name="twitter:title" content="Studiofru | Green Project - Ensiklopedia Keanekaragaman Hayati" />
                      <meta property="twitter:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia."/>
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
+
         <Hero />
 
         <Container>
-          <Box sx={{mb:5, mt:5}}>
+          <Box sx={{mb:5, mt:5}}>            
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                Catatan Terbaru
             </h2>

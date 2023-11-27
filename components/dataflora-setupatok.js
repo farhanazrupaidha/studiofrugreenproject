@@ -26,7 +26,7 @@ const { data, loading, error } = useQuery(FLORA);
 
   return (
             <Paper sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
-                  <YardIcon sx={{ fontSize: 40, color:"#20C1FE"}} />
+                  <YardIcon sx={{ fontSize: 40, color:"#22cc88"}} />
                   <Typography variant="h3" textAlign= 'right'>{data.postsConnection.aggregate.count}</Typography>
             </Paper>
   );

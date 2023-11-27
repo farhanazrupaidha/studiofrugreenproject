@@ -27,8 +27,8 @@ const { data, loading, error } = useQuery(FAUNA);
 
   return (
             <Paper sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
-                  <PetsIcon sx={{ fontSize: 40, color:"#BFCC03"}} />
-                  <Typography variant="h3" color='#BFCC03' textAlign= 'right'>{data.postsConnection.aggregate.count}</Typography>
+                  <PetsIcon sx={{ fontSize: 40, color:"#22cc88"}} />
+                  <Typography variant="h3" color='#22cc88' textAlign= 'right'>{data.postsConnection.aggregate.count}</Typography>
             </Paper>
   );
 }

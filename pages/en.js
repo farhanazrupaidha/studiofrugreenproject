@@ -129,7 +129,7 @@ export default function Index({ posts, preview }) {
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project - Encyclopedia of Biodiversity.</title>
+                     <title>Studiofru | Green Project - Encyclopedia of Biodiversity</title>
                      <meta name="title" content="Studiofru | Green Project - Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia." />
                      <meta name="description" content="Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia." />
                      <meta name="keywords" content="studiofru, encyclopedia, nature encyclopedia, flora encyclopedia, fauna encyclopedia, farming, livestock, animal, plants, biodiversity in Indonesia" />

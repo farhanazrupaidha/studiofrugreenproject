@@ -42,5 +42,5 @@
 }
 
 .post img {
-  @apply h-auto max-w-lg mx-auto;
+  @apply object-contain md:object-scale-down;
 }

@@ -47,13 +47,6 @@ import ReactPlayer from 'react-player/youtube';
 import { DiscussionEmbed } from 'disqus-react';
 import { CommentCount } from 'disqus-react';
 
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-
-import '@splidejs/react-splide/css/sea-green';
-
-// or only core styles
-import '@splidejs/react-splide/css/core';
-
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
@@ -174,7 +167,6 @@ export default function Post({ post, morePosts, preview }) {
                     </Box>
                 </AccordionDetails>
               </Accordion>  
-             
                    
             </article>
             <center>
@@ -290,32 +282,7 @@ export default function Post({ post, morePosts, preview }) {
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}       
-      </Container>
-      <Divider sx={{m:5, mb:10}} />
-      <Box sx={{ml:5}}>
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-        Berdasarkan Topik
-      </h2>
-      </Box>
-      <Box sx={{mb:5}}>
-      <Splide aria-label="Catatan Terbaru">
-              <SplideSlide>
-                <RecentFlora />
-              </SplideSlide>  
-              <SplideSlide>
-                <RecentFauna />
-              </SplideSlide>
-              <SplideSlide>
-                <RecentSains />
-              </SplideSlide>   
-              <SplideSlide>
-                <RecentWisata />
-              </SplideSlide>       
-              <SplideSlide>
-                <RecentPengetahuan />
-              </SplideSlide>                                                    
-      </Splide>  
-      </Box>     
+      </Container>   
     </Layout>
   )
 }
