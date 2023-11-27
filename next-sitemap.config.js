@@ -3,7 +3,7 @@ module.exports = {
   siteUrl: 'https://studiofrugreenproject.com',
   changefreq: 'weekly',
   priority: 0.7,
-  sitemapSize: 7000,
+  sitemapSize: 5000,
   generateRobotsTxt: true,
   exclude: ['/tentang', '/wisata', '/endemik', '/videos', '/fauna', '/pengetahuan', '/sains', '/disclaimer', '/termsofuse', '/kontribusi', '/kontak', '/forum', '/locations/bali', '/locations/jawatengah', '/locations/jawatimur' , '/en/endemic', '/en/videos' , '/en/knowledge', '/en/locations/setupatok'],
   // Default transformation function
@@ -24,7 +24,6 @@ robotsTxtOptions: {
     {
       userAgent: '*',
       disallow: [
-        '/tentang', '/wisata', '/endemik', '/videos', '/fauna', '/pengetahuan', '/sains', '/disclaimer', '/termsofuse', '/kontribusi', '/kontak', '/forum', '/lokasi/bali', '/lokasi/jawatengah', '/lokasi/jawatimur',
         '/posts/Pentingnya-Tanah', '/posts/pemandangan-gunung-lawu-dan-telaga-sarangan', '/posts/Deskripsi-Asal-dan-Khasiat-Super-Napier-Grass-Pakchong', '/posts/Deskripsi-Asal-dan-Khasiat-Sambiloto-Andrographis-paniculata',
         '/posts/Deskripsi-Asal-dan-Khasiat-Kelor-Moringa-oleifera', '/posts/Deskripsi-Asal-dan-Khasiat-Kembang-Kantil-Cempaka-Magnolia-champaca', '/posts/Deskripsi-Asal-dan-Manfaat-Bunga-Teratai-Nymphaeaceae', 
         '/posts/Deskripsi-Asal-dan-Khasiat-Daun-Ungu-Graptophyllum-pictum', '/posts/10-Jenis-Tanah-di-Wilayah-Indonesia', '/posts/Deskripsi-Asal-dan-Kegunaan-Jati-Tectona-grandis', '/posts/deskripsi-asal-manfaat-dan-kegunaan-bunga-matahari-helianthus-annuus', 
