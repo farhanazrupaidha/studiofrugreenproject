@@ -132,7 +132,7 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Flora and Fauna in the Region of Bali" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/images/tanah.jpg" />
+                     <meta name="twitter:image" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Container>

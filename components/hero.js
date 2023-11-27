@@ -6,10 +6,11 @@ import DataCountFauna from '/components/data-fauna';
 
 import Typewriter from 'typewriter-effect';
 
+import Image from "next/image";
+
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { styled } from '@mui/material/styles';
 
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 

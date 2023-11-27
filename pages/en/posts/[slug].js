@@ -125,13 +125,14 @@ export default function Post({ post, morePosts, preview }) {
                      <meta property="og:description" content={post.seo.description} />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content={post.seo.image.url} />
-                      <meta name="og:url" content={`https://studiofrugreenproject.com/posts-en/${post.slug}`}/>
-                     <meta name="og:type" content="website" />
+                     <meta name="og:url" content={`https://studiofrugreenproject.com/en/posts/${post.slug}`}/>
+                     <meta name="og:type" content="article" />
                      <meta name="twitter:site" content="@studiofruworks" />
+                     <meta name="twitter:creator" content="@studiofruworks" />
                      <meta name="twitter:title" content={post.seo.title} />
                      <meta property="twitter:description" content={post.seo.description} />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content={post.seo.image.url} />
+                     <meta name="twitter:image" content={post.seo.image.url} />
                 </Head>
               <motion.div
                 className="progress-bar"
@@ -151,7 +152,7 @@ export default function Post({ post, morePosts, preview }) {
                   aria-controls="panel1a-content" 
                   id="panel1a-header"
                   >        
-                  <Typography variant="h5">Reference</Typography>   
+                  <Typography variant="h6">Reference</Typography>   
                 </AccordionSummary>
                 <AccordionDetails>   
                     <Box sx={{mt:4, whiteSpace: 'nowrap', overflowX: 'auto'}}>
@@ -168,7 +169,7 @@ export default function Post({ post, morePosts, preview }) {
             <center>
             <Box sx={{mt:7}}>
             <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
-            <Typography variant='h5' color="#ff0055">Share this article</Typography>
+            <Typography variant='h6' color="#ff0055">Share this article</Typography>
             <Box sx={{mb:5, mt:2}}>
             <Stack
                 direction="row"

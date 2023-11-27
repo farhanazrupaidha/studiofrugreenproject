@@ -153,7 +153,7 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:title" content="Studiofru | Green Project  - Encyclopedia of Biodiversity" />
                      <meta property="twitter:description" content="Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia."/>
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/images/tanah.jpg" />
+                     <meta name="twitter:image" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Hero />

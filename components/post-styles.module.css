@@ -40,3 +40,7 @@
 .post td {
   @apply whitespace-nowrap h-px;
 }
+
+.post img {
+  @apply h-auto max-w-lg mx-auto;
+}
