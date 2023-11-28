@@ -6,7 +6,9 @@ import { getAllPostsForHome } from '../lib/graphcms'
 
 const Container = dynamic(() => import('components/container'));
 const PostPreview = dynamic(() => import('components/post-preview'));
-const Layout = dynamic(() => import('components/layout'));
+const Layout = dynamic(() => import('components/layout'), {
+  ssr: false,
+});
 const Location = dynamic(() => import('components/location'), {
   ssr: false,
 });
@@ -34,7 +36,10 @@ const Paginate = dynamic(() => import('components/paginate'), {
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 
-import ReactPlayer from 'react-player/youtube';
+const ReactPlayer = dynamic(() => import('react-player/youtube'), {
+  ssr: false,
+});
+
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import '@splidejs/react-splide/css/sea-green';

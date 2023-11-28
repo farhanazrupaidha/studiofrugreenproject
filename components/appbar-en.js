@@ -26,8 +26,6 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
 import { makeStyles } from '@mui/styles';
-import { styled, alpha } from '@mui/material/styles';
-
 
 const useStyles = makeStyles((theme) => ({
   text: {

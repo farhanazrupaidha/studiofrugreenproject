@@ -7,7 +7,7 @@ export default function Header() {
       <Link href="/" className="hover:underline">
                 <Typewriter
                   options={{
-                    strings: ['Studiofru | Green Project','Jelajah Ensiklopedia', 'Flora'],
+                    strings: ['Studiofru | Green Project','Ensiklopedia Keanekaragaman Hayati', 'Encyclopedia of Biodiversity'],
                     autoStart: true,
                     loop: true,
                   }}

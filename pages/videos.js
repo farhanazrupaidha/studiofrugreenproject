@@ -26,7 +26,9 @@ import '@splidejs/react-splide/css/sea-green';
 // or only core styles
 import '@splidejs/react-splide/css/core';
 
-import ReactPlayer from 'react-player/youtube';
+const ReactPlayer = dynamic(() => import('react-player/youtube'), {
+  ssr: false,
+});
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
