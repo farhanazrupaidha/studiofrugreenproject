@@ -41,6 +41,3 @@
   @apply whitespace-nowrap h-px;
 }
 
-.post img {
-  @apply object-contain md:object-scale-down;
-}
