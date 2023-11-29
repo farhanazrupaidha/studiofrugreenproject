@@ -111,21 +111,23 @@ export default function Index({ posts, preview }) {
       <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project - Flora and Fauna in the Central Java Region</title>
-                     <meta name="description" content="Explore encyclopedias and various informations about flora and fauna in the Central Java region." />
+                     <title>Studiofru | Green Project - Flora and Fauna in Central Java</title>
+                     <meta name="description" content="Explore encyclopedias and various informations about flora and fauna in Central Java." />
                      <meta name="keywords" content="studiofru, green project, studiofru green project, west java encyclopedia, animals in central java, plants in west java, flora in central java, farming in central java, livestock in central java" />
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="en-US" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com/en/locations/jawatengah" hreflang="en-US" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/locations/centraljava" hreflang="id-ID" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/locations/centraljava" hreflang="en-US" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/locations/centraljava" hreflang="x-default" />     
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/fotopetani_1.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/en/locations/jawatengah" />
                      <meta property="og:title" content="Studiofru | Green Project - Flora and Fauna in the Central Java Region." />
-                     <meta property="og:description" content="Explore encyclopedias and various information about flora and fauna in the Central Java region." />
-                     <meta property="og:site_name" content="Studiofru | Flora and Fauna in the Central Java Region" />
+                     <meta property="og:description" content="Explore encyclopedias and various information about flora and fauna in Central Java." />
+                     <meta property="og:site_name" content="Studiofru | Flora and Fauna in Central Java" />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />

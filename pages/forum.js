@@ -24,6 +24,8 @@ export default function ResponsiveStack() {
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/forum" hreflang="id-ID" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/forum" hreflang="en-US" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/forum" hreflang="x-default" /> 
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />

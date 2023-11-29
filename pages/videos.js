@@ -126,7 +126,9 @@ export default function Index({ posts, preview }) {
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="id-ID" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com/video" hreflang="id-ID" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/endemic" hreflang="id-ID" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/endemic" hreflang="en-US" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/endemic" hreflang="x-default" /> 
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />

@@ -113,25 +113,27 @@ export default function Index({ posts, preview }) {
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>Studiofru | Green Project - Flora and Fauna in the West Java Region.</title>
-                     <meta name="description" content="Explore encyclopedias and various informations about flora and fauna in the West Java region." />
+                     <title>Studiofru | Green Project - Flora and Fauna in West Java</title>
+                     <meta name="description" content="Explore encyclopedias and various informations about flora and fauna in West Java." />
                      <meta name="keywords" content="studiofru, green project, studiofru green project, west java encyclopedia, animals in west java, plants in west java, flora in west java, farming in west java, livestock in west java" />
                      <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="en-US" />
-                     <link rel="alternate" href="https://studiofrugreenproject.com/en/locations/jawabarat" hreflang="en-US" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/locations/westjava" hreflang="id-ID" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/locations/westjava" hreflang="en-US" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/locations/westjava" hreflang="x-default" /> 
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/fotopetani_1.jpg" />
-                     <meta property="og:url" content="https://studiofrugreenproject.com/en/locations/jawabarat" />
-                     <meta property="og:title" content="Studiofru | Green Project - Flora and Fauna in the West Java Region." />
-                     <meta property="og:description" content="Explore encyclopedias and various information about flora and fauna in the West Java region." />
+                     <meta property="og:url" content="https://studiofrugreenproject.com/en/locations/westjava" />
+                     <meta property="og:title" content="Studiofru | Green Project - Flora and Fauna in West Java." />
+                     <meta property="og:description" content="Explore encyclopedias and various information about flora and fauna in West Java." />
                      <meta property="og:site_name" content="Studiofru | Flora and Fauna in the West Java Region." />
                      <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
-                     <meta name="twitter:title" content="Studiofru | Green Project - Flora and Fauna in the West Java Region." />
+                     <meta name="twitter:title" content="Studiofru | Green Project - Flora and Fauna in West Java." />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />

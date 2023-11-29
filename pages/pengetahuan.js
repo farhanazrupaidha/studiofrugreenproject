@@ -114,6 +114,8 @@ export default function Index({ posts, preview }) {
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/pengetahuan" hreflang="id-ID" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/knowledge" hreflang="en-US" />
+                     <link rel="alternate" href="https://studiofrugreenproject.com/en/knowledge" hreflang="x-default" /> 
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/fotopetani_1.jpg" />
