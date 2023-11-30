@@ -24,10 +24,10 @@ robotsTxtOptions: {
     {
       userAgent: '*',
       disallow: [
-        '/posts/Pentingnya-Tanah', '/posts/pemandangan-gunung-lawu-dan-telaga-sarangan', '/posts/Deskripsi-Asal-dan-Khasiat-Super-Napier-Grass-Pakchong', '/posts/Deskripsi-Asal-dan-Khasiat-Sambiloto-Andrographis-paniculata',
+        '/posts/Pentingnya-Tanah', '/posts/Deskripsi-Asal-dan-Khasiat-Super-Napier-Grass-Pakchong', '/posts/Deskripsi-Asal-dan-Khasiat-Sambiloto-Andrographis-paniculata',
         '/posts/Deskripsi-Asal-dan-Khasiat-Kelor-Moringa-oleifera', '/posts/Deskripsi-Asal-dan-Khasiat-Kembang-Kantil-Cempaka-Magnolia-champaca', '/posts/Deskripsi-Asal-dan-Manfaat-Bunga-Teratai-Nymphaeaceae', 
-        '/posts/Deskripsi-Asal-dan-Khasiat-Daun-Ungu-Graptophyllum-pictum', '/posts/10-Jenis-Tanah-di-Wilayah-Indonesia', '/posts/Deskripsi-Asal-dan-Kegunaan-Jati-Tectona-grandis', '/posts/deskripsi-asal-manfaat-dan-kegunaan-bunga-matahari-helianthus-annuus', 
-        '/en/fauna', '/englishversion', '/posts/Deskripsi-Asal-dan-Khasiat-Orok-Orok-Crotalaria-juncea', '/en/knowledge', '/en/videos', '/en/endemic', '/en/setupatok'      
+        '/posts/Deskripsi-Asal-dan-Khasiat-Daun-Ungu-Graptophyllum-pictum', '/posts/10-Jenis-Tanah-di-Wilayah-Indonesia', '/posts/Deskripsi-Asal-dan-Kegunaan-Jati-Tectona-grandis',
+        '/englishversion', '/posts/Deskripsi-Asal-dan-Khasiat-Orok-Orok-Crotalaria-juncea', '/en/knowledge', '/en/videos', '/en/endemic'     
       ],
     },
   ],
