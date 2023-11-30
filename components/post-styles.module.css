@@ -4,8 +4,7 @@
 
 .post p,
 .post ul,
-.post ol,
-.post blockquote {
+.post ol {
   @apply my-6;
 }
 
@@ -41,3 +40,6 @@
   @apply whitespace-nowrap h-px;
 }
 
+.post blockquote {
+  @apply p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-emerald-500 dark:bg-slate-950 text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white;
+}
