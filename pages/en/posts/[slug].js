@@ -9,7 +9,8 @@ const ErrorPage = dynamic(() => import('components/errorpage'), {
   ssr: false,
 });
 const Container = dynamic(() => import('components/container'));
-const PostBody = dynamic(() => import('components/post-body'), {
+const PostBody = dynamic(() => import('components/post-body'));
+const PostReference = dynamic(() => import('components/post-reference'), {
   ssr: false,
 });
 const MoreStories = dynamic(() => import('components/more-stories'), {
@@ -19,13 +20,11 @@ const Header = dynamic(() => import('components/header'), {
   ssr: false,
 });
 const PostHeader = dynamic(() => import('components/post-header'));
-const PostTitle = dynamic(() => import('components/post-title'), {
-  ssr: false,
-});
+const PostTitle = dynamic(() => import('components/post-title'));
 const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
 });
-const Layout = dynamic(() => import('components/layout'));
+const Layout = dynamic(() => import('components/layout-en'));
 const Location = dynamic(() => import('components/location'), {
   ssr: false,
 });
@@ -34,7 +33,6 @@ const ShareButton = dynamic(() => import('components/socialsharebutton'), {
 });
 
 import { motion, useScroll } from "framer-motion"
-import ReactPlayer from 'react-player/youtube';
 import { DiscussionEmbed } from 'disqus-react';
 
 import Box from '@mui/material/Box';
@@ -138,25 +136,7 @@ export default function Post({ post, morePosts, preview }) {
                 author={post.author}
               />
               <PostBody content={post.content} />
-              <Accordion sx={{mt:5}}>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content" 
-                  id="panel1a-header"
-                  >        
-                  <Typography variant="h6">Reference</Typography>   
-                </AccordionSummary>
-                <AccordionDetails>   
-                    <Box sx={{mt:4, whiteSpace: 'nowrap', overflowX: 'auto'}}>
-                        <Typography variant='body2'>
-                            <div
-                                dangerouslySetInnerHTML={{ __html: post.reference?.html }}
-                            />
-                        </Typography>
-                    </Box>
-                </AccordionDetails>
-              </Accordion>  
-             
+              <PostReference reference={post.reference} />  
             </article>
             <center>
             <Box sx={{mt:7}}>
@@ -240,17 +220,6 @@ export default function Post({ post, morePosts, preview }) {
             </Box>
             </center>
         <SectionSeparator />
-        <Box sx={{mb:5}}>
-        <Box sx={{ mb:5}}> 
-        <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-          Video Documentation
-        </h2>
-        </Box>  
-        <section className="c-share">         
-          <ReactPlayer controls={true} loop={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
-        </section> 
-        </Box> 
-        <Divider sx={{mb:10, mt:10}} />
         <Location />
         <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
           Recent Notes

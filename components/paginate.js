@@ -1,5 +1,4 @@
 import React from 'react';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
@@ -22,8 +21,7 @@ const Paginate = ({
 
 return (
 <>
-    <Stack spacing={2} sx={{borderRadius: 5, m:5}} justifyContent="center" alignItems="center">
-			<ButtonGroup  variant="contained" sx={{borderRadius: 5}} color="secondary" backgroundColor="white" aria-label="medium secondary button group">
+			<ButtonGroup  variant="contained" sx={{borderRadius: 5, mb:10}} color="secondary" aria-label="medium secondary button group">
 				<Button onClick={previousPage} className="page-number">
 					Terbaru <KeyboardArrowLeftIcon />
 				</Button>
@@ -31,7 +29,6 @@ return (
 					Terdahulu <KeyboardArrowRightIcon />
 				</Button>
 			</ButtonGroup>
-	</Stack>
     </>
 	);
 };

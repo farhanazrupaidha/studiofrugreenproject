@@ -1,14 +1,10 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
-import Head from 'next/head'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 
 const SearchBar = dynamic(() => import('components/searchbar'), {
-  ssr: false,
-});
-const Layout = dynamic(() => import('components/layout'), { 
   ssr: false,
 });
 const CoverImage = dynamic(() => import('components/cover-image'),{ 
@@ -56,28 +52,7 @@ const { data, loading, error } = useQuery(FLORA);
   if (error) return `Error! ${error}`;
 
   return (
-<Layout>
-               <Head
-                     defaultTitle="Studiofru | Green Project"
-                   >
-                     <title>Studiofru | Green Project</title>
-                     <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan di Indonesia." />
-                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
-                     <meta name="author" content="Studiofru | https://studiofrugreenproject.com/" />
-                     <meta property="image" content="/images/tanah.jpg" />
-                     <meta property="og:url" content="https://studiofrugreenproject.com/" />
-                     <meta property="og:title" content="Studiofru | Green Project" />
-                     <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan di Indonesia." />
-                     <meta property="og:site_name" content="Studiofru | Green Project" />
-                     <meta property="og:image" content="/images/tanah.jpg" />
-                     <meta name="og:type" content="website" />
-                     <meta name="twitter:site" content="@studiofruworks" />
-                     <meta name="twitter:title" content="Studiofru | Green Project" />
-                     <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/images/tanah.jpg" />
-                    <link rel="icon" href="/images/favicon.ico" />
-               </Head>
-
+<>
 <section id="hero" data-stellar-background-ratio="0.5">
         <center>
             <Box sx={{mt:20, height:'250px'}}>
@@ -95,7 +70,6 @@ const { data, loading, error } = useQuery(FLORA);
         </center>
 </section>
 
-
 <Stack spacing={{ xs: 2, sm: 3 }} direction="row" useFlexGap flexWrap="wrap" justifyContent="center" sx={{m:5}}>
     {data &&
       data.posts.map((item) => (
@@ -111,7 +85,7 @@ const { data, loading, error } = useQuery(FLORA);
         </Box>
             ))}
     </Stack>
-</Layout>
+    </>        
   )
 }
 

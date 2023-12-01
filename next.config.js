@@ -10,13 +10,15 @@ module.exports = withBundleAnalyzer({
       process.env.GRAPHCMS_PROJECT_API,
   },
    reactStrictMode: true,
-    images: {
-      domains: ['media.graphassets.com'],
-      formats: ['image/avif', 'image/webp']
-    },
-   experimental: {
-    workerThreads: false,
-    cpus: 1
-   }
+   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media.graphassets.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
   })
 

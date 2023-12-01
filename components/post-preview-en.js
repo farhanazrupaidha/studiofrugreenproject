@@ -32,11 +32,6 @@ export default function PostPreview({
   tags
 }) {
 
-  const handleClick = () => {
-    console.info('You clicked the Chip.');
-  };
-
-
   return (
     <Box sx={{bgcolor: 'background.default'}}>
       <Stack
@@ -55,9 +50,11 @@ export default function PostPreview({
       <div className="mb-4 text-lg">
         <Date dateString={date} />
       </div>
-        <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" sx={{mt:2, mb:2}}>
+      <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" sx={{mt:2, mb:2}}>
             {tags.map((tag) => (
-                <Chip sx={{maxWidth:200}} color="secondary" label= {tag} onClick={handleClick} />
+              <ul key={tag}>
+                <Chip sx={{maxWidth:200}} color="secondary" label= {tag} />
+              </ul>  
             ))}
         </Stack>
       <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>

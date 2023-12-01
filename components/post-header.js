@@ -15,7 +15,6 @@ const PostTitle = dynamic(() => import('components/post-title'),{
 
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
 
 export default function PostHeader({ title, coverImage, date, author, tags }) {
   const handleClick = () => {
@@ -29,7 +28,9 @@ export default function PostHeader({ title, coverImage, date, author, tags }) {
       </div>
         <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" sx={{mt:2, mb:2}}>
             {tags.map((tag) => (
-                <Chip sx={{maxWidth:200}} color="secondary" key={tag.id} label= {tag} onClick={handleClick} />
+              <ul key={tag}>
+                <Chip sx={{maxWidth:200}} color="secondary" label= {tag} />
+              </ul>  
             ))}
         </Stack>
       <div className="hidden md:block md:mb-12">

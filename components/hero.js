@@ -21,8 +21,6 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
 export default function Hero () {
 
-  const date = new Date().toLocaleDateString();
-  const time = new Date().toLocaleTimeString();
 
   return (
 <section id="hero" data-stellar-background-ratio="0.5">
@@ -54,8 +52,6 @@ export default function Hero () {
     <Box sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
             <AccessTimeFilledIcon sx={{ fontSize: 40, color:"#22cc88"}} />
             <Typography variant="h6" gutterBottom color="#22cc88" sx={{textAlign: 'right'}}>10/10/2022</Typography>
-            <Typography variant="h6" gutterBottom color="#22cc88" sx={{textAlign: 'right'}}>{`${date}`}</Typography>
-            <Typography variant="h6" gutterBottom color="#22cc88" sx={{textAlign: 'right'}}>{`${time}`}</Typography>
     </Box>
         <DataCountFlora />
         <DataCountFauna />

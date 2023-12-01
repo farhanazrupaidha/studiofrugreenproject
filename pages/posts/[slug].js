@@ -9,7 +9,8 @@ const ErrorPage = dynamic(() => import('components/errorpage'), {
   ssr: false,
 });
 const Container = dynamic(() => import('components/container'));
-const PostBody = dynamic(() => import('components/post-body'), {
+const PostBody = dynamic(() => import('components/post-body'));
+const PostReference = dynamic(() => import('components/post-reference'), {
   ssr: false,
 });
 const MoreStories = dynamic(() => import('components/more-stories'), {
@@ -34,7 +35,6 @@ const ShareButton = dynamic(() => import('components/socialsharebutton'), {
 });
 
 import { motion, useScroll } from "framer-motion"
-import ReactPlayer from 'react-player/youtube';
 import { DiscussionEmbed } from 'disqus-react';
 
 import Box from '@mui/material/Box';
@@ -42,9 +42,6 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
 
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
@@ -54,7 +51,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import {
   TwitterShareButton,
@@ -78,7 +74,6 @@ const LightTooltip = styled(({ className, ...props }) => (
 }));
 
 export default function Post({ post, morePosts, preview }) {
-
   const router = useRouter()
 
   if (!router.isFallback && !post?.slug) {
@@ -131,33 +126,15 @@ export default function Post({ post, morePosts, preview }) {
                 className="progress-bar"
                 style={{ scaleX: scrollYProgress }}
               />
-            <PostHeader
+              <PostHeader
                 title={post.title}
-                tags={post.tags}
                 coverImage={post.coverImage}
+                tags={post.tags}
                 date={post.date}
                 author={post.author}
               />
-              <PostBody content={post.content} />
-              <Accordion sx={{mt:5}}>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content" 
-                  id="panel1a-header"
-                  >        
-                  <Typography variant="h6">Referensi</Typography>   
-                </AccordionSummary>
-                <AccordionDetails>   
-                    <Box sx={{mt:4, whiteSpace: 'nowrap', overflowX: 'auto'}}>
-                        <Typography variant='body2'>
-                            <div
-                                dangerouslySetInnerHTML={{ __html: post.reference?.html }}
-                            />
-                        </Typography>
-                    </Box>
-                </AccordionDetails>
-              </Accordion>  
-                   
+              <PostBody content={post.content} />   
+              <PostReference reference={post.reference} />    
             </article>
             <center>
             <Box sx={{mt:7}}>
@@ -177,7 +154,7 @@ export default function Post({ post, morePosts, preview }) {
                     title={post.seo.title}
                 >
                 <LightTooltip disableFocusListener title="Share it on Twitter">
-                    <IconButton><TwitterIcon color="primary" size="small" /></IconButton>
+                    <TwitterIcon color="primary" size="small" />
                 </LightTooltip>
                 </TwitterShareButton>
                 <FacebookShareButton
@@ -186,7 +163,7 @@ export default function Post({ post, morePosts, preview }) {
                     hashtag={'#studiofrugreenproject'}
                 >
                 <LightTooltip disableFocusListener title="Share it on Facebook">
-                    <IconButton><FacebookIcon color="primary" size="small" /></IconButton>
+                    <FacebookIcon color="primary" size="small" />
                 </LightTooltip>
                 </FacebookShareButton>
                 <WhatsappShareButton
@@ -195,7 +172,7 @@ export default function Post({ post, morePosts, preview }) {
                     separator="->"
                 >
                 <LightTooltip disableFocusListener title="Share it on  WhatsApp">
-                    <IconButton><WhatsAppIcon color="primary" size="small" /></IconButton>
+                    <WhatsAppIcon color="primary" size="small" />
                 </LightTooltip>
                 </WhatsappShareButton>
             </Stack>
@@ -248,7 +225,7 @@ export default function Post({ post, morePosts, preview }) {
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}       
-      </Container>   
+      </Container>
     </Layout>
   )
 }
