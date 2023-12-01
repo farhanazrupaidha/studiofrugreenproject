@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+seeimport { useRouter } from 'next/router'
 import * as React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
@@ -20,9 +20,7 @@ const Header = dynamic(() => import('components/header'), {
   ssr: false,
 });
 const PostHeader = dynamic(() => import('components/post-header'));
-const PostTitle = dynamic(() => import('components/post-title'), {
-  ssr: false,
-});
+const PostTitle = dynamic(() => import('components/post-title'));
 const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
 });
