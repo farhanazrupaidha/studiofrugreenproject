@@ -13,7 +13,7 @@ const PostBody = dynamic(() => import('components/post-body'));
 const PostReference = dynamic(() => import('components/post-reference'), {
   ssr: false,
 });
-const MoreStories = dynamic(() => import('components/more-stories'), {
+const MoreStories = dynamic(() => import('components/more-stories-en'), {
   ssr: false,
 });
 const Header = dynamic(() => import('components/header'), {
