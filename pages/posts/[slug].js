@@ -8,28 +8,11 @@ import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
 const ErrorPage = dynamic(() => import('components/errorpage'), {
   ssr: false,
 });
-const Container = dynamic(() => import('components/container'), {
-  ssr: false,
-});
+const Container = dynamic(() => import('components/container'));
 const PostBody = dynamic(() => import('components/post-body'), {
   ssr: false,
 });
 const MoreStories = dynamic(() => import('components/more-stories'), {
-  ssr: false,
-});
-const RecentFlora = dynamic(() => import('components/recent-flora'), {
-  ssr: false,
-});
-const RecentFauna = dynamic(() => import('components/recent-fauna'), {
-  ssr: false,
-});
-const RecentSains = dynamic(() => import('components/recent-sains'), {
-  ssr: false,
-});;
-const RecentWisata = dynamic(() => import('components/recent-wisata'), {
-  ssr: false,
-});
-const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'), {
   ssr: false,
 });
 const Header = dynamic(() => import('components/header'), {
