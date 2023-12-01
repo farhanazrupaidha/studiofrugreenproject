@@ -1,4 +1,4 @@
-seeimport { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import * as React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
