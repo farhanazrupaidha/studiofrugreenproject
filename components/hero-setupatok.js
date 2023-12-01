@@ -1,7 +1,12 @@
-import React, { Component, useRouter } from 'react';
+import React from 'react';
+import dynamic from 'next/dynamic'
 
-import DataCountFlora from '/components/dataflora-setupatok';
-import DataCountFauna from '/components/datafauna-setupatok';
+const DataCountFlora = dynamic(() => import('components/data-flora'), {
+  ssr: false,
+});
+const DataCountFauna = dynamic(() => import('components/data-fauna'), {
+  ssr: false,
+});
 
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';

@@ -18,9 +18,7 @@ const MoreStories = dynamic(() => import('components/more-stories'), {
 const Header = dynamic(() => import('components/header'), {
   ssr: false,
 });
-const PostHeader = dynamic(() => import('components/post-header'), {
-  ssr: false,
-});
+const PostHeader = dynamic(() => import('components/post-header'));
 const PostTitle = dynamic(() => import('components/post-title'), {
   ssr: false,
 });
@@ -38,7 +36,6 @@ const ShareButton = dynamic(() => import('components/socialsharebutton'), {
 import { motion, useScroll } from "framer-motion"
 import ReactPlayer from 'react-player/youtube';
 import { DiscussionEmbed } from 'disqus-react';
-import { CommentCount } from 'disqus-react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -204,20 +201,7 @@ export default function Post({ post, morePosts, preview }) {
             </Stack>
             </Box>
             <Box sx={{mt:5, maxWidth: 700, width:'100%'}}>
-              <Divider sx={{mb:5, maxWidth:300, width:'95%' }} />
-              <CommentCount
-                shortname='studiofru-green-project'
-                config={
-                {
-                  url: post.id,
-                  identifier: post.id,
-                  title: post.title,
-                  }
-                }
-              >
-              {/* Placeholder Text */}
-                Komentar
-              </CommentCount>        
+              <Divider sx={{mb:5, maxWidth:300, width:'95%' }} />       
               <DiscussionEmbed
                 shortname='studiofru-green-project'
                 config={
@@ -257,17 +241,6 @@ export default function Post({ post, morePosts, preview }) {
             </Box>
             </center>
         <SectionSeparator />
-        <Box sx={{mb:5}}>
-        <Box sx={{ mb:5}}> 
-        <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-          Dokumentasi Video
-        </h2>
-        </Box>  
-        <section className="c-share">         
-          <ReactPlayer controls={true} loop={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
-        </section> 
-        </Box> 
-        <Divider sx={{mb:10, mt:10}} />
         <Location />
         <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
           Catatan Terbaru

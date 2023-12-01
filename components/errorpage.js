@@ -1,13 +1,19 @@
-import React, { Component, useRouter } from 'react';
-import { useLazyQuery, useQuery, gql } from '@apollo/client';
+import React from 'react';
+import { useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 import Head from 'next/head'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 
-import SearchBar from 'components/searchbar';
-import PostPreview from "components/post-preview";
-import Layout from "components/layout";
-import CoverImage from 'components/cover-image'
+const SearchBar = dynamic(() => import('components/searchbar'), {
+  ssr: false,
+});
+const Layout = dynamic(() => import('components/layout'), { 
+  ssr: false,
+});
+const CoverImage = dynamic(() => import('components/cover-image'),{ 
+ssr: false,
+});
 
 import Typewriter from 'typewriter-effect';
 

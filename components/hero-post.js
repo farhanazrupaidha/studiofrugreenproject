@@ -1,7 +1,15 @@
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from '../components/cover-image'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
+
+const Avatar = dynamic(() => import('components/avatar'), {
+  ssr: false,
+});
+const Data = dynamic(() => import('components/date'), {
+  ssr: false,
+});
+const CoverImage = dynamic(() => import('components/cover-image'), {
+  ssr: false,
+});
 
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';

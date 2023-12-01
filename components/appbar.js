@@ -164,13 +164,13 @@ function ResponsiveAppBar(props) {
               onClose={handleCloseUserMenu}
             >
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Button href="/flora" color="inherit">FLORA</Button>
+                  <Link href="/flora" underline="hover" color="inherit">FLORA</Link>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Button href="/fauna" color="inherit">FAUNA</Button>
+                  <Link href="/fauna" underline="hover" color="inherit">FAUNA</Link>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
-                  <Button href="/endemik" color="inherit">ENDEMIK</Button>
+                  <Link href="/endemik" underline="hover" color="inherit">ENDEMIK</Link>
                 </MenuItem>
             </Menu>
 

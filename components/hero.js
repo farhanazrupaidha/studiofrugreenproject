@@ -1,8 +1,15 @@
 import React from 'react';
+import dynamic from 'next/dynamic'
 
-import SearchBar from '/components/searchbar';
-import DataCountFlora from '/components/data-flora';
-import DataCountFauna from '/components/data-fauna';
+const SearchBar = dynamic(() => import('components/searchbar'), {
+  ssr: false,
+});
+const DataCountFlora = dynamic(() => import('components/data-flora'), {
+  ssr: false,
+});
+const DataCountFauna = dynamic(() => import('components/data-fauna'), {
+  ssr: false,
+});
 
 import Typewriter from 'typewriter-effect';
 

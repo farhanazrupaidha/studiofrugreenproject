@@ -4,7 +4,7 @@ export default function Date({ dateString }) {
   const date = parseISO(dateString)
   return (
   <>
-  <time dateTime={dateString} suppressHydrationWarning>{format(date, 'LLLL	d, yyyy')}</time>
+  <time dateTime={dateString} suppressHydrationWarning={true}>{format(date, 'd LLLL, yyyy')}</time>
   </>  
   )
 }

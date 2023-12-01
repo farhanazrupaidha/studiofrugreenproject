@@ -6,8 +6,11 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-            <meta charset="utf-8" />           
-            <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+            <meta charset="utf-8" /> 
+            <meta
+              name="format-detection"
+              content="telephone=no, date=no, email=no, address=no"
+            />          
             <link
               rel="icon"
               href="/icon?<generated>"
@@ -25,10 +28,7 @@ export default class MyDocument extends Document {
             <link
               rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
-            />
-             {/* monetag */}
-            <meta name="monetag" content="9663b06f2269f23a9530d7c480190dbd" />           
-            {/* monetag */}           
+            />          
             {/* google adsense */}
      	    <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
      	    <Script dangerouslySetInnerHTML={{

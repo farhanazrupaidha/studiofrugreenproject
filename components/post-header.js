@@ -1,10 +1,21 @@
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from '../components/cover-image'
-import PostTitle from '../components/post-title'
+import dynamic from 'next/dynamic'
+
+const Avatar = dynamic(() => import('components/avatar'), {
+  ssr: false,
+});
+const Date = dynamic(() => import('components/date'), { 
+  ssr: false,
+});
+const CoverImage = dynamic(() => import('components/cover-image'),{ 
+ssr: false,
+});
+const PostTitle = dynamic(() => import('components/post-title'),{ 
+  ssr: false,
+  });
 
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 
 export default function PostHeader({ title, coverImage, date, author, tags }) {
   const handleClick = () => {
@@ -18,7 +29,7 @@ export default function PostHeader({ title, coverImage, date, author, tags }) {
       </div>
         <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" sx={{mt:2, mb:2}}>
             {tags.map((tag) => (
-                <Chip sx={{maxWidth:200}} color="secondary" label= {tag} onClick={handleClick} />
+                <Chip sx={{maxWidth:200}} color="secondary" key={tag.id} label= {tag} onClick={handleClick} />
             ))}
         </Stack>
       <div className="hidden md:block md:mb-12">

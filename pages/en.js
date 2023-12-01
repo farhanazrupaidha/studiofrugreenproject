@@ -11,7 +11,9 @@ const RecentFauna = dynamic(() => import('components/recent-fauna-en'), {
   ssr: false,
 });
 const Container = dynamic(() => import('components/container'));
-const PostPreview = dynamic(() => import('components/post-preview-en'));
+const PostPreview = dynamic(() => import('components/post-preview-en'), {
+  ssr: false,
+});
 const Layout = dynamic(() => import('components/layout-en'));
 const Location = dynamic(() => import('components/location-en'), {
   ssr: false,
@@ -26,7 +28,9 @@ const Paginate = dynamic(() => import('components/paginate-en'), {
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 
-import ReactPlayer from 'react-player/youtube';
+const ReactPlayer = dynamic(() => import('react-player/youtube'), {
+  ssr: false,
+});
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 

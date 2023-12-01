@@ -5,12 +5,10 @@ const Footer = dynamic(() => import('../components/footer'), { ssr: false })
 
 export default function Layout({ preview, children }) {
   return (
-    <html lang="id">
+    <>
     <ResponsiveAppBar />
-      <div className="min-h-screen">
         <main>{children}</main>
-      </div>
       <Footer />
-    </html>
+    </>
   )
 }

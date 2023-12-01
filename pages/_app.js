@@ -3,8 +3,8 @@ import '../styles/index.css';
 import * as React from 'react'
 import Head from 'next/head';
 
-import { ThemeProvider, useTheme, createTheme, responsiveFontSizes, } from '@mui/material/styles';
-import { deepOrange, green, cyan, indigo, blueGrey, } from '@mui/material/colors';
+import { ThemeProvider, createTheme, responsiveFontSizes, } from '@mui/material/styles';
+import {  green, cyan, indigo, blueGrey } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
 
 const { motion,useScroll } = require("framer-motion");
@@ -12,7 +12,6 @@ const { motion,useScroll } = require("framer-motion");
 import IconButton from '@mui/material/IconButton';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
-import { usePostHog } from 'next-use-posthog';
 
 export const primary = "#00bfbf";
 export const black = "#111111";
@@ -21,12 +20,6 @@ export const white = "#fafafa";
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 function MyApp({ Component, pageProps }) {
-usePostHog('phc_hIxyJYhMq4PNf6nFh6e5l8JX6tmKnDNgiaWLY6s201j', {
-    api_host: 'https://app.posthog.com',
-    loaded: (posthog) => {
-      if (process.env.NODE_ENV === 'development') posthog.opt_out_capturing()
-    },
-  })
 
  const [mode, setMode] = React.useState('dark');
   const colorMode = React.useMemo(
@@ -94,27 +87,6 @@ const theme = responsiveFontSizes(ModeTheme);
         <Head>
                <link rel="icon" href="/images/favicon.ico" />
         </Head>
-      <div style={{ position: 'fixed', bottom: '55px', right: '20px', backgroundColor: '#073EF8',  borderRadius: '20px'}}>
-      <motion.div
-              className="box"
-              animate={{
-                scale: [1, 2, 2, 1, 1],
-                rotate: [0, 0, 180, 180, 0],
-                borderRadius: ["0%", "0%", "50%", "50%", "0%"]
-              }}
-              transition={{
-                duration: 2,
-                ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.8, 1],
-                repeat: Infinity,
-                repeatDelay: 1
-              }}
-            >
-        <IconButton backgroundColor="green" onClick={colorMode.toggleColorMode} color="inherit">
-            {theme.palette.mode === 'light' ? <LightModeIcon /> : <NightsStayIcon />}
-        </IconButton>
-        </motion.div>
-        </div>
         <Component {...pageProps} />
     </ThemeProvider>
   </ColorModeContext.Provider>

@@ -138,6 +138,7 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
+                    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
                </Head>      
         <Container>
           <Intro />

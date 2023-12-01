@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import Button from "@mui/material/Button";
 import Menu from '@mui/material/Menu';
@@ -88,7 +87,7 @@ export default function LocaleSwitch() {
                         onClose={handleClose}
                       >
                         <MenuItem onClick={handleClose} disableRipple>
-                            <Link href="/">
+                            <Link href="/" passHref>
                                   <ReactCountryFlag
                                      countryCode="ID"
                                      svg
@@ -101,7 +100,7 @@ export default function LocaleSwitch() {
                              </Link>
                         </MenuItem>
                         <MenuItem onClick={handleClose} disableRipple>
-                              <Link href="/en">
+                              <Link href="/en" passHref>
                                   <ReactCountryFlag
                                      countryCode="US"
                                      svg

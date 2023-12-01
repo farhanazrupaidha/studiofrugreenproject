@@ -1,11 +1,9 @@
 
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
-import Divider from '@mui/material/Divider';
 import { styled } from '@mui/material/styles';
 
 import TwitterIcon from '@mui/icons-material/Twitter';

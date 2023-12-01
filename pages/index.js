@@ -5,7 +5,9 @@ import dynamic from 'next/dynamic'
 import { getAllPostsForHome } from '../lib/graphcms'
 
 const Container = dynamic(() => import('components/container'));
-const PostPreview = dynamic(() => import('components/post-preview'));
+const PostPreview = dynamic(() => import('components/post-preview'), {
+  ssr: false,
+});
 const Layout = dynamic(() => import('components/layout'));
 const Location = dynamic(() => import('components/location'), {
   ssr: false,

@@ -1,5 +1,8 @@
+import dynamic from 'next/dynamic'
 
-import PostPreview from './post-preview-en'
+const PostPreview = dynamic(() => import('components/post-preview-en'), {
+  ssr: false,
+});
 
 export default function MoreStories({ posts }) {
 

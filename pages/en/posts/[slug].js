@@ -9,18 +9,24 @@ const ErrorPage = dynamic(() => import('components/errorpage'), {
   ssr: false,
 });
 const Container = dynamic(() => import('components/container'));
-const PostBody = dynamic(() => import('components/post-body'));
+const PostBody = dynamic(() => import('components/post-body'), {
+  ssr: false,
+});
 const MoreStories = dynamic(() => import('components/more-stories'), {
   ssr: false,
 });
-const Header = dynamic(() => import('components/header'));
+const Header = dynamic(() => import('components/header'), {
+  ssr: false,
+});
 const PostHeader = dynamic(() => import('components/post-header'));
-const PostTitle = dynamic(() => import('components/post-title'));
+const PostTitle = dynamic(() => import('components/post-title'), {
+  ssr: false,
+});
 const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
 });
-const Layout = dynamic(() => import('components/layout-en'));
-const Location = dynamic(() => import('components/location-en'), {
+const Layout = dynamic(() => import('components/layout'));
+const Location = dynamic(() => import('components/location'), {
   ssr: false,
 });
 const ShareButton = dynamic(() => import('components/socialsharebutton'), {
@@ -30,7 +36,6 @@ const ShareButton = dynamic(() => import('components/socialsharebutton'), {
 import { motion, useScroll } from "framer-motion"
 import ReactPlayer from 'react-player/youtube';
 import { DiscussionEmbed } from 'disqus-react';
-import { CommentCount } from 'disqus-react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -195,20 +200,7 @@ export default function Post({ post, morePosts, preview }) {
             </Stack>
             </Box>
             <Box sx={{mt:5, maxWidth: 700, width:'100%'}}>
-              <Divider sx={{mb:5, maxWidth:300, width:'95%' }} />
-              <CommentCount
-                shortname='studiofru-green-project'
-                config={
-                {
-                  url: post.id,
-                  identifier: post.id,
-                  title: post.title,
-                  }
-                }
-              >
-              {/* Placeholder Text */}
-                Comments
-              </CommentCount>        
+              <Divider sx={{mb:5, maxWidth:300, width:'95%' }} />       
               <DiscussionEmbed
                 shortname='studiofru-green-project'
                 config={
@@ -221,7 +213,7 @@ export default function Post({ post, morePosts, preview }) {
               />
         </Box>          
             <Divider sx={{mt:5, mb:5, maxWidth:300, width:'95%' }} />
-              <Typography variant="h6" color="#ff0055" sx={{mt:2}}>Follow Studiofru | Green Project via social media to get short information about flora and fauna.</Typography>
+              <Typography variant="h6" color="#ff0055" sx={{mt:2}}>Follow Studiofru | Green Project via social media to get short information about flora and fauna</Typography>
               <Stack
                 direction="row"
                 spacing={1}

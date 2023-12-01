@@ -1,9 +1,12 @@
 import React from 'react';
+import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import { useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
-import Link from 'next/link'
 
-import CoverImage from 'components/cover-image'
+const CoverImage = dynamic(() => import('components/cover-image'),{ 
+  ssr: false,
+  });
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
