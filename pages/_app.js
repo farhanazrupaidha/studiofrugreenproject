@@ -26,7 +26,7 @@ export function reportWebVitals(metric) {
 function MyApp({ Component, pageProps }) {
  
   useEffect(() => {
-    posthog.init('process.env.NEXT_PUBLIC_POSTHOG_KEY', { api_host: 'https://app.posthog.com' })
+    posthog.init('process.env.phc_hIxyJYhMq4PNf6nFh6e5l8JX6tmKnDNgiaWLY6s201j', { api_host: 'https://app.posthog.com' })
     posthog.capture('my event', { property: 'value' })
   }, [])
 
