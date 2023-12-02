@@ -128,17 +128,17 @@ export default function Index({ posts, preview }) {
                      <link rel="alternate" href="https://studiofrugreenproject.com/en/endemic" hreflang="x-default" /> 
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
-                     <meta property="image" content="/images/tanah.jpg" />
+                     <meta property="image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/video" />
                      <meta property="og:title" content="Studiofru | Green Project - Dokumentasi Video" />
                      <meta property="og:description" content="Jelajah dokumentasi mengenai flora dan fauna serta lingkungan pertanian dan perkebunan di Indonesia." />
                      <meta property="og:site_name" content="Studiofru | Green Project - Dokumentasi Video" />
-                     <meta property="og:image" content="/images/tanah.jpg" />
+                     <meta property="og:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project - VDokumentasi Video" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/tanah.jpg" />e
+                     <meta name="twitter:image:src" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Container>

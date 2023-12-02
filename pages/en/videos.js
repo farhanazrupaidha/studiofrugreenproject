@@ -129,17 +129,17 @@ export default function Index({ posts, preview }) {
                      <link rel="alternate" href="https://studiofrugreenproject.com/en/video" hreflang="x-default" /> 
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
-                     <meta property="image" content="/images/tanah.jpg" />
+                     <meta property="image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/video" />
                      <meta property="og:title" content="Studiofru | Green Project - Video Documentation" />
                      <meta property="og:description" content="Explore documentation regarding flora and fauna as well as the agricultural and plantation environment in Indonesia." />
                      <meta property="og:site_name" content="Studiofru |Green Project - Video Documentation" />
-                     <meta property="og:image" content="/images/tanah.jpg" />
+                     <meta property="og:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project - Video Documentation" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/tanah.jpg" />
+                     <meta name="twitter:image:src" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Container>

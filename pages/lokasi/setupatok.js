@@ -131,12 +131,12 @@ export default function Index({ posts, preview }) {
                      <meta property="og:title" content="Studiofru | Green Project - Setu Patok Mundu Cirebon" />
                      <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Konservasi Danau Setu Patok Mundu Cirebon" />
                      <meta property="og:site_name" content="Studiofru | Green Project - Setu Patok Mundu Cirebon" />
-                     <meta property="og:image" content="/images/tanah.jpg" />
+                     <meta property="og:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project - Setu Patok Mundu Cirebon" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/images/tanah.jpg" />
+                     <meta name="twitter:image:src" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <link rel="icon" href="/images/favicon.ico" />
                      <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
                </Head>        

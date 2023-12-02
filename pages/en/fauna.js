@@ -118,17 +118,17 @@ export default function Index({ posts, preview }) {
                      <link rel="alternate" href="https://studiofrugreenproject.com/en/fauna" hreflang="x-default" /> 
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
-                     <meta property="image" content="/images/tanah.jpg" />
+                     <meta property="image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/en/fauna" />
                      <meta property="og:title" content="Studiofru | Green Project Green Project - Fauna in Indonesia" />
                      <meta property="og:description" content="Explore the encyclopedia and various information regarding naming identities, origins, history and benefits of various animals in Indonesia." />
                      <meta property="og:site_name" content="Studiofru | Green Project Green Project - Fauna in Indonesia" />
-                     <meta property="og:image" content="/images/tanah.jpg" />
+                     <meta property="og:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project Green Project -Fauna in Indonesia" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/tanah.jpg" />e
+                     <meta name="twitter:image:src" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
         <Container>

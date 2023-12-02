@@ -22,17 +22,17 @@ export default function ResponsiveStack() {
                      <link rel="alternate" href="https://studiofrugreenproject.com/kontribusi" hreflang="id-ID" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
-                     <meta property="image" content="/images/tanah.jpg" />
+                     <meta property="image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/kontribusi" />
                      <meta property="og:title" content="Studiofru | Green Project - Kontribusi" />
                      <meta property="og:description" content="Ikut berkontribusi dalam pengarsipan informasi ensiklopedia berbagai flora dan fauna di Indonesia." />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
-                     <meta property="og:image" content="/images/tanah.jpg" />
+                     <meta property="og:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project - Kontribusi" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="/images/tanah.jpg" />
+                     <meta name="twitter:image:src" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta name="robots" content="noindex,nofollow" />
                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
