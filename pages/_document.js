@@ -55,12 +55,6 @@ export default class MyDocument extends Document {
             `,
          }} />
          {/* google adsense */}  
-         <script src="https://t.posthog.com/static/array.js" strategy="afterInteractive" />
-         <script dangerouslySetInnerHTML={{
-            __html: `
-            posthog.init("phc_hIxyJYhMq4PNf6nFh6e5l8JX6tmKnDNgiaWLY6s201j")
-            `,
-         }} />
         </Head>
         <body>
           <Main />

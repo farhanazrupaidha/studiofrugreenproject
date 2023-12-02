@@ -1,11 +1,7 @@
 import '../styles/index.css';
 
-import * as React from 'react'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Script from 'next/script'
-import Head from 'next/head';
-import * as gtag from '../lib/gtag'
+import React, { useEffect } from 'react'
+import posthog from 'posthog-js'
 
 import { ThemeProvider, createTheme, responsiveFontSizes, } from '@mui/material/styles';
 import {  green, cyan, indigo, blueGrey } from '@mui/material/colors';
@@ -18,20 +14,22 @@ export const white = "#fafafa";
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 export function reportWebVitals(metric) {
-  metric.label === "web-vital" && console.log(metric);
+  // Use `window.gtag` if you initialized Google Analytics as this example:
+  // https://github.com/vercel/next.js/blob/canary/examples/with-google-analytics/pages/_app.js
+  window.gtag('event', metric.name, {
+    value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), // values must be integers
+    event_label: metric.id, // id unique to current page load
+    non_interaction: true, // avoids affecting bounce rate.
+  });
 }
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
+ 
   useEffect(() => {
-    const handleRouteChange = (url) => {
-      gtag.pageview(url)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+    posthog.init('process.env.NEXT_PUBLIC_POSTHOG_KEY', { api_host: 'https://app.posthog.com' })
+    posthog.capture('my event', { property: 'value' })
+  }, [])
+
 
  const [mode, setMode] = React.useState('dark');
   const colorMode = React.useMemo(
