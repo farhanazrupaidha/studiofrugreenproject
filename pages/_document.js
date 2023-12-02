@@ -45,8 +45,8 @@ export default class MyDocument extends Document {
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />                   
         {/* google adsense */}
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
-        <Script dangerouslySetInnerHTML={{
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
+        <script dangerouslySetInnerHTML={{
             __html: `
            (adsbygoogle = window.adsbygoogle || []).push({
              google_ad_client: '${process.env.NEXT_GOOGLE_AD}',
@@ -55,8 +55,8 @@ export default class MyDocument extends Document {
             `,
          }} />
          {/* google adsense */}  
-         <Script src="https://t.posthog.com/static/array.js" strategy="afterInteractive" />
-         <Script dangerouslySetInnerHTML={{
+         <script src="https://t.posthog.com/static/array.js" strategy="afterInteractive" />
+         <script dangerouslySetInnerHTML={{
             __html: `
             posthog.init("phc_hIxyJYhMq4PNf6nFh6e5l8JX6tmKnDNgiaWLY6s201j")
             `,

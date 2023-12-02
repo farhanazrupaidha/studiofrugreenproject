@@ -128,8 +128,7 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Wisata" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="https://www.studiofrugreenproject.com/images/tanah.jpg />
-                    <link rel="icon" href="/images/favicon.ico" />
+                     <meta name="twitter:image:src" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                </Head>
         <Container>
           <Intro />

@@ -34,7 +34,7 @@ export default function ResponsiveStack() {
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
                      <meta name="robots" content="noindex,nofollow" />
-                    <link rel="icon" href="/images/favicon.ico" />
+                     <link rel="icon" href="/images/favicon.ico" />
                </Head>
    <Box sx={{ maxWidth: 800, m:'auto', mb:2, mt:10, align: 'center', overflow: 'hidden' }}>
     <Typography variant="h3" gutterBottom sx={{m:5, fontWeight: 'bold', textAlign: 'center', lineHeight: 1}}>
