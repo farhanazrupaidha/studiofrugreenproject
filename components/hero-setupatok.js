@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic'
+import { format } from 'date-fns'
 
 const DataCountFlora = dynamic(() => import('components/data-flora'), {
   ssr: false,
@@ -17,9 +18,6 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
 export default function Hero () {
 
-  const date = new Date().toLocaleDateString();
-  const time = new Date().toLocaleTimeString();
-
   return (
 <Box sx={{m:'auto', mt:5, mb:5}}>
     <Stack
@@ -36,8 +34,7 @@ export default function Hero () {
     <Box sx={{ borderRadius: 5, p:2,  }}>
             <AccessTimeFilledIcon sx={{ fontSize: 40, color:"#20C1FE"}} />
             <Typography variant="h5" gutterBottom color="primary" sx={{textAlign: 'right'}}>10/10/2022</Typography>
-            <Typography variant="h5" gutterBottom color="primary" sx={{textAlign: 'right'}}>{`${date}`}</Typography>
-            <Typography variant="h5" gutterBottom color="primary" sx={{textAlign: 'right'}}>{`${time}`}</Typography>
+            <Typography variant="h6" gutterBottom color="#22cc88" sx={{textAlign: 'right'}}>{format ( new Date(), 'do MMMM Y')}</Typography>
     </Box>
         <DataCountFlora />
         <DataCountFauna />

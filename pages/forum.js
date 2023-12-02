@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import * as React from 'react';
 
 import Typewriter from 'typewriter-effect';
-import ReactPlayer from 'react-player/youtube';
+import { YouTubeEmbed } from '@next/third-parties/google'
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -60,7 +60,7 @@ export default function ResponsiveStack() {
               <Divider sx={{m:10}} />
               <Box sx={{mt:10, mb:5}}>                 
                 <section className="d-share">
-                              <ReactPlayer url='https://youtu.be/bHkj6MgXdiw?si=epvJyo3Q-B_vz_la' />
+                  <YouTubeEmbed videoid="bHkj6MgXdiw" params="controls=1" />
                 </section>
               </Box> 
     </Layout>

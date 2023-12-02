@@ -1,17 +1,15 @@
 import '../styles/index.css';
 
 import * as React from 'react'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import Script from 'next/script'
 import Head from 'next/head';
+import * as gtag from '../lib/gtag'
 
 import { ThemeProvider, createTheme, responsiveFontSizes, } from '@mui/material/styles';
 import {  green, cyan, indigo, blueGrey } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
-
-const { motion,useScroll } = require("framer-motion");
-
-import IconButton from '@mui/material/IconButton';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import NightsStayIcon from '@mui/icons-material/NightsStay';
 
 export const primary = "#00bfbf";
 export const black = "#111111";
@@ -19,7 +17,21 @@ export const white = "#fafafa";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
+export function reportWebVitals(metric) {
+  metric.label === "web-vital" && console.log(metric);
+}
+
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
  const [mode, setMode] = React.useState('dark');
   const colorMode = React.useMemo(
@@ -84,9 +96,6 @@ const theme = responsiveFontSizes(ModeTheme);
   <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-        <Head>
-               <link rel="icon" href="/images/favicon.ico" />
-        </Head>
         <Component {...pageProps} />
     </ThemeProvider>
   </ColorModeContext.Provider>

@@ -71,6 +71,7 @@ const LightTooltip = styled(({ className, ...props }) => (
   },
 }));
 
+
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
 
@@ -152,7 +153,7 @@ export default function Post({ post, morePosts, preview }) {
                     title={post.seo.title}
                 >
                 <LightTooltip disableFocusListener title="Share it on Twitter">
-                    <TwitterIcon color="primary" size="small" />
+                    <IconButton><TwitterIcon color="primary" size="small" /></IconButton>
                 </LightTooltip>
                 </TwitterShareButton>
                 <FacebookShareButton
@@ -161,7 +162,7 @@ export default function Post({ post, morePosts, preview }) {
                     hashtag={'#studiofrugreenproject'}
                 >
                 <LightTooltip disableFocusListener title="Share it on Facebook">
-                    <FacebookIcon color="primary" size="small" />
+                    <IconButton><FacebookIcon color="primary" size="small" /></IconButton>
                 </LightTooltip>
                 </FacebookShareButton>
                 <WhatsappShareButton
@@ -170,11 +171,11 @@ export default function Post({ post, morePosts, preview }) {
                     separator="->"
                 >
                 <LightTooltip disableFocusListener title="Share it on  WhatsApp">
-                    <WhatsAppIcon color="primary" size="small" />
+                    <IconButton><WhatsAppIcon color="primary" size="small" /></IconButton>
                 </LightTooltip>
                 </WhatsappShareButton>
             </Stack>
-            </Box>
+            </Box>       
             <Box sx={{mt:5, maxWidth: 700, width:'100%'}}>
               <Divider sx={{mb:5, maxWidth:300, width:'95%' }} />       
               <DiscussionEmbed
@@ -187,7 +188,7 @@ export default function Post({ post, morePosts, preview }) {
                   }
                 }
               />
-        </Box>          
+            </Box>                        
             <Divider sx={{mt:5, mb:5, maxWidth:300, width:'95%' }} />
               <Typography variant="h6" color="#ff0055" sx={{mt:2}}>Ikuti Studiofru | Green Project melalui media sosial untuk mendapatkan informasi singkat mengenai flora dan fauna</Typography>
               <Stack

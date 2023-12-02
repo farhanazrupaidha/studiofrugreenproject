@@ -26,7 +26,7 @@ import '@splidejs/react-splide/css/sea-green';
 // or only core styles
 import '@splidejs/react-splide/css/core';
 
-import ReactPlayer from 'react-player/youtube';
+import { YouTubeEmbed } from '@next/third-parties/google'
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -146,21 +146,10 @@ export default function Index({ posts, preview }) {
           <Intro />
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-                Video Documentation
-            </h2>   
-            
-            <Splide aria-label="Video Diary">
-              <SplideSlide>
-              <Typography variant="h4" sx={{mb:5}}>Video Diary</Typography>
-                <section className="d-share">
-                <ReactPlayer controls={true} loop={true} playing={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
-                </section>
-              </SplideSlide>  
-            </Splide>                     
-            </Box>
-            <Divider sx={{mt:10, mb:10}} />            
-          <Location />
-
+                Video Documentations
+            </h2>
+          </Box>
+          <Location />          
 			{blogPosts ? (
 			<Box>
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">

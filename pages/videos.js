@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { request } from 'graphql-request';
-import { useRouter } from "next/router";
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { getAllPostsForHome } from '../lib/graphcms'
@@ -26,9 +25,7 @@ import '@splidejs/react-splide/css/sea-green';
 // or only core styles
 import '@splidejs/react-splide/css/core';
 
-const ReactPlayer = dynamic(() => import('react-player/youtube'), {
-  ssr: false,
-});
+import { YouTubeEmbed } from '@next/third-parties/google'
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -149,18 +146,8 @@ export default function Index({ posts, preview }) {
           <Box sx={{mb:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                 Dokumentasi Video
-            </h2>   
-            
-            <Splide aria-label="Video Diary">
-              <SplideSlide>
-              <Typography variant="h4" sx={{mb:5}}>Video Diary</Typography>
-                <section className="d-share">
-                <ReactPlayer controls={true} loop={true} playing={true} url='https://youtube.com/playlist?list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh&si=UWK4qsLyblzoOOUT' />
-                </section>
-              </SplideSlide>  
-            </Splide>                     
-            </Box>
-            <Divider sx={{mt:10, mb:10}} />            
+            </h2>                      
+            </Box>       
           <Location />
 
 			{blogPosts ? (
