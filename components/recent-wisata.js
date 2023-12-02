@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useQuery, gql } from '@apollo/client';
 import withApollo from "../config";
 
-const CoverImage = dynamic(() => import('components/cover-image'),{ 
+const CoverImage = dynamic(() => import('components/cover-image-small'),{ 
   ssr: false,
   });
 
@@ -25,8 +25,8 @@ const FLORA = gql`
             image: {
               resize: {
                 fit:crop,
-                width:2000,
-                height:1000
+                width:500,
+                height:320
               }
             }
           })

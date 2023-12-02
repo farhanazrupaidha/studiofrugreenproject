@@ -25,6 +25,7 @@ export default class MyDocument extends Document {
               sizes="<generated>"
             />   
             <link rel="icon" href="/images/favicon.ico" />  
+            {/* Global Site Tag (gtag.js) - Google Analytics */}
             <script
               dangerouslySetInnerHTML={{
               __html: `
