@@ -12,7 +12,6 @@ const DataCountFauna = dynamic(() => import('components/data-fauna'), {
 });
 
 import Typewriter from 'typewriter-effect';
-import { format } from 'date-fns'
 
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -21,6 +20,9 @@ import Typography from '@mui/material/Typography';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
 export default function Hero () {
+
+  const date = new Date().toLocaleDateString();
+  const time = new Date().toLocaleTimeString();
 
   return (
 <>
@@ -50,9 +52,10 @@ export default function Hero () {
       sx={{mb:2}}
     >
     <Box sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
-            <AccessTimeFilledIcon sx={{ fontSize: 40, color:"#22cc88"}} />
-            <Typography variant="h6" gutterBottom color="#22cc88" sx={{textAlign: 'right'}}>10/10/2022</Typography>
-            <Typography variant="h6" gutterBottom color="#22cc88" sx={{textAlign: 'right'}}>{format ( new Date(), 'do MMMM Y')}</Typography>
+            <AccessTimeFilledIcon sx={{ fontSize: 30, color:"#22cc88"}} />
+            <Typography variant="h6" color="#22cc88" sx={{textAlign: 'right'}}>10/10/2022</Typography>
+            <Typography variant="h6" color="#22cc88" sx={{textAlign: 'right'}}>{`${date}`}</Typography>
+            <Typography variant="h6" color="#22cc88" sx={{textAlign: 'right'}}>{`${time}`}</Typography>
     </Box>
         <DataCountFlora />
         <DataCountFauna />

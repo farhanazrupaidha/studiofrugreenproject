@@ -24,6 +24,9 @@ const Hero = dynamic(() => import('components/hero-en'), {
 const Paginate = dynamic(() => import('components/paginate-en'), {
   ssr: false,
 });
+const SectionSeparator = dynamic(() => import('components/section-separator'), {
+  ssr: false,
+});
 
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
@@ -159,6 +162,7 @@ export default function Index({ posts, preview }) {
         <Hero />
 
         <Container>
+          <SectionSeparator />
           <Box sx={{mb:5, mt:5}}>
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                Recent Articles
@@ -196,21 +200,32 @@ export default function Index({ posts, preview }) {
 				<div className="loading">Loading...</div>
 			)}
         </Container>  
-        <Divider sx={{m:5, mb:10}} />
+        <Divider sx={{m:10}} />    
+      <Box sx={{ml:5, mb:10}}>
+      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+        Video Documentation
+      </h2>
+      </Box> 
+      <Box sx={{mb:15}}>
+      <section className="c-share">       
+        <iframe width="660" height="415" src="https://www.youtube.com/embed/videoseries?si=ZZ21CtYNevctbJRX&amp;list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />         
+      </section>
+      </Box>      
+      <Divider sx={{m:10}} />    
       <Box sx={{ml:5}}>
       <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
         Based on Topic
       </h2>
-      </Box>
-      <Box sx={{mb:5}}>
-      <Splide aria-label="Catatan Terbaru">
+      </Box>        
+      <Box sx={{mb:10}}>
+        <Splide aria-label="New Articles">
               <SplideSlide>
                 <RecentFlora />
               </SplideSlide>  
               <SplideSlide>
                 <RecentFauna />
-              </SplideSlide>                                                  
-      </Splide>  
+              </SplideSlide>                                                    
+        </Splide> 
       </Box>             
       </Layout>
     </>

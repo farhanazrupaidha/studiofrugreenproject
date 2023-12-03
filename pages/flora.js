@@ -33,7 +33,7 @@ export default function Flora ({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (where: {_search: "flora"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (where: {tags_contains_some: "Flora"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title

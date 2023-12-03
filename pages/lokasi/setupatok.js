@@ -14,9 +14,10 @@ const Location = dynamic(() => import('components/location'), {
 const Paginate = dynamic(() => import('components/paginate'), {
   ssr: false,
 });
-
+const SectionSeparator = dynamic(() => import('components/section-separator'), {
+  ssr: false,
+});
 const Hero = dynamic(() => import('components/hero-setupatok'));
-
 
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -34,7 +35,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (where: {_search: "setu patok"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (where: {tags_contains_some: "Setu Patok"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
@@ -146,7 +147,7 @@ export default function Index({ posts, preview }) {
                 Wilayah Konservasi Danau Setu Patok
             </h2>
           <Hero />
-          <Divider sx={{mt:10, mb:10}} />
+          <SectionSeparator />
           <Location />
 			{blogPosts ? (
 			<Box>

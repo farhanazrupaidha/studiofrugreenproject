@@ -18,19 +18,8 @@ const Paginate = dynamic(() => import('components/paginate-en'), {
   ssr: false,
 });
 
-
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-
-import '@splidejs/react-splide/css/sea-green';
-
-// or only core styles
-import '@splidejs/react-splide/css/core';
-
-import { YouTubeEmbed } from '@next/third-parties/google'
-
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
+
 
 export default function Index({ posts, preview }) {
 
@@ -45,7 +34,7 @@ export default function Index({ posts, preview }) {
 				'https://api-ap-southeast-2.hygraph.com/v2/clijsrvoy05qk01t9f56qa446/master',
 				`
 			{
-				posts (locales: en, where: {_search: "video"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
+				posts (locales: en, where: {tags_contains_some: "Video"}, orderBy: date_DESC, first: ${postsPerPage}, skip: ${
 					currentPage * postsPerPage - postsPerPage
 				}) {
 					        title
