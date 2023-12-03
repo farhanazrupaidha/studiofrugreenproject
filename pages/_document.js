@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import Script from 'next/script'
+import { GoogleTagManager } from '@next/third-parties/google'
 import * as gtag from '../lib/gtag'
 
 export default class MyDocument extends Document {
@@ -39,11 +39,8 @@ export default class MyDocument extends Document {
               `,
               }}
             /> 
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
-      <script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-      />                   
+           <GoogleTagManager gtmId="${gtag.GA_TRACKING_ID}" />  
+      {/* Global Site Tag (gtag.js) - Google Analytics */}                
         {/* google adsense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
         <script dangerouslySetInnerHTML={{

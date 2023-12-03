@@ -34,8 +34,6 @@ const ShareButton = dynamic(() => import('components/socialsharebutton'), {
 
 import { motion, useScroll } from "framer-motion"
 
-import { DiscussionEmbed } from 'disqus-react';
-
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
@@ -176,20 +174,7 @@ export default function Post({ post, morePosts, preview }) {
                 </LightTooltip>
                 </WhatsappShareButton>
             </Stack>
-            </Box>   
-            <Box sx={{mt:5, maxWidth: 700, width:'100%'}}>
-              <Divider sx={{mb:5, maxWidth:300, width:'95%' }} />      
-              <DiscussionEmbed
-                shortname='studiofru-green-project'
-                config={
-                {
-                  url: post.url,
-                  identifier: post.id,
-                  title: post.title,
-                  }
-                }
-              />
-            </Box>                                        
+            </Box>                                         
             <Divider sx={{mt:5, mb:5, maxWidth:300, width:'95%' }} />
               <Typography variant="h6" color="#ff0055" sx={{mt:2}}>Ikuti Studiofru | Green Project melalui media sosial untuk mendapatkan informasi singkat mengenai flora dan fauna</Typography>
               <Stack

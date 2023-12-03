@@ -12,7 +12,6 @@ const DataCountFauna = dynamic(() => import('components/data-fauna'), {
 });
 
 import Typewriter from 'typewriter-effect';
-import { format } from 'date-fns'
 
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
