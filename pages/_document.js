@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import Script from 'next/script'
 import * as gtag from '../lib/gtag'
 
 export default class MyDocument extends Document {
@@ -42,13 +41,13 @@ export default class MyDocument extends Document {
               `,
               }}
             /> 
+            {/* Global Site Tag (gtag.js) - Google Analytics */}
             <script
-              async
+              strategy="afterInteractive"
               src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-            />
-            {/* Global Site Tag (gtag.js) - Google Analytics */}                
+            />                   
             {/* google adsense */}
-            <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
             <script dangerouslySetInnerHTML={{
                 __html: `
               (adsbygoogle = window.adsbygoogle || []).push({
@@ -57,7 +56,7 @@ export default class MyDocument extends Document {
                 });
                 `,
             }} />
-            {/* google adsense */}  
+         {/* google adsense */}  
         </Head>
         <body>
           <Main />
