@@ -97,8 +97,6 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="description" content={post.seo.description} />
                      <meta name="keywords" content={post.seo.keywords} />
                      <meta name="robots" content="index, follow" />
-                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="en-US" />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/posts/${post.slug}`} hreflang="id-ID" />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en-US" />

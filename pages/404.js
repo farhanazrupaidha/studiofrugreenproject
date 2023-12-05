@@ -68,7 +68,6 @@ const { data, loading, error } = useQuery(FLORA);
                      <meta name="twitter:title" content="Studiofru | Green Project" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
-                    <link rel="icon" href="/images/favicon.ico" />
                </Head>
 
 <section id="hero" data-stellar-background-ratio="0.5">

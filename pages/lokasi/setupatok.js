@@ -119,26 +119,22 @@ export default function Index({ posts, preview }) {
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Konservasi Danau Setu Patok Mundu Cirebon" />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, setu patok, danau setu patok, setu patok cirebon, cirebon" />
                      <meta name="robots" content="index, follow" />
-                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/locations/setupatok" hreflang="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/en/locations/setupatok" hreflang="en-US" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/en/locations/setupatok" hreflang="x-default" /> 
-                     <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
                      <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/location/setupatok" />
                      <meta property="og:title" content="Studiofru | Green Project - Setu Patok Mundu Cirebon" />
                      <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai flora dan fauna di wilayah Konservasi Danau Setu Patok Mundu Cirebon" />
                      <meta property="og:site_name" content="Studiofru | Green Project - Setu Patok Mundu Cirebon" />
-                     <meta property="og:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project - Setu Patok Mundu Cirebon" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
-                     <link rel="icon" href="/images/favicon.ico" />
+                     <meta name="twitter:image:src" content="/images/tanah.jpg" />
                      <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
                </Head>        
         <Container>

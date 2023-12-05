@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { GoogleTagManager } from '@next/third-parties/google'
+import Script from 'next/script'
 import * as gtag from '../lib/gtag'
 
 export default class MyDocument extends Document {
@@ -7,7 +7,11 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-            <meta charset="utf-8" /> 
+            <link rel="icon" href="/images/favicon.ico" />  
+            <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+            <meta name="revisit-after" content="3 days" />
             <meta
               name="format-detection"
               content="telephone=no, date=no, email=no, address=no"
@@ -24,7 +28,6 @@ export default class MyDocument extends Document {
               type="image/<generated>"
               sizes="<generated>"
             />   
-            <link rel="icon" href="/images/favicon.ico" />  
             {/* Global Site Tag (gtag.js) - Google Analytics */}
             <script
               dangerouslySetInnerHTML={{
@@ -39,19 +42,19 @@ export default class MyDocument extends Document {
               `,
               }}
             /> 
-           <GoogleTagManager gtmId="${gtag.GA_TRACKING_ID}" />  
-      {/* Global Site Tag (gtag.js) - Google Analytics */}                
-        {/* google adsense */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
-        <script dangerouslySetInnerHTML={{
-            __html: `
-           (adsbygoogle = window.adsbygoogle || []).push({
-             google_ad_client: '${process.env.NEXT_GOOGLE_AD}',
-             enable_page_level_ads: true
-             });
-            `,
-         }} />
-         {/* google adsense */}  
+             <Script src="https://www.googletagmanager.com/gtag/js?id==${gtag.GA_TRACKING_ID}" />
+            {/* Global Site Tag (gtag.js) - Google Analytics */}                
+            {/* google adsense */}
+            <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
+            <script dangerouslySetInnerHTML={{
+                __html: `
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: '${process.env.NEXT_GOOGLE_AD}',
+                enable_page_level_ads: true
+                });
+                `,
+            }} />
+            {/* google adsense */}  
         </Head>
         <body>
           <Main />

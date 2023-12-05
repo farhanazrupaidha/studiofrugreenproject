@@ -136,28 +136,24 @@ export default function Index({ posts, preview }) {
                      <meta name="title" content="Studiofru | Green Project - Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia." />
                      <meta name="description" content="Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia." />
                      <meta name="keywords" content="studiofru, encyclopedia, nature encyclopedia, flora encyclopedia, fauna encyclopedia, farming, livestock, animal, plants, biodiversity in Indonesia" />
-                     <meta name="robots" content="index, follow" />
-                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+                     <meta name="robots" content="index, follow" />   
                      <meta name="language" content="en-US" />                 
                      <link rel="alternate" href="https://studiofrugreenproject.com" hreflang="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/en" hreflang="en-US" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/en" hreflang="x-default" />
-                     <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
-                     <meta property="image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/en" />
                      <meta property="og:title" content="Studiofru | Green Project - Encyclopedia of Biodiversity" />
                      <meta property="og:description" content="Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia."/>
                      <meta property="og:site_name" content="Studiofru | Green Project - Encyclopedia of Biodiversity" />
-                     <meta property="og:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project  - Encyclopedia of Biodiversity" />
                      <meta property="twitter:description" content="Explore encyclopedias and various information regarding naming identities, origins, history and benefits of various plants and animals in Indonesia."/>
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
-                    <link rel="icon" href="/images/favicon.ico" />
+                     <meta name="twitter:image" content="/images/tanah.jpg" />
                </Head>
         <Hero />
 
@@ -199,18 +195,7 @@ export default function Index({ posts, preview }) {
 			) : (
 				<div className="loading">Loading...</div>
 			)}
-        </Container>  
-        <Divider sx={{m:10}} />    
-      <Box sx={{ml:5, mb:10}}>
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-        Video Documentation
-      </h2>
-      </Box> 
-      <Box sx={{mb:15}}>
-      <section className="c-share">       
-        <iframe width="660" height="415" src="https://www.youtube.com/embed/videoseries?si=ZZ21CtYNevctbJRX&amp;list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />         
-      </section>
-      </Box>      
+        </Container>      
       <Divider sx={{m:10}} />    
       <Box sx={{ml:5}}>
       <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">

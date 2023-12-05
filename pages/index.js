@@ -22,15 +22,6 @@ const RecentFlora = dynamic(() => import('components/recent-flora'), {
 const RecentFauna = dynamic(() => import('components/recent-fauna'), {
   ssr: false,
 });
-const RecentSains = dynamic(() => import('components/recent-sains'), {
-  ssr: false,
-});
-const RecentWisata = dynamic(() => import('components/recent-wisata'), {
-  ssr: false,
-});
-const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'), {
-  ssr: false,
-});
 const Paginate = dynamic(() => import('components/paginate'), {
   ssr: false,
 });
@@ -143,28 +134,24 @@ export default function Index({ posts, preview }) {
                      <meta name="title" content="Studiofru | Green Project - Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia." />
                      <meta name="description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, farming, livestock, animal, plants" />
-                     <meta name="robots" content="index, follow" />
-                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />                     
+                     <meta name="robots" content="index, follow" />                    
                      <meta name="language" content="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com" hreflang="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/en" hreflang="en-US" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/en" hreflang="x-default" />
-                     <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
-                     <meta property="image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/" />
                      <meta property="og:title" content="Studiofru | Green Project - Ensiklopedia Keanekaragaman Hayati" />
                      <meta property="og:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia."/>
                      <meta property="og:site_name" content="Studiofru | Green Project - Ensiklopedia Keanekaragaman Hayati" />
-                     <meta property="og:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Green Project - Ensiklopedia Keanekaragaman Hayati" />
                      <meta property="twitter:description" content="Jelajah ensiklopedia dan berbagai informasi mengenai identitas penamaan, asal, sejarah dan manfaat dari berbagai tumbuhan dan hewan di Indonesia."/>
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image" content="/images/tanah.jpg" />
-                    <link rel="icon" href="/images/favicon.ico" />
                </Head>
 
         <Hero />
@@ -207,18 +194,7 @@ export default function Index({ posts, preview }) {
 			) : (
 				<div className="loading">Loading...</div>
 			)}
-      </Container>
-      <Divider sx={{m:10}} />    
-      <Box sx={{ml:5, mb:10}}>
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-        Dokumentasi Video
-      </h2>
-      </Box> 
-      <Box sx={{mb:15}}>
-      <section className="c-share">       
-        <iframe width="660" height="415" src="https://www.youtube.com/embed/videoseries?si=ZZ21CtYNevctbJRX&amp;list=PLQNlRTZc_hMXysrhTEc8v8SSAzhQQgxoh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />         
-      </section>
-      </Box>      
+      </Container>    
       <Divider sx={{m:10}} />    
       <Box sx={{ml:5}}>
       <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
@@ -232,16 +208,7 @@ export default function Index({ posts, preview }) {
               </SplideSlide>  
               <SplideSlide>
                 <RecentFauna />
-              </SplideSlide>
-              <SplideSlide>
-                <RecentSains />
-              </SplideSlide>   
-              <SplideSlide>
-                <RecentWisata />
-              </SplideSlide>       
-              <SplideSlide>
-                <RecentPengetahuan />
-              </SplideSlide>                                                    
+              </SplideSlide>                                                  
         </Splide> 
       </Box> 
       </Layout>

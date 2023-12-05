@@ -116,26 +116,22 @@ export default function Index({ posts, preview }) {
                      <meta name="description" content="Explore encyclopedias and various informations about flora and fauna in the region of Bali." />
                      <meta name="keywords" content="studiofru, green project, studiofru green project, Bali encyclopedia, animals in Bali, plants in Bali, flora in Bali, farming in Bali, livestock in Bali " />
                      <meta name="robots" content="index, follow" />
-                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="en-US" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/locations/bali" hreflang="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/en/locations/bali" hreflang="en-US" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/en/locations/bali" hreflang="x-default" />                     
-                     <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" /> 
-                     <meta property="image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta property="image" content="/images/tanah.jpg" />
                      <meta property="og:url" content="https://studiofrugreenproject.com/en/locations/bali" />
                      <meta property="og:title" content="Studiofru | Flora and Fauna in the Region of Bali" />
                      <meta property="og:description" content="Explore encyclopedias and various information about flora and fauna in the region of Bali." />
                      <meta property="og:site_name" content="Studiofru | Flora and Fauna in The Region of Bali" />
-                     <meta property="og:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta property="og:image" content="/images/tanah.jpg" />
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content="Studiofru | Flora and Fauna in the Region of Bali" />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image" content="https://www.studiofrugreenproject.com/images/tanah.jpg" />
-                    <link rel="icon" href="/images/favicon.ico" />
+                     <meta name="twitter:image" content="/images/tanah.jpg" />
                </Head>
         <Container>
           <Intro />

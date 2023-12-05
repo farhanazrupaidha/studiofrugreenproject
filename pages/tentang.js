@@ -56,11 +56,8 @@ const { data, loading, error } = useQuery(ABOUT);
                      <meta name="description" content={data.page.seo.description} />
                      <meta name="keywords" content={data.page.seo.keywords} />
                      <meta name="robots" content="index, follow" />
-                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/tentang" hreflang="id-ID" />
-                     <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru | Green Project" />                      
                      <meta property="image" content={data.page.seo.image.url} />
                      <meta property="og:title" content={data.page.seo.title} />
