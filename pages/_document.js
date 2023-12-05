@@ -42,10 +42,13 @@ export default class MyDocument extends Document {
               `,
               }}
             /> 
-             <script async src="https://www.googletagmanager.com/gtag/js?id==${gtag.GA_TRACKING_ID}" />
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+            />
             {/* Global Site Tag (gtag.js) - Google Analytics */}                
             {/* google adsense */}
-            <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
+            <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
             <script dangerouslySetInnerHTML={{
                 __html: `
               (adsbygoogle = window.adsbygoogle || []).push({
