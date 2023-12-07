@@ -48,11 +48,12 @@ return (
         <TextField
           required
           variant="standard"
+          error
           style = {{width: '100%'}}
           sx={{ input: { color: 'black' }, mb:1, mt:2, ml:3 }}
-          color="secondary"
-          placeholder= " Ketik pencarian di sini"
+          placeholder="Jika hasil kosong berarti data tidak ditemukan"
           type="text"
+          label="Ketik pencarian di sini"
           onChange={(e) => setSearchFilter(e.target.value)}
         />
         <Button

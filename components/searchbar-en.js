@@ -48,11 +48,12 @@ return (
         <TextField
           required
           variant="standard"
+          error
           style = {{width: '100%'}}
           sx={{ input: { color: 'black' }, mb:1, mt:2, ml:3 }}
-          color="secondary"
-          placeholder= "Type your search here"
+          placeholder= "If the result is empty, it means the data was not found"
           type="text"
+          label= "Type your search here"
           onChange={(e) => setSearchFilter(e.target.value)}
         />
         <Button
