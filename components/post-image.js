@@ -13,7 +13,6 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-
 import Dialog from '@mui/material/Dialog';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -40,7 +39,6 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
 
   return (
 <Box>  
-    <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
     <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap">
         {cloudinaryImageLibrary.map((pic) => (
           <CldImage
@@ -56,6 +54,7 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
         ))}  
     </Stack>
 
+    <Divider sx={{mt:5, mb:2, maxWidth:300, width:'95%' }} />
     <Typography variant='body2' sx={{ mb:5, mt:1 }}>Click the image to see it in full size</Typography>  
 
     <Dialog
