@@ -54,8 +54,8 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
         ))}  
     </Stack>
 
-    <Divider sx={{mt:5, mb:2, maxWidth:300, width:'95%' }} />
-    <Typography variant='body2' sx={{ mb:5, mt:1 }}>Click the image to see it in full size</Typography>  
+    <Divider sx={{mt:3, mb:2, maxWidth:300, width:'95%' }} />
+    <Typography variant='body2' color='secondary' sx={{ mb:5, mt:1 }}>Click the image to see it in full size</Typography>  
 
     <Dialog
         fullScreen
