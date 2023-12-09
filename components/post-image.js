@@ -38,7 +38,8 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
   };
 
   return (
-<Box>  
+<Box> 
+   <Divider sx={{mt:5, mb:2, maxWidth:300, width:'95%' }} />
     <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap">
         {cloudinaryImageLibrary.map((pic) => (
           <CldImage
@@ -54,8 +55,7 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
         ))}  
     </Stack>
 
-    <Divider sx={{mt:3, mb:2, maxWidth:300, width:'95%' }} />
-    <Typography variant='body2' color='secondary' sx={{ mb:5, mt:1 }}>Click the image to see it in full size</Typography>  
+    <Typography variant='body2' color='secondary' sx={{ mb:5, mt:2 }}>Click the image to see it in full size</Typography>  
 
     <Dialog
         fullScreen
