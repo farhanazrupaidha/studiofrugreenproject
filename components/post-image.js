@@ -12,6 +12,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 
 import Dialog from '@mui/material/Dialog';
 import AppBar from '@mui/material/AppBar';
@@ -39,6 +40,7 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
 
   return (
 <Box>  
+    <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
     <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap">
         {cloudinaryImageLibrary.map((pic) => (
           <CldImage
