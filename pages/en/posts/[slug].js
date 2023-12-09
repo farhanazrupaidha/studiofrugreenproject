@@ -10,7 +10,9 @@ const ErrorPage = dynamic(() => import('components/errorpage'), {
 });
 const Container = dynamic(() => import('components/container'));
 const PostBody = dynamic(() => import('components/post-body'));
-const PostImage = dynamic(() => import('components/post-image'));
+const PostImage = dynamic(() => import('components/post-image'), {
+  ssr: false,
+});
 const PostReference = dynamic(() => import('components/post-reference'), {
   ssr: false,
 });

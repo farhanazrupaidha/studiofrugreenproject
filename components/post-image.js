@@ -56,7 +56,7 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
         ))}  
     </Stack>
 
-    <Typography variant='body2' color="secondary" sx={{ mb:5, mt:1 }}>Click the image to see it in full size</Typography>  
+    <Typography variant='body2' sx={{ mb:5, mt:1 }}>Click the image to see it in full size</Typography>  
 
     <Dialog
         fullScreen
