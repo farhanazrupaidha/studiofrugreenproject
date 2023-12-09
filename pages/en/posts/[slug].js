@@ -10,6 +10,9 @@ const ErrorPage = dynamic(() => import('components/errorpage'), {
 });
 const Container = dynamic(() => import('components/container'));
 const PostBody = dynamic(() => import('components/post-body'));
+const PostImage = dynamic(() => import('components/post-image'), {
+  ssr: false,
+});
 const PostReference = dynamic(() => import('components/post-reference'), {
   ssr: false,
 });
@@ -128,6 +131,7 @@ export default function Post({ post, morePosts, preview }) {
                 date={post.date}
                 author={post.author}
               />
+              <PostImage cloudinaryImageLibrary={post.cloudinaryImageLibrary} title={post.title} />
               <PostBody content={post.content} />
               <PostReference reference={post.reference} />  
             </article>

@@ -75,6 +75,33 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
+"@cloudinary-util/url-loader@^3.20.0":
+  version "3.21.0"
+  resolved "https://registry.npmjs.org/@cloudinary-util/url-loader/-/url-loader-3.21.0.tgz"
+  integrity sha512-YcB+mZgriZB29eoFGvVaEDu9ov6ROEqqVxq6kqCywUwHbsXGIZx0TYt0SJoqVj2ISvdL2wZzTLyBOpaFXJN1bg==
+  dependencies:
+    "@cloudinary-util/util" "2.3.0"
+    "@cloudinary/url-gen" "^1.10.2"
+
+"@cloudinary-util/util@^2.3.0", "@cloudinary-util/util@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/@cloudinary-util/util/-/util-2.3.0.tgz"
+  integrity sha512-0Gojd+ZRQjJQmlBEAa8Ua94amvx7uWHoUzVUEGi1S8bgF1wPcMqG07cSUGQfRwHsFQ/9XOesx76Df622E+CevA==
+
+"@cloudinary/transformation-builder-sdk@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.npmjs.org/@cloudinary/transformation-builder-sdk/-/transformation-builder-sdk-1.9.0.tgz"
+  integrity sha512-19ZV3r2dE2mYMZTN/ytP7p7hmqiD7PC6EoWdQwJByabN4JXtNwgotElHYC509/eD7j5xJajghgHiIXTonrgMhQ==
+  dependencies:
+    "@cloudinary/url-gen" "^1.7.0"
+
+"@cloudinary/url-gen@^1.10.2", "@cloudinary/url-gen@^1.7.0":
+  version "1.14.0"
+  resolved "https://registry.npmjs.org/@cloudinary/url-gen/-/url-gen-1.14.0.tgz"
+  integrity sha512-XbG8QgD5fkTUO/YYUWftfz3sUpKzRZJkXhp6xLSxmK/36iyMy2wA4SF5FLCOnv6fLLUneQzXbc4OAwaDM0EWCQ==
+  dependencies:
+    "@cloudinary/transformation-builder-sdk" "^1.9.0"
+
 "@corex/deepmerge@^4.0.29":
   version "4.0.43"
   resolved "https://registry.npmjs.org/@corex/deepmerge/-/deepmerge-4.0.43.tgz"
@@ -1546,6 +1573,14 @@ nanoid@^3.1.30, nanoid@^3.3.4, nanoid@^3.3.6:
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.6.tgz"
   integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
 
+next-cloudinary@^5.11.0:
+  version "5.11.0"
+  resolved "https://registry.npmjs.org/next-cloudinary/-/next-cloudinary-5.11.0.tgz"
+  integrity sha512-gTPqqMG7hzoeA2wEBpUR51FExVFq3+p1qZU52xlwejpEGYaGVIVzpILOA0G2i9s0jyxudWuA5GLFh2A/bvQmFw==
+  dependencies:
+    "@cloudinary-util/url-loader" "^3.20.0"
+    "@cloudinary-util/util" "^2.3.0"
+
 next-share@^0.20.0:
   version "0.20.0"
   resolved "https://registry.npmjs.org/next-share/-/next-share-0.20.0.tgz"
@@ -1568,7 +1603,7 @@ next-with-apollo@^5.3.0:
   dependencies:
     isomorphic-unfetch "^3.0.0"
 
-next@*, "next@^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0", next@latest:
+next@*, "next@^12 || ^13 || ^14", "next@^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0", next@latest:
   version "12.3.4"
   resolved "https://registry.npmjs.org/next/-/next-12.3.4.tgz"
   integrity sha512-VcyMJUtLZBGzLKo3oMxrEF0stxh8HwuW976pAzlHhI3t8qJ4SROjCrSh1T24bhrbjw55wfZXAbXPGwPt5FLRfQ==
@@ -2127,7 +2162,7 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-"react@^16.6.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18.0.0", react@^17.0.0, "react@^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^17.x || ^18.x", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16, react@>=16.6.0, react@>=16.8, react@>=16.8.0, react@>=17.0.2:
+"react@^16.6.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18.0.0", "react@^17 || ^18", react@^17.0.0, "react@^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^17.x || ^18.x", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16, react@>=16.6.0, react@>=16.8, react@>=16.8.0, react@>=17.0.2:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

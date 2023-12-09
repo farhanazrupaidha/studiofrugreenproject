@@ -15,6 +15,8 @@ export default function CoverImage({ title, url, slug }) {
       loading="eager"
       priority={true}
       layout="responsive"
+      blurDataURL={url}
+      placeholder='blur'
     />
   )
 

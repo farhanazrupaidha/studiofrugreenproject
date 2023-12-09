@@ -1,0 +1,105 @@
+import React from 'react';
+import { CldImage } from 'next-cloudinary';
+
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+import '@splidejs/react-splide/css/sea-green';
+
+// or only core styles
+import '@splidejs/react-splide/css/core';
+
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
+import Dialog from '@mui/material/Dialog';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+
+export default function PostImage({ cloudinaryImageLibrary, title }) {
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+<Box>  
+    <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap">
+        {cloudinaryImageLibrary.map((pic) => (
+          <CldImage
+            width="100"
+            height="100"
+            crop='fill'
+            src={pic.public_id}
+            alt={title}
+            blurDataURL={pic.public_id}
+            placeholder='blur'
+            onClick={handleClickOpen}
+          />
+        ))}  
+    </Stack>
+
+    <Typography variant='body2' sx={{ mb:5, mt:1 }}>Click to see image</Typography>  
+
+    <Dialog
+        fullScreen
+        open={open}
+        onClose={handleClose}
+        TransitionComponent={Transition}
+      >
+        <AppBar sx={{ position: 'relative' }}>
+          <Toolbar>
+            <IconButton
+              edge="start"
+              color="inherit"
+              onClick={handleClose}
+              aria-label="close"
+            >
+              <CloseIcon />
+            </IconButton>
+            <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+              Gallery
+            </Typography>
+            <Button autoFocus color="inherit" onClick={handleClose}>
+              close
+            </Button>
+          </Toolbar>
+        </AppBar>
+
+    <Splide aria-label="Gallery">     
+        {cloudinaryImageLibrary.map((pic) => (
+          <SplideSlide>
+            <Box sx={{ m:'auto', textAlign: 'center' }}>
+              <CldImage
+                width={pic.width/1.5}
+                height={pic.height/1.5}
+                src={pic.public_id}
+                alt={title}
+                blurDataURL={pic.public_id}
+                placeholder='blur'
+              />
+            </Box>
+          </SplideSlide>    
+        ))}                                              
+    </Splide>   
+    
+      </Dialog>
+
+</Box>  
+  )
+}

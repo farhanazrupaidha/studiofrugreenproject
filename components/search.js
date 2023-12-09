@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useRouter } from "next/router";
 
 import { useLazyQuery, gql } from '@apollo/client';
 import withApollo from "../config";
