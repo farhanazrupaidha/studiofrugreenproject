@@ -4,12 +4,6 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { getAllPostsForHomeEn } from '../lib/graphcms'
 
-const RecentFlora = dynamic(() => import('components/recent-flora-en'), {
-  ssr: false,
-});
-const RecentFauna = dynamic(() => import('components/recent-fauna-en'), {
-  ssr: false,
-});
 const Container = dynamic(() => import('components/container'));
 const PostPreview = dynamic(() => import('components/post-preview-en'), {
   ssr: false,
@@ -18,13 +12,17 @@ const Layout = dynamic(() => import('components/layout-en'));
 const Location = dynamic(() => import('components/location-en'), {
   ssr: false,
 });
-const Hero = dynamic(() => import('components/hero-en'), {
-    ssr: false,
-});
-const Paginate = dynamic(() => import('components/paginate-en'), {
+const Hero = dynamic(() => import('components/hero-en'));
+const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
 });
-const SectionSeparator = dynamic(() => import('components/section-separator'), {
+const RecentFlora = dynamic(() => import('components/recent-flora-en'), {
+  ssr: false,
+});
+const RecentFauna = dynamic(() => import('components/recent-fauna-en'), {
+  ssr: false,
+});
+const Paginate = dynamic(() => import('components/paginate-en'), {
   ssr: false,
 });
 

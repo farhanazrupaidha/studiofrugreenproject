@@ -17,7 +17,7 @@ module.exports = withBundleAnalyzer({
         hostname: 'media.graphassets.com',
         port: '',
         pathname: '/**',
-      },
+      }
     ],
     formats: ['image/avif', 'image/webp'],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
