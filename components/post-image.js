@@ -49,6 +49,7 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
             alt={title}
             blurDataURL={pic.public_id}
             placeholder='blur'
+            loading="lazy"
             onClick={handleClickOpen}
           />
         ))}  
@@ -93,6 +94,7 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
                 alt={title}
                 blurDataURL={pic.public_id}
                 placeholder='blur'
+                loading="lazy"
               />
             </Box>
           </SplideSlide>    
