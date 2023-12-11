@@ -131,7 +131,7 @@ export default function Post({ post, morePosts, preview }) {
                 date={post.date}
                 author={post.author}
               />
-              <PostImage cloudinaryImageLibrary={post.cloudinaryImageLibrary} />
+              <PostImage cloudinaryImageLibrary={post.cloudinaryImageLibrary} title={post.title} />
               <PostBody content={post.content} />   
               <PostReference reference={post.reference} />    
             </article>
