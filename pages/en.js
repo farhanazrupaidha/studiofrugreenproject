@@ -43,7 +43,7 @@ export default function Index({ posts, preview }) {
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(4);
+	const [postsPerPage] = useState(8);
 
 
 	useEffect(() => {
