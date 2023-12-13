@@ -22,6 +22,15 @@ const RecentFlora = dynamic(() => import('components/recent-flora'), {
 const RecentFauna = dynamic(() => import('components/recent-fauna'), {
   ssr: false,
 });
+const RecentPengetahuan = dynamic(() => import('components/recent-pengetahuan'), {
+  ssr: false,
+});
+const RecentSains = dynamic(() => import('components/recent-sains'), {
+  ssr: false,
+});
+const RecentWisata = dynamic(() => import('components/recent-wisata'), {
+  ssr: false,
+});
 const Paginate = dynamic(() => import('components/paginate'), {
   ssr: false,
 });
@@ -41,7 +50,7 @@ export default function Index({ posts, preview }) {
 	const [blogPosts, setBlogPosts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPosts, setTotalPosts] = useState();
-	const [postsPerPage] = useState(8);
+	const [postsPerPage] = useState(10);
 
 
 	useEffect(() => {
@@ -208,7 +217,16 @@ export default function Index({ posts, preview }) {
               </SplideSlide>  
               <SplideSlide>
                 <RecentFauna />
-              </SplideSlide>                                                  
+              </SplideSlide>         
+              <SplideSlide>
+                <RecentSains />
+              </SplideSlide>  
+              <SplideSlide>
+                <RecentPengetahuan />
+              </SplideSlide>  
+              <SplideSlide>
+                <RecentWisata />
+              </SplideSlide>                                           
         </Splide> 
       </Box> 
       </Layout>
