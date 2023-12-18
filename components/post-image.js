@@ -3,7 +3,7 @@ import { CldImage } from 'next-cloudinary';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
-import '@splidejs/react-splide/css/sea-green';
+import '@splidejs/react-splide/css/skyblue';
 
 // or only core styles
 import '@splidejs/react-splide/css/core';
@@ -19,6 +19,8 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
+
+import AdsClickIcon from '@mui/icons-material/AdsClick';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -56,7 +58,7 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
     </Stack>
 
     <Divider sx={{mt:3, mb:1, maxWidth:300, width:'95%' }} />
-    <Typography variant='body2' color='secondary' sx={{ mb:5, mt:1 }}>Click the image to see it in full size</Typography>  
+    <AdsClickIcon color="primary" />  
 
     <Dialog
         fullScreen

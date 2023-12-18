@@ -1,6 +1,7 @@
 import '../styles/index.css';
 
 import React, { useEffect } from 'react'
+import Head from 'next/head'
 import posthog from 'posthog-js'
 
 import { ThemeProvider, createTheme, responsiveFontSizes, } from '@mui/material/styles';
@@ -93,6 +94,9 @@ const theme = responsiveFontSizes(ModeTheme);
   return (
   <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+      </Head>
       <CssBaseline />
         <Component {...pageProps} />
     </ThemeProvider>

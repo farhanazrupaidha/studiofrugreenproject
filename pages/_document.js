@@ -8,7 +8,6 @@ export default class MyDocument extends Document {
         <Head>
             <link rel="icon" href="/images/favicon.ico" />  
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
             <meta name="revisit-after" content="3 days" />
             <meta
               name="format-detection"
