@@ -1,12 +1,12 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://studiofrugreenproject.com',
-  changefreq: 'weekly',
+  changefreq: 'daily',
   priority: 0.7,
-  sitemapSize: 5000,
+  sitemapSize: 7000,
   generateRobotsTxt: true,
   exclude: ['/tentang', '/wisata', '/videos', '/fauna', '/pengetahuan', '/disclaimer', '/termsofuse', '/kontribusi', '/kontak', '/forum', 
-  '/locations/jawatengah', '/locations/jawatimur' , '/en/endemic', '/en/videos' , '/en/knowledge', '/en/locations/setupatok', '/posts/Deskripsi-Asal-dan-Khasiat-Putri-Malu-Mimosa-pudica',
+  '/locations/jawatengah', '/locations/jawatimur' , '/en/endemic', '/en/videos' , '/en/knowledge', '/posts/Deskripsi-Asal-dan-Khasiat-Putri-Malu-Mimosa-pudica',
   '/posts/apa-itu-ayam-dan-bagaimana-sejarahnya'
 ],
   // Default transformation function
