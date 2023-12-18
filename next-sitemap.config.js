@@ -5,7 +5,7 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
   generateRobotsTxt: true,
-  exclude: ['/tentang', '/wisata', '/endemik', '/videos', '/fauna', '/pengetahuan', '/sains', '/disclaimer', '/termsofuse', '/kontribusi', '/kontak', '/forum', 
+  exclude: ['/tentang', '/wisata', '/videos', '/fauna', '/pengetahuan', '/disclaimer', '/termsofuse', '/kontribusi', '/kontak', '/forum', 
   '/locations/jawatengah', '/locations/jawatimur' , '/en/endemic', '/en/videos' , '/en/knowledge', '/en/locations/setupatok', '/posts/Deskripsi-Asal-dan-Khasiat-Putri-Malu-Mimosa-pudica',
   '/posts/apa-itu-ayam-dan-bagaimana-sejarahnya'
 ],
@@ -31,7 +31,7 @@ robotsTxtOptions: {
         '/posts/Deskripsi-Asal-dan-Khasiat-Kelor-Moringa-oleifera', '/posts/Deskripsi-Asal-dan-Khasiat-Kembang-Kantil-Cempaka-Magnolia-champaca', '/posts/Deskripsi-Asal-dan-Manfaat-Bunga-Teratai-Nymphaeaceae', 
         '/posts/Deskripsi-Asal-dan-Khasiat-Daun-Ungu-Graptophyllum-pictum', '/posts/10-Jenis-Tanah-di-Wilayah-Indonesia', '/posts/Deskripsi-Asal-dan-Kegunaan-Jati-Tectona-grandis',
         '/englishversion', '/posts/Deskripsi-Asal-dan-Khasiat-Orok-Orok-Crotalaria-juncea','/posts/Deskripsi-Asal-dan-Khasiat-Putri-Malu-Mimosa-pudica', '/posts/apa-itu-ayam-dan-bagaimana-sejarahnya' , '/en/knowledge', 
-        '/en/videos', '/en/endemic'     
+        '/en/videos'     
       ],
     },
   ],

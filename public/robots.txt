@@ -19,7 +19,6 @@ Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Putri-Malu-Mimosa-pudica
 Disallow: /posts/apa-itu-ayam-dan-bagaimana-sejarahnya
 Disallow: /en/knowledge
 Disallow: /en/videos
-Disallow: /en/endemic
 
 # Host
 Host: https://studiofrugreenproject.com
