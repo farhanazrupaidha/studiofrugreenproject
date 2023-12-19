@@ -20,8 +20,6 @@ Disallow: /posts/apa-itu-ayam-dan-bagaimana-sejarahnya
 Disallow: /en/knowledge
 Disallow: /en/videos
 
-# Host
-Host: https://studiofrugreenproject.com
 
 # Sitemaps
 Sitemap: https://studiofrugreenproject.com/sitemap.xml
