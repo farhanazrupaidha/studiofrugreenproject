@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import Head from 'next/head'
 import posthog from 'posthog-js'
 
-import { ThemeProvider, createTheme, responsiveFontSizes, } from '@mui/material/styles';
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import {  green, cyan, indigo, blueGrey } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
 

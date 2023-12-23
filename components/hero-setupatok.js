@@ -1,10 +1,10 @@
 import React from 'react';
 import dynamic from 'next/dynamic'
 
-const DataCountFlora = dynamic(() => import('components/data-flora'), {
+const DataCountFlora = dynamic(() => import('components/dataflora-setupatok'), {
   ssr: false,
 });
-const DataCountFauna = dynamic(() => import('components/data-fauna'), {
+const DataCountFauna = dynamic(() => import('components/datafauna-setupatok'), {
   ssr: false,
 });
 
