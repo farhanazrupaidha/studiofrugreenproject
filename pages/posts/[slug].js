@@ -101,8 +101,6 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="keywords" content={post.seo.keywords} />
                      <meta name="robots" content="index, follow" />
                      <meta name="language" content="id-ID" />
-                     <link rel="alternate" href={`https://studiofrugreenproject.com/posts/${post.slug}`} hreflang="id-ID" />
-                     <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en-US" />>
                      <meta name="author" content="Studiofru" />                     
                      <meta property="image" content={post.seo.image.url} />
                      <meta property="og:title" content={post.seo.title} />
