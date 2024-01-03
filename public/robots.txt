@@ -24,7 +24,7 @@ Disallow: /forum
 Disallow: /termsofuse
 Disallow: /tentang
 Disallow: /kontak
-Dissalow: /kontribusi
+Disallow: /kontribusi
 Disallow: /disclaimer
 
 
