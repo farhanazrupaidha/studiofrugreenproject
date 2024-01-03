@@ -55,7 +55,6 @@ const { data, loading, error } = useQuery(ABOUT);
                      <title>{data.page.seo.title}</title>
                      <meta name="description" content={data.page.seo.description} />
                      <meta name="keywords" content={data.page.seo.keywords} />
-                     <meta name="robots" content="index, follow" />
                      <meta name="language" content="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com" hreflang="id-ID" />
                      <meta name="author" content="Studiofru | Green Project" />                      
@@ -70,7 +69,7 @@ const { data, loading, error } = useQuery(ABOUT);
                      <meta name="twitter:title" content={data.page.seo.title} />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content={data.page.seo.image.url} />
-                     <meta name="robots" content="noindex,nofollow" />
+                     <meta name="robots" content="noindex, nofollow" />
                 </Head>
 <section id="about" data-stellar-background-ratio="0.5">
 <Box sx={{m:'auto', mt:5}}>

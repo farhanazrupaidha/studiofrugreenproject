@@ -18,7 +18,6 @@ export default function ResponsiveStack() {
                      <title>Studiofru | Green Project - Forum</title>
                      <meta name="description" content="Wadah forum untuk berkolaborasi dalam lingkup flora dan fauna." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
-                     <meta name="robots" content="index, follow" />
                      <meta name="language" content="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/forum" hreflang="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/en/forum" hreflang="en-US" />
@@ -35,7 +34,7 @@ export default function ResponsiveStack() {
                      <meta name="twitter:title" content="Studiofru | Green Project - Forum" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
-                     <meta name="robots" content="noindex,nofollow" />
+                     <meta name="robots" content="noindex, nofollow" />
                </Head>
                <section id="about" data-stellar-background-ratio="0.5">
                 <Box sx={{m:'auto', mt:5, mb:5}}>

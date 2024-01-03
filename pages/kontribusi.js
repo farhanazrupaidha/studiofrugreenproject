@@ -15,7 +15,6 @@ export default function ResponsiveStack() {
                      <title>Studiofru | Green Project - Kontribusi</title>
                      <meta name="description" content="Ikut berkontribusi dalam pengarsipan informasi ensiklopedia berbagai flora dan fauna di Indonesia." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, kontribusi ilmu pengetahuan" />
-                     <meta name="robots" content="index, follow" />
                      <meta name="language" content="id-ID" />
                      <link rel="alternate" href="https://studiofrugreenproject.com/kontribusi" hreflang="id-ID" />
                      <meta name="author" content="Studiofru | Green Project" /> 
@@ -30,7 +29,7 @@ export default function ResponsiveStack() {
                      <meta name="twitter:title" content="Studiofru | Green Project - Kontribusi" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
-                     <meta name="robots" content="noindex,nofollow" />
+                     <meta name="robots" content="noindex, nofollow" />
                </Head>
    <Box sx={{ maxWidth: 800, m:'auto', mb:2, mt:10, align: 'center', overflow: 'hidden' }}>
     <Typography variant="h3" gutterBottom sx={{m:5, fontWeight: 'bold', textAlign: 'center', lineHeight: 1}}>

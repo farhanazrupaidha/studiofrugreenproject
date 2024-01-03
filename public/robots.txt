@@ -19,6 +19,13 @@ Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Putri-Malu-Mimosa-pudica
 Disallow: /posts/apa-itu-ayam-dan-bagaimana-sejarahnya
 Disallow: /en/knowledge
 Disallow: /en/videos
+Disallow: /404
+Disallow: /forum
+Disallow: /termsofuse
+Disallow: /tentang
+Disallow: /kontak
+Dissalow: /kontribusi
+Disallow: /disclaimer
 
 
 # Sitemaps

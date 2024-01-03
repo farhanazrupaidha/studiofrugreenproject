@@ -55,7 +55,6 @@ const { data, loading, error } = useQuery(ABOUT);
                      <title>{data.page.seo.title}</title>
                      <meta name="description" content={data.page.seo.description} />
                      <meta name="keywords" content={data.page.seo.keywords} />
-                     <meta name="robots" content="index, follow" />
                      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                      <meta name="language" content="id-ID" />
@@ -75,7 +74,7 @@ const { data, loading, error } = useQuery(ABOUT);
                      <meta name="twitter:title" content={data.page.seo.title} />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content={data.page.seo.image.url} />
-                     <meta name="robots" content="noindex,nofollow" />
+                     <meta name="robots" content="noindex, nofollow" />
                 </Head>
 <section id="about" data-stellar-background-ratio="0.5">
 <Box sx={{m:'auto', mt:5}}>
