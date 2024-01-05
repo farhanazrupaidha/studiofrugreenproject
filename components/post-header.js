@@ -6,6 +6,9 @@ const Avatar = dynamic(() => import('components/avatar'), {
 const Date = dynamic(() => import('components/date'), { 
   ssr: false,
 });
+const UpdatedAt = dynamic(() => import('components/updated-at'), { 
+  ssr: false,
+});
 const CoverImage = dynamic(() => import('components/cover-image'),{ 
 ssr: false,
 });
@@ -16,15 +19,18 @@ const PostTitle = dynamic(() => import('components/post-title'),{
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 
-export default function PostHeader({ title, coverImage, date, author, tags }) {
+export default function PostHeader({ title, coverImage, date, updatedAt, author, tags }) {
   const handleClick = () => {
     console.info('You clicked the Chip.');
   };
   return (
     <>
       <PostTitle>{title}</PostTitle>
+      <div className="mb-2 text-lg">
+       first published at: <Date dateString={date} />
+      </div>
       <div className="mb-6 text-lg">
-        <Date dateString={date} />
+       updated at: <UpdatedAt dateString={updatedAt} />
       </div>
         <Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" sx={{mt:2, mb:2}}>
             {tags.map((tag) => (

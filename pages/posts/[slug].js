@@ -126,6 +126,7 @@ export default function Post({ post, morePosts, preview }) {
                 coverImage={post.coverImage}
                 tags={post.tags}
                 date={post.date}
+                updatedAt={post.updatedAt}
                 author={post.author}
               />
               <PostImage cloudinaryImageLibrary={post.cloudinaryImageLibrary} title={post.title} />
