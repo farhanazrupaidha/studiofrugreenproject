@@ -55,7 +55,6 @@ export default class MyDocument extends Document {
                 `,
             }} />
             {/* google adsense */}  
-            <script src="https://phicmune.net/pfe/current/tag.min.js?z=6546234" data-cfasync="false" async></script>
         </Head>
         <body>
           <Main />

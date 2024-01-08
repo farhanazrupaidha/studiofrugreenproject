@@ -8,44 +8,44 @@ export const getServerSideProps = async ({ res }) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://studiofrugreenproject.com</loc>
+        <loc>https://www.studiofrugreenproject.com</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://studiofrugreenproject.com/en</loc>
+        <loc>https://www.studiofrugreenproject.com/en</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://studiofrugreenproject.com/flora</loc>
+        <loc>https://www.studiofrugreenproject.com/flora</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>    
     <url>
-        <loc>https://studiofrugreenproject.com/fauna</loc>
+        <loc>https://www.studiofrugreenproject.com/fauna</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>   
     <url>
-        <loc>https://studiofrugreenproject.com/en/flora</loc>
+        <loc>https://www.studiofrugreenproject.com/en/flora</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>    
     <url>
-        <loc>https://studiofrugreenproject.com/en/fauna</loc>
+        <loc>https://www.studiofrugreenproject.com/en/fauna</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>     
     ${postsId.map(({ slug, updatedAt }) => `
     <url>
-        <loc>https://studiofrugreenproject.com/posts/${slug}</loc>
+        <loc>https://www.studiofrugreenproject.com/posts/${slug}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -105,10 +105,16 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-    </url>                          
+    </url>          
+    <url>
+        <loc>https://www.studiofrugreenproject.com/posts/deskripsi-asal-dan-manfaat-bungur-kecil-lagerstroemia-indica-bagi-kesehatan</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>                  
     ${postsEn.map(({ slug, updatedAt }) => `
     <url>
-        <loc>https://studiofrugreenproject.com/en/posts/${slug}</loc>
+        <loc>https://www.studiofrugreenproject.com/en/posts/${slug}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
