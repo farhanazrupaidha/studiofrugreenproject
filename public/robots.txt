@@ -26,6 +26,7 @@ Disallow: /tentang
 Disallow: /kontak
 Disallow: /kontribusi
 Disallow: /disclaimer
+Disallow: /posts/deskripsi-asal-dan-manfaat-pacing-hibiscus-rosa-sinensis
 
 
 # Sitemaps
