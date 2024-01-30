@@ -21,6 +21,8 @@ const Item = styled(Box)(({ theme }) => ({
 }));
 
 export default function AppBottomBar () {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
   <>
   <Box justifyContent="center" alignItems="center" sx={{ml:2, mr:2}}>
@@ -50,7 +52,7 @@ export default function AppBottomBar () {
 
         <Item>
             <Typography variant="caption" gutterBottom>
-                © 2022 - 2023 <Link href="https://studiofruworks.com">Studiofru</Link> | Green Project. All rights reserved.
+                © 2022 - {year} <Link href="https://studiofruworks.com">Studiofru</Link> | Green Project. All rights reserved.
             </Typography>
         </Item>
       </Stack>

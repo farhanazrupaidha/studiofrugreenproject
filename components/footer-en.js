@@ -62,11 +62,6 @@ const classes = useStyles();
                 Community
             </Typography>
             <Typography variant="body1" gutterBottom>
-                <Link href="/forum" underline="hover" color='inherit'>
-                  Forum
-                </Link>
-            </Typography>
-            <Typography variant="body1" gutterBottom>
               <Link href="/kontribusi" underline="hover" color='inherit'>
                  Contribution
               </Link>
