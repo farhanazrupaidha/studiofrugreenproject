@@ -134,6 +134,18 @@ export const getServerSideProps = async ({ res }) => {
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url> 
+    <url>
+        <lochttps://www.studiofrugreenproject.com/posts/dampak-terhadap-lingkungan-dan-potensi-lain-dari-galian-c-kopi-luhur-cirebon</loc>
+        <lastmod>${updatedAt}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>     
+    <url>
+        <lochttps://www.studiofrugreenproject.com/posts/deskripsi-asal-dan-manfaat-ginje-cascabela-thevetia-bagi-kesehatan</loc>
+        <lastmod>${updatedAt}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url> 
     `)  
     .join('\n')}                         
     ${postsEn.map(({ slug, updatedAt }) => `
