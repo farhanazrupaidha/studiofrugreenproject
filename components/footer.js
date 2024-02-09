@@ -54,7 +54,7 @@ const classes = useStyles();
         </Item>
         <Item sx={{maxWidth:400, width:'100%'}}>
             <Typography variant="body2" sx={{mt:2}} gutterBottom>
-            Semua foto yang dimuat di situs ini merupakan hak cipta dari Studiofru (Farhanaz Rupaidha) selaku fotografer asli. Foto - foto diambil langsung di tempat tanaman, hewan dan lokasi - lokasi tertentu tersebut berada.
+            Semua foto yang dimuat di situs ini merupakan hak cipta dari Studiofru selaku fotografer asli. Foto - foto diambil langsung di tempat tanaman, hewan dan lokasi - lokasi tertentu tersebut berada.
             </Typography>
         </Item>
         <Item sx={{maxWidth:150, width:'100%'}}>
@@ -69,7 +69,7 @@ const classes = useStyles();
         </Item>
         <Item sx={{maxWidth:150, width:'100%'}}>
             <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
-                Profil
+                Perusahaan
             </Typography>
             <Typography variant="body1" gutterBottom>
                 <Link href="/tentang" underline="hover" color='inherit'>

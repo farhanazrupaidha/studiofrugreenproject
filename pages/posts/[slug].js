@@ -99,7 +99,6 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="title" content={post.seo.title}></meta>
                      <meta name="description" content={post.seo.description} />
                      <meta name="keywords" content={post.seo.keywords} />
-                     <meta name="robots" content="index, follow" />
                      <meta name="language" content="id-ID" />
                      <meta name="author" content="Studiofru" />                     
                      <meta property="image" content={post.seo.image.url} />

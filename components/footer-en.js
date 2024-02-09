@@ -54,7 +54,7 @@ const classes = useStyles();
         </Item>
         <Item sx={{maxWidth:400, width:'100%'}}>
             <Typography variant="body2" sx={{mt:2}} gutterBottom>
-              All photos published on this site are copyright of Studiofru (Farhanaz Rupaidha) as the original photographer. Photos are taken directly where plants, animals and certain locations are located.
+              All photos published on this site are copyright of Studiofru as the original photographer. Photos are taken directly where plants, animals and certain locations are located.
             </Typography>
         </Item>
         <Item sx={{maxWidth:150, width:'100%'}}>
@@ -69,7 +69,7 @@ const classes = useStyles();
         </Item>
         <Item sx={{maxWidth:150, width:'100%'}}>
             <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
-                Profile
+                Company
             </Typography>
             <Typography variant="body1" gutterBottom>
                 <Link href="/tentang" underline="hover" color='inherit'>
