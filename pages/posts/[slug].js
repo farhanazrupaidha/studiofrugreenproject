@@ -115,6 +115,10 @@ export default function Post({ post, morePosts, preview }) {
                      <meta property="twitter:description" content={post.seo.description} />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image" content={post.seo.image.url} />
+                     <link rel="alternate" href={`https://studiofrugreenproject.com/posts/${post.slug}`} hreflang="id-ID" />
+                     <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en-US" />
+                     <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="x-default" />
+                     <meta name="robots" content="noindex, nofollow" />
                 </Head>
               <motion.div
                 className="progress-bar"

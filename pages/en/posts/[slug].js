@@ -99,7 +99,6 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="title" content={post.seo.title}></meta>
                      <meta name="description" content={post.seo.description} />
                      <meta name="keywords" content={post.seo.keywords} />
-                     <meta name="robots" content="index, follow" />
                      <meta name="language" content="en-US" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru" />                     
@@ -116,6 +115,10 @@ export default function Post({ post, morePosts, preview }) {
                      <meta property="twitter:description" content={post.seo.description} />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image" content={post.seo.image.url} />
+                     <link rel="alternate" href={`https://studiofrugreenproject.com/posts/${post.slug}`} hreflang="id-ID" />
+                     <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en-US" />
+                     <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="x-default" />
+                     <meta name="robots" content="index, follow" />
                 </Head>
               <motion.div
                 className="progress-bar"
