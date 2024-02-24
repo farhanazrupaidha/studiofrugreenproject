@@ -1,5 +1,6 @@
 import * as React from 'react';
 import dynamic from 'next/dynamic'
+import Script from 'next/script'
 
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -25,6 +26,10 @@ import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
+import Alert from '@mui/material/Alert';
+
+import SouthIcon from '@mui/icons-material/South';
+
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -71,32 +76,14 @@ ElevationScroll.propTypes = {
 function ResponsiveAppBar(props) {
   const classes = useStyles();
 
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
+  const handleClose = () => {
     setAnchorEl(null);
-    };
+  };
 
 
   return (
@@ -140,48 +127,42 @@ function ResponsiveAppBar(props) {
 
             <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
                 <Button
-                    onClick={handleOpenUserMenu}
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
+                    aria-controls={open ? 'basic-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    onClick={handleClick}
                 >
                     Spesies
                 </Button>
 
             <Menu
-              sx={{ mt: '35px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+              'aria-labelledby': 'basic-button',
+            }}
             >
-                <Link href="/flora" underline="hover" color="inherit">
-                  <MenuItem onClick={handleCloseUserMenu}>
+                <Link href="/flora" underline="hover" color="inherit" onClick={handleClose}>
+                  <MenuItem>
                     FLORA
                   </MenuItem>
                 </Link>
-                <Link href="/fauna" underline="hover" color="inherit">
-                  <MenuItem onClick={handleCloseUserMenu}>
+                <Link href="/fauna" underline="hover" color="inherit" onClick={handleClose}>
+                  <MenuItem>
                     FAUNA
                   </MenuItem>
                 </Link>
-                <Link href="/endemik" underline="hover" color="inherit">
-                <MenuItem onClick={handleCloseUserMenu}>
+                <Link href="/endemik" underline="hover" color="inherit" onClick={handleClose}>
+                <MenuItem>
                   ENDEMIK
                 </MenuItem>
                 </Link>
             </Menu>
 
                 <Button
-                    onClick={handleCloseNavMenu}
                     href="/sains"
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
@@ -189,7 +170,6 @@ function ResponsiveAppBar(props) {
                     Sains
                 </Button>
                 <Button
-                    onClick={handleCloseNavMenu}
                     href="/pengetahuan"
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
@@ -198,7 +178,6 @@ function ResponsiveAppBar(props) {
                 </Button>
 
                 <Button
-                    onClick={handleCloseNavMenu}
                     href="/wisata"
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
@@ -206,12 +185,18 @@ function ResponsiveAppBar(props) {
                     Wisata
                 </Button>
                 <Button
-                    onClick={handleCloseNavMenu}
                     href="/videos"
                     color= 'secondary'
                     sx={{ my: 2, mr:2, display: 'block' }}
                 >
                     Video
+                </Button>
+                <Button
+                    href="https://sociabuzz.com/studiofru/tribe"
+                    color= 'secondary'
+                    sx={{ my: 2, mr:2, display: 'block' }}
+                >
+                    DUKUNGAN
                 </Button>
                 <LocaleSwitch />
           </Box>
@@ -220,6 +205,22 @@ function ResponsiveAppBar(props) {
         </AppBar>
       </ElevationScroll>
       <Toolbar />
+      <Alert 
+        variant="filled" 
+        severity="info"  
+        action={
+          <Button color="inherit" size="small" endIcon={<SouthIcon />}>
+            DUKUNG
+          </Button>
+      }>
+        Hallo 🙂 Situs ini kebetulan sedang membutuhkan dukungan dari teman - teman yang baik hati untuk terus berlanjut. 
+        Dukungan berapa pun jumlahnya akan sangat berarti dan berharga. Terima kasih pada teman - teman yang telah mendukung untuk proyek ini terus berlanjut sehingga data - data keanekaragaman hayati dapat diakses dengan mudah dan kita dapat terus mengenal serta menghargai keberadaan mereka sebagai makhluk hidup yang mendiami tanah Indonesia.</Alert>
+      <Script type="text/javascript" src="https://storage.sociabuzz.com/storage/js/main/buttononwebsite/index.min.js" />
+      <Script
+        dangerouslySetInnerHTML={{
+          __html: `sbBoW.draw("studiofru","QmVyaSBEdWt1bmdhbg","position-bottom-middle","#22cc88","#FFFFFF")`,
+        }}
+      />
     </React.Fragment>
   );
 }

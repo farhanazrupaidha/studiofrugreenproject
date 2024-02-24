@@ -71,32 +71,14 @@ ElevationScroll.propTypes = {
 function ResponsiveAppBar(props) {
   const classes = useStyles();
 
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
+  const handleClose = () => {
     setAnchorEl(null);
-    };
+  };
 
 
   return (
@@ -140,41 +122,36 @@ function ResponsiveAppBar(props) {
 
             <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
                 <Button
-                    onClick={handleOpenUserMenu}
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
+                    aria-controls={open ? 'basic-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    onClick={handleClick}
                 >
                     Species
                 </Button>
 
             <Menu
-              sx={{ mt: '35px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+              'aria-labelledby': 'basic-button',
+            }}
             >
-                <Link href="/en/flora" underline="hover" color="inherit">
-                  <MenuItem onClick={handleCloseUserMenu}>
+                <Link href="/en/flora" underline="hover" color="inherit" onClick={handleClose}>
+                  <MenuItem>
                     FLORA
                   </MenuItem>
                 </Link>
-                <Link href="/en/fauna" underline="hover" color="inherit">
-                  <MenuItem onClick={handleCloseUserMenu}>
+                <Link href="/en/fauna" underline="hover" color="inherit" onClick={handleClose}>
+                  <MenuItem>
                     FAUNA
                   </MenuItem>
                 </Link>
-                <Link href="/en/endemic" underline="hover" color="inherit">
-                  <MenuItem onClick={handleCloseUserMenu}>
+                <Link href="/en/endemic" underline="hover" color="inherit" onClick={handleClose}>
+                  <MenuItem>
                     ENDEMIC
                   </MenuItem>
                 </Link>
