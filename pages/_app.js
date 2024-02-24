@@ -2,11 +2,22 @@ import '../styles/index.css';
 
 import React, { useEffect } from 'react'
 import Head from 'next/head'
+import Script from 'next/script'
 import posthog from 'posthog-js'
 
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import {  green, cyan, indigo, blueGrey } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
+import Button from '@mui/material/Button';
+import RecommendIcon from '@mui/icons-material/Recommend';
+
+const style = {
+  position: 'fixed',
+  height:'100%',
+  maxHeight: 500,
+  display:'block',
+  p:2
+};
 
 export const primary = "#00bfbf";
 export const black = "#111111";
@@ -98,6 +109,7 @@ const theme = responsiveFontSizes(ModeTheme);
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
       </Head>
       <CssBaseline />
+        <Button variant="contained" color="secondary" size="large" sx={{borderRadius: 5, position: 'fixed', bottom: "50px", left:'50%', transform: 'translate(-50%, -50%)', display:'block', boxShadow: 100, fontWeight: 'bold'}} href="https://sociabuzz.com/studiofru/support" target="_blank"><RecommendIcon sx={{mr:1}} />Beri Dukungan</Button>  
         <Component {...pageProps} />
     </ThemeProvider>
   </ColorModeContext.Provider>

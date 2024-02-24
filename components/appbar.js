@@ -1,6 +1,5 @@
 import * as React from 'react';
 import dynamic from 'next/dynamic'
-import Script from 'next/script'
 
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -29,6 +28,7 @@ import Avatar from '@mui/material/Avatar';
 import Alert from '@mui/material/Alert';
 
 import SouthIcon from '@mui/icons-material/South';
+import RecommendIcon from '@mui/icons-material/Recommend';
 
 import { makeStyles } from '@mui/styles';
 
@@ -209,18 +209,12 @@ function ResponsiveAppBar(props) {
         variant="filled" 
         severity="info"  
         action={
-          <Button color="inherit" size="small" endIcon={<SouthIcon />}>
+          <Button color="secondary" size="small" variant="contained" endIcon={<RecommendIcon />} href="https://sociabuzz.com/studiofru/support" target="_blank">
             DUKUNG
           </Button>
       }>
         Hallo 🙂 Situs ini kebetulan sedang membutuhkan dukungan dari teman - teman yang baik hati untuk terus berlanjut. 
         Dukungan berapa pun jumlahnya akan sangat berarti dan berharga. Terima kasih pada teman - teman yang telah mendukung untuk proyek ini terus berlanjut sehingga data - data keanekaragaman hayati dapat diakses dengan mudah dan kita dapat terus mengenal serta menghargai keberadaan mereka sebagai makhluk hidup yang mendiami tanah Indonesia.</Alert>
-      <Script type="text/javascript" src="https://storage.sociabuzz.com/storage/js/main/buttononwebsite/index.min.js" />
-      <Script
-        dangerouslySetInnerHTML={{
-          __html: `sbBoW.draw("studiofru","QmVyaSBEdWt1bmdhbg","position-bottom-middle","#22cc88","#FFFFFF")`,
-        }}
-      />
     </React.Fragment>
   );
 }
