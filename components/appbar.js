@@ -187,7 +187,7 @@ function ResponsiveAppBar(props) {
                 <Button
                     href="/videos"
                     color= 'secondary'
-                    sx={{ my: 2, mr:2, display: 'block' }}
+                    sx={{ my: 2, display: 'block' }}
                 >
                     Video
                 </Button>
