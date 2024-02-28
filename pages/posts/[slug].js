@@ -9,9 +9,6 @@ import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
 const ErrorPage = dynamic(() => import('components/errorpage'), {
   ssr: false,
 });
-const CommentBox = dynamic(() => import('components/comment-box'), {
-  ssr: false,
-});
 const Container = dynamic(() => import('components/container'));
 const PostBody = dynamic(() => import('components/post-body'));
 const PostImage = dynamic(() => import('components/post-image'), {
