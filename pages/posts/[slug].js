@@ -2,10 +2,14 @@ import { useRouter } from 'next/router'
 import * as React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import { DiscussionEmbed } from 'disqus-react';
 
 import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
 
 const ErrorPage = dynamic(() => import('components/errorpage'), {
+  ssr: false,
+});
+const CommentBox = dynamic(() => import('components/comment-box'), {
   ssr: false,
 });
 const Container = dynamic(() => import('components/container'));
@@ -135,10 +139,23 @@ export default function Post({ post, morePosts, preview }) {
               />
               <PostImage cloudinaryImageLibrary={post.cloudinaryImageLibrary} title={post.title} />
               <PostBody content={post.content} />   
-              <PostReference reference={post.reference} />    
+              <PostReference reference={post.reference} />  
             </article>
             <center>
             <Box sx={{mt:7}}>
+            <Box sx={{mt:5, maxWidth: 700, width:'100%'}}>
+              <Divider sx={{mb:5, maxWidth:300, width:'95%' }} />      
+              <DiscussionEmbed
+                shortname='studiofru-green-project'
+                config={
+                {
+                  url: post.url,
+                  identifier: post.id,
+                  title: post.title,
+                  }
+                }
+              />
+            </Box>               
             <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
             <Typography variant='h6' color="#ff0055">Bagikan catatan ini</Typography>
             <Box sx={{mb:5, mt:2}}>
