@@ -190,6 +190,14 @@ function ResponsiveAppBar(props) {
                 >
                     VIDEO
                 </Button>
+                <Button
+                    onClick={handleCloseNavMenu}
+                    href="https://sociabuzz.com/studiofru/tribe"
+                    color= 'secondary'
+                    sx={{ my: 2, mr:2, display: 'block' }}
+                >
+                    Support
+                </Button>                
                 <LocaleSwitch />
           </Box>
           <Search />

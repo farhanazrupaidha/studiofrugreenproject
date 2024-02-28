@@ -115,9 +115,9 @@ function DrawerToggle () {
                   </ListItem>
                   <Divider sx={{mr:5}} />
                   <ListItem disablePadding>
-                    <ListItemButton href="/forum">
+                    <ListItemButton href="https://sociabuzz.com/studiofru/tribe">
                       <ListItemText>
-                        Forum
+                        Dukungan
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
