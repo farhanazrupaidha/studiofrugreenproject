@@ -6,7 +6,7 @@ import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
 
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/X';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -33,8 +33,8 @@ export default function AppBottomBar () {
         alignItems="center"
       >
         <Item>
-        <IconButton href="https://twitter.com/studiofruworks" color="secondary" aria-label="Follow me on Twitter">
-            <TwitterIcon />
+        <IconButton href="https://twitter.com/studiofruworks" color="secondary" aria-label="Follow me on X">
+            <XIcon />
           </IconButton>
           <IconButton href="https://www.youtube.com/channel/UCX5J82L560fv5r5hslQwI-A" color="secondary" aria-label="Follow me on YouTube">
             <YouTubeIcon />

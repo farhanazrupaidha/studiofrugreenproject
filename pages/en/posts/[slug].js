@@ -46,7 +46,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
 
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -153,8 +153,8 @@ export default function Post({ post, morePosts, preview }) {
                     url={`https://studiofrugreenproject.com/en/posts/${post.slug}`}
                     title={post.seo.title}
                 >
-                <LightTooltip disableFocusListener title="Share it on Twitter">
-                    <IconButton><TwitterIcon color="primary" size="small" /></IconButton>
+                <LightTooltip disableFocusListener title="Share it on X">
+                    <IconButton><XIcon color="primary" size="small" /></IconButton>
                 </LightTooltip>
                 </TwitterShareButton>
                 <FacebookShareButton
