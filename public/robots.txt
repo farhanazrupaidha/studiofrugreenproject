@@ -14,9 +14,6 @@ Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Daun-Ungu-Graptophyllum-pictum
 Disallow: /posts/10-Jenis-Tanah-di-Wilayah-Indonesia
 Disallow: /posts/Deskripsi-Asal-dan-Kegunaan-Jati-Tectona-grandis
 Disallow: /englishversion
-Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Orok-Orok-Crotalaria-juncea
-Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Putri-Malu-Mimosa-pudica
-Disallow: /posts/apa-itu-ayam-dan-bagaimana-sejarahnya
 Disallow: /en/knowledge
 Disallow: /en/videos
 Disallow: /404
@@ -26,7 +23,6 @@ Disallow: /tentang
 Disallow: /kontak
 Disallow: /kontribusi
 Disallow: /disclaimer
-Disallow: /posts/deskripsi-asal-dan-manfaat-pacing-hibiscus-rosa-sinensis
 
 
 # Sitemaps
