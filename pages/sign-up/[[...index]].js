@@ -51,9 +51,9 @@ export default function Page() {
                      <meta name="twitter:image" content="https://studiofrugreenproject.com/images/tanah.jpg" />
                </Head>  
    
-    <Box sx={{m:'auto', mt:5}}>
+    <Box sx={{m:'auto', mt:5, mb:5}}>
           <center>
-              <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold"}}>
+              <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold", mb:5}}>
                   <Typewriter
                     options={{
                       strings: ['Daftar', 'Sign Up'],
@@ -62,11 +62,6 @@ export default function Page() {
                     }}
                   />
               </Typography>
-          </center>
-    </Box>
-                         
-    <Box sx={{p:5}}>
-      <center>
         <SignUp path="/sign-up" routing="path" signInUrl="/sign-in" />
         <Button href="/" sx={{mt:5}} variant="contained">Kembali/Back</Button>
       </center>

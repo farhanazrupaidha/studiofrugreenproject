@@ -33,9 +33,9 @@ export default function Page() {
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image" content="https://studiofrugreenproject.com/images/tanah.jpg" />
                </Head>      
-      <Box sx={{m:'auto', mt:5}}>
+      <Box sx={{m:'auto', mt:5, mb:5}}>
           <center>
-              <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold"}}>
+              <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold", mb:5}}>
                   <Typewriter
                     options={{
                       strings: ['Masuk', 'Sign In'],
@@ -44,11 +44,7 @@ export default function Page() {
                     }}
                   />
               </Typography>
-          </center>
-    </Box>
-                         
-    <Box sx={{p:5}}>
-      <center>
+
         <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
         <Button href="/" sx={{mt:5}} variant="contained">Kembali/Back</Button>
       </center>
