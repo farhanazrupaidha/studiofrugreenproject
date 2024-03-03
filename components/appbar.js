@@ -1,5 +1,9 @@
 import * as React from 'react';
 import dynamic from 'next/dynamic'
+import {
+  SignedIn,
+  SignedOut
+} from "@clerk/nextjs";
 
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -27,7 +31,6 @@ import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
 import Alert from '@mui/material/Alert';
 
-import SouthIcon from '@mui/icons-material/South';
 import RecommendIcon from '@mui/icons-material/Recommend';
 
 import { makeStyles } from '@mui/styles';
@@ -199,6 +202,14 @@ function ResponsiveAppBar(props) {
                     DUKUNGAN
                 </Button>
                 <LocaleSwitch />
+                <SignedIn>
+                {/* Mount the UserButton component */}
+                <Button color="secondary" href="/dashboard" sx={{ my: 2, display: 'block', mr:1 }}>Beranda</Button>
+                </SignedIn>
+                <SignedOut>
+                  {/* Signed out users get sign in button */}
+                  <Button color="secondary" href="/sign-in" sx={{ my: 2, display: 'block' }}>Masuk</Button>
+                </SignedOut>                  
           </Box>
           <Search />
           </Toolbar>
@@ -213,8 +224,9 @@ function ResponsiveAppBar(props) {
             DUKUNG
           </Button>
       }>
-        Hallo 🙂 Situs ini kebetulan sedang membutuhkan dukungan dari teman - teman yang baik hati untuk terus berlanjut. 
-        Dukungan berapa pun jumlahnya akan sangat berarti dan berharga. Terima kasih pada teman - teman yang telah mendukung untuk proyek ini terus berlanjut sehingga data - data keanekaragaman hayati dapat diakses dengan mudah dan kita dapat terus mengenal serta menghargai keberadaan mereka sebagai makhluk hidup yang mendiami tanah Indonesia.</Alert>
+        Hallo 🙂 Proyek situs ini kebetulan sedang membutuhkan dukungan dari teman - teman yang baik hati untuk terus berlanjut. 
+        Dukungan berapa pun jumlahnya akan sangat berarti dan berharga. 
+      </Alert>
     </React.Fragment>
   );
 }

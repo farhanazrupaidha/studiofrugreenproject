@@ -1,12 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "export": "next build && next export"
   },
   "dependencies": {
     "@apollo/client": "^3.7.16",
+    "@clerk/nextjs": "^4.29.9",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.15.11",

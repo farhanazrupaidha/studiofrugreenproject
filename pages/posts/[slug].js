@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import * as React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import { DiscussionEmbed } from 'disqus-react';
 
 import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
 
@@ -139,20 +138,7 @@ export default function Post({ post, morePosts, preview }) {
               <PostReference reference={post.reference} />  
             </article>
             <center>
-            <Box sx={{mt:7}}>
-            <Box sx={{mt:5, maxWidth: 700, width:'100%'}}>
-              <Divider sx={{mb:5, maxWidth:300, width:'95%' }} />      
-              <DiscussionEmbed
-                shortname='studiofru-green-project'
-                config={
-                {
-                  url: post.url,
-                  identifier: post.id,
-                  title: post.title,
-                  }
-                }
-              />
-            </Box>               
+            <Box sx={{mt:7}}>              
             <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
             <Typography variant='h6' color="#ff0055">Bagikan catatan ini</Typography>
             <Box sx={{mb:5, mt:2}}>

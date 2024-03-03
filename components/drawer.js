@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
+import {
+  SignedIn,
+  SignedOut
+} from "@clerk/nextjs";
 
 const LocaleSwitch = dynamic(() => import('components/locale-switch'), {
   ssr: false,
@@ -129,7 +133,17 @@ function DrawerToggle () {
                     </ListItemButton>
                   </ListItem>
               </List>
-        <LocaleSwitch />   
+        <LocaleSwitch />  
+        <center>
+          <SignedIn>
+          {/* Mount the UserButton component */}
+            <Button color="secondary" href="/dashboard" sx={{ my: 2, display: 'block', mr:1 }}>Beranda</Button>
+          </SignedIn>
+          <SignedOut>
+          {/* Signed out users get sign in button */}
+            <Button color="secondary" href="/sign-in" sx={{ my: 2, display: 'block' }}>Masuk</Button>
+          </SignedOut>  
+        </center>                        
         <Button color="inherit" onClick={() => setOpen(false)}>X Tutup</Button>
       </Drawer>
     </div>

@@ -1,5 +1,9 @@
 import * as React from 'react';
 import dynamic from 'next/dynamic'
+import {
+  SignedIn,
+  SignedOut
+} from "@clerk/nextjs";
 
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -25,6 +29,10 @@ import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
+import Alert from '@mui/material/Alert';
+
+import RecommendIcon from '@mui/icons-material/Recommend';
+
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -158,7 +166,6 @@ function ResponsiveAppBar(props) {
             </Menu>
 
                 <Button
-                    onClick={handleCloseNavMenu}
                     href="/en/science"
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
@@ -166,7 +173,6 @@ function ResponsiveAppBar(props) {
                     SCIENCE
                 </Button>
                 <Button
-                    onClick={handleCloseNavMenu}
                     href="/en/knowledge"
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
@@ -175,7 +181,6 @@ function ResponsiveAppBar(props) {
                 </Button>
 
                 <Button
-                    onClick={handleCloseNavMenu}
                     href="/en/travel"
                     color= 'secondary'
                     sx={{ my: 2, display: 'block' }}
@@ -183,7 +188,6 @@ function ResponsiveAppBar(props) {
                     TRAVEL
                 </Button>
                 <Button
-                    onClick={handleCloseNavMenu}
                     href="/en/videos"
                     color= 'secondary'
                     sx={{ my: 2, mr:2, display: 'block' }}
@@ -191,20 +195,38 @@ function ResponsiveAppBar(props) {
                     VIDEO
                 </Button>
                 <Button
-                    onClick={handleCloseNavMenu}
                     href="https://sociabuzz.com/studiofru/tribe"
                     color= 'secondary'
                     sx={{ my: 2, mr:2, display: 'block' }}
                 >
-                    Support
+                    SUPPORT
                 </Button>                
                 <LocaleSwitch />
+                <SignedIn>
+                {/* Mount the UserButton component */}
+                <Button color="secondary" href="/dashboard" sx={{ my: 2, display: 'block', mr:1 }}>Dashboard</Button>
+                </SignedIn>
+                <SignedOut>
+                  {/* Signed out users get sign in button */}
+                  <Button color="secondary" href="/sign-in" sx={{ my: 2, display: 'block' }}>Sign In</Button>
+                </SignedOut>  
           </Box>
           <Search />
           </Toolbar>
         </AppBar>
       </ElevationScroll>
       <Toolbar />
+      <Alert 
+        variant="filled" 
+        severity="info"  
+        action={
+          <Button color="secondary" size="small" variant="contained" endIcon={<RecommendIcon />} href="https://sociabuzz.com/studiofru/support" target="_blank">
+            SUPPORT
+          </Button>
+      }>
+        Hello 🙂 This site as a project is currently need your support to continue.
+         Any amount of support will be very meaningful and valuable.
+      </Alert>      
     </React.Fragment>
   );
 }
