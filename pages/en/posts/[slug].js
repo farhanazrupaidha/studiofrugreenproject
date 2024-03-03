@@ -200,7 +200,12 @@ export default function Post({ post, morePosts, preview }) {
               <IconButton href="https://www.facebook.com/studiofruworks" color="primary" aria-label="Follow me on Facebook">
                 <FacebookIcon />
               </IconButton> 
-              </LightTooltip>     
+              </LightTooltip>  
+              <LightTooltip disableFocusListener title="Follow me on X">
+              <IconButton href="https://twitter.com/studiofruworks" color="primary" aria-label="Follow me on X">
+                <XIcon />
+              </IconButton> 
+              </LightTooltip>                   
               </Stack>       
             </Box>
             </center>

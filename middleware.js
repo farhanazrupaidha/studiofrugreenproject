@@ -22,8 +22,24 @@ export default authMiddleware({
     "/videos",
     "/wisata",
     "/posts/:path*",
-    "/lokasi/:path*",
-    "en/:path*"
+    "/lokasi/bali",
+    "/lokasi/jawabarat",
+    "/lokasi/jawatengah",
+    "/lokasi/jawatimur",
+    "/lokasi/setupatok",
+    "/en/locations/bali",
+    "/en/locations/centraljava",
+    "/en/locations/eastjava",
+    "/en/locations/setupatok",
+    "/en/locations/westjava",
+    "/en/endemic",
+    "/en/fauna",
+    "/en/flora",
+    "/en/knowledge",
+    "/en/science",
+    "/en/travel",
+    "/en/videos",
+    "/en/posts/:path*"
   ],
 });
  
