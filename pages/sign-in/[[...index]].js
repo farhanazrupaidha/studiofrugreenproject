@@ -2,28 +2,15 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { SignIn } from "@clerk/nextjs";
 
-const Layout = dynamic(() => import('../../components/layout'));
+import Typewriter from 'typewriter-effect';
 
 import Box from '@mui/material/Box';
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  overflowY:'auto',
-  height:'100%',
-  maxHeight: 600,
-  display:'block',
-  width: '100%',
-  maxWidth:580,
-  boxShadow: 100,
-  borderRadius: 5
-};
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 export default function Page() {
   return (
-    <Layout>
+    <>
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
@@ -46,11 +33,26 @@ export default function Page() {
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image" content="https://studiofrugreenproject.com/images/tanah.jpg" />
                </Head>      
-      <Box sx={style}>
-        <center>
-          <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
-        </center>
-      </Box>
-    </Layout>     
+      <Box sx={{m:'auto', mt:5}}>
+          <center>
+              <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold"}}>
+                  <Typewriter
+                    options={{
+                      strings: ['Masuk', 'Sign In'],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+              </Typography>
+          </center>
+    </Box>
+                         
+    <Box sx={{p:5}}>
+      <center>
+        <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
+        <Button href="/" sx={{mt:5}} variant="contained">Kembali/Back</Button>
+      </center>
+    </Box>        
+    </>     
   ) 
 }

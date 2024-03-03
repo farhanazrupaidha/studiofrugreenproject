@@ -4,7 +4,11 @@ import { SignUp } from "@clerk/nextjs";
 
 const Layout = dynamic(() => import('../../components/layout'));
 
+import Typewriter from 'typewriter-effect';
+
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 const style = {
   position: 'absolute',
@@ -23,7 +27,7 @@ const style = {
 
 export default function Page() {
   return (
-  <Layout> 
+  <> 
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
@@ -45,12 +49,29 @@ export default function Page() {
                      <meta property="twitter:description" content="Daftar untuk menjadi member Studiofru | Green Project."/>
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image" content="https://studiofrugreenproject.com/images/tanah.jpg" />
-               </Head>    
-    <Box sx={style}>
+               </Head>  
+   
+    <Box sx={{m:'auto', mt:5}}>
+          <center>
+              <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold"}}>
+                  <Typewriter
+                    options={{
+                      strings: ['Daftar', 'Sign Up'],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+              </Typography>
+          </center>
+    </Box>
+                         
+    <Box sx={{p:5}}>
       <center>
         <SignUp path="/sign-up" routing="path" signInUrl="/sign-in" />
+        <Button href="/" sx={{mt:5}} variant="contained">Kembali/Back</Button>
       </center>
     </Box>  
-  </Layout>     
+    
+  </>     
   ) 
 }
