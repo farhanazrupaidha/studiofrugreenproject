@@ -24,32 +24,28 @@ const style = {
 export default function Page() {
   return (
   <Layout> 
-      <Head
-        defaultTitle="JackPlan"
-        >
-          <title>JackPlan - Sign Up</title>
-          <meta name="title" content="JackPlan - Sign Up" />
-          <meta name="description" content="Sign up to become member." />
-          <meta name="keywords" content="studiofru, jackplan, travel, travel planner, trip, journal, sign up page" />
-          <meta name="robots" content="noindex, nofollow" />
-          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />                     
-          <meta name="language" content="en-US" />
-          <link rel="alternate" href="https://jackplan.com/sign-up" hreflang="en-US" />
-          <link rel="alternate" href="https://jackplan.com/sign-up" hreflang="x-default" />
-          <meta name="author" content="Studiofru | JackPlan" />
-          <meta property="image" content="https://jackplan.com/images/jackplan - seo image - 2.png" />
-          <meta property="og:url" content="https://jackplan.com/sign-up" />
-          <meta property="og:title" content="JackPlan - Sign Up" />
-          <meta property="og:description" content="Sign up to become member." />
-          <meta property="og:site_name" content="JackPlan" />
-          <meta property="og:image" content="https://jackplan.com/images/jackplan - seo image - 2.png" />
-          <meta name="og:type" content="website" />
-          <meta name="twitter:site" content="@studiofruworks" />
-          <meta name="twitter:title" content="JackPlan - Sign Up" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image:src" content="https://jackplan.com/images/jackplan - seo image - 2.png" />
-      </Head>     
+               <Head
+                     defaultTitle="Studiofru | Green Project"
+                   >
+                     <title>Studiofru | Green Project - Daftar</title>
+                     <meta name="title" content="Studiofru | Green Project - Daftar" />
+                     <meta name="description" content="Daftar untuk menjadi member Studiofru | Green Project." />
+                     <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian, daftar, sign up" />
+                     <meta name="robots" content="index, follow" />                    
+                     <meta name="author" content="Studiofru | Green Project" /> 
+                     <meta property="image" content="https://studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta property="og:url" content="https://studiofrugreenproject.com/" />
+                     <meta property="og:title" content="Studiofru | Green Project - Daftar" />
+                     <meta property="og:description" content="Daftar untuk menjadi member Studiofru | Green Project."/>
+                     <meta property="og:site_name" content="Studiofru | Green Project - Ensiklopedia Keanekaragaman Hayati" />
+                     <meta property="og:image" content="https://studiofrugreenproject.com/images/tanah.jpg" />
+                     <meta name="og:type" content="website" />
+                     <meta name="twitter:site" content="@studiofruworks" />
+                     <meta name="twitter:title" content="Studiofru | Green Project - Daftar" />
+                     <meta property="twitter:description" content="Daftar untuk menjadi member Studiofru | Green Project."/>
+                     <meta name="twitter:card" content="summary_large_image" />
+                     <meta name="twitter:image" content="https://studiofrugreenproject.com/images/tanah.jpg" />
+               </Head>    
     <Box sx={style}>
       <center>
         <SignUp path="/sign-up" routing="path" signInUrl="/sign-in" />
