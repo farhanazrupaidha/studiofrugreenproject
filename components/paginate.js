@@ -23,7 +23,7 @@ return (
 <>
 			<ButtonGroup  variant="contained" sx={{borderRadius: 5, mb:10}} color="secondary" aria-label="medium secondary button group">
 				<Button onClick={previousPage} className="page-number">
-					Terbaru <KeyboardArrowLeftIcon />
+				<KeyboardArrowLeftIcon /> Terbaru
 				</Button>
 				<Button onClick={nextPage} className="page-number">
 					Terdahulu <KeyboardArrowRightIcon />
