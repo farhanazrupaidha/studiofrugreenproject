@@ -217,17 +217,6 @@ function ResponsiveAppBar(props) {
         </AppBar>
       </ElevationScroll>
       <Toolbar />
-      <Alert 
-        variant="filled" 
-        severity="info"  
-        action={
-          <Button color="secondary" size="small" variant="contained" endIcon={<RecommendIcon />} href="https://sociabuzz.com/studiofru/support" target="_blank">
-            DUKUNG
-          </Button>
-      }>
-        Hallo 🙂 Proyek situs ini kebetulan sedang membutuhkan dukungan dari teman - teman yang baik hati untuk terus berlanjut. 
-        Dukungan berapa pun jumlahnya akan sangat berarti dan berharga. 
-      </Alert>
     </React.Fragment>
   );
 }

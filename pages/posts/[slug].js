@@ -34,6 +34,8 @@ const Location = dynamic(() => import('components/location'), {
 const ShareButton = dynamic(() => import('components/socialsharebutton'), {
   ssr: false,
 });
+const AdsterraBannerDesktop = dynamic(() => import('components/adsterra-banner-desktop'));
+const AdsterraBannerMobile = dynamic(() => import('components/adsterra-banner-mobile'));
 
 import { motion, useScroll } from "framer-motion"
 
@@ -126,18 +128,12 @@ export default function Post({ post, morePosts, preview }) {
               />
               <Box sx={{mt:5, mb:5}}>
                 <center>
-                  <script dangerouslySetInnerHTML={{
-                    __html: `
-                    atOptions = {
-                      'key' : 'da63cf0c73cf0fedf2d8d957d26c0f2b',
-                      'format' : 'iframe',
-                      'height' : 90,
-                      'width' : 728,
-                      'params' : {}
-                    };
-                    document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/da63cf0c73cf0fedf2d8d957d26c0f2b/invoke.js"></scr' + 'ipt>');
-                    `,
-                  }} />
+                  <div class ="mobileHide">
+                    <AdsterraBannerDesktop />
+                  </div>
+                  <div class ="mobileShow">
+                    <AdsterraBannerMobile />
+                  </div>                  
                 </center>
               </Box>
               <PostHeader
@@ -147,23 +143,7 @@ export default function Post({ post, morePosts, preview }) {
                 date={post.date}
                 updatedAt={post.updatedAt}
                 author={post.author}
-              />
-              <Box sx={{mt:5, mb:5}}>
-                <center>
-                  <script dangerouslySetInnerHTML={{
-                    __html: `
-                    atOptions = {
-                      'key' : 'da63cf0c73cf0fedf2d8d957d26c0f2b',
-                      'format' : 'iframe',
-                      'height' : 90,
-                      'width' : 728,
-                      'params' : {}
-                    };
-                    document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/da63cf0c73cf0fedf2d8d957d26c0f2b/invoke.js"></scr' + 'ipt>');
-                    `,
-                  }} />
-                </center>
-              </Box>              
+              />             
               <PostImage cloudinaryImageLibrary={post.cloudinaryImageLibrary} title={post.title} />
               <PostBody content={post.content} />   
               <PostReference reference={post.reference} />  

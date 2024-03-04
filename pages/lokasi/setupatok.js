@@ -19,8 +19,10 @@ const SectionSeparator = dynamic(() => import('components/section-separator'), {
 });
 const Hero = dynamic(() => import('components/hero-setupatok'));
 
+const AdsterraBannerDesktop = dynamic(() => import('components/adsterra-banner-desktop'));
+const AdsterraBannerMobile = dynamic(() => import('components/adsterra-banner-mobile'));
+
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
 
 export default function Index({ posts, preview }) {
 
@@ -144,6 +146,16 @@ export default function Index({ posts, preview }) {
             </h2>
           <Hero />
           <SectionSeparator />
+          <Box sx={{mt:5, mb:5}}>
+            <center>
+              <div class ="mobileHide">
+                <AdsterraBannerDesktop />
+              </div>
+              <div class ="mobileShow">
+                <AdsterraBannerMobile />
+              </div>                  
+            </center>
+          </Box>        
           <Location />
 			{blogPosts ? (
 			<Box>
