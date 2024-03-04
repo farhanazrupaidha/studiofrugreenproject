@@ -2,7 +2,8 @@ import * as React from 'react';
 import dynamic from 'next/dynamic'
 import {
   SignedIn,
-  SignedOut
+  SignedOut,
+  UserButton
 } from "@clerk/nextjs";
 
 import PropTypes from 'prop-types';
@@ -204,7 +205,7 @@ function ResponsiveAppBar(props) {
                 <LocaleSwitch />
                 <SignedIn>
                 {/* Mount the UserButton component */}
-                <Button color="secondary" href="/" sx={{ my: 2, display: 'block', mr:1 }}>Beranda</Button>
+                <Button color="secondary" href="/" sx={{ my: 2, display: 'block', mr:1 }}><UserButton /></Button>
                 </SignedIn>
                 <SignedOut>
                   {/* Signed out users get sign in button */}
