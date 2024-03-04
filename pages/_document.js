@@ -54,6 +54,7 @@ export default class MyDocument extends Document {
                 });
                 `,
             }} />
+            <meta name="google-adsense-account" content="ca-pub-1624631757856478"/>
             {/* google adsense */}  
         </Head>
         <body>
