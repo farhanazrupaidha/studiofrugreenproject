@@ -7,7 +7,6 @@ User-agent: *
 Disallow: /en/knowledge
 Disallow: /en/videos
 Disallow: /404
-Disallow: /forum
 Disallow: /termsofuse
 Disallow: /tentang
 Disallow: /kontak
