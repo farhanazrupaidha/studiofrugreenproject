@@ -119,7 +119,6 @@ export default function Post({ post, morePosts, preview }) {
                      <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en-US" />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="x-default" />
                      <meta name="robots" content="index, follow" />
-                     <meta name="googlebot" content="noindex" />
                 </Head>
               <motion.div
                 className="progress-bar"

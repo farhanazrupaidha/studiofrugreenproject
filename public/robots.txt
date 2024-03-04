@@ -4,16 +4,6 @@ Allow: /
 
 # *
 User-agent: *
-Disallow: /posts/Pentingnya-Tanah
-Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Super-Napier-Grass-Pakchong
-Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Sambiloto-Andrographis-paniculata
-Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Kelor-Moringa-oleifera
-Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Kembang-Kantil-Cempaka-Magnolia-champaca
-Disallow: /posts/Deskripsi-Asal-dan-Manfaat-Bunga-Teratai-Nymphaeaceae
-Disallow: /posts/Deskripsi-Asal-dan-Khasiat-Daun-Ungu-Graptophyllum-pictum
-Disallow: /posts/10-Jenis-Tanah-di-Wilayah-Indonesia
-Disallow: /posts/Deskripsi-Asal-dan-Kegunaan-Jati-Tectona-grandis
-Disallow: /englishversion
 Disallow: /en/knowledge
 Disallow: /en/videos
 Disallow: /404
