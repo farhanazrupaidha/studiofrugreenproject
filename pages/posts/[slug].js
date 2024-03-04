@@ -124,6 +124,22 @@ export default function Post({ post, morePosts, preview }) {
                 className="progress-bar"
                 style={{ scaleX: scrollYProgress }}
               />
+              <Box sx={{mt:5, mb:5}}>
+                <center>
+                  <script dangerouslySetInnerHTML={{
+                    __html: `
+                    atOptions = {
+                      'key' : 'da63cf0c73cf0fedf2d8d957d26c0f2b',
+                      'format' : 'iframe',
+                      'height' : 90,
+                      'width' : 728,
+                      'params' : {}
+                    };
+                    document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/da63cf0c73cf0fedf2d8d957d26c0f2b/invoke.js"></scr' + 'ipt>');
+                    `,
+                  }} />
+                </center>
+              </Box>
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
@@ -132,6 +148,22 @@ export default function Post({ post, morePosts, preview }) {
                 updatedAt={post.updatedAt}
                 author={post.author}
               />
+              <Box sx={{mt:5, mb:5}}>
+                <center>
+                  <script dangerouslySetInnerHTML={{
+                    __html: `
+                    atOptions = {
+                      'key' : 'da63cf0c73cf0fedf2d8d957d26c0f2b',
+                      'format' : 'iframe',
+                      'height' : 90,
+                      'width' : 728,
+                      'params' : {}
+                    };
+                    document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/da63cf0c73cf0fedf2d8d957d26c0f2b/invoke.js"></scr' + 'ipt>');
+                    `,
+                  }} />
+                </center>
+              </Box>              
               <PostImage cloudinaryImageLibrary={post.cloudinaryImageLibrary} title={post.title} />
               <PostBody content={post.content} />   
               <PostReference reference={post.reference} />  
@@ -209,6 +241,13 @@ export default function Post({ post, morePosts, preview }) {
               </Stack>       
             </Box>
             </center>
+        <SectionSeparator />
+        <Box sx={{mt:5, mb:5}}>
+        <center>
+          <script async="async" data-cfasync="false" src="//pl22692592.profitablegatecpm.com/47f63e668a1eda1f44ac16b60d1e0850/invoke.js"></script>
+          <div id="container-47f63e668a1eda1f44ac16b60d1e0850"></div>
+        </center>           
+        </Box>
         <SectionSeparator />
         <Location />
         <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">

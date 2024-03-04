@@ -8,9 +8,9 @@ import RecommendIcon from '@mui/icons-material/Recommend';
 
 export default function Layout({ preview, children }) {
   return (
-  <html lang="id" suppressHydrationWarning>
+  <>
     <ResponsiveAppBar />
-    <div className="min-h-screen">
+    <div className="min-h-screen">   
     <Button 
         variant="contained" 
         color="secondary" 
@@ -25,14 +25,14 @@ export default function Layout({ preview, children }) {
           boxShadow: 100, 
           fontWeight: 'bold'
           }} 
-          href="https://sociabuzz.com/studiofru/support" 
+          href="https://www.profitablegatecpm.com/uk0vqgawc?key=451d8c17e922585785b1275ac708ea0f" 
           target="_blank">
             <RecommendIcon sx={{mr:1}} />
             Beri Dukungan
         </Button>       
-        <main>{children}</main>
+          {children}
     </div>
     <Footer />
-  </html>
+  </>
   )
 }
