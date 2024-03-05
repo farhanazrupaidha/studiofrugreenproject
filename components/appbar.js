@@ -205,7 +205,7 @@ function ResponsiveAppBar(props) {
                 <LocaleSwitch />
                 <SignedIn>
                 {/* Mount the UserButton component */}
-                <Button color="secondary" sx={{ my: 2, display: 'block', mr:1 }}><UserButton /></Button>
+                <Button color="secondary" sx={{ display: 'block', mr:1 }}><UserButton /></Button>
                 </SignedIn>
                 <SignedOut>
                   {/* Signed out users get sign in button */}
