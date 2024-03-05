@@ -9,7 +9,6 @@ import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/s
 import {  green, cyan, indigo, blueGrey } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
 
-
 export const primary = "#00bfbf";
 export const black = "#111111";
 export const white = "#fafafa";

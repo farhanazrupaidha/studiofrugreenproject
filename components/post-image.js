@@ -89,15 +89,17 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
         {cloudinaryImageLibrary.map((pic) => (
           <SplideSlide>
             <Box sx={{ m:'auto', textAlign: 'center' }}>
-              <CldImage
-                width={pic.width/1.5}
-                height={pic.height/1.5}
-                src={pic.public_id}
-                alt={title}
-                blurDataURL={pic.public_id}
-                placeholder='blur'
-                loading="lazy"
-              />
+              <center>
+                <CldImage
+                  width={pic.width/1.5}
+                  height={pic.height/1.5}
+                  src={pic.public_id}
+                  alt={title}
+                  blurDataURL={pic.public_id}
+                  placeholder='blur'
+                  loading="lazy"
+                />
+              </center>
             </Box>
           </SplideSlide>    
         ))}                                              

@@ -34,6 +34,8 @@ const RecentWisata = dynamic(() => import('components/recent-wisata'), {
 const Paginate = dynamic(() => import('components/paginate'), {
   ssr: false,
 });
+const AdsterraBannerDesktop = dynamic(() => import('components/adsterra-banner-desktop'));
+const AdsterraBannerMobile = dynamic(() => import('components/adsterra-banner-mobile'));
 
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
@@ -172,6 +174,16 @@ export default function Index({ posts, preview }) {
                Catatan Terbaru
             </h2>
           </Box>
+          <Box sx={{mt:5, mb:5}}>
+            <center>
+              <div class ="mobileHide">
+                <AdsterraBannerDesktop />
+              </div>
+              <div class ="mobileShow">
+                <AdsterraBannerMobile />
+              </div>                  
+            </center>
+          </Box>             
           <Location />
 			{blogPosts ? (
 			<Box>

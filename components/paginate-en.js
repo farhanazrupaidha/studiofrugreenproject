@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
@@ -20,18 +21,19 @@ const Paginate = ({
 	}
 
 return (
-<>
-			<ButtonGroup  variant="contained" sx={{borderRadius: 5, mb:10}} color="secondary" backgroundColor="white" aria-label="medium secondary button group">
-				<Button onClick={previousPage} className="page-number">
-				<KeyboardArrowLeftIcon /> Newer 
+	<Box>
+		<Stack spacing={{ xs: 1, sm: 1 }} direction="row" useFlexGap flexWrap="wrap" justifyContent="center" alignItems="center">
+				<Button onClick={previousPage} className="page-number" variant="outlined" sx={{borderRadius: 5, mb:10}} color="secondary">
+					<KeyboardArrowLeftIcon /> Newer
 				</Button>
-				<Button onClick={nextPage} className="page-number">
+				<Button onClick={nextPage} className="page-number" variant="outlined" sx={{borderRadius: 5, mb:10}} color="secondary">
 					Older <KeyboardArrowRightIcon />
 				</Button>
-			</ButtonGroup>
-    </>
+		</Stack>		
+    </Box>
 	);
 };
 
 export default Paginate;
+
 
