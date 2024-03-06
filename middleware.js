@@ -23,45 +23,11 @@ export default authMiddleware({
     // Allow users visiting public routes to access them
     return NextResponse.next();
   },
-    
+
   // Routes that can always be accessed, and have
   // no authentication information
-  publicRoutes: [
-    "/", 
-    "/404",  
-    "/disclaimer", 
-    "/en",
-    "/endemik",
-    "/fauna",
-    "/flora",
-    "kontak",
-    "/kontribusi",
-    "/pengetahuan",
-    "/sains",
-    "/tentang",
-    "/termsofuse",
-    "/videos",
-    "/wisata",
-    "/posts/:path*",
-    "/lokasi/bali",
-    "/lokasi/jawabarat",
-    "/lokasi/jawatengah",
-    "/lokasi/jawatimur",
-    "/lokasi/setupatok",
-    "/en/locations/bali",
-    "/en/locations/centraljava",
-    "/en/locations/eastjava",
-    "/en/locations/setupatok",
-    "/en/locations/westjava",
-    "/en/endemic",
-    "/en/fauna",
-    "/en/flora",
-    "/en/knowledge",
-    "/en/science",
-    "/en/travel",
-    "/en/videos",
-    "/en/posts/:path*"
-  ],
+  publicRoutes: (req) => !req.url.includes("/endemik"),
+  debug: true
 });
  
 export const config = {
