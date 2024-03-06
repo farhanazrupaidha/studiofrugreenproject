@@ -26,8 +26,7 @@ export default authMiddleware({
 
   // Routes that can always be accessed, and have
   // no authentication information
-  publicRoutes: (req) => !req.url.includes("/endemik"),
-  debug: true
+  publicRoutes: (req) => !req.url.includes("/endemik")
 });
  
 export const config = {

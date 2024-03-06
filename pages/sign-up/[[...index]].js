@@ -27,7 +27,7 @@ const style = {
 
 export default function Page() {
   return (
-  <> 
+  <Layout> 
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
@@ -53,20 +53,19 @@ export default function Page() {
    
     <Box sx={{m:'auto', mt:5, mb:5}}>
           <center>
-              <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold", mb:5}}>
+              <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold", mb:10}}>
                   <Typewriter
                     options={{
-                      strings: ['Daftar', 'Sign Up'],
+                      strings: ['Daftar'],
                       autoStart: true,
                       loop: true,
                     }}
                   />
               </Typography>
         <SignUp path="/sign-up" routing="path" signInUrl="/sign-in" />
-        <Button href="/" sx={{mt:5}} variant="contained">Kembali/Back</Button>
       </center>
     </Box>  
     
-  </>     
+  </Layout>     
   ) 
 }

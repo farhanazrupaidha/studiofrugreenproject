@@ -2,6 +2,8 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { SignIn } from "@clerk/nextjs";
 
+import Layout from 'components/layout';
+
 import Typewriter from 'typewriter-effect';
 
 import Box from '@mui/material/Box';
@@ -10,7 +12,7 @@ import Button from '@mui/material/Button';
 
 export default function Page() {
   return (
-    <>
+    <Layout>
                <Head
                      defaultTitle="Studiofru | Green Project"
                    >
@@ -35,20 +37,18 @@ export default function Page() {
                </Head>      
       <Box sx={{m:'auto', mt:5, mb:5}}>
           <center>
-              <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold", mb:5}}>
+              <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold", mb:10}}>
                   <Typewriter
                     options={{
-                      strings: ['Masuk', 'Sign In'],
+                      strings: ['Masuk untuk mendapatkan akses penuh'],
                       autoStart: true,
                       loop: true,
                     }}
                   />
               </Typography>
-
         <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
-        <Button href="/" sx={{mt:5}} variant="contained">Kembali/Back</Button>
       </center>
     </Box>        
-    </>     
+    </Layout>     
   ) 
 }
