@@ -1,10 +1,5 @@
 import * as React from 'react';
 import dynamic from 'next/dynamic'
-import {
-  SignedIn,
-  SignedOut,
-  UserButton
-} from "@clerk/nextjs";
 
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -202,15 +197,7 @@ function ResponsiveAppBar(props) {
                 >
                     DUKUNGAN
                 </Button>
-                <LocaleSwitch />
-                <SignedIn>
-                {/* Mount the UserButton component */}
-                <Button color="secondary" sx={{ display: 'block', mr:1 }}><UserButton /></Button>
-                </SignedIn>
-                <SignedOut>
-                  {/* Signed out users get sign in button */}
-                  <Button color="secondary" href="/sign-in" sx={{ my: 2, display: 'block' }}>Masuk</Button>
-                </SignedOut>                  
+                <LocaleSwitch />                
           </Box>
           <Search />
           </Toolbar>

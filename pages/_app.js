@@ -93,7 +93,6 @@ function MyApp({ Component, pageProps }) {
 const theme = responsiveFontSizes(ModeTheme);
 
   return (
-    <ClerkProvider {...pageProps}>
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <Head>
@@ -103,7 +102,6 @@ const theme = responsiveFontSizes(ModeTheme);
           <Component {...pageProps} />
       </ThemeProvider>
     </ColorModeContext.Provider>
-  </ClerkProvider>  
   )
 }
 
