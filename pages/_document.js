@@ -1,11 +1,15 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import * as gtag from '../lib/gtag'
+import {
+  DocumentHeadTags,
+  documentGetInitialProps,
+} from '@mui/material-nextjs/v13-pagesRouter';
 
-export default class MyDocument extends Document {
-  render() {
+export default function MyDocument(props) {
     return (
       <Html>
         <Head>
+            <DocumentHeadTags {...props} />
             <link rel="icon" href="/images/favicon.ico" />  
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <meta name="revisit-after" content="3 days" />
@@ -63,5 +67,9 @@ export default class MyDocument extends Document {
         </body>
       </Html>
     )
-  }
 }
+
+MyDocument.getInitialProps = async (ctx) => {
+  const finalProps = await documentGetInitialProps(ctx);
+  return finalProps;
+};
