@@ -41,7 +41,7 @@ function copy() {
 
     return (
          <LightTooltip title={!copied ? "Copy link" : "Copied!"}>
-            <IconButton><ContentCopyIcon color="primary" size="small" onClick={copy} /></IconButton>
+            <ContentCopyIcon color="primary" size="small" onClick={copy} />
          </LightTooltip>
     )
 }

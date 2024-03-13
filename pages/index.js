@@ -9,9 +9,6 @@ const PostPreview = dynamic(() => import('components/post-preview'), {
   ssr: false,
 });
 const Layout = dynamic(() => import('components/layout'));
-const Location = dynamic(() => import('components/location'), {
-  ssr: false,
-});
 const Hero = dynamic(() => import('components/hero'));
 const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
@@ -184,7 +181,6 @@ export default function Index({ posts, preview }) {
               </div>                  
             </center>
           </Box>             
-          <Location />
 			{blogPosts ? (
 			<Box>
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">

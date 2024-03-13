@@ -28,9 +28,6 @@ const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
 });
 const Layout = dynamic(() => import('components/layout-en'));
-const Location = dynamic(() => import('components/location'), {
-  ssr: false,
-});
 const ShareButton = dynamic(() => import('components/socialsharebutton'), {
   ssr: false,
 });
@@ -186,7 +183,7 @@ export default function Post({ post, morePosts, preview }) {
                     title={post.seo.title}
                 >
                 <LightTooltip disableFocusListener title="Share it on X">
-                    <IconButton><XIcon color="primary" size="small" /></IconButton>
+                    <XIcon color="primary" size="small" />
                 </LightTooltip>
                 </TwitterShareButton>
                 <FacebookShareButton
@@ -195,7 +192,7 @@ export default function Post({ post, morePosts, preview }) {
                     hashtag={'#studiofrugreenproject'}
                 >
                 <LightTooltip disableFocusListener title="Share it on Facebook">
-                    <IconButton><FacebookIcon color="primary" size="small" /></IconButton>
+                    <FacebookIcon color="primary" size="small" />
                 </LightTooltip>
                 </FacebookShareButton>
                 <WhatsappShareButton
@@ -204,7 +201,7 @@ export default function Post({ post, morePosts, preview }) {
                     separator="->"
                 >
                 <LightTooltip disableFocusListener title="Share it on  WhatsApp">
-                    <IconButton><WhatsAppIcon color="primary" size="small" /></IconButton>
+                    <WhatsAppIcon color="primary" size="small" />
                 </LightTooltip>
                 </WhatsappShareButton>
             </Stack>
@@ -249,7 +246,6 @@ export default function Post({ post, morePosts, preview }) {
             </center>           
             </Box>
             <SectionSeparator />
-        <Location />
         <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
           Recent Notes
         </h2>        

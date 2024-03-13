@@ -154,42 +154,8 @@ function ResponsiveAppBar(props) {
                     FAUNA
                   </MenuItem>
                 </Link>
-                <Link href="/en/endemic" underline="hover" color="inherit" onClick={handleClose}>
-                  <MenuItem>
-                    ENDEMIC
-                  </MenuItem>
-                </Link>
             </Menu>
 
-                <Button
-                    href="/en/science"
-                    color= 'secondary'
-                    sx={{ my: 2, display: 'block' }}
-                >
-                    SCIENCE
-                </Button>
-                <Button
-                    href="/en/knowledge"
-                    color= 'secondary'
-                    sx={{ my: 2, display: 'block' }}
-                >
-                    KNOWLEDGE
-                </Button>
-
-                <Button
-                    href="/en/travel"
-                    color= 'secondary'
-                    sx={{ my: 2, display: 'block' }}
-                >
-                    TRAVEL
-                </Button>
-                <Button
-                    href="/en/videos"
-                    color= 'secondary'
-                    sx={{ my: 2, mr:2, display: 'block' }}
-                >
-                    VIDEO
-                </Button>
                 <Button
                     href="https://sociabuzz.com/studiofru/tribe"
                     color= 'secondary'

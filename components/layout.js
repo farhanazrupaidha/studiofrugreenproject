@@ -8,7 +8,7 @@ import RecommendIcon from '@mui/icons-material/Recommend';
 
 export default function Layout({ preview, children }) {
   return (
-  <html lang="id" suppressHydrationWarning>
+  <>
     <ResponsiveAppBar />
     <div className="min-h-screen">
     <Button 
@@ -33,6 +33,6 @@ export default function Layout({ preview, children }) {
           {children}
     </div>
     <Footer />
-  </html>
+  </>
   )
 }

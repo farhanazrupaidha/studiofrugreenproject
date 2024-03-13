@@ -4,7 +4,6 @@ import React, { useEffect } from 'react'
 import Head from 'next/head'
 import posthog from 'posthog-js'
 
-import { AppCacheProvider } from '@mui/material-nextjs/v13-pagesRouter';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import {  green, cyan, indigo, blueGrey } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -25,7 +24,7 @@ export function reportWebVitals(metric) {
   });
 }
 
-function MyApp({ Component, pageProps, props }) {
+function MyApp({ Component, pageProps }) {
  
   useEffect(() => {
     posthog.init('phc_Q1PtwUBXBo54aOD2od03hCKu7JTP4rzHwZVNW5m3G8q', { api_host: 'https://app.posthog.com' })
@@ -93,7 +92,6 @@ function MyApp({ Component, pageProps, props }) {
 const theme = responsiveFontSizes(ModeTheme);
 
   return (
-    <AppCacheProvider {...props}>
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
           <Head>
@@ -103,7 +101,6 @@ const theme = responsiveFontSizes(ModeTheme);
             <Component {...pageProps} />
         </ThemeProvider>
       </ColorModeContext.Provider>
-    </AppCacheProvider>
   )
 }
 

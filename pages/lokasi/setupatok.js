@@ -8,9 +8,6 @@ const Container = dynamic(() => import('components/container'));
 const PostPreview = dynamic(() => import('components/post-preview'));
 const Intro = dynamic(() => import('components/intro'));
 const Layout = dynamic(() => import('components/layout'));
-const Location = dynamic(() => import('components/location'), {
-  ssr: false,
-});
 const Paginate = dynamic(() => import('components/paginate'), {
   ssr: false,
 });
@@ -156,7 +153,6 @@ export default function Index({ posts, preview }) {
               </div>                  
             </center>
           </Box>        
-          <Location />
 			{blogPosts ? (
 			<Box>
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
