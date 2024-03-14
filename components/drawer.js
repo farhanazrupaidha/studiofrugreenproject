@@ -66,48 +66,7 @@ function DrawerToggle () {
                         Fauna
                       </ListItemText>
                     </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding>
-                    <ListItemButton href="/endemik">
-                      <ListItemText>
-                        Endemik
-                      </ListItemText>
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding sx={{mt:2}}>
-                      <ListItemText>
-                        Lainnya
-                      </ListItemText>
-                  </ListItem>
-                  <Divider sx={{mr:5}} />
-                  <ListItem disablePadding>
-                    <ListItemButton href="/sains">
-                      <ListItemText>
-                        Sains
-                      </ListItemText>
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding>
-                    <ListItemButton href="/pengetahuan">
-                      <ListItemText>
-                        Pengetahuan
-                      </ListItemText>
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding>
-                    <ListItemButton href="/wisata">
-                      <ListItemText>
-                        Wisata
-                      </ListItemText>
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding>
-                    <ListItemButton href="/videos">
-                      <ListItemText>
-                        Video
-                      </ListItemText>
-                    </ListItemButton>
-                  </ListItem>                  
+                  </ListItem>                
                   <ListItem disablePadding sx={{mt:2}}>
                       <ListItemText>
                         Komunitas
