@@ -46,7 +46,7 @@ export const getServerSideProps = async ({ res }) => {
     ${postsId.map(({ slug, updatedAt }) => `
     <url>
         <loc>https://studiofrugreenproject.com/posts/${slug}</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
+        <lastmod>${updatedAt}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>                                 
