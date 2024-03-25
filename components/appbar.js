@@ -161,7 +161,7 @@ function ResponsiveAppBar(props) {
                     color= 'secondary'
                     sx={{ my: 2, mr:2, display: 'block' }}
                 >
-                    DUKUNGAN
+                    DONASI
                 </Button>
                 <LocaleSwitch />                
           </Box>
