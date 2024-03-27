@@ -159,7 +159,13 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-    </url>                                                              
+    </url>    
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/deskripsi-asal-dan-manfaat-oyong-luffa-acutangula-bagi-kesehatan</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>                                                               
     ${postsEn.map(({ slug, updatedAt }) => `
     <url>
         <loc>https://studiofrugreenproject.com/en/posts/${slug}</loc>
