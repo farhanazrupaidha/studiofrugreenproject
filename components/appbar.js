@@ -125,36 +125,6 @@ function ResponsiveAppBar(props) {
             </Typography>
 
             <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
-                <Button
-                    color= 'secondary'
-                    sx={{ my: 2, display: 'block' }}
-                    aria-controls={open ? 'basic-menu' : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={open ? 'true' : undefined}
-                    onClick={handleClick}
-                >
-                    Spesies
-                </Button>
-
-            <Menu
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-              'aria-labelledby': 'basic-button',
-            }}
-            >
-                <Link href="/flora" underline="hover" color="inherit" onClick={handleClose}>
-                  <MenuItem>
-                    FLORA
-                  </MenuItem>
-                </Link>
-                <Link href="/fauna" underline="hover" color="inherit" onClick={handleClose}>
-                  <MenuItem>
-                    FAUNA
-                  </MenuItem>
-                </Link>
-            </Menu>
 
                 <Button
                     href="https://sociabuzz.com/studiofru/tribe"

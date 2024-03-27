@@ -18,31 +18,7 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://studiofrugreenproject.com/flora</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>    
-    <url>
-        <loc>https://studiofrugreenproject.com/fauna</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
     </url>   
-    <url>
-        <loc>https://studiofrugreenproject.com/en/flora</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>    
-    <url>
-        <loc>https://studiofrugreenproject.com/en/fauna</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>     
     ${postsId.map(({ slug, updatedAt }) => `
     <url>
         <loc>https://studiofrugreenproject.com/posts/${slug}</loc>
