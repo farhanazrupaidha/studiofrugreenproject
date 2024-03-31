@@ -54,8 +54,8 @@ export default function Hero () {
     <Box sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
             <AccessTimeFilledIcon sx={{ fontSize: 30, color:"#22cc88"}} />
             <Typography variant="h6" color="#22cc88" sx={{textAlign: 'right'}}>10/10/2022</Typography>
-            <Typography variant="h6" color="#22cc88" sx={{textAlign: 'right'}}>{`${date}`}</Typography>
-            <Typography variant="h6" color="#22cc88" sx={{textAlign: 'right'}}>{`${time}`}</Typography>
+            <Typography variant="h6" color="#22cc88" sx={{textAlign: 'right'}} suppressHydrationWarning>{`${date}`}</Typography>
+            <Typography variant="h6" color="#22cc88" sx={{textAlign: 'right'}} suppressHydrationWarning>{`${time}`}</Typography>
     </Box>
         <DataCountFlora />
         <DataCountFauna />

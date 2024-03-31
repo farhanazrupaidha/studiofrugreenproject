@@ -125,7 +125,13 @@ function ResponsiveAppBar(props) {
             </Typography>
 
             <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
-
+            <Button
+                    href="/lokasi/setupatok"
+                    color= 'secondary'
+                    sx={{ my: 2, mr:2, display: 'block' }}
+                >
+                    Setu Patok
+                </Button>
                 <Button
                     href="https://sociabuzz.com/studiofru/tribe"
                     color= 'secondary'

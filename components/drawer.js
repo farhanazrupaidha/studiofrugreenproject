@@ -49,24 +49,17 @@ function DrawerToggle () {
         <List sx={{ mr: 2, ml:2 }}>
                   <ListItem disablePadding>
                       <ListItemText>
-                        Spesies
+                        Lokasi Khusus
                       </ListItemText>
                   </ListItem>
                   <Divider sx={{mr:5}} />
                   <ListItem disablePadding>
                     <ListItemButton href="/flora">
                       <ListItemText>
-                        Flora
+                        Setu Patok
                       </ListItemText>
                     </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding>
-                    <ListItemButton href="/fauna">
-                      <ListItemText>
-                        Fauna
-                      </ListItemText>
-                    </ListItemButton>
-                  </ListItem>                
+                  </ListItem>               
                   <ListItem disablePadding sx={{mt:2}}>
                       <ListItemText>
                         Komunitas

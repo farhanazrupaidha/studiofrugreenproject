@@ -46,27 +46,7 @@ function DrawerToggle () {
             </Typography>
         </Toolbar>
         <Divider sx={{m:1}} />
-        <List sx={{ mr: 2, ml:2 }}>
-                  <ListItem disablePadding>
-                      <ListItemText>
-                        Species
-                      </ListItemText>
-                  </ListItem>
-                  <Divider sx={{mr:5}} />
-                  <ListItem disablePadding>
-                    <ListItemButton href="/flora">
-                      <ListItemText>
-                        Flora
-                      </ListItemText>
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding>
-                    <ListItemButton href="/fauna">
-                      <ListItemText>
-                        Fauna
-                      </ListItemText>
-                    </ListItemButton>
-                  </ListItem>                
+        <List sx={{ mr: 2, ml:2 }}>               
                   <ListItem disablePadding sx={{mt:2}}>
                       <ListItemText>
                         Community
@@ -76,7 +56,7 @@ function DrawerToggle () {
                   <ListItem disablePadding>
                     <ListItemButton href="https://sociabuzz.com/studiofru/tribe">
                       <ListItemText>
-                        Support
+                        Donation
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
