@@ -25,14 +25,14 @@ export default function Hero () {
   const time = new Date().toLocaleTimeString();
 
   return (
-<>
+<section id="hero" data-stellar-background-ratio="0.5">
 <Box sx={{m:'auto', mt:5, mb:5}}>
     <Box sx={{mb:5}}>
         <center>
             <Typography variant='h1' color="#22cc88" sx={{fontWeight:"bold", height:'130px', mb:15, m:3}}>
               Studiofru | Green Project
             </Typography>
-            <Typography variant='h2' color="white" sx={{fontWeight:"bold", height:'110px', mt:10}}>
+            <Typography variant='h2' color="primary" sx={{fontWeight:"bold", height:'110px', mt:10}}>
                 <Typewriter
                   options={{
                     strings: ['Ensiklopedia Keanekaragaman Hayati'],
@@ -64,7 +64,7 @@ export default function Hero () {
         </Box>
     </Stack>
   </Box>
-</>
+</section>
   );
 }
 

@@ -7,12 +7,10 @@ import posthog from 'posthog-js'
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import {  green, cyan, indigo, blueGrey } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
+import IconButton from '@mui/material/IconButton';
 
-export const primary = "#00bfbf";
-export const black = "#111111";
-export const white = "#fafafa";
-
-const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 export function reportWebVitals(metric) {
   // Use `window.gtag` if you initialized Google Analytics as this example:
@@ -24,6 +22,13 @@ export function reportWebVitals(metric) {
   });
 }
 
+export const primary = "#00bfbf";
+export const black = "#111111";
+export const white = "#fafafa";
+
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+
+
 function MyApp({ Component, pageProps }) {
  
   useEffect(() => {
@@ -31,73 +36,77 @@ function MyApp({ Component, pageProps }) {
     posthog.capture('my event', { property: 'value' })
   }, [])
 
-
- const [mode, setMode] = React.useState('dark');
+ const [mode, setMode] = React.useState('light');
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
       },
     }),
     [],
   );
 
-  let ModeTheme = React.useMemo(
-      () =>
-        createTheme({
-          palette: {
-            mode,
-             ...(mode === 'light'
-                  ? {
-                      // palette values for light mode
-                      primary: {
-                              main: indigo [900],
-                              primary: indigo [200]
-                            },
-                      secondary: {
-                              main: green [300],
-                              primary: indigo [400],
-                            },
-                      background: {
-                              default: white,
-                              paper: indigo [500],
-                              chip: green [400],
-                              Box: indigo [200]
-                            },
-                      color: black
-                    }
-                  : {
-                      // palette values for dark mode
-                     primary: {
-                            main: green [100],
-                            primary: blueGrey [200],
-                           },
-                     secondary: {
-                            main: cyan [200],
-                            primary: '#011C3E',
-                           },
-                     background: {
-                            default: '#01142C',
-                            paper: '#032146',
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+           ...(mode === 'light'
+                ? {
+                    // palette values for light mode
+                    primary: {
+                            main: blueGrey [50],
+                            primary: blueGrey [200]
+                          },
+                    secondary: {
+                            main: black,
+                            primary: indigo [400],
+                          },
+                    background: {
+                            default: white,
+                            paper: blueGrey [50],
                             chip: cyan [50],
-                            Box: blueGrey [700],
-                           },
-                     color: '#4C6AB0'
-                    }),
-          },
+                            Box: indigo [200],
+                          },
+                    color: black
+                  }
+                : {
+                    // palette values for dark mode
+                   primary: {
+                          main: green [100],
+                          primary: blueGrey [200],
+                         },
+                   secondary: {
+                          main: cyan [200],
+                          primary: '#011C3E',
+                         },
+                   background: {
+                          default: '#01142C',
+                          paper: '#032146',
+                          chip: cyan [50],
+                          Box: blueGrey [700],
+                         },
+                   color: '#4C6AB0'
+                  }),
+        },
         }),
       [mode],
     );
 
-const theme = responsiveFontSizes(ModeTheme);
+  const MyTheme = responsiveFontSizes (theme)
 
   return (
       <ColorModeContext.Provider value={colorMode}>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={MyTheme}>
           <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
           </Head>
           <CssBaseline /> 
+            <div style={{ position: 'fixed', bottom: '50px', right: '38px', backgroundColor: '#032146',  borderRadius: '20px', transform: 'rotate(45deg)'}}>
+              <IconButton onClick={colorMode.toggleColorMode} color="primary">
+                {theme.palette.mode === 'light' ? <LightModeIcon /> : <DarkModeIcon />}                
+              </IconButton>
+            </div>          
             <Component {...pageProps} />
         </ThemeProvider>
       </ColorModeContext.Provider>

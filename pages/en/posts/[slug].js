@@ -184,7 +184,7 @@ export default function Post({ post, morePosts, preview }) {
                     title={post.seo.title}
                 >
                 <LightTooltip disableFocusListener title="Share it on X">
-                    <XIcon color="primary" size="small" />
+                    <XIcon color="secondary" size="small" />
                 </LightTooltip>
                 </TwitterShareButton>
                 <FacebookShareButton
@@ -193,7 +193,7 @@ export default function Post({ post, morePosts, preview }) {
                     hashtag={'#studiofrugreenproject'}
                 >
                 <LightTooltip disableFocusListener title="Share it on Facebook">
-                    <FacebookIcon color="primary" size="small" />
+                    <FacebookIcon color="secondary" size="small" />
                 </LightTooltip>
                 </FacebookShareButton>
                 <WhatsappShareButton
@@ -202,7 +202,7 @@ export default function Post({ post, morePosts, preview }) {
                     separator="->"
                 >
                 <LightTooltip disableFocusListener title="Share it on  WhatsApp">
-                    <WhatsAppIcon color="primary" size="small" />
+                    <WhatsAppIcon color="secondary" size="small" />
                 </LightTooltip>
                 </WhatsappShareButton>
             </Stack>
@@ -217,22 +217,22 @@ export default function Post({ post, morePosts, preview }) {
                 sx={{mt:2, mb:4}}
             >
               <LightTooltip disableFocusListener title="Follow me on YouTube">
-              <IconButton href="https://www.youtube.com/channel/UCX5J82L560fv5r5hslQwI-A" color="primary" aria-label="Follow me on YouTube">
+              <IconButton href="https://www.youtube.com/channel/UCX5J82L560fv5r5hslQwI-A" color="secondary" aria-label="Follow me on YouTube">
                 <YouTubeIcon />
               </IconButton>
               </LightTooltip>
               <LightTooltip disableFocusListener title="Follow me on Instagram">
-              <IconButton href="https://www.instagram.com/studiofrugreenproject/" color="primary" aria-label="Follow me on Instagram">
+              <IconButton href="https://www.instagram.com/studiofrugreenproject/" color="secondary" aria-label="Follow me on Instagram">
                 <InstagramIcon />
               </IconButton>
               </LightTooltip>
               <LightTooltip disableFocusListener title="Follow me on Facebook">
-              <IconButton href="https://www.facebook.com/studiofruworks" color="primary" aria-label="Follow me on Facebook">
+              <IconButton href="https://www.facebook.com/studiofruworks" color="secondary" aria-label="Follow me on Facebook">
                 <FacebookIcon />
               </IconButton> 
               </LightTooltip>  
               <LightTooltip disableFocusListener title="Follow me on X">
-              <IconButton href="https://twitter.com/studiofruworks" color="primary" aria-label="Follow me on X">
+              <IconButton href="https://twitter.com/studiofruworks" color="secondary" aria-label="Follow me on X">
                 <XIcon />
               </IconButton> 
               </LightTooltip>                   

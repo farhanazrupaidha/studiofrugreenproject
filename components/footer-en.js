@@ -69,7 +69,7 @@ const classes = useStyles();
         </Item>
         <Item sx={{maxWidth:150, width:'100%'}}>
             <Typography variant="h6" sx={{fontWeight: 'bold'}} gutterBottom>
-                Company
+                Profile
             </Typography>
             <Typography variant="body1" gutterBottom>
                 <Link href="/tentang" underline="hover" color='inherit'>

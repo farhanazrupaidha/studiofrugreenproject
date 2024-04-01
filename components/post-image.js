@@ -58,7 +58,7 @@ export default function PostImage({ cloudinaryImageLibrary, title }) {
     </Stack>
 
     <Divider sx={{mt:3, mb:1, maxWidth:300, width:'95%' }} />
-    <AdsClickIcon color="primary" />  
+    <AdsClickIcon color="secondary" />  
 
     <Dialog
         fullScreen
