@@ -80,6 +80,7 @@ return (
         <Button
           variant="contained"
           color="secondary"
+          href="#button"
           sx={{borderRadius: 5}}
           onClick={() =>
             executeSearch({
@@ -104,6 +105,7 @@ return (
       color="secondary"
       sx={{borderRadius: 5, mt: 3}}
       onClick={handleClose}
+      href="#button"
     >
       Close
     </Button>

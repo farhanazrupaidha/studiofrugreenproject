@@ -4,6 +4,74 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+@layer base {
+  p {
+    @apply text-inherit my-6;
+  }
+
+  h1 {
+    @apply mt-12 mb-4 text-4xl leading-snug;
+  }
+
+  h2 {
+    @apply mt-12 mb-4 text-3xl leading-snug;
+  }
+
+  h3 {
+    @apply mt-8 mb-4 text-2xl leading-snug;
+  } 
+
+  blockquote{
+    @apply p-4 my-4 border-s-4 border-gray-300 bg-gray-50 text-sky-400 dark:border-gray-500 dark:bg-gray-800 text-xl italic font-medium leading-relaxed;
+  }
+
+  table {
+    @apply table-auto min-w-full text-left text-sm overflow-x-auto border-spacing-0 mb-8;
+  }
+  
+  thead {
+    @apply border-b font-medium;
+  }
+  
+  tr {
+    @apply border-b h-px;
+  }
+  
+  td {
+    @apply whitespace-nowrap h-px;
+  }
+  
+  blockquote {
+    @apply p-4 my-4 border-s-4 border-gray-300 bg-slate-50 text-sky-400 dark:border-gray-500 dark:bg-slate-800 text-xl italic font-medium leading-relaxed;
+  }
+  
+  img {
+    @apply resize aspect-w-auto aspect-h-auto lg:aspect-none;
+  }
+  
+  code {
+    @apply text-sm sm:text-base inline-flex text-left text-sky-400  items-center space-x-4 rounded-lg p-4 pl-6 bg-slate-50 dark:bg-slate-800 border-gray-300;
+  }
+  
+  ul {
+    @apply list-disc my-6 list-inside;
+  }
+
+  ol {
+    @apply list-decimal my-6 list-inside;
+  }
+
+  a {
+    @apply font-semibold;
+  }
+  a:hover {
+    @apply text-sky-400 underline;
+  }
+  iframe {
+    @apply my-6 w-full;
+  }
+}
+
 #app {
   height: 100%;
 }

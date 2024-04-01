@@ -57,8 +57,9 @@ return (
           onChange={(e) => setSearchFilter(e.target.value)}
         />
         <Button
-          variant="contained"
+          variant="outlined"
           color="secondary"
+          href="#button"
           sx={{borderRadius: 5}}
           onClick={() =>
             executeSearch({
@@ -69,8 +70,9 @@ return (
             Search
          </Button>
         <Button
-          variant="contained"
+          variant="outlined"
           color="secondary"
+          href="#button"
           sx={{borderRadius: 5}}
           onClick={refresh}
         >
