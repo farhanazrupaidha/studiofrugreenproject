@@ -5,22 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  p {
-    @apply text-inherit my-6;
-  }
-
-  h1 {
-    @apply mt-12 mb-4 text-4xl leading-snug;
-  }
-
-  h2 {
-    @apply mt-12 mb-4 text-3xl leading-snug;
-  }
-
-  h3 {
-    @apply mt-8 mb-4 text-2xl leading-snug;
-  } 
-
   blockquote{
     @apply p-4 my-4 border-s-4 border-gray-300 bg-gray-50 text-sky-400 dark:border-gray-500 dark:bg-gray-800 text-xl italic font-medium leading-relaxed;
   }
