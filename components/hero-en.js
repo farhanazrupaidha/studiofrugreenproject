@@ -25,7 +25,7 @@ export default function Hero () {
   const time = new Date().toLocaleTimeString();
 
   return (
-<>
+<section id="hero" data-stellar-background-ratio="0.5">
 <Box sx={{m:'auto', mt:5, mb:5}}>
     <Box sx={{mb:5}}>
         <center>
@@ -64,7 +64,7 @@ export default function Hero () {
         </Box>
     </Stack>
   </Box>
-</>
+</section>
   );
 }
 
