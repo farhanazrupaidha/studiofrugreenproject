@@ -94,15 +94,15 @@ export default function Post({ post, morePosts, preview }) {
                 <Head
                      defaultTitle="Studiofru | Green Project"
                    >
-                     <title>{post.seo.title}</title>
-                     <meta name="title" content={post.seo.title}></meta>
-                     <meta name="description" content={post.seo.description} />
-                     <meta name="keywords" content={post.seo.keywords} />
+                     <title>{post.title}</title>
+                     <meta name="title" content={post.title}></meta>
+                     <meta name="description" content={post.excerpt} />
+                     <meta name="keywords" content={post.tags} />
                      <meta name="language" content="id-ID" />
                      <meta name="author" content="Studiofru" />                     
-                     <meta property="image" content={post.seo.image.url} />
-                     <meta property="og:title" content={post.seo.title} />
-                     <meta property="og:description" content={post.seo.description} />
+                     <meta property="image" content={post.coverImage} />
+                     <meta property="og:title" content={post.title} />
+                     <meta property="og:description" content={post.excerpt} />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content={post.seo.image.url} />
                      <meta name="og:url" content={`https://studiofrugreenproject.com/posts/${post.slug}`} />
@@ -110,10 +110,10 @@ export default function Post({ post, morePosts, preview }) {
                      <meta property="og:locale" content="id-ID" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:creator" content="@studiofruworks" />
-                     <meta name="twitter:title" content={post.seo.title} />
-                     <meta property="twitter:description" content={post.seo.description} />
+                     <meta name="twitter:title" content={post.title} />
+                     <meta property="twitter:description" content={post.excerpt} />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image" content={post.seo.image.url} />
+                     <meta name="twitter:image" content={post.coverImage} />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/posts/${post.slug}`} hreflang="id-ID" />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en-US" />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="x-default" />

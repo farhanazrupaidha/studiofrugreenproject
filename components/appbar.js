@@ -14,20 +14,21 @@ const Search = dynamic(() => import('components/search'), {
 const LocaleSwitch = dynamic(() => import('components/locale-switch'), {
   ssr: false,
 });
+const Category = dynamic(() => import('components/category'), {
+  ssr: false,
+});
+const SpeciesLocation = dynamic(() => import('components/species-location'), {
+  ssr: false,
+});
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
-import Alert from '@mui/material/Alert';
-
-import RecommendIcon from '@mui/icons-material/Recommend';
 
 import { makeStyles } from '@mui/styles';
 
@@ -125,21 +126,16 @@ function ResponsiveAppBar(props) {
             </Typography>
 
             <Box sx={{ flexGrow: 0, mr:3, display: { xs: 'none', md: 'flex' } }}>
-            <Button
-                    href="/lokasi/setupatok"
-                    color= 'secondary'
-                    sx={{ my: 2, mr:2, display: 'block' }}
-                >
-                    Setu Patok
-                </Button>
-                <Button
-                    href="https://sociabuzz.com/studiofru/tribe"
-                    color= 'secondary'
-                    sx={{ my: 2, mr:2, display: 'block' }}
-                >
-                    DONASI
-                </Button>
-                <LocaleSwitch />                
+              <SpeciesLocation />
+              <Category />
+              <Button
+                href="https://sociabuzz.com/studiofru/tribe"
+                color= 'secondary'
+                sx={{ my: 2, mr:2, display: 'block' }}
+              >
+                DONASI
+              </Button>
+              <LocaleSwitch />                
           </Box>
           <Search />
           </Toolbar>

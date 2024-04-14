@@ -42,7 +42,7 @@ const SearchBar = ({posts, slug}) => {
 
 return (
 <Box sx={style}>
-    <Box sx={{maxWidth:700, m:'auto', mt:5, mb:10, textAlign: 'center', backgroundColor: '#eceff1', borderRadius: 5}}>
+    <Box sx={{maxWidth:700, m:'auto', mb:10, textAlign: 'center', backgroundColor: '#eceff1', borderRadius: 5}}>
       <Stack spacing={1} direction="row">
         <TextField
           required

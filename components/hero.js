@@ -60,7 +60,7 @@ export default function Hero () {
         <DataCountFlora />
         <DataCountFauna />
         <Box sx={{maxWidth:650, width:'100%'}}>
-                <SearchBar />
+          <SearchBar />
         </Box>
     </Stack>
   </Box>

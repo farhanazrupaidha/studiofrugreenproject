@@ -7,9 +7,9 @@ import Typography from '@mui/material/Typography';
 
 import PetsIcon from '@mui/icons-material/Pets';
 
-const FLORA = gql`
-  query {
-  postsConnection(where: {_search: "Setu Patok", tags_contains_some: "Fauna"}) {
+const FAUNA = gql`
+  query ($slug: String) {
+  postsConnection(where: {speciesLocation: {slug: $slug}, tags_contains_some: "Fauna"}) {
     aggregate {
       count
     }
@@ -18,18 +18,22 @@ const FLORA = gql`
 `;
 
 
-const DataCountFlora = ({postsConnection}) => {
-const { data, loading, error } = useQuery(FLORA);
+const DataCountFauna = ({slug}) => {
+const { data, loading, error } = useQuery(FAUNA, {
+  variables: {
+    slug: `${slug}`
+  }
+});
 
   if (loading) return null;
   if (error) return `Error! ${error}`;
 
   return (
-            <Paper sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%' }}>
+            <Paper sx={{ borderRadius: 5, p:2, maxWidth:200, width:'100%', mb:5, mt:5 }}>
                   <PetsIcon sx={{ fontSize: 40, color:"#22cc88"}} />
                   <Typography variant="h3" color='#22cc88' textAlign= 'right'>{data.postsConnection.aggregate.count}</Typography>
             </Paper>
   );
 }
 
-export default withApollo(DataCountFlora);
+export default withApollo(DataCountFauna);

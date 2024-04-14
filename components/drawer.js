@@ -4,6 +4,12 @@ import dynamic from 'next/dynamic'
 const LocaleSwitch = dynamic(() => import('components/locale-switch'), {
   ssr: false,
 });
+const Category = dynamic(() => import('components/category'), {
+  ssr: false,
+});
+const SpeciesLocation = dynamic(() => import('components/species-location'), {
+  ssr: false,
+});
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -49,17 +55,18 @@ function DrawerToggle () {
         <List sx={{ mr: 2, ml:2 }}>
                   <ListItem disablePadding>
                       <ListItemText>
-                        Lokasi Khusus
+                        Jelajah 
                       </ListItemText>
                   </ListItem>
                   <Divider sx={{mr:5}} />
+                  <SpeciesLocation />    
                   <ListItem disablePadding>
-                    <ListItemButton href="/flora">
                       <ListItemText>
-                        Setu Patok
+                        Lainnya 
                       </ListItemText>
-                    </ListItemButton>
-                  </ListItem>               
+                  </ListItem>
+                  <Divider sx={{mr:5}} />
+                  <Category />           
                   <ListItem disablePadding sx={{mt:2}}>
                       <ListItemText>
                         Komunitas
