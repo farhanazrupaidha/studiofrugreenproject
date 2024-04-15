@@ -5,23 +5,20 @@ import { relayStylePagination } from '@apollo/client/utilities'
 // Learn more about `@apollo/client` here - https://www.apollographql.com/docs/react/why-apollo
 // Learn more about `next-with-apollo` here - https://github.com/lfades/next-with-apollo
 
-// creating the Apollo Client
-const client = new ApolloClient({
-  uri: process.env.GRAPHCMS_PROJECT_API, // <- Configure GraphQL Server URL (must be absolute)
-  cache: new InMemoryCache({
-    typePolicies: {
-      Query: {
-        fields: {
-          postsConnection: relayStylePagination(),
-        },
-      },
-    },
-  }),
-});
-
 export default withApollo(
-  () => {
-    return client;
+  ({ initialState }) => {
+    return new ApolloClient({
+      uri: process.env.GRAPHCMS_PROJECT_API,
+      cache: new InMemoryCache({
+        typePolicies: {
+          Query: {
+            fields: {
+              postsConnection: relayStylePagination(),
+            },
+          },
+        },
+      }).restore(initialState || {})
+    });
   },
   {
     // providing the Apollo Client access to the pages

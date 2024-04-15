@@ -1,4 +1,3 @@
-import speciesLocation from 'components/species-location';
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Map from 'react-map-gl';
@@ -75,8 +74,8 @@ export default function LocationPost ({speciesLocation, preview}) {
         mapStyle="mapbox://styles/mapbox/streets-v9"
     />
       </Paper>  
-        <DataCountFlora slug = {speciesLocation?.slug} />
-        <DataCountFauna slug = {speciesLocation?.slug} />
+        <DataCountFlora slug = {speciesLocation.slug} />
+        <DataCountFauna slug = {speciesLocation.slug} />
       </Stack>    
       <SectionSeparator />  
       <PostCategories slug = {speciesLocation?.slug} />
