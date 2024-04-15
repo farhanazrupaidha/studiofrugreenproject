@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
-import withApollo from "../config";
+import withApollo from "../lib/config";
 
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';

@@ -58,14 +58,14 @@ export default function LocationPost ({speciesLocation, preview}) {
       <Typography>{speciesLocation?.description}</Typography> 
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
-        spacing={{ xs: 5, sm: 2, md: 4 }}
+        spacing={{ xs: 4, sm: 2, md: 4 }}
         justifyContent="center"
         alignItems="center"
         sx={{mb:8, mt:5}}
       >
-      <Paper sx={{maxWidth:820, width:'100%'}}>
+      <Paper sx={{maxWidth:820, width:'100%', height: 470}}>
       <Map
-        mapboxAccessToken="sk.eyJ1Ijoic3R1ZGlvZnJ1IiwiYSI6ImNsdjBrc21kdjFndHcybnJ5aDVuamRoM2UifQ.6GzoCHQ1uGXnZIQhZ5ERZw"
+        mapboxAccessToken="pk.eyJ1Ijoic3R1ZGlvZnJ1IiwiYSI6ImNrZXBuYXlwcDN2cGwyc2x0Y2libnY2cmwifQ.LsxGcgeSlLKEYbnNldaEfw"
         initialViewState={{
           longitude: `${speciesLocation?.map.longitude}`,
           latitude: `${speciesLocation?.map.latitude}`,
