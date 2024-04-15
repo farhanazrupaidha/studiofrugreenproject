@@ -74,8 +74,8 @@ export default function LocationPost ({speciesLocation, preview}) {
         mapStyle="mapbox://styles/mapbox/streets-v9"
     />
       </Paper>  
-        <DataCountFlora slug = {speciesLocation.slug} />
-        <DataCountFauna slug = {speciesLocation.slug} />
+        <DataCountFlora slug = {speciesLocation?.slug} />
+        <DataCountFauna slug = {speciesLocation?.slug} />
       </Stack>    
       <SectionSeparator />  
       <PostCategories slug = {speciesLocation?.slug} />
