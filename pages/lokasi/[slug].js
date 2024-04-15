@@ -5,13 +5,18 @@ import Map from 'react-map-gl';
 
 import { getLocation, getAllLocationsWithSlug } from 'lib/graphcms'
 
-const PostCategories = dynamic(() => import('components/posts-basedon-location'));
+const PostCategories = dynamic(() => import('components/posts-basedon-location'), {
+  ssr: false,
+});
 const Container = dynamic(() => import('../../components/container'));
 const Layout = dynamic(() => import('components/layout'));
 const DataCountFlora = dynamic(() => import('components/dataflora-location'), {
   ssr: false,
 });
 const DataCountFauna = dynamic(() => import('components/datafauna-location'), {
+  ssr: false,
+});
+const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
 });
 
@@ -53,14 +58,14 @@ export default function LocationPost ({speciesLocation, preview}) {
       <Typography>{speciesLocation?.description}</Typography> 
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
-        spacing={{ xs: 1, sm: 2, md: 4 }}
+        spacing={{ xs: 5, sm: 2, md: 4 }}
         justifyContent="center"
         alignItems="center"
         sx={{mb:8, mt:5}}
       >
       <Paper sx={{maxWidth:820, width:'100%'}}>
       <Map
-        mapboxAccessToken="pk.eyJ1Ijoic3R1ZGlvZnJ1IiwiYSI6ImNrZXBuYXlwcDN2cGwyc2x0Y2libnY2cmwifQ.LsxGcgeSlLKEYbnNldaEfw"
+        mapboxAccessToken="sk.eyJ1Ijoic3R1ZGlvZnJ1IiwiYSI6ImNsdjBrc21kdjFndHcybnJ5aDVuamRoM2UifQ.6GzoCHQ1uGXnZIQhZ5ERZw"
         initialViewState={{
           longitude: `${speciesLocation?.map.longitude}`,
           latitude: `${speciesLocation?.map.latitude}`,
@@ -72,7 +77,8 @@ export default function LocationPost ({speciesLocation, preview}) {
       </Paper>  
         <DataCountFlora slug = {speciesLocation?.slug} />
         <DataCountFauna slug = {speciesLocation?.slug} />
-      </Stack>      
+      </Stack>    
+      <SectionSeparator />  
       <PostCategories slug = {speciesLocation?.slug} />
     </Container>
     </Box>

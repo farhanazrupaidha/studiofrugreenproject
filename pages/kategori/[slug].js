@@ -3,7 +3,9 @@ import Head from 'next/head'
 
 import { getCategory, getAllCategoriesWithSlug } from 'lib/graphcms'
 
-const PostCategories = dynamic(() => import('components/posts-basedon-category'));
+const PostCategories = dynamic(() => import('components/posts-basedon-category'), {
+  ssr: false,
+});
 const Container = dynamic(() => import('../../components/container'));
 const Layout = dynamic(() => import('components/layout'));
 
