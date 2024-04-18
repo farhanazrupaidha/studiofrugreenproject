@@ -41,6 +41,7 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
+import LinearProgress from '@mui/material/LinearProgress';
 
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
@@ -87,7 +88,7 @@ export default function Post({ post, morePosts, preview }) {
       <Container>
         <Header />
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <LinearProgress color="secondary" />
         ) : (
           <>
             <article>
@@ -100,11 +101,11 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="keywords" content={post.tags} />
                      <meta name="language" content="id-ID" />
                      <meta name="author" content="Studiofru" />                     
-                     <meta property="image" content={post.coverImage} />
+                     <meta property="image" content={post.coverImage.url} />
                      <meta property="og:title" content={post.title} />
                      <meta property="og:description" content={post.excerpt} />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
-                     <meta property="og:image" content={post.seo.image.url} />
+                     <meta property="og:image" content={post.coverImage.url} />
                      <meta name="og:url" content={`https://studiofrugreenproject.com/posts/${post.slug}`} />
                      <meta name="og:type" content="article" />
                      <meta property="og:locale" content="id-ID" />
@@ -113,7 +114,7 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="twitter:title" content={post.title} />
                      <meta property="twitter:description" content={post.excerpt} />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image" content={post.coverImage} />
+                     <meta name="twitter:image" content={post.coverImage.url} />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/posts/${post.slug}`} hreflang="id-ID" />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en-US" />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="x-default" />
@@ -160,7 +161,7 @@ export default function Post({ post, morePosts, preview }) {
                 <ShareButton />
                 <TwitterShareButton
                     url={`https://studiofrugreenproject.com/posts/${post.slug}`}
-                    title={post.seo.title}
+                    title={post.title}
                 >
                 <LightTooltip disableFocusListener title="Share it on X">
                     <XIcon color="secondary" size="small" />
@@ -168,7 +169,7 @@ export default function Post({ post, morePosts, preview }) {
                 </TwitterShareButton>
                 <FacebookShareButton
                     url={`https://studiofrugreenproject.com/posts/${post.slug}`}
-                    quote={post.seo.title}
+                    quote={post.title}
                     hashtag={'#studiofrugreenproject'}
                 >
                 <LightTooltip disableFocusListener title="Share it on Facebook">
@@ -177,7 +178,7 @@ export default function Post({ post, morePosts, preview }) {
                 </FacebookShareButton>
                 <WhatsappShareButton
                     url={`https://studiofrugreenproject.com/posts/${post.slug}`}
-                    title={post.seo.title}
+                    title={post.title}
                     separator="->"
                 >
                 <LightTooltip disableFocusListener title="Share it on  WhatsApp">

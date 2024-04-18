@@ -9,12 +9,6 @@ const PostCategories = dynamic(() => import('components/posts-basedon-location')
 });
 const Container = dynamic(() => import('../../components/container'));
 const Layout = dynamic(() => import('components/layout'));
-const DataCountFlora = dynamic(() => import('components/dataflora-location'), {
-  ssr: false,
-});
-const DataCountFauna = dynamic(() => import('components/datafauna-location'), {
-  ssr: false,
-});
 const SectionSeparator = dynamic(() => import('components/section-separator'), {
   ssr: false,
 });
@@ -74,8 +68,6 @@ export default function LocationPost ({speciesLocation, preview}) {
         mapStyle="mapbox://styles/mapbox/streets-v9"
     />
       </Paper>  
-        <DataCountFlora slug = {speciesLocation?.slug} />
-        <DataCountFauna slug = {speciesLocation?.slug} />
       </Stack>    
       <SectionSeparator />  
       <PostCategories slug = {speciesLocation?.slug} />

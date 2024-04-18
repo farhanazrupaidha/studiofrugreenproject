@@ -99,11 +99,11 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="language" content="en-US" />
                      <meta name="revisit-after" content="3 days" />
                      <meta name="author" content="Studiofru" />                     
-                     <meta property="image" content={post.coverImage} />
+                     <meta property="image" content={post.coverImage.url} />
                      <meta property="og:title" content={post.title} />
                      <meta property="og:description" content={post.excerpt} />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
-                     <meta property="og:image" content={post.coverImage} />
+                     <meta property="og:image" content={post.coverImage.url} />
                      <meta name="og:url" content={`https://studiofrugreenproject.com/en/posts/${post.slug}`}/>
                      <meta name="og:type" content="article" />
                      <meta name="twitter:site" content="@studiofruworks" />
@@ -111,7 +111,7 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="twitter:title" content={post.title} />
                      <meta property="twitter:description" content={post.excerpt} />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image" content={post.coverImage} />
+                     <meta name="twitter:image" content={post.coverImage.url} />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/posts/${post.slug}`} hreflang="id-ID" />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="en-US" />
                      <link rel="alternate" href={`https://studiofrugreenproject.com/en/posts/${post.slug}`} hreflang="x-default" />
@@ -180,7 +180,7 @@ export default function Post({ post, morePosts, preview }) {
                 <ShareButton />
                 <TwitterShareButton
                     url={`https://studiofrugreenproject.com/en/posts/${post.slug}`}
-                    title={post.seo.title}
+                    title={post.title}
                 >
                 <LightTooltip disableFocusListener title="Share it on X">
                     <XIcon color="secondary" size="small" />
@@ -188,7 +188,7 @@ export default function Post({ post, morePosts, preview }) {
                 </TwitterShareButton>
                 <FacebookShareButton
                     url={`https://studiofrugreenproject.com/en/posts/${post.slug}`}
-                    quote={post.seo.title}
+                    quote={post.title}
                     hashtag={'#studiofrugreenproject'}
                 >
                 <LightTooltip disableFocusListener title="Share it on Facebook">
@@ -197,7 +197,7 @@ export default function Post({ post, morePosts, preview }) {
                 </FacebookShareButton>
                 <WhatsappShareButton
                     url={`https://studiofrugreenproject.com/en/posts/${post.slug}`}
-                    title={post.seo.title}
+                    title={post.title}
                     separator="->"
                 >
                 <LightTooltip disableFocusListener title="Share it on  WhatsApp">
