@@ -99,7 +99,7 @@ return (
         {data &&
             data.speciesLocations.map((item) => (
               <Link href={`/lokasi/${item.slug}`} className="hover:underline">
-                <MenuItem value={item.title} key={item.id}>{item.title}</MenuItem>
+                <MenuItem sx={{textTransform:"uppercase"}} value={item.title} key={item.id}>{item.title}</MenuItem>
               </Link>  
         ))}  
       </StyledMenu>   

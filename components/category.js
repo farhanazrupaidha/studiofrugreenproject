@@ -98,7 +98,7 @@ return (
         {data &&
             data.categories.map((item) => (
               <Link href={`/kategori/${item.slug}`} className="hover:underline">
-                <MenuItem value={item.title} key={item.id}>{item.title}</MenuItem>
+                <MenuItem sx={{textTransform:"uppercase"}} value={item.title} key={item.id}>{item.title}</MenuItem>
               </Link>  
         ))}  
       </StyledMenu>   
