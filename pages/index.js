@@ -170,17 +170,7 @@ export default function Index({ posts, preview }) {
             <h2 className="mb-10 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
                Catatan Terbaru
             </h2>
-          </Box>
-          <Box sx={{mt:5, mb:5}}>
-            <center>
-              <div class ="mobileHide">
-                <AdsterraBannerDesktop />
-              </div>
-              <div class ="mobileShow">
-                <AdsterraBannerMobile />
-              </div>                  
-            </center>
-          </Box>             
+          </Box>            
 			{blogPosts ? (
 			<Box>
 			<div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
