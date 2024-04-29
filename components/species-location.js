@@ -35,7 +35,7 @@ const StyledMenu = styled((props) => (
 
 const LOCATION = gql`
   query SpeciesLocations {
-    speciesLocations {
+    speciesLocations (orderBy: title_ASC) {
         title
         slug
         posts {

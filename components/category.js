@@ -34,7 +34,7 @@ const StyledMenu = styled((props) => (
 
 const CATEGORIES= gql`
   query Categories {
-    categories {
+    categories (orderBy: title_ASC) {
         title
         slug
         posts {
