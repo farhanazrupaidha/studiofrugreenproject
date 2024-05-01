@@ -124,16 +124,6 @@ export default function Post({ post, morePosts, preview }) {
                 className="progress-bar"
                 style={{ scaleX: scrollYProgress }}
               />
-              <center>
-                <Box sx={{mt:5, mb:5}}>
-                    <div class ="mobileHide">
-                      <AdsterraBannerDesktop />
-                    </div>
-                    <div class ="mobileShow">
-                      <AdsterraBannerMobile />
-                    </div>                  
-                </Box>
-              </center>
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
