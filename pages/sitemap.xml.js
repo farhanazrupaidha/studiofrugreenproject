@@ -231,6 +231,12 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+    </url>        
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/deskripsi-asal-dan-manfaat-patikan-kebo-euphorbia-hirta-bagi-kesehatan</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
     </url>                                                                                 
     ${postsEn.map(({ slug, updatedAt }) => `
     <url>

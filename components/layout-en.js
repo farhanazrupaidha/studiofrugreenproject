@@ -25,7 +25,7 @@ export default function Layout({ preview, children }) {
           boxShadow: 100, 
           fontWeight: 'bold'
           }} 
-          href="https://www.profitablegatecpm.com/uk0vqgawc?key=451d8c17e922585785b1275ac708ea0f" 
+          href="https://sociabuzz.com/studiofru/donate" 
           target="_blank">
             <RecommendIcon sx={{mr:1}} />
             Support the project
