@@ -91,14 +91,6 @@ export default function Index({ posts, preview }) {
                                 })
                               }
                             }
-                            seo {
-                                  title
-                                  description
-                                  keywords
-                                  image {
-                                    url
-                                  }
-                                }
                           }
 				 postsConnection {
 					pageInfo {
