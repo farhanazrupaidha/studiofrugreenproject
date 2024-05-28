@@ -145,7 +145,9 @@ export default function Post({ post, morePosts, preview }) {
             <Typography variant='h6' color="#ff0055">Cetak catatan ini</Typography>
             <Box sx={{mb:5, mt:2}}>
             <Button variant="outlined" color="secondary" endIcon={<PrintIcon />}>
-              Cetak
+              <button onClick={print}>
+                Cetak
+              </button>
             </Button>
             </Box>                    
             <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
