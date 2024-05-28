@@ -42,6 +42,7 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import LinearProgress from '@mui/material/LinearProgress';
+import Button from '@mui/material/Button';
 
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
@@ -51,6 +52,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import PrintIcon from '@mui/icons-material/Print';
 
 import {
   TwitterShareButton,
@@ -82,6 +84,7 @@ export default function Post({ post, morePosts, preview }) {
   }
 
   const { scrollYProgress } = useScroll();
+  const print = () => window.print();
 
   return (
     <Layout preview={preview}>
@@ -137,7 +140,14 @@ export default function Post({ post, morePosts, preview }) {
               <PostReference reference={post.reference} />  
             </article>
             <center>
-            <Box sx={{mt:7}}>              
+            <Box sx={{mt:7}}>      
+            <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
+            <Typography variant='h6' color="#ff0055">Cetak catatan ini</Typography>
+            <Box sx={{mb:5, mt:2}}>
+            <Button variant="outlined" color="secondary" endIcon={<PrintIcon />}>
+              Cetak
+            </Button>
+            </Box>                    
             <Divider sx={{mt:5, mb:3, maxWidth:300, width:'95%' }} />
             <Typography variant='h6' color="#ff0055">Bagikan catatan ini</Typography>
             <Box sx={{mb:5, mt:2}}>
