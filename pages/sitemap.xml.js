@@ -291,7 +291,19 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-    </url>                                                                                                
+    </url>    
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/sedekah-laut-cara-masyarakat-pesisir-laut-desa-citemu-mundu-cirebon-berterima-kasih-kepada-laut-sebagai-salah-satu-sumber-kehidupan</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>     
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/permata-tersembunyi-di-keraton-kasepuhan-cirebon</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>                                                                                                 
     ${postsEn.map(({ slug, updatedAt }) => `
     <url>
         <loc>https://studiofrugreenproject.com/en/posts/${slug}</loc>
