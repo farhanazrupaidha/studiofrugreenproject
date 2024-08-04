@@ -2,25 +2,6 @@
 User-agent: *
 Allow: /
 
-# *
-User-agent: *
-Disallow: /404
-Disallow: /termsofuse
-Disallow: /tentang
-Disallow: /kontak
-Disallow: /kontribusi
-Disallow: /disclaimer
-Disallow: /en/knowledge
-Disallow: /en/videos
-Disallow: /en/locations/bali
-Disallow: /en/locations/eastjava
-Disallow: /en/locations/setupatok
-Disallow: /en/locations/westjava
-Disallow: /lokasi/bali
-Disallow: /lokasi/jawabarat
-Disallow: /lokasi/jawatengah
-Disallow: /lokasi/jawatimur
-
 
 # Sitemaps
 Sitemap: https://studiofrugreenproject.com/sitemap.xml
