@@ -30,7 +30,6 @@ export default function ResponsiveStack() {
                      <meta name="twitter:title" content="Studiofru | Green Project - Kontak" />
                      <meta name="twitter:card" content="summary_large_image" />
                      <meta name="twitter:image:src" content="/images/tanah.jpg" />
-                     <meta name="robots" content="noindex, nofollow" />
                </Head>
     <Box sx={{ maxWidth: 800, m:'auto', mt:10, overflow: 'hidden' }}>
     <iframe
