@@ -230,4 +230,3 @@ export async function getStaticProps({ preview = false }) {
     props: { posts, preview },
   }
 }
-
