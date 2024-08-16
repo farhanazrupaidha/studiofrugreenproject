@@ -333,7 +333,43 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-    </url>                                                                                                      
+    </url>        
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/menjajal-kereta-api-kelas-ekonomi-premium</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>  
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/manfaat-pupuk-organik</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>  
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/5-cara-mudah-menyuburkan-tanah-secara-biologis</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>  
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/bagaimana-cara-menyuburkan-tanah</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>        
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/manfaat-mangga-bagi-kesehatan</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>     
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/10-jenis-tanah-di-wilayah-indonesia</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>                                                                                                               
     ${postsEn.map(({ slug, updatedAt }) => `
     <url>
         <loc>https://studiofrugreenproject.com/en/posts/${slug}</loc>

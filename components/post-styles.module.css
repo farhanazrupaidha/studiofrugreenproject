@@ -45,7 +45,7 @@
 }
 
 .post img {
-  @apply resize aspect-w-auto aspect-h-auto lg:aspect-none;
+  @apply resize aspect-w-auto aspect-h-auto lg:aspect-none my-6;
 }
 
 .post code {
