@@ -222,12 +222,6 @@ export default function Post({ post, morePosts, preview }) {
             </Box>
             </center>
         <SectionSeparator />
-        <Box sx={{mt:5, mb:7}}>
-        <center>
-          <script async="async" data-cfasync="false" src="//pl22692592.profitablegatecpm.com/47f63e668a1eda1f44ac16b60d1e0850/invoke.js"></script>
-          <div id="container-47f63e668a1eda1f44ac16b60d1e0850"></div>
-        </center>           
-        </Box>
         <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
           Catatan Terbaru
         </h2>
