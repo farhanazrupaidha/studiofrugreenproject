@@ -6,7 +6,7 @@
 
 @layer base {
   a {
-    @apply font-semibold;
+    @apply text-sky-500 font-semibold;
   }
 
   a:hover {

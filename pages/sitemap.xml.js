@@ -428,7 +428,13 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-    </url>                                                                                                                                   
+    </url>      
+        <url>
+        <loc>https://studiofrugreenproject.com/posts/wisata-alam-danau-setu-patok-cirebon</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>                                                                                                                              
 </urlset>
 `;
 
