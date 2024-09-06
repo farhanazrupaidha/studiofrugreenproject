@@ -446,7 +446,13 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-    </url>                                                                                                                                   
+    </url>  
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/tanaman-budidaya-tertua-di-dunia-ada-di-indonesia</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>                                                                                                                                          
 </urlset>
 `;
 
