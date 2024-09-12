@@ -458,7 +458,19 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-    </url>                                                                                                                                              
+    </url>     
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/6-manfaat-kacang-hias-atau-kacang-pinto-bagi-kesehatan-tanah</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>  
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/tanaman-tanaman-yang-dapat-digunakan-untuk-mengatasi-inflamasi-pada-kulit</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>                                                                                                                                                  
 </urlset>
 `;
 
