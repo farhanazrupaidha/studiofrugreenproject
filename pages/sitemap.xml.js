@@ -128,7 +128,13 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-    </url>                                                                                                                                                                        
+    </url>   
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/kegunaan-taka-sebagai-alternatif-bahan-pangan-dan-manfaatnya-bagi-kesehatan</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>                                                                                                                                                                           
 </urlset>
 `;
 
