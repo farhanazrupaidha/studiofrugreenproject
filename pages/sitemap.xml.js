@@ -134,7 +134,19 @@ export const getServerSideProps = async ({ res }) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-    </url>                                                                                                                                                                           
+    </url>  
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/potensi-industri-dan-budidaya-rosella</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>    
+    <url>
+        <loc>https://studiofrugreenproject.com/posts/3-manfaat-dan-kegunaan-lain-dari-rosella</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>                                                                                                                                                                               
 </urlset>
 `;
 
