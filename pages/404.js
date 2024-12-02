@@ -76,7 +76,7 @@ const { data, loading, error } = useQuery(FLORA);
             <Typography variant='h3' color="#BFCC03" sx={{fontWeight:"bold", height:'100px'}}>
                 <Typewriter
                   options={{
-                    strings: ['tidak menemukan yang dicari?', 'silahkan ketik dalam kolom pencarian di bawah ini ..'],
+                    strings: ['tidak menemukan yang dicari?', 'silahkan ketik dalam kolom pencarian di bawah ini '],
                     autoStart: true,
                     loop: true,
                   }}
