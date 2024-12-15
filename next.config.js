@@ -14,7 +14,7 @@ module.exports = withBundleAnalyzer({
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'media.graphassets.com',
+        hostname: 'ap-southeast-2.graphassets.com',
         port: '',
         pathname: '/**',
       }
