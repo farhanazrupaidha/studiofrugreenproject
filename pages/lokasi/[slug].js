@@ -84,6 +84,7 @@ export async function getStaticProps({ params, preview = false }) {
       preview,
       speciesLocation: data.speciesLocation
     },
+    revalidate: 60,
   }
 }
 
