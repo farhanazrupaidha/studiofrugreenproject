@@ -57,7 +57,6 @@ export async function getStaticProps({ params, preview = false }) {
       preview,
       category: data.category
     },
-    revalidate: 60,
   }
 }
 
