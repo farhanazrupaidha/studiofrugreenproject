@@ -23,10 +23,19 @@ export const getServerSideProps = async ({ res }) => {
     </url>
     `)
     .join('\n')} 
+    ${location.map(({ slug, updatedAt }) => `
+    <url>
+        <loc>https://studiofrugreenproject.com/kategori/${slug}</loc>
+        <lastmod>${updatedAt}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    `)
+    .join('\n')} 
     ${postsId.map(({ slug, updatedAt }) => `
     <url>
         <loc>https://studiofrugreenproject.com/posts/${slug}</loc>
-        <lastmod>${updatedAt}</lastmod>
+        <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>                                 
