@@ -32,7 +32,7 @@ export const getServerSideProps = async ({ res }) => {
     </url>
     `)
     .join('\n')} 
-    ${postsId.map(({ slug, updatedAt }) => `
+    ${postsId.map(({ slug }) => `
     <url>
         <loc>https://studiofrugreenproject.com/posts/${slug}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
